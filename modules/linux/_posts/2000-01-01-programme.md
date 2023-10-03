@@ -8,7 +8,7 @@ Mark Pallen and Andrea Telatin
 
 ***
 
-## Monday morning
+### Monday morning
 
 - **Introduction to the course and to the week**
   -  install/join Discord
