@@ -13,7 +13,7 @@ _Mark Pallen and Andrea Telatin_
 - **Introduction to the course and to the week**
   -  install/join Discord
 - **Talk from Mark Pallen**:
-  -  [_Unix and the Command Line_](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/githubio/2023_course/week_1/2023_Week1_Command_line_Unix.pptx)
+  -  _Unix and the Command Line_  ([Powerpoint slides here](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/githubio/2023_course/week_1/2023_Week1_Command_line_Unix.pptx))
 - **[Bioinformatics tutorial](week_1_Monday_session_1.md) led by Mark Pallen**
   -  _Comparing and contrasting file handling within the Finder and the Terminal on MacOS_
   -  _Basic Unix commands_
@@ -28,7 +28,7 @@ _Mark Pallen and Andrea Telatin_
 ### Tuesday morning
 
 - **Talk from Mark Pallen**
-  -  _CLIMB, the cloud, and virtual notebook servers_
+  -  _CLIMB, the cloud, and virtual notebook servers_ ([Powerpoint slides here](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/githubio/2023_course/week_1/2023_Week1_CLIMB_cloud_notebooks.pptx))
 - **Bioinformatics tutorial led by Andrea Telatin**
   -  _Handling files and commands within the Jupyter Hub environment_
 
