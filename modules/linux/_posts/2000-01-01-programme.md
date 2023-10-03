@@ -2,7 +2,7 @@
 
 _Mark Pallen and Andrea Telatin_
 
-**Week commencing October 16th 2023**
+**W/b October 16th 2023**
 
 **Venue:** to follow
 
