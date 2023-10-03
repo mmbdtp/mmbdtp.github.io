@@ -17,36 +17,36 @@ Mark Pallen and Andrea Telatin
 - **Bioinformatics session led by Mark Pallen**
   -  _Comparing and contrasting file handling within the Finder and the Terminal on MacOS; basic Unix commands_
 
-## Monday afternoon
+### Monday afternoon
 
 - **Bioinformatics session led by Andrea Telatin**
   -  _Installing programs, setting up your Mac, and handling Conda environments_
 ***
-## Tuesday morning
+### Tuesday morning
 
 - **Talk from Mark Pallen**
   -  _CLIMB, the cloud, and virtual notebook servers_
 - **Bioinformatics session led by Andrea Telatin**
   -  _Handling files and commands within the Jupyter Hub environment_
 
-## Tuesday afternoon
+### Tuesday afternoon
 
 - **Bioinformatics session led by Andrea Telatin**
   -  _Handling text files in Unix environment_
 ***
-## Thursday morning
+### Thursday morning
 
 - **Discussion session led by Mark Pallen**
   -  _On sequence file formats_
 - **Bioinformatics session led by Andrea Telatin**
   -  _Downloading and analyzing FASTA files_
 
-## Thursday afternoon
+### Thursday afternoon
 
 - **Bioinformatics session led by Andrea Telatin**
   -  _Mapping sequences, the BAM file format_
 ***
-## Friday morning
+### Friday morning
 
 - **Discussion session led by Mark Pallen**
   -  _On how sequences evolve_
