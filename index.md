@@ -3,14 +3,15 @@ layout: index
 published: true
 ---
 
-A problem-based learning curriculum for the **Microbes, Microbiomes and Bioinformatics** doctoral training program
+Bioinformatics Training for UEA's MRC Microbes, Microbiomes and Bioinformatics Doctoral Training Programme
 <br> 
 
 ## About
 
-This is the offical website for the 6-weeks MMBDTP Training, which will be held
-this fall (2023). The website is currently under costruction, but if you are interested
-in seeing the (similar) program from the previous year, please [check the archived website](https://mmbdtp.github.io/2022/).
+This is the website for the 6-weeks Mandatory Bioinformatics Training for the **Microbes, Microbiomes and Bioinformatics** doctoral training program, which will be held
+from October to December 2023). 
+* The website is  under costruction
+* An archive of last year's programme  [can be accessed here](https://mmbdtp.github.io/2022/).
 
 ---
 
