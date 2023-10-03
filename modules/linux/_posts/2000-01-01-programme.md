@@ -1,4 +1,4 @@
-# Week 1: Linux and the Command Line
+# Week 1: Unix and the Command Line
 
 Mark Pallen and Andrea Telatin
 
