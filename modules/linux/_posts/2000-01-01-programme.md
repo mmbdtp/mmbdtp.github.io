@@ -5,7 +5,9 @@ Mark Pallen and Andrea Telatin
 **Week commencing October 16th 2023**
 
 **Venue:** to follow
+
 ***
+
 ## Monday morning
 
 - **Introduction to the course and to the week**
