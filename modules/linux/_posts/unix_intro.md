@@ -15,12 +15,18 @@ Click on the magnifying glass icon (Spotlight) in the top-right corner of your s
 
 Type **Terminal** and press **Enter.**
 
+Alternatively, you can open the *Applications* folder, then *Utilities* and double-click on *Terminal*.
+
+- :bulb: After you have opened the Terminal, if you mouse over the icon for the Terminal in the Dock and select _Options_, uyou can tell MacOS to keep the icon available in your Dock.
+
 You should now see a window with a command-line prompt.
 
 ```
 computername:~ username$
 ```
-The command-line prompt typically displays the name of your computer, the current working directory and your username. It ends with a **$** sign, waiting for you to enter a command. When you first open the Terminal app, you are likely to find yourself in your home directory associated with your username and account on the MacBook. The tilde sign ~ represents a shortcut designation for that directory within Unix file systems
+The command-line prompt typically displays the name of your computer, the current working directory and your username. It ends with a **$** sign, waiting for you to enter a command. 
+
+When you first open the Terminal app, you are likely to find yourself in your home directory associated with your username and account on the MacBook. The tilde sign ~ represents a shortcut designation for that directory within Unix file systems
 
 ---
 
@@ -137,11 +143,11 @@ Every location (file or directory) in the file system can be described either:
 
 - as an absolute path, that is the full path from the root directory to the location, for example
   
-```/users/admin/steve```
+  ```/users/admin/steve```
   
 - as a relative path, that is the path from the current directory to the location, so if we are inside a directory called **jon,** it would be
 
-```../admin/steve```
+  ```../admin/steve```
 
 
 
@@ -239,9 +245,26 @@ The **cat** command will show you the contents of a text file.
 cat origin.txt
 ```
 
+
+### Peeking with *head* and *tail*
+
+**Cat** will direct the enrtire contents of a file to the screen. Some times files are large, or even impossibly large, and we save our sanity if we just
+print the first (or last) lines of a file. The **head** and **tail** commands are used for this purpose.
+
+```
+head origin.txt
+```
+
+By default both `head` and `tail` print the first 10 lines of a file. 
+You can change this behaviour by adding the `-n NUMBER` parameter, for example:
+
+```
+tail -n 1 learn_bash/files/introduction.txt 
+```
+
 ---
 
-###Shortcuts and mesages from the terminal
+### Shortcuts and mesages from the terminal
 
 There are two quick shortcuts you can use to navigate around the Unix prompt. If a file already exists in the place you are specifying, you can autocomplete the command. By pressing the tab button. Type "cat o" and then the tab button. Also, you can use the up and down arrows to take you up and down the set of previous commands, which can be invoked or edited.
 
