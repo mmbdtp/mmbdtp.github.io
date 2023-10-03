@@ -1,6 +1,6 @@
 # Week 1: Unix and the Command Line
 
-Mark Pallen and Andrea Telatin
+_Mark Pallen and Andrea Telatin_
 
 **Week commencing October 16th 2023**
 
@@ -21,6 +21,7 @@ Mark Pallen and Andrea Telatin
 
 - **Bioinformatics session led by Andrea Telatin**
   -  _Installing programs, setting up your Mac, and handling Conda environments_
+
 ***
 
 ### Tuesday morning
@@ -36,7 +37,6 @@ Mark Pallen and Andrea Telatin
   -  _Handling text files in Unix environment_
 
 ***
-
 
 ### Thursday morning
 
