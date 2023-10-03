@@ -22,6 +22,7 @@ Mark Pallen and Andrea Telatin
 - **Bioinformatics session led by Andrea Telatin**
   -  _Installing programs, setting up your Mac, and handling Conda environments_
 ***
+
 ### Tuesday morning
 
 - **Talk from Mark Pallen**
@@ -33,7 +34,10 @@ Mark Pallen and Andrea Telatin
 
 - **Bioinformatics session led by Andrea Telatin**
   -  _Handling text files in Unix environment_
+
 ***
+
+
 ### Thursday morning
 
 - **Discussion session led by Mark Pallen**
@@ -45,11 +49,16 @@ Mark Pallen and Andrea Telatin
 
 - **Bioinformatics session led by Andrea Telatin**
   -  _Mapping sequences, the BAM file format_
+
 ***
+
 ### Friday morning
 
 - **Discussion session led by Mark Pallen**
   -  _On how sequences evolve_
 - **Bioinformatics session led by Andrea Telatin**
   -  _Mapping short reads against a reference genome_
+
 ***
+
+
