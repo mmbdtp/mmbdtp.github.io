@@ -15,7 +15,8 @@ _Mark Pallen and Andrea Telatin_
 - **Talk from Mark Pallen**:
   -  _Unix and the Command Line_
 - **Bioinformatics session led by Mark Pallen**
-  -  _Comparing and contrasting file handling within the Finder and the Terminal on MacOS; basic Unix commands_
+  -  _Comparing and contrasting file handling within the Finder and the Terminal on MacOS_
+  -  _Basic Unix commands_
 
 ### Monday afternoon
 
@@ -60,5 +61,4 @@ _Mark Pallen and Andrea Telatin_
   -  _Mapping short reads against a reference genome_
 
 ***
-
 
