@@ -51,5 +51,5 @@ Mark Pallen and Andrea Telatin
 - **Discussion session led by Mark Pallen**
   -  _On how sequences evolve_
 - **Bioinformatics session led by Andrea Telatin**
-  -  _Mapping short reads against a reference genome
+  -  _Mapping short reads against a reference genome_
 ***
