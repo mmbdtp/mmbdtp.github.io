@@ -86,10 +86,10 @@ touch grandeur.txt
 ```
 Let's add some text.
 ```
-echo "There is grandeur in this view of life" \> grandeur.txt
+echo "There is grandeur in this view of life" > grandeur.txt
 ```
-**echo** makes the shell return the text as an output and the "\>" redirects that output into **grandeur.txt.** 
-- See [https://en.wikipedia.org/wiki/Redirection_(computing] (https://en.wikipedia.org/wiki/Redirection_(computing))
+**echo** makes the shell return the text as an output and the ">" redirects that output into **grandeur.txt.** 
+- See https://en.wikipedia.org/wiki/Redirection_(computing)
 
 Click on the **grandeur.txt** file in the Finder and you can see it now contains the text.
 
@@ -204,7 +204,8 @@ If you specify a directory, the ls command will list the contents of that direct
 ```
 ls ~/Desktop
 ```
-If your screen gets cluttered with outputs of previous commands, type **clear** to clear it up
+
+- :bulb: If your screen gets cluttered with outputs of previous commands, type **clear** to clear it up
 ```
 clear
 ```
@@ -305,6 +306,7 @@ What has this command done?
 
 
 ---
+
 
 ### Time for a break
 
