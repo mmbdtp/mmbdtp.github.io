@@ -1,7 +1,3 @@
----
-title: Programme
----
-
 # Week 1: Linux and the Command Line
 
 Mark Pallen and Andrea Telatin
@@ -9,7 +5,7 @@ Mark Pallen and Andrea Telatin
 **Week commencing October 16th 2023**
 
 **Venue:** to follow
-
+***
 ## Monday morning
 
 - **Introduction to the course and to the week**
@@ -23,7 +19,7 @@ Mark Pallen and Andrea Telatin
 
 - **Bioinformatics session led by Andrea Telatin**
   -  _Installing programs, setting up your Mac, and handling Conda environments_
-
+***
 ## Tuesday morning
 
 - **Talk from Mark Pallen**
@@ -35,7 +31,7 @@ Mark Pallen and Andrea Telatin
 
 - **Bioinformatics session led by Andrea Telatin**
   -  _Handling text files in Unix environment_
-
+***
 ## Thursday morning
 
 - **Discussion session led by Mark Pallen**
@@ -47,10 +43,11 @@ Mark Pallen and Andrea Telatin
 
 - **Bioinformatics session led by Andrea Telatin**
   -  _Mapping sequences, the BAM file format_
-
+***
 ## Friday morning
 
 - **Discussion session led by Mark Pallen**
   -  _On how sequences evolve_
 - **Bioinformatics session led by Andrea Telatin**
   -  _Mapping short reads against a reference genome
+***
