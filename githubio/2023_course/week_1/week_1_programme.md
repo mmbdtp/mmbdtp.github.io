@@ -13,8 +13,8 @@ _Mark Pallen and Andrea Telatin_
 - **Introduction to the course and to the week**
   -  install/join Discord
 - **Talk from Mark Pallen**:
-  -  _Unix and the Command Line_
-- **Bioinformatics tutorial led by Mark Pallen**
+  -  [_Unix and the Command Line_](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/githubio/2023_course/week_1/2023_Week1_Command_line_Unix.pptx)
+- **[Bioinformatics tutorial](week_1_Monday_session_1.md) led by Mark Pallen**
   -  _Comparing and contrasting file handling within the Finder and the Terminal on MacOS_
   -  _Basic Unix commands_
 
