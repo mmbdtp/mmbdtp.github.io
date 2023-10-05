@@ -37,6 +37,9 @@ _Dave Baker & Nabil-Fareed Alikhan_
 - **Handling sequencing data**
   -  _On sequence file formats_
 
+- **File compression**
+  -  _On sequence file formats_
+
 ### Thursday afternoon
 
 - **Quality control for short reads**
