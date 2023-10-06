@@ -1,3 +1,7 @@
+---
+title: Installing Discord
+---
+
 ## Installing Discord
 1. Go to the Discord Download Page:
 	* Open your favorite web browser.
