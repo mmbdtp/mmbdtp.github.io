@@ -1,5 +1,5 @@
 ---
-title: Week 1: Unix and the Command Line Programme
+title: Week 1 Unix and the Command Line Programme
 ---
 
 
