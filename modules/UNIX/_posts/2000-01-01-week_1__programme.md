@@ -38,7 +38,7 @@ _Mark Pallen and Andrea Telatin_
 
 - **Talk from Mark Pallen**
   -  _CLIMB, the cloud, and virtual notebook servers_ ([Powerpoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/githubio/2023_course/week_1/2023_Week1_CLIMB_cloud_notebooks.pptx))
-- **[Bioinformatics Tutorial] led by Andrea Telatin**
+- **Bioinformatics Tutorial led by Andrea Telatin**
 
   -  _Handling files and commands within the Jupyter Hub environment_
 
