@@ -1,4 +1,8 @@
+---
+title: Assessing Read Quality, Trimming and Filtering
+---
 ##Assessing Read Quality, Trimming and Filtering
+
 Today we will work through the following tutorials, kindly provided by the [Data Carpentry](https://datacarpentry.org) initiative.
 
 1. [Background and metadata](https://datacarpentry.org/wrangling-genomics/instructor/01-background.html)
