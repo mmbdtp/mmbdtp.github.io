@@ -44,7 +44,7 @@ _Mark Pallen and Andrea Telatin_
 
 ### Tuesday afternoon
 
-- **Bioinformatics Tutorial week_1_Tuesday_session_2.md led by Andrea Telatin**
+- **Bioinformatics Tutorial led by Andrea Telatin**
 
   -  _Handling text files in Unix environment_
 
