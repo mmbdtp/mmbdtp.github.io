@@ -1,4 +1,6 @@
-# Background to sequencing
+---
+title: Background to sequencing
+---
 
 The first half of this week will be dedicated to a hands-on unscripted run through how sequencing is actually done on the Illumina platform and using Oxford Nanopore. 
 
