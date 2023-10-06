@@ -3,7 +3,7 @@ title: Assessing Read Quality, Trimming and Filtering
 ---
 
 
-**Assessing Read Quality, Trimming and Filtering**
+#Assessing Read Quality, Trimming and Filtering
 
 Today we will work through the following tutorials, kindly provided by the [Data Carpentry](https://datacarpentry.org) initiative.
 
