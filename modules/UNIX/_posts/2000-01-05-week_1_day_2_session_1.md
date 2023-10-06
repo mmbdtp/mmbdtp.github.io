@@ -1,7 +1,6 @@
 ---
-title: Notebook servers 
+title: Notebook servers
 ---
-
 
 ## Handling files and commands within a Jupyter Hub 
 
