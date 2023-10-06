@@ -2,6 +2,7 @@
 title: Playing with text files
 ---
 
+
 Text files and the command line
 ===============================
 
