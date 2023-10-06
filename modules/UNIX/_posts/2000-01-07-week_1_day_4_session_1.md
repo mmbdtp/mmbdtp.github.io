@@ -1,3 +1,6 @@
+---
+title: FASTA files
+---
 ##FASTA files
  
 Here we introduce the FASTA format to store DNA and protein sequences.
