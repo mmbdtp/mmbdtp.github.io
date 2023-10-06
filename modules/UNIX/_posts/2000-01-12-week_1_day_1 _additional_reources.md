@@ -1,3 +1,7 @@
+---
+title: Additional resources 
+---
+
 ### Additional resources (optional)
 Here are some links to additional resources that you might want to explore in your own time to reinforce your learning. 
 
