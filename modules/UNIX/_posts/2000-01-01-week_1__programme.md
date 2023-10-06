@@ -1,3 +1,8 @@
+---
+title: Week 1: Unix and the Command Line Programme
+---
+
+
 # Week 1: Unix and the Command Line
 
 _Mark Pallen and Andrea Telatin_
