@@ -1,3 +1,8 @@
+___
+title: Programme
+---
+
+
 # Week 2: Creating and handling sequences
 _David Baker and Nabil-Fareed Alikhan_ 
 David.Baker@quadram.ac.uk
