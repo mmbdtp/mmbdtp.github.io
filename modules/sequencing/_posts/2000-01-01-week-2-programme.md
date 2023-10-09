@@ -29,8 +29,9 @@ David.Baker@quadram.ac.uk
 ### Thursday and Friday
 
 - **Bioinformatics tutorial led by Nabil-Fareed Alikhan**
-  - Revisiting sequence file formats
-    - [FASTQ in detail](/seq-qc/fastq-in-detail)
+  - [Revisiting sequence file formats](sequence-data.md)
+    - [Exploring file formats](file-formats.md)
+    - [FASTQ in detail](fastq-in-detail.md)
 	- File compression
   - Quality of short read data
   - Quality of long read data
