@@ -2,6 +2,8 @@
 title: Installing programs and handling Conda environments
 ---
 
+## Installing programs and handling Conda environments
+
 In this tutorial, we will start with the basics of installing programs on the command line, focusing on MacOS, and then move on to more advanced topics like setting up Miniconda and Conda environments.
 
 
