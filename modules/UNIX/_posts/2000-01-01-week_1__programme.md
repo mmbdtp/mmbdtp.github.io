@@ -6,7 +6,7 @@ title: Programme
 # Week 1: Unix and the Command Line
 **Week beginning October 16th 2023**
 
-**Mark Pallen** ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk)) and **Andrea Telatin** ([andrea.telatin@quadram.ac.uk](mailto:andrea.telatin))
+**Tutors**: **Mark Pallen** ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk)) and **Andrea Telatin** ([andrea.telatin@quadram.ac.uk](mailto:andrea.telatin))
 
 Note that these sessions are part of your mandatory training. Please email the organisers if you are going to be late or are unable to attend through illness.
 Please bring your MacBooks and ensure that you can log on to Eduroam.
