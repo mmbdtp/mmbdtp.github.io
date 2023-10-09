@@ -29,9 +29,10 @@ David.Baker@quadram.ac.uk
 ### Thursday and Friday
 
 - **Bioinformatics tutorial led by Nabil-Fareed Alikhan**
-  - [Revisiting sequence file format](/modules/sequencing/file-compression)
+  - Revisiting sequence file formats
     - [FASTQ in detail](/seq-qc/fastq-in-detail)
-	- [File compression](/seq-qc/file-compression)
-  - [Quality of short read data](/modules/sequencing/short-read-qc)
-  - [Quality of long read data](/modules/sequencing/long-read-qc)
+	- File compression
+  - Quality of short read data
+  - Quality of long read data
 
+_Links are on the left navigation bar_
