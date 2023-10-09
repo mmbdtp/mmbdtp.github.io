@@ -2,7 +2,7 @@
 title: Naming files
 ---
 
-### Naming Conventions: Finder vs Terminal 
+## Naming Conventions: Finder vs Terminal 
 
 - **Finder**: allows filenames with spaces. Not case sensitive.
 - **Terminal**: Creates difficulties for filenames without spaces; instead we tend to use underscores or quotes. Case-sensitive
