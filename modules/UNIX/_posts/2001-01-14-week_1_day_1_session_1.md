@@ -1,7 +1,7 @@
+---
+title: Handling files
+---
 
----
-title:Handling files
----
 ### Naming Conventions: Finder vs Terminal 
 
 - **Finder**: allows filenames with spaces. Not case sensitive.
