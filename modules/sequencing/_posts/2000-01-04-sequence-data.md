@@ -3,7 +3,7 @@ title: Revisting sequence file formats
 ---
 
 ## Revisting sequence file formats
-
+In this session, we will revisit the different file formats used to store sequencing data. We will also discuss the different ways of representing errors or uncertainty in sequencing data.
 
 ### Representing nucleotides 
 During sequencing, the nucleotide bases in a DNA or RNA sample (library) are determined by the sequencer. For each fragment in the library, a sequence is generated, also called a read, which is simply a succession of nucleotides. The sequence of a read is represented by a string of letters, where each letter represents a nucleotide base. The most common nucleotide bases are adenine (A), cytosine (C), guanine (G), and thymine (T). In RNA, thymine is replaced by uracil (U). 
@@ -34,7 +34,6 @@ Sequencing instruments may also give ambiguous signals, which are represented by
 > N means the base could not be determined. This is different from a gap, which means the base is not present in the sequence.
 
 Read [Johnson 2010](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2865858/) for more details. 
-
 
 ### Common file formats
 
