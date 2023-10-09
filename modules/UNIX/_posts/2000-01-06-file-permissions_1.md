@@ -2,7 +2,7 @@
 title: File Permissions in Unix
 ---
 
-### File Permissions in Unix
+## File Permissions in Unix
 
 
 Unix-based systems, including macOS, manage file and directory access through permissions. These permissions determine who can read, write, or execute files and directories. Permissions are divided into three categories for each file: user, group, and others. For more details, check the [https://en.wikipedia.org/wiki/File-system_permissions](Wikipedia page on Unix file permissions).
