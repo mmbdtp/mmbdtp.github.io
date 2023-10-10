@@ -4,7 +4,7 @@ title: Sequence homology and alignment
 
 # Sequence homology and alignment
 
-### Monday 21 November
+### Day 1
 
 ##### Overview of the day/week 
 
