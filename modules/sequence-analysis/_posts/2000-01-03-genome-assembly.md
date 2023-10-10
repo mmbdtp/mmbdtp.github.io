@@ -4,7 +4,7 @@ title: Genome assembly
 
 # Genome assembly
 
-###  Tuesday
+###  Day 2
 
 #####  Overview of the day
 
