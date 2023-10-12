@@ -103,3 +103,5 @@ And to decompress and process data from a compressed file:
 ```bash
 gunzip -c compressed_data.gz | command_to_process_data
 ```
+
+[Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).
