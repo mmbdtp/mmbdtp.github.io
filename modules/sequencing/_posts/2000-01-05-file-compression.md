@@ -11,15 +11,42 @@ In this module, we will cover the some basics on file compression, understand th
 ## What is file compression?
 File compression is the process of reducing the size of one or more files or folders to save disk space or reduce the time required for file transfer. Compression algorithms remove redundancy and encode data more efficiently.
 
+Here is a table of common compression formats and their descriptions:
 
 | Compression Format   | Description                                               | Commonly Used On         |
 |----------------------|-----------------------------------------------------------|---------------------------|
 | ZIP                  | Uses ZIP compression algorithm; highly compatible        | Multiple platforms       |
-| Gzip (.gz)           | Uses DEFLATE algorithm; commonly in Unix-like systems   | Unix-like systems        |
-| 7-Zip (.7z)          | Open-source with high compression ratios                | Windows, various platforms |
+| Gzip           | Uses DEFLATE algorithm; commonly in Unix-like systems   | Unix-like systems        |
+| 7-Zip           | Open-source with high compression ratios                | Windows, various platforms |
 | RAR                  | Often used for large files and supports multiple methods | Multiple platforms       |
 | TAR                  | Groups files/directories (not compression by itself)    | Multiple platforms       |
-| Bzip2 (.bz2)         | Uses Burrows-Wheeler Transform; good compression ratios  | Multiple platforms       |
-| LZMA (.xz)           | Known for high compression ratios                        | Linux and software distribution |
-| Compressed Archive Formats | Native archive formats (e.g., .tar.gz, .zip)         | Respective platforms      |
+| Bzip2          | Uses Burrows-Wheeler Transform; good compression ratios  | Multiple platforms       |
+| LZMA            | Known for high compression ratios                        | Linux and software distribution |
+| Compressed Archive Formats | Native archive formats         | Respective platforms      |
 
+## Exercise questions 
+
+* What is a file exension? 
+* What are the file extensions for the following compression formats?
+
+
+| Compression Format   | Description                                               | Commonly Used On         |
+|----------------------|-----------------------------------------------------------|---------------------------|
+| ZIP                  | Uses ZIP compression algorithm; highly compatible        | Multiple platforms       |
+| Gzip           | Uses DEFLATE algorithm; commonly in Unix-like systems   | Unix-like systems        |
+| 7-Zip           | Open-source with high compression ratios                | Windows, various platforms |
+| RAR                  | Often used for large files and supports multiple methods | Multiple platforms       |
+| TAR                  | Groups files/directories (not compression by itself)    | Multiple platforms       |
+| Bzip2          | Uses Burrows-Wheeler Transform; good compression ratios  | Multiple platforms       |
+| LZMA            | Known for high compression ratios                        | Linux and software distribution |
+
+
+| Compression Format  |  Extensions |
+|---|---|
+|  ZIP |   |
+| Gzip   |   |
+| 7-Zip     |   |
+| RAR     |   |
+| TAR     |   |
+| Bzip2     |   |
+| LZMA     |   |
