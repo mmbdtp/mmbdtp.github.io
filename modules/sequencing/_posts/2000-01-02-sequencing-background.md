@@ -37,5 +37,6 @@ If you are not familiar with these techniologies you might want to take a look a
 - [Coursera's "DNA Sequencing Technologies and Applications"](https://www.coursera.org/learn/dna-technologies)
 
 
+[Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).
 
 

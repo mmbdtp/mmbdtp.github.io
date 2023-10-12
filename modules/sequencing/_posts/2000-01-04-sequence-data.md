@@ -35,3 +35,4 @@ Sequencing instruments may also give ambiguous signals, which are represented by
 
 Read [Johnson 2010](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2865858/) for more details. 
 
+[Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).
