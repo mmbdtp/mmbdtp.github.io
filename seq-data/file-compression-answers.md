@@ -38,7 +38,10 @@ _You can suggest programs for any operating system_
 
 N.B The compression ratio is a measure of how effectively a compression algorithm reduces the size of data. It is typically expressed as a ratio or a percentage and represents the relationship between the original data size (before compression) and the compressed data size (after compression).
 
-This is an open question. Depending on the data, different compression formats will have different compression ratios. In general implementations of LZMA i.e. xz seems to be the best for FASTQ, although it is not commonly used. See https://linuxreviews.org/Comparison_of_Compression_Algorithms 
+This is an open question. Depending on the data, different compression formats will have different compression ratios. From the list above, implementations of LZMA i.e. xz seems to be the best for FASTQ, although it is not commonly used. See [https://linuxreviews.org/Comparison_of_Compression_Algorithms](https://linuxreviews.org/Comparison_of_Compression_Algorithms)
+
+Other formats that perform well (not listed) are [dsrc2](https://academic.oup.com/bioinformatics/article/30/15/2213/2391485) (for Illumina fastq) and [zstd](https://en.wikipedia.org/wiki/Zstd)
+
 
 ###  What are considerations when choosing a compression format?
 
