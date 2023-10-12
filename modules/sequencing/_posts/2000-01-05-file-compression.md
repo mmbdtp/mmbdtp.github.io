@@ -26,8 +26,8 @@ Here is a table of common compression formats and their descriptions:
 
 ## Exercise questions 
 
-* What is a file extension? 
-* What are the file extensions for the following compression formats?
+**What is a file extension?**
+**What are the file extensions for the following compression formats?**
   * Zip
   * Gzip 
   * 7-Zip
@@ -36,7 +36,7 @@ Here is a table of common compression formats and their descriptions:
   * BZIP2
   * LZMA
 
-* What programs could you use to compress and decompress the following formats (These programs can be for any operating system)?
+**What programs could you use to compress and decompress the following formats (These programs can be for any operating system)?**
   * Zip
   * Gzip 
   * 7-Zip
@@ -44,8 +44,8 @@ Here is a table of common compression formats and their descriptions:
   * TAR
   * BZIP2
   * LZMA
-* Which of these formats has the best compression ratio?
-* What are considerations when choosing a compression format?
+**Which of these formats has the best compression ratio?**
+**What are considerations when choosing a compression format?**
 
 Watch [Compression: Crash Course Computer Science #21](https://youtu.be/OtDxDvCpPL4?si=AMBN09cTGLyRx_ql) for a light introduction on file compression (in general). 
 
