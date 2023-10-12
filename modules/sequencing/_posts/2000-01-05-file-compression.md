@@ -29,18 +29,6 @@ Here is a table of common compression formats and their descriptions:
 * What is a file exension? 
 * What are the file extensions for the following compression formats?
 
-
-| Compression Format   | Description                                               | Commonly Used On         |
-|----------------------|-----------------------------------------------------------|---------------------------|
-| ZIP                  | Uses ZIP compression algorithm; highly compatible        | Multiple platforms       |
-| Gzip           | Uses DEFLATE algorithm; commonly in Unix-like systems   | Unix-like systems        |
-| 7-Zip           | Open-source with high compression ratios                | Windows, various platforms |
-| RAR                  | Often used for large files and supports multiple methods | Multiple platforms       |
-| TAR                  | Groups files/directories (not compression by itself)    | Multiple platforms       |
-| Bzip2          | Uses Burrows-Wheeler Transform; good compression ratios  | Multiple platforms       |
-| LZMA            | Known for high compression ratios                        | Linux and software distribution |
-
-
 | Compression Format  |  Extensions |
 |---|---|
 |  ZIP |   |
@@ -50,3 +38,17 @@ Here is a table of common compression formats and their descriptions:
 | TAR     |   |
 | Bzip2     |   |
 | LZMA     |   |
+
+* What programs could you use to compress and decompress the following formats (These programs can be for any operating system)?
+
+| Compression Format  |  Software |
+|---|---|
+|  ZIP |   |
+| Gzip   |   |
+| 7-Zip     |   |
+| RAR     |   |
+| TAR     |   |
+| Bzip2     |   |
+| LZMA     |   |
+
+
