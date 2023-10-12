@@ -28,28 +28,24 @@ Here is a table of common compression formats and their descriptions:
 
 * What is a file exension? 
 * What are the file extensions for the following compression formats?
-
-| Compression Format  |  Extensions |
-|---|---|
-|  ZIP |   |
-| Gzip   |   |
-| 7-Zip     |   |
-| RAR     |   |
-| TAR     |   |
-| Bzip2     |   |
-| LZMA     |   |
+  * Zip
+  * Gzip 
+  * 7-Zip
+  * RAR
+  * TAR
+  * BZIP2
+  * LZMA
 
 * What programs could you use to compress and decompress the following formats (These programs can be for any operating system)?
-
-| Compression Format  |  Software |
-|---|---|
-|  ZIP |   |
-| Gzip   |   |
-| 7-Zip     |   |
-| RAR     |   |
-| TAR     |   |
-| Bzip2     |   |
-| LZMA     |   |
+  * Zip
+  * Gzip 
+  * 7-Zip
+  * RAR
+  * TAR
+  * BZIP2
+  * LZMA
+* Which of these formats has the best compression ratio?
+* What are considerations when choosing a compression format?
 
 Watch [Compression: Crash Course Computer Science #21](https://youtu.be/OtDxDvCpPL4?si=AMBN09cTGLyRx_ql) for a light introduction on file compression (in general). 
 
