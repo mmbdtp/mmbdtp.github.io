@@ -9,7 +9,7 @@ In this module, we will cover the some basics on file compression, understand th
 > You should avoid working with uncompressed sequenced read data (i.e FASTQ or SAM). It is a waste of disk space and will slow down your analysis. Some bioinformatics tools you will encounter will force you to use uncompressed files, and this is a sign they are poorly written. 
 
 ## What is file compression?
-File compression is the process of reducing the size of one or more files or folders to save disk space or reduce the time required for file transfer. Compression algorithms remove redundancy and encode data more efficiently.
+File compression is the process of reducing the size of one or more files or folders to save disk space or reduce the time required for file transfer. Compression algorithms remove redundancy and encode data more efficiently. File compression is a right field of study in computer science and technical details of file compression [can be found here](/seq-data/compression.pdf)
 
 Here is a table of common compression formats and their descriptions:
 
