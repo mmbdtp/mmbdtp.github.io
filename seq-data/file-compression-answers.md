@@ -53,3 +53,6 @@ Other formats that perform well (not listed) are [dsrc2](https://academic.oup.co
 * EASE FOR ALL USERS INVOVLED
 
 
+### What is the difference between SAM and BAM formats?
+
+BAM files contain the same information as SAM files, except they are in binary file format which is not readable by humans. On the other hand, BAM files are smaller and more efficient for software to work with than SAM files, saving time and reducing costs of computation and storage.
