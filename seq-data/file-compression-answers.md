@@ -2,9 +2,10 @@
 layout: page
 ---
 
-Answers to the questions in the [File Compression]({{site.baseurl}}/modules/sequencing/file-compression/) lesson.
+Answers to the questions in the [File Compression]({{site.baseurl}}/modules/sequencing/file-compression/).
 
 * What is a file exension? 
+
 * What are the file extensions for the following compression formats?
 
 | Compression Format  |  Extensions |
