@@ -26,7 +26,7 @@ Here is a table of common compression formats and their descriptions:
 
 ## Exercise questions 
 
-* What is a file exension? 
+* What is a file extension? 
 * What are the file extensions for the following compression formats?
   * Zip
   * Gzip 

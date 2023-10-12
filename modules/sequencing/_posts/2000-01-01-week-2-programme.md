@@ -34,7 +34,7 @@ David.Baker@quadram.ac.uk
   - Revisiting sequence file formats
     - [Exploring file formats](/seq-data/file-formats)
     - [FASTQ in detail](/seq-data/fastq-in-detail)
-    
+     
 	- File compression
     - [Using gzip](/seq-data/using-gzip)
   - Quality control of short read data
