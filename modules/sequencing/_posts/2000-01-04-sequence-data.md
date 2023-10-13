@@ -51,9 +51,6 @@ This is difficult.
 
 [Answers to exercises](/seq-data/sequence-data-answers)
 
-### Representing quality scores
-
-While we talk about file "formats" for sequencing data these are not the same as file formats for propperity programs such as MS Word or binary file formats. These are simply text files with a particular structure. This means that you can open these files and read them as plain text even if the file extension is `.fastq`, `.fasta` and so on. 
-
+[Next step: File formats](/seq-data/file-formats)
 
 [Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).
