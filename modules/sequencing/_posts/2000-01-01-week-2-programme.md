@@ -30,11 +30,11 @@ David.Baker@quadram.ac.uk
 
 _Bioinformatics tutorial led by Nabil-Fareed Alikhan_
 
-**[Revisiting sequence file formats]({{site.baseurl}}/modules/sequencing/sequence-data/)**
-    - [Exploring file formats](/seq-data/file-formats)
-    - [FASTQ in detail](/seq-data/fastq-in-detail) 
-**[File compression]({{site.baseurl}}/modules/sequencing/file-compression/)**
-    - [Using gzip](/seq-data/using-gzip)
-**[Quality control of short read data]({{site.baseurl}}/modules/sequencing/short-read-qc)**
-**[Quality control of long read data]({{site.baseurl}}/modules/sequencing/long-read-qc)**
+* **[Revisiting sequence file formats]({{site.baseurl}}/modules/sequencing/sequence-data/)**
+    * [Exploring file formats](/seq-data/file-formats)
+    * [FASTQ in detail](/seq-data/fastq-in-detail) 
+* **[File compression]({{site.baseurl}}/modules/sequencing/file-compression/)**
+    * [Using gzip](/seq-data/using-gzip)
+* **[Quality control of short read data]({{site.baseurl}}/modules/sequencing/short-read-qc)**
+* **[Quality control of long read data]({{site.baseurl}}/modules/sequencing/long-read-qc)**
 
