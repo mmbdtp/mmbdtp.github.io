@@ -25,8 +25,8 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
   -  _Basic Unix commands_
 - **Bioinformatics Tutorial  led by Andrea Telatin**
   -  _Installing programs, setting up your Mac, and handling Conda environments_
-    -  [Conda environments tutorial](https://telatin.github.io/microbiome-bioinformatics/Install-Miniconda/)  
-    -  [Linux CLI Slides, PDF](https://github.com/telatin/learn_bash/releases/download/2022/telatin-unix.pdf)
+     -  [Conda environments tutorial](https://telatin.github.io/microbiome-bioinformatics/Install-Miniconda/) (website)
+     -  [Linux CLI Slides](https://github.com/telatin/learn_bash/releases/download/2022/telatin-unix.pdf) (PDF)
 
 ***
 
