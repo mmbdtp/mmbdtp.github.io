@@ -24,7 +24,9 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
   -  _Comparing and contrasting file handling within the Finder and the Terminal on MacOS_
   -  _Basic Unix commands_
 - **Bioinformatics Tutorial  led by Andrea Telatin**
-  -  _Installing programs, setting up your Mac, and handling Conda environments_ ([Slides, PDF](https://github.com/telatin/learn_bash/releases/download/2022/telatin-unix.pdf))
+  -  _Installing programs, setting up your Mac, and handling Conda environments_
+    -  [Conda environments tutorial](https://telatin.github.io/microbiome-bioinformatics/Install-Miniconda/)  
+    -  [Linux CLI Slides, PDF](https://github.com/telatin/learn_bash/releases/download/2022/telatin-unix.pdf)
 
 ***
 
