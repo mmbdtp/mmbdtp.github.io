@@ -8,6 +8,7 @@ In this tutorial, we will start with the basics of installing programs on the co
 
 
 ### Setup your Mac: Install Rosetta
+
 `Rosetta` is a translation layer that enables applications compiled for Intel-based Macs to run on Apple Silicon Macs, such as those using the M1 or M2 chip. Without Rosetta, applications that have not been compiled natively for Apple Silicon may not run.
 
 However, macOS comes with a number of built-in Unix commands, and these commands are native to the operating system. Therefore, most standard Unix commands provided by macOS itself (like ls, cd, mv, etc.) are unaffected by the presence or absence of Rosetta, as they will have native versions for the architecture.
@@ -46,27 +47,28 @@ xcode-select --install
 ![Screenshot](https://www.ics.uci.edu/~pattis/common/handouts/macclion/images/clang/Clang%20xcode-select.png)
 
 
+### Installing Programs using Homebrew
 
-###Installing Programs using Homebrew
 **Homebrew** is a popular package manager for MacOS which simplifies the installation of software. Let's get started by installing Homebrew.
 
 
 Enter the following command to install `Homebrew`:
 
-```
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+
 Then follow the on-screen instructions.
 
 Once you have `Homebrew` installed, you can use it to install various software packages. For example, let's install `wget`, a commonly used tool for downloading files over the web, with some advantages over `curl`.
 
-```
+```bash
 brew install wget
 ```
 
 Try using `wget` to get a sequence file from GenBank.
 
-```
+```bash
 #make sure you are in your home directory
 cd ~
 wget "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000005845.2/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCF_000005845.2.zip" -O coligenome.zip
@@ -79,7 +81,7 @@ Note the file extension: `.zip`. ZIP files are a popular archive file format tha
 macOS comes with a built-in command-line utility to handle ZIP files. To unzip a file from the Terminal, you can use the `unzip` command followed by the filename.
 
 
-```
+```bash
 unzip coligenome.zip
 ```
 
@@ -91,7 +93,7 @@ Let's talk about **Conda**.
 
 ---
 
-###Conda
+### Conda
 
 **Conda** is an open-source, cross-platform, language-agnostic package manager and environment management system. 
 
@@ -114,32 +116,35 @@ In summary, while `Homebrew` is excellent for general software installations on 
 
 Imagine you're buying a new smartphone.
 
-* **Conda** is like getting a smartphone with all the fancy apps pre-installed. It's great because you have everything from the get-go, but it might have some apps you'll never use. Conda comes with a lot of pre-installed packages, making the initial download larger.
+* **Conda** is like getting a smartphone with all the fancy apps pre-installed. It's great because you have everything from the get-go, but it might have some apps you'll never use. Conda comes with a lot of pre-installed packages, making the initial download larger. This is what some Python developers might prefer.
 * **Miniconda** is like getting just the smartphone with only the essential apps. It's lightweight and fast to start with. You only download and add the apps (or packages) you need, when you need them. Miniconda gives you the `Conda` tool itself and lets you choose your packages as you go.
-So, both give you a smartphone (or the `Conda` system). But `Conda` gives you all the bells and whistles from the start, while` Miniconda` lets you pick and choose as you go along.
+So, both give you a smartphone (or the `Conda` system). But `Conda` gives you all the bells and whistles from the start, while` Miniconda` lets you pick and choose as you go along. This is what bioinformaticians usually prefer.
 
 Today we are going to use `Miniconda`. 
 
 **Installing Miniconda**
 
-The latest version is available from the [offical website](https://docs.conda.io/en/latest/miniconda.html). There are installers there for macOS and Linux and versions based on different versions of Python. If you want to install miniconda somehwere, always use the most appropriate link for your platform and the version desired (avoid Python 2.7 and 32-bit versions)
+The latest version is available from the [offical website](https://docs.conda.io/en/latest/miniconda.html). 
+There are installers there for macOS and Linux and versions based on different versions of Python. 
+If you want to install miniconda somehwere, always use the most appropriate link for your platform and the version desired (avoid Python 2.7 and 32-bit versions)
 
 But to get started on your M@ MacBooks, here a typical workflow, that will install Miniconda in your home directory.
 
 First, download the Miniconda installer for MacOS:
 
-```
+```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh
 ```
+
 Give the script installer permissions
 
-```
+```bash
 chmod +x Miniconda3-latest-MacOSX-arm64.sh
 ```
 
 Then run the installer script:
 
-```
+```bash
 ./Miniconda3-latest-MacOSX-arm64.sh
 ```
 
@@ -147,14 +152,14 @@ This will start an interactive process that will ask some questions (to accept t
 
 When the process is finished you need to restart your shell i. e. to log out and login again
 
-```
+```bash
 bash
 zsh
 ```
 
 Check that Miniconda is properly initialized by asking for the `Conda` Version:
 
-```
+```bash
 conda --version
 ```
 
@@ -164,7 +169,7 @@ You should also be able to see that you are working within Miniconda's base envi
 
 ---
 
-###Setting Up Conda Environments
+### Setting Up Conda Environments
 
 Conda simplifies installing packages, but a problem remains: conflicting versions. 
 
@@ -197,16 +202,17 @@ So, in a nutshell, Conda environments help you manage your software tools in a c
 
 We need to choose a unique name for our new environment, in this example myenv1 (usually it’s the name of a tool (like qiime2-2020.1) or a task (like denovo):
 
-```
+```bash
 conda create -n myenv1
 ```
 **Activate the environment**
 
 To use an environment we need first to activate it:
 
-```
+```bash
 conda activate myenv1
 ```
+
 When the new environment is active, you will no longer be able to access any packages you installed in the base environment and if you install a package now it will belong to the active environment.
 
 ###Conda channels
@@ -216,16 +222,15 @@ Conda allows to install packages from a *default channel* (mainly containing pyt
 If we want conda to install bioinformatics programs, we need to tell it which channels to look at. There are three channels that can be of particular interest in (bio)data science:
 
 
-```
+```bash
 conda config --add channels defaults
 conda config --add channels bioconda
 conda config --add channels conda-forge
 conda config --add subdirs osx-64
 #that last line is needed for new MacBooks!
-
 ```
 
-###Installing Programs in Conda Environments
+### Installing Programs in Conda Environments
 
 **Bioconda** is a distribution of bioinformatics software for the Conda package manager. Conda is an open-source package manager that can install software and manage environments. While Conda is general-purpose and can manage software written in any language, Bioconda specifically targets the bioinformatics community, with a collection of over 7,000 bioinformatics packages, making it one of the largest and most comprehensive software distributions available for computational biology.
 
@@ -233,14 +238,14 @@ A straightforward `bioconda` tool that can calculate the GC percentage for seque
 
 To check if the program `seqkit` is available in `bioonda`, and which versions:
 
-```
+```bash
 conda search -c bioconda seqkit
 ```
 
 
 To install a package, simply replace `search` with `install`. If you also add `-y` you will not be prompted and will try to install directly.
 
-```
+```bash
 conda install -y -c bioconda seqkit
 ```
 
@@ -248,7 +253,7 @@ conda install -y -c bioconda seqkit
 
 - First, create a sample FASTA file:
 
-```
+```bash
 echo ">sample_sequence" > sample.fasta
 echo "AGCTAGCTAGCTAGCTA" >> sample.fasta
 ```
@@ -257,7 +262,7 @@ echo "AGCTAGCTAGCTAGCTA" >> sample.fasta
 
 - Now, compute the GC content:
 
-```
+```bash
 seqkit fx2tab sample.fasta --gc
 ```
 
@@ -270,13 +275,13 @@ NB: `seqkit` is versatile and offers many other sequence-related utilities, so i
 
 To deactivate the current environment and return to the previous environment:
 
-```
+```bash
 conda deactivate
 ```
 
 Now you are in the base environment, try using `seqkit` again
 
-```
+```bash
 seqkit fx2tab sample.fasta --gc
 ```
 
@@ -287,14 +292,14 @@ It doesn't work!!!
 
 To get a list of the environments in your system:
 
-```
+```bash
 conda info --envs
 ```
 **Delete an environment**
 
 To be used with care
 
-```
+```bash
 conda remove -n ENVIRONMENT_NAME --all
 
 ```

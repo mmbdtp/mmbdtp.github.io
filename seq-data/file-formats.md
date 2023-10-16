@@ -2,6 +2,8 @@
 layout: page
 ---
 
+While we talk about file "formats" for sequencing data these are not the same as file formats for propperity programs such as MS Word or binary file formats. These are simply text files with a particular structure. This means that you can open these files and read them as plain text even if the file extension is `.fastq`, `.fasta` and so on. 
+
 # Common file formats
 
 Here are some common genomics sequence file formats, some of which we have mentioned already;. 
