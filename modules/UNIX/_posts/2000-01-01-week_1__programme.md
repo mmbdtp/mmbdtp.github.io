@@ -24,11 +24,12 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
   -  _Comparing and contrasting file handling within the Finder and the Terminal on MacOS_
   -  _Basic Unix commands_
 - **Bioinformatics Tutorial  led by Andrea Telatin**
-  -  _Installing programs, setting up your Mac, and handling Conda environments_
+  -  _Installing programs, setting up your Mac, and handling Conda environments_ ([Slides, PDF](https://github.com/telatin/learn_bash/releases/download/2022/telatin-unix.pdf))
 
 ***
 
 ### Tuesday
+
 **Venue:** Quadram Institute Room UG55C from 9.00 am to 13.00; UG55B from 15.00 to 17.00
 - **Talk from Mark Pallen**
   -  _CLIMB, the cloud, and virtual notebook servers_ ([Powerpoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/githubio/2023_course/week_1/2023_Week1_CLIMB_cloud_notebooks.pptx))
