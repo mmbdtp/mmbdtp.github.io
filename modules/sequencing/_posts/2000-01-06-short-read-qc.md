@@ -26,10 +26,16 @@ wget -O pKP1-NDM-1_R2.fastq.gz https://zenodo.org/records/10018484/files/pKP1-ND
 
 ### Required software
 
-If you are not using a CLIMB-BIG-DATA notebook, you may need to install some software. This is how to do it via conda: 
+If you are not using a CLIMB-BIG-DATA notebook, you may need to install some software. 
+
+* [FASTQE](https://fastqe.com/)
+* [FASTQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+* [Cutadapt](https://cutadapt.readthedocs.io/en/stable/)
+
+This is how to do it via conda: 
 
 ```
-conda install fastqe fastqc -y
+conda install fastqe fastqc cutadapt -y
 ```
 
 ## Assess quality with FASTQE 
@@ -91,6 +97,46 @@ fastqc --help
 **female_oral2.fastq.gz data looks terrible, we should probably resequence it, but if we had to; how could we improve the quality?**
 
 [Answers to exercise 2](/seq-data/short-read-qc-answers)
+
+## Trim and filter - short reads
+
+The quality drops in the middle of these sequences. This could cause bias in downstream analyses with these potentially incorrectly called nucleotides. Sequences must be treated to reduce bias in downstream analysis. Trimming can help to increase the number of reads the aligner or assembler are able to succesfully use, reducing the number of reads that are unmapped or unassembled. In general, quality treatments include:
+
+* Trimming/cutting/masking sequences
+    * from low quality score regions
+    * beginning/end of sequence
+    * removing adapters
+* Filtering of sequences
+    * with low mean quality score
+    * too short
+    * with too many ambiguous (N) bases
+
+To accomplish this task we will use [Cutadapt](https://journal.embnet.org/index.php/embnetjournal/article/view/200), a tool that enhances sequence quality by automating adapter trimming as well as quality control. We will:
+
+* Trim low-quality bases from the ends. Quality trimming is done before any adapter trimming. We will set the quality threshold as 20, a commonly used threshold.
+* Trim adapter with Cutadapt. For that we need to supply the sequence of the adapter. In this sample, Nextera is the adapter that was detected. We can find the sequence of the Nextera adapter on the Illumina website here `CTGTCTCTTATACACATCT`. We will trim that sequence from the 3’ end of the reads.
+* Filter out sequences with length < 20 after trimming
+
+### Exercise 3: Trim and filter
+
+**Use cutadapt to trim the adapter sequence from the 3' end of the reads, and filter out sequences with a length less than 20 after trimming.**
+
+```
+cutadapt -q 20 -a CTGTCTCTTATACACATCT -m 20 female_oral2.fastq.gz  | gzip -c > female_oral2.trimmed.fastq.gz
+```
+
+Can you explain what each of the options does?
+
+**Run FASTQE and FASTQC on the trimmed data and compare to the original file.**
+
+**Does the per base sequence quality look better?**
+
+**Is the adapter gone?**
+
+**What can you say about some of the other metrics?**
+
+[Answers to exercise 3](/seq-data/short-read-qc-answers2)
+
 
 ### Citation
 
