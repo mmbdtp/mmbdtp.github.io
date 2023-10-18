@@ -7,7 +7,7 @@ layout: page
 Answers for [File formats](/seq-data/file-formats) exercise.
 
 
-**Identify the file format?**
+## Identify the file format?
 
 | Hidden filename         | True filename          |
 |-------------------------|------------------------|
@@ -22,7 +22,7 @@ Answers for [File formats](/seq-data/file-formats) exercise.
 | pKP1-NDM-1.gemini       | pKP1-NDM-1.sorted.bam  |
 | pKP1-NDM-1.pisces       | pKP1-NDM-1.vcf         |
 
-**List other common file extensions people use?**
+## List other common file extensions people use?
 
 | Format               | File extensions                                            |
 |----------------------|--------------------------------------------------------|
@@ -37,7 +37,7 @@ Answers for [File formats](/seq-data/file-formats) exercise.
 | _FAST5_               | .fast5 |
 
 
-**Can you define some general rules to determine the file format?**
+## Can you define some general rules to determine the file format?
 
 * **pKP1-NDM-1.aries**: FASTA files start with a header line starting with '>', followed by the sequence data.
 
