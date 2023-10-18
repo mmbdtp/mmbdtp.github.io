@@ -49,6 +49,8 @@ Yes. No adapter is detected now.
 * We now have a single main GC peak due to removing the adapter.
 * N content is the same as before as we don’t have any Ns in these reads.
 
+If these plots are unclear, you can refer to the notes for the previous exercise, [Answers to exercise 2](/seq-data/short-read-qc-answers). 
+
 Answers for [short-read-qc exercises]({{site.baseurl}}/modules/sequencing/short-read-qc/)
 
 [Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).
