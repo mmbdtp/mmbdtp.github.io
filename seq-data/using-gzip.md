@@ -92,10 +92,11 @@ gunzip -c compressed_data.gz | command_to_process_data
 
 **What happens to the file extension after compressing with `gzip`?**
 
-**Can you combine the steps in exercise 1 and 2, to create and compress a file in one step?**
+**How can you view the contents of these files?**
 
 **What is the difference between `|` and `>`?**
 
+**Can you combine the steps in exercise 1 and 2, to create and compress a file in one step?**
 
 This is difficult. Hint, use piping. 
 
