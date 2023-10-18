@@ -61,7 +61,7 @@ This is the an example header line that we could see in a FASTQ file:
 * `0`: This is the number of control bits
 * `CGCAGAAC`, `ACAGAGTT`: These are the index sequences (also known as barcode sequences)
 
-This relates back to what we saw earlier this week. Say for Illumina, sequencing machines contain one or more flow cells and each of these flow cells contains one or more lanes. Further, each lane has hundreds of quadrants, called tiles, containing oligos that bind your library.  Illumina machines employ sequencing by synthesis technology. First, individual reads are amplified in tight clonal clusters, which is done to increase signal. This amplification uses the terminal elements of the adapter in a process referred to as bridge amplification. After amplification, a PCR-like reaction is used to incorporate fluorescent nucleotides one at a time.
+This relates back to what we saw earlier this week. Say, for Illumina, sequencing machines contain one or more flow cells and each of these flow cells contains one or more lanes. Further, each lane has hundreds of quadrants, called tiles, containing oligos that bind your library.  Illumina machines employ sequencing by synthesis technology. First, individual reads are amplified in tight clonal clusters, which is done to increase signal. This amplification uses the terminal elements of the adapter in a process referred to as bridge amplification. After amplification, a PCR-like reaction is used to incorporate fluorescent nucleotides one at a time.
 
 ![Alt text](image-3.png)
 
@@ -69,20 +69,19 @@ For each sequencing cycle completed, an image like the one above is produced. Ea
 
 Many issues can arise during the sequencing by synthesis process. A common issue is the tendency for some fragments in a clonal cluster to not incorporate a nucleotide toward the end of the process, when sequencing reagents become more limiting. This leads to ambiguity in base calls near the 3' end of reads. We will see examples of these errors (as the manifest in the output sequencing data) by the end of the module. 
 
-
 ### Representing errors or uncertainty in sequencing data
 
 Modern sequencing technologies can generate a massive number of sequence reads in a single experiment. However, no sequencing technology is perfect, and each instrument will generate different types and amount of errors, such as incorrect nucleotides being called. These wrongly called bases are due to the technical limitations of each sequencing platform.
 
 Therefore, it is necessary to understand, identify and exclude error-types that may impact the interpretation of downstream analysis. Sequence quality control is therefore an essential first step in your analysis. Catching errors early saves time later on.
 
-But what does this quality score mean?
+**But what does this quality score mean?**
 
-The quality score for each sequence is a string of characters, one for each base of the nucleotide sequence, used to characterize the probability of misidentification of each base. The score is encoded using the ASCII character table (with some historical differences):
-
-To save space, the sequencer records an ASCII character to represent scores 0-42. For example 10 corresponds to “+” and 40 corresponds to “I”. FastQC knows how to translate this. This is often called “Phred” scoring.
+The quality score for each sequence is a string of characters, one for each base of the nucleotide sequence, used to characterize the probability of misidentification of each base. The score is encoded using the ASCII character table (with some historical differences): 
 
 ![Sequence data quality](/seq-data/seq-quality.png)
+
+To save space, the sequencer records an ASCII character to represent scores 0-42. For example 10 corresponds to “+” and 40 corresponds to “I”. This is often called “Phred” scoring.
 
 So there is an ASCII character associated with each nucleotide, representing its Phred quality score, the probability of an incorrect base call:
 
