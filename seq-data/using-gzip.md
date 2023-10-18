@@ -4,42 +4,40 @@ layout: page
 
 # Using tar and gzip for fun and profit
 
-Gzip (GNU zip) compression is a widely used file compression and decompression format and tool that reduces the size of files or data streams to save storage space or reduce data transfer times over a network. It was developed as part of the GNU project and is commonly found in Unix-like operating systems, including Linux.
+> Gzip (GNU zip) compression is a widely used file compression and decompression format and tool that reduces the size of files or data streams to save storage space or reduce data transfer times over a network. It was developed as part of the GNU project and is commonly found in Unix-like operating systems, including Linux.
 
-Here's how gzip compression works:
+> tar is a command-line utility and a file format used for archiving and compressing files and directories. The term "tar" stands for "tape archive," refering to when data was stored on magnetic tapes. The "tar" utility is a commonly used tool for creating, extracting, and managing archive files in the tar format.
 
-1. **Data Compression**: Gzip uses the DEFLATE algorithm, which is a combination of LZ77 (Lempel-Ziv 77) and Huffman coding. This algorithm analyzes the input data for repeated sequences and replaces them with shorter representations. It is lossless, meaning that the original data can be fully reconstructed upon decompression.
+## Example files 
+Make some example files for us to play with.
 
-2. **File Format**: When gzip compresses a file, it creates a new file with a ".gz" extension. For example, if you have a file named "example.txt," running gzip on it will produce a compressed file called "example.txt.gz." The compressed file retains the original file's metadata, including permissions and timestamps.
-
-3. **Compression Ratio**: The compression ratio achieved by gzip depends on the nature of the data being compressed. Text files, log files, and other human-readable content often achieve good compression ratios, sometimes reducing the file size to a fraction of the original. In contrast, already compressed files like media files (e.g., MP3, JPEG) may not compress significantly.
-
-4. **Decompression**: To decompress a gzip-compressed file, you can use the `gzip` command-line tool, or various software applications that support gzip decompression. The command to decompress a gzip file is simply `gzip -d filename.gz` or `gunzip filename.gz`.
-
-5. **Streaming**: One of the advantages of gzip is that it supports streaming. You can compress or decompress data on the fly without the need to create intermediate files. This is especially useful for tasks like compressing log files as they are generated.
-
-Here's an example of how to use gzip for compression:
+You can use any combination of these, or make your own. Make at least 3 files. You can use a terminal text editor like vi or emacs, but do not use the GUI text editor.
 
 ```bash
-# To compress a file
-gzip filename
-
-# To decompress a file
-gzip -d filename.gz
+grep --help   > grep_help.txt
+touch empty_file.txt
+echo "This is some text" > sometext.txt
 ```
 
-Gzip is a fast and efficient compression method and is commonly used in web servers to compress content before sending it to clients. Modern web browsers support gzip compression, which allows websites to load faster by transmitting less data over the internet.
+### Exercise 1: Creating files
 
+**Create the some example file, as described above.** 
 
-In most Unix-like systems, `gzip` is pre-installed. To check if you have `gzip` installed, open a terminal and run:
+**What is `touch`? What does `touch` do if the file already exists?** 
+
+**From the example above, What does the `>` do for the grep output?**
+
+**What does `echo` do?**
+
+## Using gzip
+The remainered of this module will use the example files you've created to demonstrate how to use `gzip` and `tar`. Gzip allows use to compress files, while tar allows us to group files together. Let's start with gzip. 
+
+`gzip` should be pre-installed. To check if you have `gzip` installed, open a terminal and run:
 
 ```bash
 gzip --version
 ```
-
-If it's not installed, you can typically install it using your system's package manager (e.g., `apt`, `yum`, `brew`, etc.).
-
-## Basic Usage of Gzip
+If it's not installed, (tell us!) but you can typically install it using your system's package manager (e.g., `apt`, `yum`, `brew`, etc.).
 
 ### Compress a File
 
@@ -68,28 +66,6 @@ This will restore the original file, removing the `.gz` extension.
 - `-k` or `--keep`: Keep the original file after compression (by default, the original file is removed).
 - `-v` or `--verbose`: Display compression details.
 
-## Examples
-
-- To compress a file named `example.txt`:
-
-  ```bash
-  gzip example.txt
-  ```
-
-  This creates `example.txt.gz`.
-
-- To decompress `example.txt.gz` and keep the original file:
-
-  ```bash
-  gunzip -k example.txt.gz
-  ```
-
-- To compress multiple files and display compression details:
-
-  ```bash
-  gzip -v file1.txt file2.txt file3.txt
-  ```
-
 ## Compressing and Decompressing with Piping
 
 You can also use `gzip` and `gunzip` with pipes to compress and decompress data on the fly. For example, to compress the output of a command and save it to a file:
@@ -103,6 +79,23 @@ And to decompress and process data from a compressed file:
 ```bash
 gunzip -c compressed_data.gz | command_to_process_data
 ```
+
+### Exercise 2: Creating files
+
+**With the information above, and whatever else you can find via the internet, compress the files you created in Exercise 1.**
+
+**Now reverse it by decompressing those files**
+
+**What is the difference in size of the compressed files and the original files?**
+
+**Can you compress one of the files while keeping the original (decompressed)?** 
+
+**What happens to the file extension after compressing with gzip?**
+
+**Can you combine the steps in exercise 1 and 2, to create and compress a file in one step?**
+
+This is difficult. Hint, use piping. 
+
 
 [Next: Sequence file formats]({{site.baseurl}}/modules/sequencing/sequence-data/).
 
