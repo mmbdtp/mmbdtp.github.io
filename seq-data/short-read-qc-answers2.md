@@ -32,7 +32,6 @@ fastqc  female_oral2.trimmed.fastq.gz
 
 Yes. The vast majority of the bases have a quality score above 20 now.
 
-
 **Is the adapter gone?**
 
 ![Alt text](image-15.png)
