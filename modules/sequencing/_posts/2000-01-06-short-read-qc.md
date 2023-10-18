@@ -2,7 +2,9 @@
 title: Quality control for short reads
 ---
 
-In this section, we will be 
+In this section, we will be using some example data to assess the quality of short reads. We will use two tools, FASTQE and FASTQC. We will also use some tools to trim poor quality reads (or parts of reads).
+
+> Remember, the pKP1-NDM-1 reads are simulated reads, with minimal error. These are effectively "perfect" and will not be representative of real data. We can use this to compare with problematic data (female_oral2.fastq.gz)
 
 ## Where is the example data? 
 
