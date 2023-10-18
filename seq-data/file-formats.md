@@ -56,6 +56,8 @@ In general, example files should be in [https://zenodo.org/records/10018484](htt
 
 **What is this data?** This is simulated reads of a plasmid that carries _blaNDM_ genes, descibed here [https://doi.org/10.1128/aac.00368-16](https://doi.org/10.1128/aac.00368-16). _blaNDM_ genes confer carbapenem resistance and have been identified on transferable plasmids belonging to different incompatibility (Inc) groups. I chose a plasmid because it would create small files and would be easy to work with.
 
+[Answers for this exercise](/seq-data/file-formats-answers).
+
 
 [Next: FASTQ in detail](/seq-data/fastq-in-detail)
 
