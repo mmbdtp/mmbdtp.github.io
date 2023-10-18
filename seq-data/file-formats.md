@@ -52,9 +52,9 @@ Hint: Use the commands that we have seen before, such as `head`, `tail`, `less`,
 
 > This location is available if you are using the CLIMB-BIG-DATA notebook, if you are not using this notebook you can download a tarball of all the files from [Zenodo](https://zenodo.org/records/10018484/files/file-format-mystery.tar.gz?download=1) and extract it in your home directory.
 
-In general, example files should be in https://zenodo.org/records/10018484 
+In general, example files should be in [https://zenodo.org/records/10018484](https://zenodo.org/records/10018484).
 
-**What is this data?** This is simulated reads of a plasmid that carries _blaNDM_ genes, descibed here https://doi.org/10.1128/aac.00368-16. _blaNDM_ genes confer carbapenem resistance and have been identified on transferable plasmids belonging to different incompatibility (Inc) groups. I chose a plasmid because it would create small files and would be easy to work with.
+**What is this data?** This is simulated reads of a plasmid that carries _blaNDM_ genes, descibed here [https://doi.org/10.1128/aac.00368-16](https://doi.org/10.1128/aac.00368-16). _blaNDM_ genes confer carbapenem resistance and have been identified on transferable plasmids belonging to different incompatibility (Inc) groups. I chose a plasmid because it would create small files and would be easy to work with.
 
 
 [Next: FASTQ in detail](/seq-data/fastq-in-detail)
