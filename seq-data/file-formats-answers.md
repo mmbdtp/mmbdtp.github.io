@@ -175,6 +175,7 @@ CC1=GGGGGGGGGJJJJGJJJJJGCGJJGJJJJJJCJGJJGGGJJJGGGGGGJJGJCJJGGG8CJGCJJ8G8GCGCCGGG
 =GGGG=GGGGCGCCG=GGGGJCG=GGCGGGCGGGG8=GG8CCGGGGGGGCCCGCGGGGG1GGGGGGGGCG
 ```
 
+> As you get more familiar with data from a specific organism or datatype, you maybe able to identify the type of data simply by the file size. For example, for what I do, a 300MB file is likely to be a FASTQ file, while a 1MB file is likely to be a VCF file. 
 
 Back to [File formats](/seq-data/file-formats) exercise.
 

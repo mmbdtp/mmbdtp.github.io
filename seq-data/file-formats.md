@@ -50,7 +50,7 @@ For each of the files in `~/shared-team/week2/file-formats`, can you:
 
 Hint: Use the commands that we have seen before, such as `head`, `tail`, `less`, `cat`, `zcat` and so on. In case something gets stuck use CTRL-C or CTRL-Z. Ctrl+C is used to forcefully terminate a process, while Ctrl+Z is used to suspend a process and move it to the background, where it can be resumed or managed later. Remember that you can use pipes into `less` or `more` to make it easier to read the output of commands.
 
-> This location is available if you are using the CLIMB-BIG-DATA notebook, if you are not using this notebook you can download a tarball of all the files from https://zenodo.org/records/10018484/files/file-format-mystery.tar.gz?download=1 and extract it in your home directory.
+> This location is available if you are using the CLIMB-BIG-DATA notebook, if you are not using this notebook you can download a tarball of all the files from [Zenodo](https://zenodo.org/records/10018484/files/file-format-mystery.tar.gz?download=1) and extract it in your home directory.
 
 In general, example files should be in https://zenodo.org/records/10018484 
 
