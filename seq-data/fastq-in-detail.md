@@ -110,20 +110,28 @@ Using this formula, we can calculate that a quality score of 40 means only 0.000
 ```
 
 **Which ASCII character corresponds to the worst Phred score for Illumina 1.8+?**
-1. What is the Phred quality score of the 3rd nucleotide of the 1st sequence?
-1. What is the accuracy of this 3rd nucleotide?
 
-(answers below)
-1. The worst Phred score is the smallest one, so 0. For Illumina 1.8+, it corresponds to the ! character.
-1. The 3rd nucleotide of the 1st sequence has a ASCII character G, which correspond to a score of 38.
-1. The corresponding nucleotide G has an accuracy of almost 99.99%
-
-## Download example data 
+**What is the Phred quality score of the 3rd nucleotide of the following sequence?**
 
 ```
-wget https://zenodo.org/record/3977236/files/female_oral2.fastq-4143.gz  
+@M00970: .... 
+GTGCCAGCCGCCGCGGTAGTCCGACGTGGC
++ 
+GGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
 ```
 
+**What is the accuracy of this 3rd nucleotide?**
 
+[Answers for this exercise](/seq-data/fastq-in-detail-answers)
+
+[Next: Quality control of short reads (Illumina)]({{site.baseurl}}/modules/sequencing/short-read-qc/).
+
+
+### Citation
+
+Some of this material was adapted from:
+
+* Bérénice Batut, Maria Doyle, Alexandre Cormier, Anthony Bretaudeau, Laura Leroi, Erwan Corre, Stéphanie Robin, Erasmus+ Programme, Cameron Hyde, Quality Control (Galaxy Training Materials). https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html Online; accessed Wed Oct 18 2023
+* Hiltemann, Saskia, Rasche, Helena et al., 2023 Galaxy Training: A Powerful Framework for Teaching! PLOS Computational Biology 10.1371/journal.pcbi.1010752
 
 [Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).
