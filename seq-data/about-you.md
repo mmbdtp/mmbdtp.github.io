@@ -8,6 +8,7 @@ Looks like you have me (Nabil) for these days and into next week. It would be go
 
 * How difficult did you find the material in week 1?
 * What's your prior experience with this type of material (computing, bioinformatics, sequencing, etc.)?
+* Which areas did you find easy?
 * Which areas did you struggle with?
 * What aspects of bioinformatics are required for your project?
 * Did you tune out or were overwhelmed during week 1? 
