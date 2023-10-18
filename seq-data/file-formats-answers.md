@@ -39,14 +39,16 @@ Answers for [File formats](/seq-data/file-formats) exercise.
 
 ## Can you define some general rules to determine the file format?
 
-* **pKP1-NDM-1.aries**: FASTA files start with a header line starting with '>', followed by the sequence data.
+#### pKP1-NDM-1.aries
+FASTA files start with a header line starting with '>', followed by the sequence data.
 
 ```
 >KF992018.2 Klebsiella pneumoniae strain KP1 plasmid pKP1-NDM-1, complete sequence
 GATAGGCTCAGATAAACAGACCTTACCCTCGCATCGAGAACCGCTTGCCCTCCAGCATCGAGAGACGGTG
 ```
 
-* **pKP1-NDM-1.cancer**: SAM files start with a header line starting with '@', followed by the sequence data. SAM format is fairly complicated, but there is detailed specification online, https://en.wikipedia.org/wiki/SAM_(file_format). 
+#### pKP1-NDM-1.cancer
+SAM files start with a header line starting with '@', followed by the sequence data. SAM format is fairly complicated, but there is detailed specification online, https://en.wikipedia.org/wiki/SAM_(file_format). 
 
 ```
 @HD     VN:1.6  SO:unsorted     GO:query
@@ -55,7 +57,8 @@ GATAGGCTCAGATAAACAGACCTTACCCTCGCATCGAGAACCGCTTGCCCTCCAGCATCGAGAGACGGTG
 KF992018.2-55020        83      KJ802404.1      125388  60      150M    =      125339   -199    TATTGGAGCTGGGTTGGAGCTACTTAGCCAACTAATCGAAAATAATGGGAGTTGGAAATGTGTTAGTTGGTCAAAAGTTGGAATCGCCGGAGCGATTGGGGCTATAGGTGGCGGCTGGGCGTCAGGAGTTTTCAGACATGCCAGCTCCGG  GCGGGGGGGG1GGGGGCGCCCGGGGGGGCC8GG=8GGGGCGGGCGG=GCJGGGG=GCCGCGGGG=GGGG=GGGCCGCG8G8JJCGJC8GGGJJCJGJJGGGGGGJJJGGGJJGJCJJJJJJGJJGCGJJJJJGJJJJGGGGGGGGG=1CC NM:i:0   ms:i:300        AS:i:300        nn:i:0  tp:A:P  cm:i:17 s1:i:183       s2:i:0   de:f:0  rl:i:0
 ```
 
-* **pKP1-NDM-1.gemini**: BAM files start with a header line starting with '@', followed by the mapping data. This one is tricky, because it is a binary file in its own format. To figure this out, I did the following
+#### pKP1-NDM-1.gemini
+BAM files start with a header line starting with '@', followed by the mapping data. This one is tricky, because it is a binary file in its own format. To figure this out, I did the following
 
 ```bash 
 head pKP1-NDM-1.gemini 
@@ -69,7 +72,8 @@ The `zcat` output looked like a slightly garbled `bam` file, to work with `bam` 
 
 The final output is the same as the `sam` file above, so the validation is the same as for the `sam` file.
 
-* **pKP1-NDM-1.leo**: This is a BED file. BED files, like quite a few formats, are a tabular (tab-delimited) table. 
+#### pKP1-NDM-1.leo
+This is a BED file. BED files, like quite a few formats, are a tabular (tab-delimited) table. 
 
 A typical BED file contains the following columns:
 
@@ -88,7 +92,8 @@ KJ802404.1      0       28      KF992018.2-40806/1      8       +
 KJ802404.1      0       134     KF992018.2-40026/2      60      +
 ```
 
-* **pKP1-NDM-1.libra**: This is a GFF file. This is another tabular file format, but with a different structure to BED files. Much of the information is the same and it can be hard to tell the difference. 
+#### pKP1-NDM-1.libra
+This is a GFF file. This is another tabular file format, but with a different structure to BED files. Much of the information is the same and it can be hard to tell the difference. 
 
 A typical GFF file contains tab-delimited fields with specific information about genomic features. The fields in a GFF file are as follows:
 
@@ -107,7 +112,8 @@ KJ802404.1      bed2gff KF992018.2-50856/1      1       100     60      +      .
 KJ802404.1      bed2gff KF992018.2-41754/2      1       60      60      +      .KF992018.2-41754/2;
 ```
 
-* **pKP1-NDM-1.pisces**: This is a VCF file. The `#` denote header lines, the `#CHROM` line is the header line for the data. The actual data, which are  variant calls, follows after and is tab-delimited. I don't remember the specifics of each file format if I haven't worked with them for a while. I would have to look up the VCF specification to remember the details, see https://en.wikipedia.org/wiki/Variant_Call_Format for details. 
+#### pKP1-NDM-1.pisces
+This is a VCF file. The `#` denote header lines, the `#CHROM` line is the header line for the data. The actual data, which are  variant calls, follows after and is tab-delimited. I don't remember the specifics of each file format if I haven't worked with them for a while. I would have to look up the VCF specification to remember the details, see https://en.wikipedia.org/wiki/Variant_Call_Format for details. 
 
 ```
 ##fileformat=VCFv4.2
@@ -121,7 +127,8 @@ KJ802404.1      2       .       N       T,<*>   0       .       DP=25;I16=0,0,17
 KJ802404.1      3       .       N       G,<*>   0       .       DP=25;I16=0,0,17,0,0,0,859,47439,0,0,1020,61200,0,0,361,8477;QS=0,1,0;VDB=4.36512e-11;SGB=-0.690438;MQ0F=0      PL      255,51,0,255,51,255
 ```
 
-* **pKP1-NDM-1_R1.capricorn**: This is a binary file, a gzip file specifically, `zcat` will show us that it is a FASTA file as we saw before. The headers and the sequence length suggests it was a FASTQ file, but the quality scores are now removed. 
+#### pKP1-NDM-1_R1.capricorn
+This is a binary file, a gzip file specifically, `zcat` will show us that it is a FASTA file as we saw before. The headers and the sequence length suggests it was a FASTQ file, but the quality scores are now removed. 
 
 ```
 >KF992018.2-55020/1
@@ -138,7 +145,8 @@ AGTCGATGTCGCCATTGGTATAGCACCGAATTTGTCTGTAAAGGTGGAGAGTCATGACACCAGGGCAGTCCGCTCGAAGT
 GCTTCAAACCTCTCTTGCCTGGTGGGGTACGTCGAGATAATGAACTCCTCGATACCAGCTTTGGCCGCGT
 ```
 
-* **pKP1-NDM-1.scorpio**: This is a compressed (gzipped) FASTQ file. We need `zcat` or similar to handle the file compression. You may have noticed the `/2` at the end of each header. This is a convention that tells us this is the mate pair (R2) of a paired-end read. This convention is not always enforced, so I would ask the person who gave me the file to confirm.  We will delve more into FASTQ format in the next section, so I will not give a full explantion here.
+##### pKP1-NDM-1.scorpio 
+This is a compressed (gzipped) FASTQ file. We need `zcat` or similar to handle the file compression. You may have noticed the `/2` at the end of each header. This is a convention that tells us this is the mate pair (R2) of a paired-end read. This convention is not always enforced, so I would ask the person who gave me the file to confirm.  We will delve more into FASTQ format in the next section, so I will not give a full explantion here.
 
 ```
 @KF992018.2-55020/2
@@ -155,8 +163,8 @@ CCCCGGGGGGCGGGJJJJJJ(JJJCJGJG18JJJJJGJCCJGG=JJJCJGGJJGG=CJJCJJ8GGJCJGC=CGGC=CGCG
 CGGCCGCGGCGG=GCGGCG=GGC=CJCCGGCGCGCGGGGCGGGGCGGGCG(GCCGGGCGGGCGGGGCGCC
 ```
 
-
-* **pKP1-NDM-1.taurus**: This is a compressed VCF file, i.e. a bcf file. We can view the contents with `zcat` or similar. 
+#### pKP1-NDM-1.taurus
+This is a compressed VCF file, i.e. a bcf file. We can view the contents with `zcat` or similar. 
 We can also use `bcftools view` or `bcftools query` (the same way we do with SAM/BAM). After this point, we handle this the same way as a vcf file (see above). 
 
 ```bash
@@ -164,7 +172,8 @@ KJ802404.1      147292  .       N       A,<*>   0       .       DP=74;I16=0,0,38
 KJ802404.1      147293  .       N       T,<*>   0       .       DP=75;I16=0,0,38,11,0,0,2794,173756,0,0,2880,169920,0,0,900,20296;QS=0,1,0;VDB=0.975609;SGB=-0.693147;MQSB=0.99742;MQ0F=0       PL      255,148,0,255,148,255
 ```
 
-* **pKP1-NDM-1.virgo**: This is a compressed FASTQ file. We can view the contents with `zcat` or similar. You may have noticed the `/1` at the end of each header. This is a convention that tells us this is the first read pair (R1) of a paired-end read. This convention is not always enforced, so I would ask the person who gave me the file to confirm. We will delve more into FASTQ format in the next section, so I will not give a full explantion here.
+#### pKP1-NDM-1.virgo
+This is a compressed FASTQ file. We can view the contents with `zcat` or similar. You may have noticed the `/1` at the end of each header. This is a convention that tells us this is the first read pair (R1) of a paired-end read. This convention is not always enforced, so I would ask the person who gave me the file to confirm. We will delve more into FASTQ format in the next section, so I will not give a full explantion here.
 
 ```bash
 @KF992018.2-55020/1
