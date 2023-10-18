@@ -142,4 +142,6 @@ If the quality of the reads is not good, we should always first check what is wr
 
 You can also ask the sequencing facility about it, especially if the quality is really bad: the quality treatments can not solve everything. If too many bad quality bases are cut away, the corresponding reads then will be filtered out and you lose them.
 
+Answers for [short-read-qc exercises]({{site.baseurl}}/modules/sequencing/short-read-qc/)
+
 [Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).

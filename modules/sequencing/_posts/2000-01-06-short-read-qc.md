@@ -90,27 +90,7 @@ fastqc --help
 
 **female_oral2.fastq.gz data looks terrible, we should probably resequence it, but if we had to; how could we improve the quality?**
 
-
-
 [Answers to exercise 2](/seq-data/short-read-qc-answers)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### Citation
 
