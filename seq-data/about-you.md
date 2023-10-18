@@ -18,7 +18,7 @@ You can either:
 * Keep the responses for yourself OR 
 * Email your responses to <nabil-fareed.alikhan@quadram.ac.uk> OR 
 * post on the discord, OR 
-* you can present here in the this session. 
+* you can present your answers here in this session. 
 
 
 [Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).

@@ -23,12 +23,40 @@ Here are some common genomics sequence file formats, some of which we have menti
 
 ## Exercise: Exploring file formats
 
-For each of the examples below. Can you:
+The post-doc is on holiday, and you have been given a directory of mysterious sequence data files. You need to figure out what file format each file is in.
+
+```bash
+jovyan:~/shared-team/week2/file-formats$ ls -lag 
+total 68837
+drwxr-xr-x 2 users       10 Oct 18 13:47 .
+drwxr-xr-x 3 users        1 Oct 18 13:29 ..
+-rw-r--r-- 1 users   141566 Oct 18 13:32 pKP1-NDM-1.aries
+-rw-r--r-- 1 users 24137926 Oct 18 13:32 pKP1-NDM-1.cancer
+-rw-r--r-- 1 users  4170743 Oct 18 13:32 pKP1-NDM-1.gemini
+-rw-r--r-- 1 users  2598233 Oct 18 13:32 pKP1-NDM-1.leo
+-rw-r--r-- 1 users  4239662 Oct 18 13:32 pKP1-NDM-1.libra
+-rw-r--r-- 1 users 24539958 Oct 18 13:32 pKP1-NDM-1.pisces
+-rw-r--r-- 1 users  1316209 Oct 18 13:32 pKP1-NDM-1_R1.capricorn
+-rw-r--r-- 1 users  2728498 Oct 18 13:32 pKP1-NDM-1.scorpio
+-rw-r--r-- 1 users  3966215 Oct 18 13:42 pKP1-NDM-1.taurus
+-rw-r--r-- 1 users  2647629 Oct 18 13:32 pKP1-NDM-1.virgo
+```
+
+For each of the files in `~/shared-team/week2/file-formats`, can you:
 
 * Identify the file format?
-* List the common extensions people use?
-* Can you define some general rules to determine the file format?
+* List the common file extensions people use for the file formats you find?
+* Can you define some general rules to differeniate the file format?
 
-[Next: Using tar and gzip](/seq-data/fastq-in-detail)
+Hint: Use the commands that we have seen before, such as `head`, `tail`, `less`, `cat`, `zcat` and so on. In case something gets stuck use CTRL-C or CTRL-Z. Ctrl+C is used to forcefully terminate a process, while Ctrl+Z is used to suspend a process and move it to the background, where it can be resumed or managed later. Remember that you can use pipes into `less` or `more` to make it easier to read the output of commands.
+
+> This location is available if you are using the CLIMB-BIG-DATA notebook, if you are not using this notebook you can download a tarball of all the files from https://zenodo.org/records/10018484/files/file-format-mystery.tar.gz?download=1 and extract it in your home directory.
+
+In general, example files should be in https://zenodo.org/records/10018484 
+
+**What is this data?** This is simulated reads of a plasmid that carries _blaNDM_ genes, descibed here https://doi.org/10.1128/aac.00368-16. _blaNDM_ genes confer carbapenem resistance and have been identified on transferable plasmids belonging to different incompatibility (Inc) groups. I chose a plasmid because it would create small files and would be easy to work with.
+
+
+[Next: FASTQ in detail](/seq-data/fastq-in-detail)
 
 [Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).
