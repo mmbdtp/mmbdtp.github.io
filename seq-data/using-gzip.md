@@ -6,12 +6,12 @@ layout: page
 
 > Gzip (GNU zip) compression is a widely used file compression and decompression format and tool that reduces the size of files or data streams to save storage space or reduce data transfer times over a network. It was developed as part of the GNU project and is commonly found in Unix-like operating systems, including Linux.
 
-> tar is a command-line utility and a file format used for archiving and compressing files and directories. The term "tar" stands for "tape archive," refering to when data was stored on magnetic tapes. The "tar" utility is a commonly used tool for creating, extracting, and managing archive files in the tar format.
+> `tar` is a command-line utility and a file format used for archiving and compressing files and directories. The term "tar" stands for "tape archive," refering to when data was stored on magnetic tapes. The `tar` utility is a commonly used tool for creating, extracting, and managing archive files in the tar format.
 
 ## Example files 
 Make some example files for us to play with.
 
-You can use any combination of these, or make your own. Make at least 3 files. You can use a terminal text editor like vi or emacs, but do not use the GUI text editor.
+You can use any combination of these, or make your own. Make at least 3 files. You can use a terminal text editor like `vi` or `emacs`, but do not use the GUI text editor.
 
 ```bash
 grep --help   > grep_help.txt
@@ -29,15 +29,15 @@ echo "This is some text" > sometext.txt
 
 **What does `echo` do?**
 
-## Using `gzip`
-The remainered of this module will use the example files you've created to demonstrate how to use `gzip` and `tar`. Gzip allows use to compress files, while tar allows us to group files together. Let's start with gzip. 
+**How can you view the contents of these files?**
 
-`gzip` should be pre-installed. To check if you have `gzip` installed, open a terminal and run:
+## Using `gzip`
+The remainered of this module will use the example files you've created to demonstrate how to use `gzip` and `tar`. `gzip` allows use to compress files, while `tar` allows us to group files together. Let's start with `gzip`.  `gzip` should be pre-installed. To check if you have `gzip` installed, open a terminal and run:
 
 ```bash
 gzip --version
 ```
-If it's not installed, (tell us!) but you can typically install it using your system's package manager (e.g., `apt`, `yum`, `brew`, etc.).
+If it's not installed, (tell us!) but on other systems you can typically install it using your system's package manager (e.g., `apt`, `yum`, `brew`, etc.).
 
 #### Compress a File
 
