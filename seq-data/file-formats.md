@@ -44,9 +44,17 @@ drwxr-xr-x 3 users        1 Oct 18 13:29 ..
 
 For each of the files in `~/shared-team/week2/file-formats`, can you:
 
+* Copy these files to your home directory. 
 * Identify the file format?
 * List the common file extensions people use for the file formats you find?
 * Can you define some general rules to differeniate the file format?
+
+**How to copy to your home directory**
+
+```bash
+cp -r ~/shared-team/week2/file-formats ~/
+cd ~/file-formats
+```
 
 Hint: Use the commands that we have seen before, such as `head`, `tail`, `less`, `cat`, `zcat` and so on. In case something gets stuck use CTRL-C or CTRL-Z. Ctrl+C is used to forcefully terminate a process, while Ctrl+Z is used to suspend a process and move it to the background, where it can be resumed or managed later. Remember that you can use pipes into `less` or `more` to make it easier to read the output of commands.
 

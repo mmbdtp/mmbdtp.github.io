@@ -2,13 +2,70 @@
 title: Quality control for short reads
 ---
 
+In this section, we will be 
 
+## Where is the example data? 
 
-## Download example data 
+We will use some example data, found in `~/shared-team/week2/short-read-qc`. Copy it to your home directory. 
+
+```bash
+cp -r ~/shared-team/week2/short-read-qc ~/
+cd ~/short-read-qc
+```
+
+**If you are not using a CLIMB-BIG-DATA notebook, you will need to download the data.**
+```
+wget -O female_oral2.fastq.gz https://zenodo.org/record/3977236/files/female_oral2.fastq-4143.gz?download=1
+wget -O pKP1-NDM-1_R1.fastq.gz https://zenodo.org/records/10018484/files/pKP1-NDM-1_R1.fastq.gz?download=1
+wget -O pKP1-NDM-1_R2.fastq.gz https://zenodo.org/records/10018484/files/pKP1-NDM-1_R2.fastq.gz?download=1
+```
+
+## Required software
+
+If you are not using a CLIMB-BIG-DATA notebook, you may need to install some software. This is how to do it via conda: 
 
 ```
-wget https://zenodo.org/record/3977236/files/female_oral2.fastq-4143.gz  
+conda install fastqe fastqc -y
 ```
+
+## Assess quality with FASTQE 
+
+To take a look at sequence quality along all sequences, we can use FASTQE. It is an open-source tool that provides a simple and fun way to quality control raw sequence data and print them as emoji. You can use it to give a quick impression of whether your data has any problems of which you should be aware before doing any further analysis.
+
+Rather than looking at quality scores for each individual read, FASTQE looks at quality collectively across all reads within a sample and can calculate the mean for each nucleotide position along the length of the reads. The quality scores are explained in the [FASTQE documentation](https://github.com/fastqe/fastqe#scale). 
+
+### Exercise 1: Run FASTQE
+
+**Run FASTQE on the example data, pKP1-NDM-1_R1.fastq.gz and female_oral2.fastq.gz. One at a time. Which data has the better average quality?**
+
+**Which portion of read has the lower average quality, and for which file?**
+
+**What is the lowest mean score in female_oral2.fastq.gz?**
+
+> FASTQE is a fun tool, but we use something more ... comprehensive ... in practice.
+
+[Answers to exercise 1](/seq-data/short-read-qc-answers)
+
+### Assess quality with FASTQC
+
+An additional or alternative way we can check sequence quality is with [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/). It provides a modular set of analyses which you can use to check whether your data has any problems of which you should be aware before doing any further analysis. We can use it, for example, to assess whether there are known adapters present in the data. We'll run it on the FASTQ file.
+
+> FASTQC will also work for long reads. 
+
+### Exercise 2: Run FASTQC
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
