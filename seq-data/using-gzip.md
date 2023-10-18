@@ -39,7 +39,7 @@ gzip --version
 ```
 If it's not installed, (tell us!) but you can typically install it using your system's package manager (e.g., `apt`, `yum`, `brew`, etc.).
 
-### Compress a File
+#### Compress a File
 
 To compress a file using `gzip`, you can run the following command:
 
@@ -49,7 +49,7 @@ gzip filename
 
 Replace `filename` with the name of the file you want to compress. This command will create a compressed file with the `.gz` extension, such as `filename.gz`.
 
-### Decompress a File
+#### Decompress a File
 
 To decompress a `.gz` file, use the `gunzip` command:
 
@@ -59,14 +59,14 @@ gunzip filename.gz
 
 This will restore the original file, removing the `.gz` extension.
 
-## Compression Options
+#### Compression Options
 
 - `-d` or `--decompress`: Decompress the specified file(s).
 - `-c` or `--stdout`: Write compressed data to standard output (useful for piping data).
 - `-k` or `--keep`: Keep the original file after compression (by default, the original file is removed).
 - `-v` or `--verbose`: Display compression details.
 
-## Compressing and Decompressing with Piping
+#### Compressing and Decompressing with Piping
 
 You can also use `gzip` and `gunzip` with pipes to compress and decompress data on the fly. For example, to compress the output of a command and save it to a file:
 
