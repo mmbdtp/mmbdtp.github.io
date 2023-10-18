@@ -169,7 +169,7 @@ tar -xvjf archive.tar.bz2
 
 **Now reverse it by extracting those files**
 
-**What is the difference in size of the `tar` file and the sum of the original files?**
+**What is the difference in size of the `tar` file and the sum of the original files? Is this what you expected?**
 
 **What is the difference in file name of the output file between directly compressing with `gzip` and using `tar`?**
 
@@ -182,6 +182,8 @@ i.e. create a `.tar.gz` file in one step.
 Hint. Ask Arnie:
 
 ![Alt text](image-1.png)
+
+**Try running `zcat` on this file, what does zcat do?**
 
 
 [Answers to exercise questions](/seq-data/using-gzip-answers)

@@ -108,22 +108,86 @@ Don't forget to ask Arnie:
 **With the information above, and whatever else you can find via the internet, bundle all the files you created in Exercise 1 into a tarball**
 
 ```bash
-tar -cvf my_files.tar grep_help.txt sometext.txt other_file.txt
+tar -cf my_files.tar grep_help.txt sometext.txt other_file.txt
+```
+
+Here's a breakdown of the command and its options:
+
+* `tar`: This is the command itself, used to work with tar archives.
+* `-c`: This option stands for "create." It tells tar to create a new archive.
+* `-f my_files.tar`: This option is followed by the name of the archive file you want to create. In this case, "my_files.tar" is the name of the archive file.
+* `grep_help.txt sometext.txt other_file.txt`: These are the names of the files you want to include in the archive. The tar command will add these three files to "my_files.tar."
+
+You can look inside the archive with `-t`:
+
+```bash
+tar -tf my_files.tar 
 ```
 
 **Now reverse it by extracting those files**
 
+```bash
+tar -xf my_files.tar 
+```
+Here's a breakdown of the command and its options:
+
+* `tar`: This is the command itself, used to work with tar archives.
+* `-x`: This option stands for "extract." It tells tar to extract the contents of the specified archive.
+* `-f my_files.tar`: This option is followed by the name of the archive file you want to extract. In this case, "my_files.tar" is the name of the archive file from which you want to extract files.
+
 **What is the difference in size of the `tar` file and the sum of the original files?**
+
+* grep_help.txt + sometext.txt: 4060
+* my_files.tar: 10240
+
+Why is this? `tar` archives have a minimum size of 10240 bytes by default; see the GNU `tar` manual for details (but this is not GNU-specific). The result will still be bigger than sum of the file size, because file. tar stores metadata about file. Remember, `tar` will bundle files together, not compress them. 
 
 **What is the difference in file name of the output file between directly compressing with `gzip` and using `tar`?**
 
+`tar` will use whatever file name you have specified. It will not add additional file extensions. That is, you can make a `tarball` and not specify .tar as the file extension.
+
 **What is the purpose of the `-v` flag in the `tar` command.**
+
+`-v`: This option stands for "verbose." It instructs tar to operate in verbose mode, which means it will display the names of the files as they are extracted from the archive. It provides feedback about the extraction process.
 
 **Can you combine the steps in exercise 2 and 3, to create an archive and compress it in one step?**
 
 i.e. create a `.tar.gz` file in one step. 
 
+```bash
+tar -cvzf my_files.tar.gz grep_help.txt sometext.txt ref.fasta 
+```
 
+**Try running `zcat` on this file, what does `zcat` do?**
+
+`zcat` is identical to `gunzip -c`. (On some systems, `zcat` may be installed as `gzcat` to preserve the original link to compress.) `zcat` uncompresses either a list of files on the command line or its standard input and writes the uncompressed data on standard output. `zcat` will uncompress files that have the correct magic number whether they have a .gz suffix or not.
+
+This is what I see for the file I created:
+
+```
+When FILE is '-', read standard input.  With no FILE, read '.' if
+recursive, '-' otherwise.  With fewer than two FILEs, assume -h.
+Exit status is 0 if any line is selected, 1 otherwise;
+if any error occurs and -q is not given, the exit status is 2.
+
+Report bugs to: bug-grep@gnu.org
+GNU grep home page: <https://www.gnu.org/software/grep/>
+General help using GNU software: <https://www.gnu.org/gethelp/>
+sometext.txt0000644000175000001440000000002214513716466012723 0ustar  jovyanusers
+This is some text
+
+ref.fasta0000644000175000001440000051240114512223535012104 0
+ustar  jovyanusers>KJ802404.1 Escherichia coli isolate GN568 plasmid pNDM-EcoGN568, complete
+ sequence
+ATGGACCACCAGCTAGAAAGTATCGACGGAACAATCATGAGCAAGAGAACCAAAGACAAAGACCTGGAGA
+AACTCGACGTAATCAAAGACTCACCGCAAATGAGCCTGTTTGAGATCATTGAATCTCCGGCCAAGAAAGA
+CGACTACTCCAACACCATCGAGATCTACGATGCGCTGCCGAAGTACATTTGGGACCAAAAGCGTGAGCAT
+GAAGATTTATCCAACGCTGTAGTGACACGACAATGCACCATCAGAGGCCAGCATTTCACGGTGAAGGTGA
+AGCCAGCCATCATCGAGAAGGATGACGGAAGAACCGTGCTGATCTACGCGGGACAGCGAGAGGAAATCCT
+TGAGGATGCTCTACGCAAGCTCGCAGTGAACGGGAAAGGCCATATCATCGAGGGCAAGGCTGGAGTCATG
+TTCACTCTGTACGAACTCCAGAAAGAGCTCTCGAAGATGGGTCACGGTTACAACCTGAACGAAATCAAGG
+AAGCAATCCAGGTTTGTCGTGGCGCAACACTCGAATGTATCAGTGATGACGGCGAAGCCTTCATCAGCTC
+```
 
 [Back to gzip exercise](/seq-data/using-gzip)
 
