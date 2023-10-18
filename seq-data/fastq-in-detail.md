@@ -102,9 +102,15 @@ Q = -10 log10(P)
 
 Using this formula, we can calculate that a quality score of 40 means only 0.00010 probability of an error.
 
-### Review questions 
+### Exercise 1: Review questions 
 
-1. Which ASCII character corresponds to the worst Phred score for Illumina 1.8+?
+**For the FASTQ header line below, what is the run ID, the indexes used and name of the instrument?**
+
+```
+@M00970:337:000000000-BR5KF:1:1102:17745:1557 1:N:0:CGCAGAAC+ACAGAGTT
+```
+
+**Which ASCII character corresponds to the worst Phred score for Illumina 1.8+?**
 1. What is the Phred quality score of the 3rd nucleotide of the 1st sequence?
 1. What is the accuracy of this 3rd nucleotide?
 
