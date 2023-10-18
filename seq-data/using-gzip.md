@@ -104,4 +104,6 @@ And to decompress and process data from a compressed file:
 gunzip -c compressed_data.gz | command_to_process_data
 ```
 
+[Next: Sequence file formats]({{site.baseurl}}/modules/sequencing/sequence-data/).
+
 [Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).

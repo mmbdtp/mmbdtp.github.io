@@ -29,5 +29,6 @@ For each of the examples below. Can you:
 * List the common extensions people use?
 * Can you define some general rules to determine the file format?
 
+[Next: Using tar and gzip](/seq-data/fastq-in-detail)
 
 [Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).
