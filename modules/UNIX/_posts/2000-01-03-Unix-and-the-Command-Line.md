@@ -75,6 +75,10 @@ Almost all Unix commands also have Wikipedia entries.
 - [https://en.wikipedia.org/wiki/Cd_(command)](https://en.wikipedia.org/wiki/Cd_(command))
 - [https://en.wikipedia.org/wiki/List_of_Unix_commands](https://en.wikipedia.org/wiki/List_of_Unix_commands)
 
+
+Here's a cheat sheet of UNIX commands from Fosswire: 
+- [Unix/Linux Command Cheat Sheet](https://files.fosswire.com/2007/08/fwunixref.pdf)
+
 ChatGPT will also give good answers to well posed questions about what a Unix command does and how to get the best out of it.
 
 ---
