@@ -6,7 +6,7 @@ In this section, we will be using some example data to assess the quality of sho
 
 > Remember, the pKP1-NDM-1 reads are simulated reads, with minimal error. These are effectively "perfect" and will not be representative of real data. We can use this to compare with problematic data (female_oral2.fastq.gz)
 
-## Where is the example data? 
+### Where is the example data? 
 
 We will use some example data, found in `~/shared-team/week2/short-read-qc`. Copy it to your home directory. 
 
@@ -24,7 +24,7 @@ wget -O pKP1-NDM-1_R2.fastq.gz https://zenodo.org/records/10018484/files/pKP1-ND
 
 **female_oral2.fastq.gz**: This is a microbiome sample (16S) from a snake [Jacques et al. 2021.](https://qubeshub.org/community/groups/coursesource/publications?id=2727&v=1).
 
-## Required software
+### Required software
 
 If you are not using a CLIMB-BIG-DATA notebook, you may need to install some software. This is how to do it via conda: 
 
@@ -50,7 +50,7 @@ Rather than looking at quality scores for each individual read, FASTQE looks at 
 
 > FASTQE is a fun tool, but we use something more ... comprehensive ... in practice.
 
-### Assess quality with FASTQC
+## Assess quality with FASTQC
 
 An additional or alternative way we can check sequence quality is with [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/). It provides a modular set of analyses which you can use to check whether your data has any problems of which you should be aware before doing any further analysis. We can use it, for example, to assess whether there are known adapters present in the data. We'll run it on the FASTQ files.
 
