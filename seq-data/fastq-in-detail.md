@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## About FASTQ 
 FASTQ is a common file format used in bioinformatics and genomics to represent raw DNA sequencing data. It contains information about the sequences of DNA or RNA fragments obtained from a high-throughput sequencing experiment, along with quality scores for each base in the sequence. The name "FASTQ" is derived from the file extension ".fastq." 
 

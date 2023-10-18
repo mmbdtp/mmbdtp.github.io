@@ -32,6 +32,8 @@ _Bioinformatics tutorial led by Nabil-Fareed Alikhan_
 
 > Much of Bioinformatics (via computing) is about building musle memory around operating a computer, and memorizing the syntax. These exercises will give you oppotunity to practice these skills, even though some these topics will have been presented in week 1. 
 
+[Quiz about you](/seq-data/about-you)
+
 * **[File compression]({{site.baseurl}}/modules/sequencing/file-compression/)**
     * [Using tar and gzip](/seq-data/using-gzip)
 * **[Revisiting sequence file formats]({{site.baseurl}}/modules/sequencing/sequence-data/)**

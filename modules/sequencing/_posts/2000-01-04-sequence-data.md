@@ -33,7 +33,7 @@ Sequencing instruments may also give ambiguous signals, which are represented by
 
 Read [Johnson 2010](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2865858/) for more details. 
 
-### Exercise 
+### Exercise 1: Nucleotides
  
 **Convert the following sequences to all possible combinations**
 
