@@ -29,7 +29,7 @@ echo "This is some text" > sometext.txt
 
 **What does `echo` do?**
 
-## Using gzip
+## Using `gzip`
 The remainered of this module will use the example files you've created to demonstrate how to use `gzip` and `tar`. Gzip allows use to compress files, while tar allows us to group files together. Let's start with gzip. 
 
 `gzip` should be pre-installed. To check if you have `gzip` installed, open a terminal and run:
@@ -80,7 +80,7 @@ And to decompress and process data from a compressed file:
 gunzip -c compressed_data.gz | command_to_process_data
 ```
 
-### Exercise 2: Creating files
+### Exercise 2: Using `gzip`
 
 **With the information above, and whatever else you can find via the internet, compress the files you created in Exercise 1.**
 
@@ -90,12 +90,100 @@ gunzip -c compressed_data.gz | command_to_process_data
 
 **Can you compress one of the files while keeping the original (decompressed)?** 
 
-**What happens to the file extension after compressing with gzip?**
+**What happens to the file extension after compressing with `gzip`?**
 
 **Can you combine the steps in exercise 1 and 2, to create and compress a file in one step?**
 
+**What is the difference between `|` and `>`?**
+
+
 This is difficult. Hint, use piping. 
 
+[Answers to exercise questions](/seq-data/using-gzip-answers)
+
+## Using tar
+
+To use the `tar` command in a Linux or Unix-like operating system, you can perform various operations, such as creating archives, extracting files from archives, and more. Here's a basic explanation of how to use `tar` with some common operations:
+
+#### Creating a Tar Archive
+
+To create a tar archive, you typically use the `-c` (create) option, followed by the `-f` (file) option to specify the archive file's name. You also list the files and directories you want to include in the archive. For example:
+
+```bash
+tar -cvf archive.tar file1.txt file2.txt directory/
+```
+
+* `-c`: Create a new archive.
+* `-v`: Verbose mode (optional, for displaying the progress).
+* `-f archive.tar`: Specify the archive file name.
+* `file1.txt file2.txt directory/`: List the files and directories to include in the archive.
+
+#### Viewing the Contents of a Tar Archive
+
+You can list the contents of a tar archive without extracting them using the `-t` (list) option:
+
+```bash
+tar -tvf archive.tar
+```
+
+- `-t`: List the contents of the archive.
+
+#### Extracting Files from a Tar Archive
+
+To extract files from a tar archive, you can use the `-x` (extract) option:
+
+```bash
+tar -xvf archive.tar
+```
+
+- `-x`: Extract files from the archive.
+
+#### Extracting Files to a Specific Directory
+
+You can specify the target directory for extraction using the `-C` (change directory) option:
+
+```bash
+tar -xvf archive.tar -C /path/to/target_directory
+```
+
+- `-C /path/to/target_directory`: Extract files to the specified directory.
+
+#### Compressing Tar Archives
+
+You can create compressed tar archives using the `gzip` or `bzip2` compression utilities. For example:
+
+- To create a gzip-compressed tar archive: `tar -cvzf archive.tar.gz file1.txt file2.txt directory/`
+- To create a bzip2-compressed tar archive: `tar -cvjf archive.tar.bz2 file1.txt file2.txt directory/`
+
+To extract from compressed archives, you can use the `-z` option for gzip-compressed archives or the `-j` option for bzip2-compressed archives.
+
+```bash
+tar -xvzf archive.tar.gz
+tar -xvjf archive.tar.bz2
+```
+
+### Exercise 3: Using `tar`
+
+**With the information above, and whatever else you can find via the internet, bundle all the files you created in Exercise 1 into a tarball**
+
+**Now reverse it by extracting those files**
+
+**What is the difference in size of the `tar` file and the sum of the original files?**
+
+**What is the difference in file name of the output file between directly compressing with `gzip` and using `tar`?**
+
+**What is the purpose of the `-v` flag in the `tar` command.**
+
+**Can you combine the steps in exercise 2 and 3, to create an archive and compress it in one step?**
+
+i.e. create a `.tar.gz` file in one step. 
+
+Hint. Ask Arnie:
+
+![Alt text](image-1.png)
+
+
+[Answers to exercise questions](/seq-data/using-gzip-answers)
 
 [Next: Sequence file formats]({{site.baseurl}}/modules/sequencing/sequence-data/).
 
