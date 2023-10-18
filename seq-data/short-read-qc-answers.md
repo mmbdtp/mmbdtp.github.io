@@ -38,17 +38,17 @@ fastqc pKP1-NDM-1_R1.fastq.gz pKP1-NDM-1_R2.fastq.gz
 
 **Which metrics are a major difference between the two reports?**
 
-* [FAIL]Per base sequence quality
-* [WARNING]Per sequence quality scores
-* [FAIL]Per base sequence content
-* [FAIL]Per sequence GC content
-* [FAIL]Sequence Duplication Levels
-* [FAIL]Overrepresented sequences
-* [FAIL]Adapter Content
+* Per base sequence quality
+* Per sequence quality scores
+* Per base sequence content
+* Per sequence GC content
+* Sequence Duplication Levels
+* Overrepresented sequences
+* Adapter Content
 
 **What is the parts of the report are missing for pKP1-NDM? Can you explain why?**
 
-* [WARNING]Per tile sequence quality
+* Per tile sequence quality
 
 Look at the FASTQ file header for pKP1-NDM-1_R1.fastq.gz.
 ```bash
@@ -71,18 +71,18 @@ On the x-axis are the base position in the read. In this example, the sample con
 
 For each position, a boxplot is drawn with:
 
-* the median value, represented by the central red line
-* the inter-quartile range (25-75%), represented by the yellow box
-* the 10% and 90% values in the upper and lower whiskers
-* the mean quality, represented by the blue line
+* The median value, represented by the central red line.
+* The inter-quartile range (25-75%), represented by the yellow box.
+* The 10% and 90% values in the upper and lower whiskers.
+* The mean quality, represented by the blue line.
 * The y-axis shows the quality scores. The higher the score, the better the base call. The background of the graph divides the y-axis into very good quality scores (green), scores of reasonable quality (orange), and reads of poor quality (red).
 
 It is normal with all Illumina sequencers for the median quality score to start out lower over the first 5-7 bases and to then rise. The quality of reads on most platforms will drop at the end of the read. This is often due to signal decay or phasing during the sequencing run. The recent developments in chemistry applied to sequencing has improved this somewhat, but reads are now longer than ever.
 
 Why do the 3' ends of reads have lower quality?  
 
-* Signal decay: The fluorescent signal intensity decays with each cycle of the sequencing process. Due to the degrading fluorophores, a proportion of the strands in the cluster are not being elongated. The proportion of the signal being emitted continues to decrease with each cycle, yielding to a decrease of quality scores at the 3’ end of the read.
-* Phasing: The signal starts to blur with the increase of number of cycles because the cluster looses synchronicity. As the cycles progress, some strands get random failures of nucleotides to incorporate due to incomplete removal of the 3’ terminators and fluorophores or incorporation of nucleotides without effective 3’ terminators. This leads to a decrease in quality scores at the 3’ end of the read.
+* **Signal decay**: The fluorescent signal intensity decays with each cycle of the sequencing process. Due to the degrading fluorophores, a proportion of the strands in the cluster are not being elongated. The proportion of the signal being emitted continues to decrease with each cycle, yielding to a decrease of quality scores at the 3’ end of the read.
+* **Phasing**: The signal starts to blur with the increase of number of cycles because the cluster looses synchronicity. As the cycles progress, some strands get random failures of nucleotides to incorporate due to incomplete removal of the 3’ terminators and fluorophores or incorporation of nucleotides without effective 3’ terminators. This leads to a decrease in quality scores at the 3’ end of the read.
 
 This applies to Illumina, and the trend will be different for other sequencing platforms.
 
@@ -131,7 +131,7 @@ RNA sequencing data may have some transcripts that are so abundant that they reg
 
 We tried to explain here there different FastQC reports and some use cases. More about this and also some common next-generation sequencing problems can be found on [QCFAIL.com](https://sequencing.qcfail.com/)
 
-> One of the key take homes is that Quality control is dependant on the type of sequencing you are doing. For example, amplicon data will have different quality concerns to random shotgun data. It's hard to give generic guidelines around quality. Quality control starts with YOU!
+> One of the key take homes is that quality control is dependant on the type of sequencing you are doing. For example, amplicon data will have different quality concerns to random shotgun data. It's hard to give generic guidelines around quality. Quality control starts with YOU!
 
 **female_oral2.fastq.gz data looks terrible, we should probably resequence it, but if we had to; how could we improve the quality?**
 
