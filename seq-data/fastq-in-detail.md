@@ -79,7 +79,7 @@ Therefore, it is necessary to understand, identify and exclude error-types that 
 
 The quality score for each sequence is a string of characters, one for each base of the nucleotide sequence, used to characterize the probability of misidentification of each base. The score is encoded using the ASCII character table (with some historical differences): 
 
-![Sequence data quality](/seq-data/seq-quality.png)
+![Sequence data quality](/seq-data/fastq-quality-encoding.png)
 
 To save space, the sequencer records an ASCII character to represent scores 0-42. For example 10 corresponds to “+” and 40 corresponds to “I”. This is often called “Phred” scoring.
 
