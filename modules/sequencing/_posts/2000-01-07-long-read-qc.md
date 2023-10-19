@@ -27,6 +27,8 @@ NanoPlot --fastq m64011_190830_220126.Q20.subsample.fastq.gz  --plots  kde hex  
 
 **Repeat this with FASTQC**
 
+[Answers](/seq-data/long-read-qc-answers) to these questions are available.
+
 ### Citation
 
 Some of this material was adapted from:
