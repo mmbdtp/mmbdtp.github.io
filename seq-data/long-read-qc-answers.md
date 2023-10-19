@@ -19,7 +19,7 @@ NanoPlot -h
 * `--plots kde hex dot`: Specify which bivariate plots have to be made.
 * `--N50`: Show the N50 mark in the read length histogram
 * `--fastq`: Data is in one or more fastq file(s) 
-* ` m64011_190830_220126.Q20.subsample.fastq.gz`: The fastq file to analyse
+* `m64011_190830_220126.Q20.subsample.fastq.gz`: The fastq file to analyse
 
 **Inspect the generated HTML file**
 Open `NanoPlot-report.html`. You may need to download these files to your local to read them properly. 
