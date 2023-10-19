@@ -29,9 +29,6 @@ NanoPlot --fastq  m64011_190830_220126.Q20.subsample.fastq.gz  --plots hex dot k
 **Repeat this with FASTQC**
 
 
-
-
-
 ### Citation
 
 Some of this material was adapted from:
