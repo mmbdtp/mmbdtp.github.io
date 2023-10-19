@@ -40,7 +40,7 @@ We will see later how to interpret these quality scores, i.e. is `G` for good? o
 
 Let's quickly discuss the header line. The header line (`@`) tells you a lot about the circumstances of where the read came from. Remember, in most sequencing technlogies we our sequenced reads are measurements taken across a flow cell. This an example of an Illumina NextSeq flow cell: 
 
-![Alt text](image-5.png)
+![Alt text](/seq-data/image-5.png)
 
 This is the an example header line that we could see in a FASTQ file:
 
@@ -63,7 +63,7 @@ This is the an example header line that we could see in a FASTQ file:
 
 This relates back to what we saw earlier this week. Say, for Illumina, sequencing machines contain one or more flow cells and each of these flow cells contains one or more lanes. Further, each lane has hundreds of quadrants, called tiles, containing oligos that bind your library.  Illumina machines employ sequencing by synthesis technology. First, individual reads are amplified in tight clonal clusters, which is done to increase signal. This amplification uses the terminal elements of the adapter in a process referred to as bridge amplification. After amplification, a PCR-like reaction is used to incorporate fluorescent nucleotides one at a time.
 
-![Alt text](image-3.png)
+![Alt text](/seq-data/image-3.png)
 
 For each sequencing cycle completed, an image like the one above is produced. Each colored dot corresponds to a clonal cluster derived from one DNA fragment. Illumina's processing algorithm takes images like the one above and translates it into a base call for each read at each position, along with a corresponding measure of certainty in the base call.
 

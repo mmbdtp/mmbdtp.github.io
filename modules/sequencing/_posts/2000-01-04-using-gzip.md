@@ -179,7 +179,7 @@ i.e. create a `.tar.gz` file in one step.
 
 Hint. Ask Arnie:
 
-![Alt text](image-1.png)
+![Alt text](/seq-data/image-1.png)
 
 **Try running `zcat` on this file, what does zcat do?**
 
