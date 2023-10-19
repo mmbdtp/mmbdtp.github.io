@@ -41,10 +41,10 @@ _Bioinformatics tutorials led by Nabil-Fareed Alikhan_
 [Quiz about you](/seq-data/about-you)
 
 * **[File compression]({{site.baseurl}}/modules/sequencing/file-compression/)**
-    * [Using tar and gzip](/seq-data/using-gzip)
+* **[Using tar and gzip]({{site.baseurl}}/modules/sequencing/using-gzip)**
 * **[Revisiting sequence file formats]({{site.baseurl}}/modules/sequencing/sequence-data/)**
-    * [Exploring file formats](/seq-data/file-formats)
-    * [FASTQ in detail](/seq-data/fastq-in-detail) 
+* **[Exploring file formats]({{site.baseurl}}/modules/sequencing/file-formats)**
+* **[FASTQ in detail]({{site.baseurl}}/modules/sequencing/fastq-in-detail)**
 * **[Quality control of short read data]({{site.baseurl}}/modules/sequencing/short-read-qc)**
 * **[Quality control of long read data]({{site.baseurl}}/modules/sequencing/long-read-qc)**
 
