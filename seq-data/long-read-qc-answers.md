@@ -50,3 +50,7 @@ Looks pretty good to me! But I (Nabil) am not a human person.
 Maybe the GC content is a bit suspicious. 
 
 ![Alt text](image-19.png)
+
+I don't think you should see PolyAs here. 
+
+![Alt text](image-21.png)
