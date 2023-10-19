@@ -9,25 +9,23 @@ In case of long reads, we can check sequence quality with [Nanoplot](https://git
 **If you are not using a CLIMB-BIG-DATA notebook, you will need to download the data.**
 ```
 wget -O m64011_190830_220126.Q20.subsample.fastq.gz https://zenodo.org/records/5730295/files/m64011_190830_220126.Q20.subsample.fastq.gz?download=1
-
 ```
 
 ### Exercise 1: Run Nanoplot and FASTQC
 
 ```
-NanoPlot --fastq  m64011_190830_220126.Q20.subsample.fastq.gz  --plots hex dot kde  --N50
-```
+NanoPlot --fastq m64011_190830_220126.Q20.subsample.fastq.gz  --plots  kde hex  dot --N50
+``
+
+**What do each of the parameters (of the command above) mean?**
 
 **Inspect the generated HTML file**
 
-**What is the mean Qscore?**
+**What is the median read quality, mean read quality and read N50?**
 
-**What is the median, mean and N50?**
-
-**Looking at “Read lengths vs Average read quality plot using dots plot”. Did you notice something unusual with the Qscore? Can you explain it?** 
+**Looking at "Read lengths vs Average read quality plot using dots plot". Did you notice something unusual with the Qscore? Can you explain it?** 
 
 **Repeat this with FASTQC**
-
 
 ### Citation
 
