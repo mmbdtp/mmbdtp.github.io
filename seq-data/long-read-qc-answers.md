@@ -39,6 +39,14 @@ There is no reads under Q20. By the way, The qualification for HiFi reads is:
 * A minimal number of 3 subreads
 * A read Qscore >=20
 
+![Alt text](image-18.png)
 
 **Repeat this with FASTQC**
 
+Looks pretty good to me! But I (Nabil) am not a human person. 
+
+![Alt text](image-20.png)
+
+Maybe the GC content is a bit suspicious. 
+
+![Alt text](image-19.png)

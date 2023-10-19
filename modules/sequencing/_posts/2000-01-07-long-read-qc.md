@@ -5,6 +5,9 @@ title: Quality control for long reads
 # Assess quality with Nanoplot - Long reads only
 In case of long reads, we can check sequence quality with [Nanoplot](https://github.com/wdecoster/NanoPlot/). It provides basic statistics with nice plots for a fast quality control overview.
 
+**What is this data?**
+PacBio HiFi reads were provided by [PacBio - GIAB sample HG002](https://www.pacb.com/smrt-science/smrt-resources/datasets/) and was downsampled using [seqtk](https://github.com/lh3/seqtk). This is whole genome shotgun sequencing of human DNA.
+
 
 **If you are not using a CLIMB-BIG-DATA notebook, you will need to download the data.**
 ```
