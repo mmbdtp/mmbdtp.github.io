@@ -55,6 +55,6 @@ Watch [Compression: Crash Course Computer Science #21](https://youtu.be/OtDxDvCp
 
 [Answers to exercise questions](/seq-data/file-compression-answers)
 
-[Next: Using tar and gzip](/seq-data/using-gzip)
+[Next: Using tar and gzip]({{site.baseurl}}/modules/sequencing/using-gzip)
 
 [Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).

@@ -67,6 +67,6 @@ In general, example files should be in [https://zenodo.org/records/10018484](htt
 [Answers for this exercise](/seq-data/file-formats-answers).
 
 
-[Next: FASTQ in detail](/seq-data/fastq-in-detail)
+[Next: FASTQ in detail]({{site.baseurl}}/modules/sequencing/fastq-in-detail)
 
 [Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).
