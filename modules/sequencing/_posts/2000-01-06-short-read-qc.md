@@ -15,6 +15,8 @@ cp -r ~/shared-team/week2/short-read-qc ~/
 cd ~/short-read-qc
 ```
 
+>If you are part of our 2023 cohort, we should have the sequencing data from what we did earlier in the week.
+
 **If you are not using a CLIMB-BIG-DATA notebook, you will need to download the data.**
 ```
 wget -O female_oral2.fastq.gz https://zenodo.org/record/3977236/files/female_oral2.fastq-4143.gz?download=1
