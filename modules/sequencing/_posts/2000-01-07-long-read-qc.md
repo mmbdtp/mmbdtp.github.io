@@ -18,7 +18,7 @@ wget -O m64011_190830_220126.Q20.subsample.fastq.gz https://zenodo.org/records/5
 
 ```
 NanoPlot --fastq m64011_190830_220126.Q20.subsample.fastq.gz  --plots  kde hex  dot --N50
-``
+```
 
 **What do each of the parameters (of the command above) mean?**
 

@@ -17,7 +17,7 @@ cd ~/short-read-qc
 
 >If you are part of our 2023 cohort, we should have the sequencing data from what we did earlier in the week.
 
-**If you are not using a CLIMB-BIG-DATA notebook, you will need to download the data.**
+**If you are not using a CLIMB-BIG-DATA notebook, you will need to download the example data.**
 ```
 wget -O female_oral2.fastq.gz https://zenodo.org/record/3977236/files/female_oral2.fastq-4143.gz?download=1
 wget -O pKP1-NDM-1_R1.fastq.gz https://zenodo.org/records/10018484/files/pKP1-NDM-1_R1.fastq.gz?download=1
@@ -56,7 +56,7 @@ Rather than looking at quality scores for each individual read, FASTQE looks at 
 
 [Answers to exercise 1](/seq-data/short-read-qc-answers)
 
-> FASTQE is a fun tool, but we use something more ... comprehensive ... in practice.
+> FASTQE is a fun tool, but we use something more comprehensive in practice.
 
 ## Assess quality with FASTQC
 
