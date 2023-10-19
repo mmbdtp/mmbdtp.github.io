@@ -1,5 +1,5 @@
 ---
-layout: page
+title: FASTQ in detail
 ---
 
 ## About FASTQ 
