@@ -6,7 +6,6 @@ In this exercise, you will take the reads of our novel pathogen and assembly the
 
 If you are unsure about files and file types, please review [Crash Course Computer Science episode 20](https://www.youtube.com/watch?v=KN8YgJnShPM&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=21). The [Crash Course Computer Science episode 21](https://www.youtube.com/watch?v=OtDxDvCpPL4&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=22) is also helpful in understanding compression (.gz, .zip). 
 
-If you complete this exercise (using Galaxy), please attempt the [same process on the command line](/seq-analysis/genome-assembly-cli).
 
 ## What is a genome assembler doing?
 
@@ -65,11 +64,14 @@ However, Sequencing platform have errors (and cause errors downstream):
 * Hi-C
 * Or just don’t! 
 
-## Using Galaxy 
 
-We will be using Galaxy for this exercise, [https://galaxy.quadram.ac.uk/](https://galaxy.quadram.ac.uk/), Please download the sequenced reads, as explained, and upload them into Galaxy. The upload button is the top left (see below)
- 
- ![Repeats]({{site.baseurl}}/seq-analysis/UPLOAD.jpg)
+
+# Hybrid and short-read-only assembly of sequenced reads
+Let’s look at the impact of read length (long read vs short read) on genome assembly. 
+In doing so I will also show you how to run the software and assess the output.
+
+If you are unsure about the command line, please review [Crash Course Computer Science episode 22](https://www.youtube.com/watch?v=4RPtJ9UyHS0&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=23). The [episode on operating systems](https://www.youtube.com/watch?v=26QPDBe-NB8&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=19) will also help you understand `Unix` a little better. 
+
 
 
 ## Short read assembly with Shovill
@@ -80,12 +82,43 @@ SPAdes was a major improvement over previous assemblers like Velvet, but some of
 Shovill is a pipeline which uses SPAdes at its core, but alters the steps before and after the primary assembly step to get similar results in less time. Shovill also supports other assemblers like SKESA, Velvet and Megahit, so you can take advantage of the pre- and post-processing the Shovill provides with those too. 
 
 Warning: Shovill is for isolate data only, primarily small haploid organisms. It will NOT work on metagenomes or larger genomes. Please use Megahit directly instead. See more details at [https://github.com/tseemann/shovill](https://github.com/tseemann/shovill)
- 
-Use the search in the top left to look for Shovill and then fill in the inputs and launch the job. Make sure that `_R1` and `_R2` as specified correctly! 
 
-![Shovill dialog]({{site.baseurl}}/seq-analysis/shovill.jpg)
+### Doing short read assembly with Shovill
+Is Shovill installed? Please see the [Installing software](seq-analysis/installing) section.
 
-Review the output in the right hand history pane. 
+We can run Shovill with:
+```
+shovill  --R1 novel-pathogen_R1.fastq.gz  \
+         --R2 novel-pathogen_R2.fastq.gz   \
+         --outdir short_read_only --force
+```
+
+The final output: 
+
+```
+[shovill] Repaired 0 contigs from spades.fasta at 0 positions.
+[shovill] Assembly is 4938311, estimated genome size was 4712883 (+4.78%)
+[shovill] Using genome graph file 'spades/assembly_graph_with_scaffolds.gfa' => 'contigs.gfa'
+[shovill] Walltime used: 3 min 6 sec
+[shovill] Results in: /home/ubuntu/code/mmbdtp.github.io/temp/short_read_only
+[shovill] Final assembly graph: /home/ubuntu/code/mmbdtp.github.io/temp/short_read_only/contigs.gfa
+[shovill] Final assembly contigs: /home/ubuntu/code/mmbdtp.github.io/temp/short_read_only/contigs.fa
+[shovill] It contains 297 (min=75) contigs totalling 4938311 bp.
+[shovill] More correct contigs is better than fewer wrong contigs.
+[shovill] Done.
+```
+
+The contents of the `short_read_only` folder: 
+
+```
+(shovill) ubuntu@chomp:~/code/mmbdtp.github.io/temp$ ls short_read_only/ -hl
+total 15M
+-rw-rw-r-- 1 ubuntu ubuntu 4.9M Nov  2 17:01 contigs.fa
+-rw-rw-r-- 1 ubuntu ubuntu 4.8M Nov  2 17:01 contigs.gfa
+-rw-rw-r-- 1 ubuntu ubuntu    0 Nov  2 17:01 shovill.corrections
+-rw-rw-r-- 1 ubuntu ubuntu 365K Nov  2 17:01 shovill.log
+-rw-rw-r-- 1 ubuntu ubuntu 4.8M Nov  2 17:01 spades.fasta
+```
 
 The important output files, please review each of these:
 
@@ -111,13 +144,42 @@ There are different programs for hybrid assembly, with slightly different result
 * Easy install
 * Checks for circularisation 
 
-Use the search in the top left to look for Unicyler and then fill in the inputs and launch the job. Make sure that `_R1`, `_R2`, `long reads` are specified correctly! 
 
-![Unicyler dialog]({{site.baseurl}}/seq-analysis/uni.jpg)
 
-*If you run into an error about no `lr`, make sure that the long read input is set as fastqsanger.gz *
+### Doing hybrid assembly with Unicyler 
 
-Review the output in the right hand history pane. 
+Is Unicyler installed? Please see the [Installing software](seq-analysis/installing) section. 
+
+We can run Unicyler with:
+```
+unicycler -1 novel-pathogen_R1.fastq.gz \
+  -2 novel-pathogen_R2.fastq.gz \
+  -l novel-pathogen-long-reads.fastq.gz  \
+  -o hybrid_assembly
+```
+
+
+The contents of the `hybrid_assembly` folder: 
+
+```
+001_spades_graph_k027.gfa
+001_spades_graph_k053.gfa
+001_spades_graph_k071.gfa
+001_spades_graph_k087.gfa
+001_spades_graph_k099.gfa
+001_spades_graph_k111.gfa
+001_spades_graph_k119.gfa
+001_spades_graph_k127.gfa
+002_depth_filter.gfa
+003_overlaps_removed.gfa
+004_long_read_assembly.gfa
+005_bridges_applied.gfa
+006_final_clean.gfa
+assembly.fasta
+assembly.gfa
+unicycler.log
+```
+
 
 At this stage, you may want to ask about what's different about a hybrid assembly?
 
