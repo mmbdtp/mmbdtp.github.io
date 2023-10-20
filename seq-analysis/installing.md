@@ -6,15 +6,26 @@ layout: page
 
 We recommend installing command-line bioinformatics software through the package manager `conda`.
 
+> If you are using a CLIMB-BIG-DATA notebook, this is already installed for you. You can skip this step.
+
 `Conda` is an open source package management system and environment management system that runs on Windows, macOS, Linux and z/OS. `Conda` quickly installs, runs and updates packages and their dependencies. `Conda` easily creates, saves, loads and switches between environments on your local computer. It was created for `Python` programs, but it can package and distribute software for any language.
 
 * The installation instructions for [macOSX can be found here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html)
 * The installation instructions for [Linux can be found here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)
 
-You should not be using a computer running windows for this course, unless you are using windows just to terminal into a system with MacOSX or Linux. 
-
 Andrea has an extended guide here: [https://telatin.github.io/microbiome-bioinformatics/Install-Miniconda/](https://telatin.github.io/microbiome-bioinformatics/Install-Miniconda/). 
 
+### Switching to `mamba` 
+
+Conda has recently integrated a faster "solver" called `mamba`. You can enjoy the faster install times by setting `mamba` as the default solver. As shown below.
+
+```
+conda update -n base conda
+conda install -n base conda-libmamba-solver
+conda config --set solver libmamba
+```
+
+You need `conda` version 22.11 and above for this to work. 
 
 ###### In this week's course, you should use conda or containers (from week one) to manage your software
 
@@ -26,15 +37,9 @@ Week four will also need certain software, please install these packages for wee
 mamba create -n week3 -c bioconda -c conda-forge prokka unicycler shovill
 ```
 
-### Install the software for week 4 
-Week four will also need certain software, please install these packages for week for via conda/mamba. 
-
-```
-mamba create -n week4 -c bioconda -c conda-forge prokka socru breseq refseq_masher mlst snippy sistr_cmd
-```
 ### Installing Artemis, Bandage and Mauve 
 
-Artemis, bandage and mauve are software with a graphical interface you **should run on your local computer**. Follow the instructions at:
+`Artemis`, `bandage` and `mauve` are software with a graphical interface you **should run on your local computer**. Follow the instructions at:
 
 * [https://rrwick.github.io/Bandage/](https://rrwick.github.io/Bandage/)
 * [https://darlinglab.org/mauve/user-guide/viewer.html](https://darlinglab.org/mauve/user-guide/viewer.html)
@@ -42,66 +47,24 @@ Artemis, bandage and mauve are software with a graphical interface you **should 
 
 ###### The following are tips and examples to help you complete the tasks above 
 
-
 ### Installing software via conda (shovill)
 This an example of how to install `shovill` in it's own environment. This is an example if you are not clear on the syntax. If the tools above are working, you should be fine for further exercises. 
 
 ```
-conda create -n shovill shovill 
+conda create -n shovill shovill -y -c bioconda
 conda activate shovill
 ```
 
 You can install more programs in a single environment, as below:
 ```
-conda create -n myproject shovill samtools
+conda create -n myproject shovill samtools -y -c bioconda
 conda activate myproject
 ```
 
 You can add more software to an existing environment, as below:
 ```
-conda activate myproject
-conda install blast
-```
-
-
-
-### What is mamba?
-
-If you use conda, you should use `mamba`. What is `mamba` then? The website describes it as:
-
-> A Python-based CLI conceived as a drop-in replacement for conda, offering higher speed and more reliable environment solutions
-
-So you install `mamba` into your conda environment and for certain commands where you would use conda you use `mamba` instead. The parameters are effectively the same.
-
-So when you want to Create an enviroment:
-```
-conda create  -n myenv -c bioconda samtools
-# becomes
-mamba create -n myenv  -c bioconda  samtools
-```
-
-Installing software: 
-```
-conda install bqplot
-# becomes
-mamba install bqplot
-```
-
-Removing software:
-```
-conda remove bqplot
-# becomes
-mamba remove bqplot
-```
-
-As you can see, it's pretty much substitute `conda` for `mamba`. The outcome is exactly the same, except the install time is much faster.
-
-I usually keep seperate enviroments for each project, so I first create the enviroment with `conda` with `mamba` installed and then I switch to using mamba like the examples above. e.g.
-
-```
-conda create  -n myenv mamba
-conda activate myenv
-mamba install prokka
+conda activate myproject 
+conda install blast -y 
 ```
 
 ### Tips on organising your projects long term
@@ -109,7 +72,7 @@ mamba install prokka
 A quick aside, "how should I organise my projects?" in the long term. 
 
 * Use `conda` for package management (https://docs.conda.io/en/latest/)
-* `Jupyter` notebooks for exploring data and plotting figures (https://jupyter.org/)
+* `Jupyter` notebooks (offered via CLIMB=BIG-DATA but free available for other setups) for exploring data and plotting figures (https://jupyter.org/)
 
 For Processing large datasets
 
@@ -118,7 +81,8 @@ For Processing large datasets
 
 
 ### Some guidance on getting Jupyter notebooks up and running
-*This is for future reference, and is not covered in this course.* 
+
+> This is for future reference, and is not covered in this course.
 
 You can Install and control R and jupyter notebooks through `conda`.
 
