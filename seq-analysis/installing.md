@@ -27,7 +27,7 @@ conda config --set solver libmamba
 
 You need `conda` version 22.11 and above for this to work. 
 
-###### In this week's course, you should use conda or containers (from week one) to manage your software
+###### In this course, you should use conda or containers (from week one) to manage your software
 
 
 ### Install the software for week 3 
