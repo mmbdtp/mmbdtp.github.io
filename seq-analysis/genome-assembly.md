@@ -126,13 +126,6 @@ The important output files, please review each of these:
 * contigs.gfa: Assembly graph (spades)
 * shovill.log: Full log file for bug reporting
 
-If you have a problem with this process. Here are some results I prepared earlier. 
-
-* [contigs.fa](/seq-analysis/contigs.fa)
-* [contigs.gfa](/seq-analysis/contigs.gfa)
-* [shovill.corrections](/seq-analysis/shovill.corrections)
-* [shovill.log](/seq-analysis/shovill.log)
-
 
 ## Hybrid assembly with Unicyler 
 
@@ -143,7 +136,6 @@ There are different programs for hybrid assembly, with slightly different result
 * A lot of options on how aggressive you want it to join contigs
 * Easy install
 * Checks for circularisation 
-
 
 
 ### Doing hybrid assembly with Unicyler 
@@ -157,7 +149,6 @@ unicycler -1 novel-pathogen_R1.fastq.gz \
   -l novel-pathogen-long-reads.fastq.gz  \
   -o hybrid_assembly
 ```
-
 
 The contents of the `hybrid_assembly` folder: 
 
@@ -180,7 +171,6 @@ assembly.gfa
 unicycler.log
 ```
 
-
 At this stage, you may want to ask about what's different about a hybrid assembly?
 
 The important output files:
@@ -189,8 +179,9 @@ The important output files:
 * assembly.gfa: Assembly graph 
 * unicycler.log: Full log file for bug reporting
 
-If you had a problem with generating an assembly with Unicycler. Here are some results I prepared earlier. 
+# Exercise 1: Short read and hybrid assembly
 
-* [long_assembly.fasta](/seq-analysis/long_assembly.fasta)
-* [long_assembly.gfa](/seq-analysis/long_assembly.gfa)
-* [unicycler.log](/seq-analysis/unicycler.log)
+**Assemble the genome of our novel pathogen using short reads only** 
+
+**Assemble the genome of  our novel pathogen using both long and short reads (as a hybrid assembly)**
+
