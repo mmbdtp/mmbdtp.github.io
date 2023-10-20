@@ -13,5 +13,5 @@ title: Pathogen genomics
 - Exercise: [Detecting virulence factors](/seq-analysis/detect_vir) in our genome, using web tools (including resfinder etc).
 - Additional Exercise: [Detecting virulence factors](/seq-analysis/detect_vir_cli) in our genome using command line tools.
 
-##### Progress review on problem-based-learning (Alikhan, Pallen
+##### Progress review on problem-based-learning (Alikhan, Pallen)
 
