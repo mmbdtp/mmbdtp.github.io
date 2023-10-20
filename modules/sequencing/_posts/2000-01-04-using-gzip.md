@@ -1,8 +1,6 @@
 ---
-layout: page
+title: Using tar and gzip for fun and profit
 ---
-
-# Using tar and gzip for fun and profit
 
 > Gzip (GNU zip) compression is a widely used file compression and decompression format and tool that reduces the size of files or data streams to save storage space or reduce data transfer times over a network. It was developed as part of the GNU project and is commonly found in Unix-like operating systems, including Linux.
 
@@ -181,7 +179,7 @@ i.e. create a `.tar.gz` file in one step.
 
 Hint. Ask Arnie:
 
-![Alt text](image-1.png)
+![Alt text](/seq-data/image-1.png)
 
 **Try running `zcat` on this file, what does zcat do?**
 

@@ -1,5 +1,5 @@
 ---
-layout: page
+title: Exploring file formats
 ---
 
 While we talk about file "formats" for sequencing data these are not the same as file formats for propperity programs such as MS Word or binary file formats. These are simply text files with a particular structure. This means that you can open these files and read them as plain text even if the file extension is `.fastq`, `.fasta` and so on. 
@@ -67,6 +67,6 @@ In general, example files should be in [https://zenodo.org/records/10018484](htt
 [Answers for this exercise](/seq-data/file-formats-answers).
 
 
-[Next: FASTQ in detail](/seq-data/fastq-in-detail)
+[Next: FASTQ in detail]({{site.baseurl}}/modules/sequencing/fastq-in-detail)
 
 [Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).

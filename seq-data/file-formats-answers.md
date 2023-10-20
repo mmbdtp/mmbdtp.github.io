@@ -4,7 +4,7 @@ layout: page
 
 # Common file formats (answers)
 
-Answers for [File formats](/seq-data/file-formats) exercise.
+Answers for [File formats]({{site.baseurl}}/modules/sequencing/file-formats) exercise.
 
 
 ## Identify the file format?
@@ -186,6 +186,6 @@ CC1=GGGGGGGGGJJJJGJJJJJGCGJJGJJJJJJCJGJJGGGJJJGGGGGGJJGJCJJGGG8CJGCJJ8G8GCGCCGGG
 
 > As you get more familiar with data from a specific organism or datatype, you maybe able to identify the type of data simply by the file size. For example, for what I do, a 300MB file is likely to be a FASTQ file, while a 1MB file is likely to be a VCF file. 
 
-Back to [File formats](/seq-data/file-formats) exercise.
+Back to [File formats]({{site.baseurl}}/modules/sequencing/file-formats) exercise.
 
 [Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).

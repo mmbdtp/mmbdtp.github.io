@@ -51,6 +51,6 @@ This is difficult.
 
 [Answers to exercises](/seq-data/sequence-data-answers)
 
-[Next step: File formats](/seq-data/file-formats)
+[Next step: File formats]({{site.baseurl}}/modules/sequencing/file-formats)
 
 [Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).

@@ -4,7 +4,7 @@ layout: page
 
 # Exercise answers for: Using tar and gzip for fun and profit
 
-[Back to gzip exercise](/seq-data/using-gzip)
+[Back to gzip exercise]({{site.baseurl}}/modules/sequencing/using-gzip)
 
 ### Exercise 1: Creating files
 
@@ -94,7 +94,7 @@ grep --help | gzip -c > grep_help.txt.gz
 
 Did you notice that we needed to specify the `-c` flag for `gzip`? This is because `gzip` expects a file as input, not standard input. The `-c` flag tells `gzip` to read from standard input. Did you also notice that we needed to give the full file extension for the output file? This is because `gzip` will not automatically append the `.gz` extension when reading from standard input. Ask Nabil why. 
 
-[Back to gzip exercise](/seq-data/using-gzip)
+[Back to gzip exercise]({{site.baseurl}}/modules/sequencing/using-gzip)
 
 ## Using tar
 
@@ -189,5 +189,5 @@ TTCACTCTGTACGAACTCCAGAAAGAGCTCTCGAAGATGGGTCACGGTTACAACCTGAACGAAATCAAGG
 AAGCAATCCAGGTTTGTCGTGGCGCAACACTCGAATGTATCAGTGATGACGGCGAAGCCTTCATCAGCTC
 ```
 
-[Back to gzip exercise](/seq-data/using-gzip)
+[Back to gzip exercise]({{site.baseurl}}/modules/sequencing/using-gzip)
 

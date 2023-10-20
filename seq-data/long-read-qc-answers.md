@@ -4,6 +4,8 @@ layout: page
 
 ### Exercise 1: Run Nanoplot and FASTQC
 
+Answers for [Quality control of long read data]({{site.baseurl}}/modules/sequencing/long-read-qc)
+
 ```
 NanoPlot --fastq m64011_190830_220126.Q20.subsample.fastq.gz  --plots  kde hex  dot --N50
 ```
@@ -54,3 +56,5 @@ Maybe the GC content is a bit suspicious.
 I don't think you should see PolyAs here. 
 
 ![Alt text](image-21.png)
+
+[Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).

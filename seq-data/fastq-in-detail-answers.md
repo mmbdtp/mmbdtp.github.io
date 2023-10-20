@@ -2,7 +2,7 @@
 layout: page
 ---
 
-Answers for exercise in [FASTQ in detail](/seq-data/fastq-in-detail)
+Answers for exercise in [FASTQ in detail]({{site.baseurl}}/modules/sequencing/fastq-in-detail)
 
 **For the FASTQ header line below, what is the run ID, the indexes used and name of the instrument?**
 
