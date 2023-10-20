@@ -4,8 +4,7 @@ layout: page
 # Hybrid and short-read-only assembly of simulated reads
 In this exercise, you will take the reads of our novel pathogen and assembly the genome using the short reads alone and a hybrid assembly using both long and short reads. This is to illustrate how differences in sequencing data (namely, read length) will affect the final outcome. We will use these assemblies in subsequent analyses.  
 
-If you are unsure about files and file types, please review [Crash Course Computer Science episode 20](https://www.youtube.com/watch?v=KN8YgJnShPM&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=21). The [Crash Course Computer Science episode 21](https://www.youtube.com/watch?v=OtDxDvCpPL4&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=22) is also helpful in understanding compression (.gz, .zip). 
-
+If you are unsure about files and file types, please review [Crash Course Computer Science episode 20](https://www.youtube.com/watch?v=KN8YgJnShPM&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=21). The [Crash Course Computer Science episode 21](https://www.youtube.com/watch?v=OtDxDvCpPL4&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=22) is also helpful in understanding compression (.gz, .zip). The [episode on operating systems](https://www.youtube.com/watch?v=26QPDBe-NB8&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=19) will also help you understand `Unix` a little better. 
 
 ## What is a genome assembler doing?
 
@@ -63,15 +62,6 @@ However, Sequencing platform have errors (and cause errors downstream):
 * Optical mapping
 * Hi-C
 * Or just don’t! 
-
-
-
-# Hybrid and short-read-only assembly of sequenced reads
-Let’s look at the impact of read length (long read vs short read) on genome assembly. 
-In doing so I will also show you how to run the software and assess the output.
-
-If you are unsure about the command line, please review [Crash Course Computer Science episode 22](https://www.youtube.com/watch?v=4RPtJ9UyHS0&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=23). The [episode on operating systems](https://www.youtube.com/watch?v=26QPDBe-NB8&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=19) will also help you understand `Unix` a little better. 
-
 
 
 ## Short read assembly with Shovill
