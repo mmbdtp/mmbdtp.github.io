@@ -42,6 +42,7 @@ Read 2 (Reverse Read):
 * The extension direction of Read 2 is along the reverse DNA strand, meaning it reads the DNA sequence starting from the 5' end and extending towards the 3' end of the DNA fragment, which is opposite to the direction of Read 1.
 
 **Explain the term "homopolymers" and why they are difficult to read accurately in sequencing.**
+
 Homopolymers are sequences of DNA or RNA in which the same nucleotide is repeated consecutively multiple times. For example, a stretch of adenine (A) bases or thymine (T) bases repeated multiple times would be considered a homopolymer. Homopolymers are common in genomic sequences and can range in length from a few bases to many hundreds of bases.
 
 Homopolymers can be challenging to read accurately in sequencing for several reasons:
