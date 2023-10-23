@@ -39,4 +39,4 @@ test_sample	1	615427	616242	fepC	1-816/816	===============	0/0	100.00	97.30	vfdb
 test_sample	1	616239	617231	fepG	1-993/993	===============	0/0	100.00	94.06	vfdb	NP_752607	(fepG) iron-enterobactin ABC transporter permease [Enterobactin (VF0228)] [Escherichia coli CFT073]
 ```
 
-[Back to Programme]({{site.baseurl}}/modules/sequencing-analysis/programme/).
+[Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).

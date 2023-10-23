@@ -26,3 +26,4 @@ title: Sequence homology and alignment
 - Exercise: [Check environment, software, and tools ready for later exercises](/seq-analysis/installing)
 - Additional Exercise: [If you're unsure how a computer works, please review Crash Course Computer Science episodes 1 - 20](https://www.youtube.com/watch?v=O5nskjZ_GoI&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=2)
 
+[Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).

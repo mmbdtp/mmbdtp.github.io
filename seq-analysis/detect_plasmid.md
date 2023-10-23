@@ -48,4 +48,4 @@ How PHASTER works - Finding prophages
 
 Arndt D, Marcu A, Liang Y, Wishart DS. PHAST, PHASTER and PHASTEST: Tools for finding prophage in bacterial genomes. Brief Bioinform. 2019;20(4):1560-1567. doi:[10.1093/bib/bbx121](https://academic.oup.com/bib/article/20/4/1560/4222653)
 
-[Back to Programme]({{site.baseurl}}/modules/sequencing-analysis/programme/).
+[Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).

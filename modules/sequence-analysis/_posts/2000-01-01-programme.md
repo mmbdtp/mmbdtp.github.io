@@ -11,7 +11,7 @@ _Nabil-Fareed Alikhan and Mark Pallen_
 ### Sequence homology and alignment
 - **Talk from Mark Pallen**:
   -  _Sequence homology_ ([Powerpoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/modules/sequence-analysis/_posts/Sequence%20homology_2023.pptx))
-- **Problem-based learning on homology searches  led by Mark Pallen**
+- **[Problem-based learning on homology searches]()  led by Mark Pallen**
 - **Problem-based learning on alignment led by Nabil Alikhan**
 
 ***

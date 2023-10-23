@@ -53,4 +53,4 @@ Try to create a table of your assessment (with better explanations), like the on
 
 
 
-[Back to Programme]({{site.baseurl}}/modules/sequencing-analysis/programme/).
+[Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).

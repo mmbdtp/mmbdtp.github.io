@@ -51,4 +51,4 @@ Your exercise now is to compare and contrast the  hybrid and short-read-only ass
 
 Check for contamination too with [Kraken/Bracken](https://ccb.jhu.edu/software/bracken/)
 
-[Back to Programme]({{site.baseurl}}/modules/sequencing-analysis/programme/).
+[Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).

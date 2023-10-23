@@ -52,4 +52,4 @@ This can be done using `Artemis`. Load up the manual annotation you have already
 
 How did you annotation compare to the automated one?
 
-[Back to Programme]({{site.baseurl}}/modules/sequencing-analysis/programme/).
+[Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).

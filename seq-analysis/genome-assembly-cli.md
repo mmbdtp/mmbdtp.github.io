@@ -91,4 +91,4 @@ The important output files:
 * assembly.gfa: Assembly graph 
 * unicycler.log: Full log file for bug reporting
 
-[Back to Programme]({{site.baseurl}}/modules/sequencing-analysis/programme/).
+[Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).

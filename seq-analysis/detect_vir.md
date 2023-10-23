@@ -57,4 +57,4 @@ Other online tools you can try, include:
 
 Using these tools what can you say about the genome?
 
-[Back to Programme]({{site.baseurl}}/modules/sequencing-analysis/programme/).
+[Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).

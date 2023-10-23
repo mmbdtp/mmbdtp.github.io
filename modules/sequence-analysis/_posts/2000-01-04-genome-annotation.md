@@ -16,4 +16,4 @@ title: Genome annotation
 - Exercise: [Automated annotation of genome using Prokka](/seq-analysis/prokka) and compare Prokka output with manual annotation
 
 
-[Back to Programme]({{site.baseurl}}/modules/sequencing-analysis/programme/).
+[Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).
