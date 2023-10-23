@@ -24,3 +24,5 @@ title: Genome assembly
 #####  Talk from Mark Pallen: *Amerithrax: from genome to culprit*
 
   - _Amerithrax: from genome to culprit_ ([Powerpoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/modules/sequence-analysis/_posts/2023_Week%203_Talk_Amerithrax.pptx))
+
+  [Back to Programme]({{site.baseurl}}/modules/sequencing-analysis/programme/).
