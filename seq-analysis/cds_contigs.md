@@ -48,3 +48,4 @@ Try doing a few by hand, but there are automated tools that will predict CDS. On
 * [Prodigal](https://github.com/hyattpd/Prodigal) (my favourite)
 
 
+[Back to Programme]({{site.baseurl}}/modules/sequencing-analysis/programme/).

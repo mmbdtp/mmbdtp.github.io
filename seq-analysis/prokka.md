@@ -51,3 +51,5 @@ This can be done using `Artemis`. Load up the manual annotation you have already
 ![Artemis with two tracks]({{site.baseurl}}/seq-analysis/art_compare.png)
 
 How did you annotation compare to the automated one?
+
+[Back to Programme]({{site.baseurl}}/modules/sequencing-analysis/programme/).

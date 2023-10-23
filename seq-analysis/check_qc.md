@@ -50,3 +50,7 @@ Try to create a table of your assessment (with better explanations), like the on
 | sample_6    |         |        |
 | sample_7    |           |        |
 | sample_8    |           |        |
+
+
+
+[Back to Programme]({{site.baseurl}}/modules/sequencing-analysis/programme/).

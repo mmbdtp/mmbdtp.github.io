@@ -50,3 +50,6 @@ You can also try other tools such as:
 
 * [MOB-Suite](https://github.com/phac-nml/mob-suite).
 
+
+
+[Back to Programme]({{site.baseurl}}/modules/sequencing-analysis/programme/).

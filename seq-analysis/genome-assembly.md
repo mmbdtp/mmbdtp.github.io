@@ -188,3 +188,4 @@ _We will compare the results of these assemblies in the next exercise_
 [Answers to the exercises](/seq-analysis/genome-assembly-answers)
 
  
+ [Back to Programme]({{site.baseurl}}/modules/sequencing-analysis/programme/).

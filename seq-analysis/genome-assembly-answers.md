@@ -64,3 +64,5 @@ It's important for read lengths to span repeated sequences in the genome during 
 **What issues do some sequencing platforms encounter when dealing with GC-rich or AT-rich DNA sequences?**
 
 Regions that are AT-rich or GC-rich are similarly difficult because they respond poorly to the amplification protocols required by some platforms. Palindromic sequences or hairpin structures are difficult to denature, making such regions challenging for sequencing tools that include a denaturation step.
+
+[Back to Programme]({{site.baseurl}}/modules/sequencing-analysis/programme/).
