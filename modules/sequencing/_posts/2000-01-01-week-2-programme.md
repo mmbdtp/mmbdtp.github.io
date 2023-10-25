@@ -7,7 +7,7 @@ title: Programme
 
 Tutors: David Baker (david.baker@quadram.ac.uk) and Nabil-Fareed Alikhan (nabil-fareed.alikhan@quadram.ac.uk)
 
-Note that these sessions are part of your mandatory training. Please email the organisers if you are going to be late or are unable to attend through illness. For ThuPlease bring your MacBooks and ensure that you can log on to Eduroam.
+Note that these sessions are part of your mandatory training. Please email the organisers if you are going to be late or are unable to attend through illness. For Thursday/Friday, Please bring your MacBooks and ensure that you can log on to Eduroam.
 
 ***
 
