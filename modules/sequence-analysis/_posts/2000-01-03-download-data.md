@@ -28,7 +28,7 @@ FASTQ format is a text-based format for storing both a biological sequence (usua
 
 It was originally developed at the Wellcome Trust Sanger Institute to bundle a FASTA formatted sequence and its quality data, but has become the de facto standard for storing the output of high-throughput sequencing instruments.
 
-### Reminder: What is Gzip 
+### Reminder: What is `gzip` 
 
 A GZ file is an archive file compressed by the standard GNU zip (gzip) compression algorithm. It typically contains a single compressed file but may also store multiple compressed files. gzip is primarily used on Unix operating systems for file compression.
 
@@ -64,10 +64,10 @@ You need `conda` version 22.11 and above for this to work.
 
 
 ### Install the software for week 3 
-Week four will also need certain software, please install these packages for week for via conda/mamba. 
+Week three will need certain software, please install these packages for week for via conda/mamba. 
 
 ```
-mamba create -n week3 -c bioconda -c conda-forge prokka unicycler shovill
+conda create -n week3 -c bioconda -c conda-forge prokka unicycler shovill
 ```
 
 ### Installing Artemis, Bandage and Mauve 
@@ -78,7 +78,7 @@ mamba create -n week3 -c bioconda -c conda-forge prokka unicycler shovill
 * [https://darlinglab.org/mauve/user-guide/viewer.html](https://darlinglab.org/mauve/user-guide/viewer.html)
 * [https://www.sanger.ac.uk/tool/artemis/](https://www.sanger.ac.uk/tool/artemis/)
 
-###### The following are tips and examples to help you complete the tasks above 
+## The following are tips and examples to help you complete the tasks above 
 
 ### Installing software via conda (shovill)
 This an example of how to install `shovill` in it's own environment. This is an example if you are not clear on the syntax. If the tools above are working, you should be fine for further exercises. 
