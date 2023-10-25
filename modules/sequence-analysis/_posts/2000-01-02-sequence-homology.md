@@ -1,5 +1,5 @@
 ---
-title: Sequence homology and alignment
+title: Sequence alignment and homology searches
 ---
 
 # Sequence homology and alignment

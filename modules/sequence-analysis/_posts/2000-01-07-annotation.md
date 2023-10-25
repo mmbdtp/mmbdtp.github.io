@@ -1,8 +1,7 @@
 ---
-title: Genome assembly
+title: Genome browsers and annotation
 ---
 
-# Genome assembly
 
 ###  Day 2
 

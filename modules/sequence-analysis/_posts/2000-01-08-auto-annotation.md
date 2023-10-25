@@ -1,3 +1,3 @@
 ---
-title: Pathogen genomics
+title: Automated annotation
 ---

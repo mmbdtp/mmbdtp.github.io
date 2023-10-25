@@ -21,7 +21,7 @@ _Nabil-Fareed Alikhan and Mark Pallen_
 - **Talk from Mark Pallen**
   -  _Microbial Genomics: Theory and Practice_ ([Powerpoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/modules/sequence-analysis/_posts/2023_Week%203_Talk_Microbial_genomics.pptx))
 - **[Hybrid and short-read-only assembly of sequenced reads]({{site.baseurl}}/modules/sequence-analysis/genome-assembly/) led by Nabil-Fareed Alikhan**
-- **[Perform QC and compare hybrid and short-read-only assemblies]({{site.baseurl}}/modules/sequence-analysis/genome-assembly-qc) led by Nabil-Fareed Alikhan**
+- **[Compare hybrid and short-read-only assemblies]({{site.baseurl}}/modules/sequence-analysis/genome-assembly-qc) led by Nabil-Fareed Alikhan**
 - **[Assess the quality of some other (provided) assembled genomes]({{site.baseurl}}/modules/sequence-analysis/check-qc) led by Nabil-Fareed Alikhan**
 - **Talk from Mark Pallen**
   - _Amerithrax: from genome to culprit_ ([Powerpoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/modules/sequence-analysis/_posts/2023_Week%203_Talk_Amerithrax.pptx))

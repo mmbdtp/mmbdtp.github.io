@@ -1,5 +1,5 @@
 ---
-title: Pathogen genomics
+title: Detecting virulence factors
 ---
 
 # Pathogen genomics

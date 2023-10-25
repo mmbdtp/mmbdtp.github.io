@@ -1,5 +1,5 @@
 ---
-title: Genome assembly
+title: Hybrid and short-read-only assembly of sequenced reads
 ---
 
 # Genome assembly

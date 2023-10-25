@@ -1,5 +1,5 @@
 ---
-title: Genome assembly
+title: Compare hybrid and short-read-only assemblies
 ---
 
 # Genome assembly
