@@ -2,44 +2,123 @@
 title: Genome browsers and annotation
 ---
 
+# Using a genome browser to look at contigs of our genomic data
 
-###  Day 2
+You should use the assembled contigs we generated earlier, particularly the one generated with Unicycler.
 
-#####  Overview of the day
+If you had a problem with generating an assembly with Unicycler. Here are some results I prepared earlier. 
 
-#####  Talk (Pallen):  *Microbial Genomics: Theory and Practice*
+* [long_assembly.fasta](/seq-analysis/long_assembly.fasta)
+* [long_assembly.gfa](/seq-analysis/long_assembly.gfa)
+* [unicycler.log](/seq-analysis/unicycler.log)
 
-  -  _Microbial Genomics: Theory and Practice_ ([Powerpoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/modules/sequence-analysis/_posts/2023_Week%203_Talk_Microbial_genomics.pptx))
+If you have having difficulty with the amount of sequence information, try the next few exercises with this short sequence "small_contigs.fasta!. If you feel more confident you may try the "mystery pathogenicity island" - both of these are taken from the long read assembly above. 
 
-##### Instructions for problem-based learning on genome assembly (Alikhan)
+* [small_contig.fasta](/seq-analysis/small_contigs.fasta)
+* [mystery_island.fasta](/seq-analysis/mystery_island.fasta)
 
-- Exercise: [hybrid and short-read-only assembly of sequenced reads](/seq-analysis/genome-assembly)
+There a number of genome browsers available, we will use [Artemis](https://www.sanger.ac.uk/tool/artemis/). 
+For ease of use, you can split the assembly FASTA file (Use the hybrid assembly for this) into seperate files. The FASTA file may look like this:
 
-#####  Instructions for problem-based learning on assembly QC (Alikhan)
+```
+>1
+TGATAGCAGCT...
+>2 
+AGCAGCTAGCA...
+```
 
-- Exercise: [perform QC and compare hybrid and short-read-only assemblies](/seq-analysis/assembly_qc) (using QUAST, webBlast a contig, Kraken, assembly graph with bandage etc.)
-- Additional exercise: [Assess the Quality of some other (provided) assembled genomes](/seq-analysis/check_qc). Dataset will include assembled contigs of different strains that fail QC for one reason or another.
+You can open `Artemis` like any other graphical program. From the command line you can run it with:
 
-#####  Talk from Mark Pallen: *Amerithrax: from genome to culprit*
+```
+art my_assembly.fasta
+```
 
-  - _Amerithrax: from genome to culprit_ ([Powerpoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/modules/sequence-analysis/_posts/2023_Week%203_Talk_Amerithrax.pptx))
+You should try the smaller sequence from your assembly first. 
 
-  [Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).
+![Artemis with one tracks]({{site.baseurl}}/seq-analysis/artemis.png)
 
+By default you will see 6 tracks. One for each frame (3 forward, 3 reverse). The black ticks are termination codons. A close up of the seqeunce is shown in the bottom panel. 
 
-  # Genome annotation
+Try annotating the sequence by clicking and dragging on one of the tracks. `Right Click` > `Create` > `Feature from base range`. You can annotate any string of bases as whatever you like. 
+ 
 
-### Day 3
+# CDS prediction for genome contigs
 
-##### Instructions for PBL on CDS calling and annotation (Alikhan)
+You should use the assembled contigs we generated earlier, particularly the one generated with Unicycler.
 
-- Exercise: [Using a genome browser to look at our assembled contigs](/seq-analysis/using_genome_browser)
-- Exercise: [CDS prediction for our assembled contigs](/seq-analysis/cds_contigs)
-- Exercise: [Manually annotate regions of our assembled contigs using web based homology searches](/seq-analysis/annotate)
+If you had a problem with generating an assembly with Unicycler. Here are some results I prepared earlier. 
 
-##### Instructions for problem-based learning on genome annotation (Alikhan)
+* [long_assembly.fasta](/seq-analysis/long_assembly.fasta)
+* [long_assembly.gfa](/seq-analysis/long_assembly.gfa)
+* [unicycler.log](/seq-analysis/unicycler.log)
 
-- Exercise: [Automated annotation of genome using Prokka](/seq-analysis/prokka) and compare Prokka output with manual annotation
+If you have having difficulty with the amount of sequence information, try the next few exercises with this short sequence "small_contigs.fasta!. If you feel more confident you may try the "mystery pathogenicity island" - both of these are taken from the long read assembly above. 
+
+* [small_contig.fasta](/seq-analysis/small_contigs.fasta)
+* [mystery_island.fasta](/seq-analysis/mystery_island.fasta)
+
+##### Exercise: Open the a sequence in Artemis and spend some time marking genes you think are valid. 
+
+Let's try annotating some coding sequences (CDS). Genes that code for proteins comprise open reading frames (ORFs) consisting of a series of codons that specify the amino acid sequence of the protein that the gene encodes. The ORF begins with an initiation codon - usually (but not always) ATG - and ends with a termination codon: TAA, TAG or TGA. Searching a DNA sequence for ORFs that begin with an ATG and end with a termination triplet is therefore one way of looking for genes. The analysis is complicated by the fact that each DNA sequence has six reading frames, three in one direction and three in the reverse direction on the complementary strain. 
+
+> Remember: A double-stranded DNA molecule has six reading frames. Both strands are read in the 5′→3′ direction. Each strand has three reading frames, depending on which nucleotide is chosen as the starting position.  
+
+Thus, we know that the genes will appear between termination codons. But does that mean that every ORF encodes a gene? No. One thing to keep in mind is that sequences that *look* like genes will occur randomly. Consider a completely random ATGC sequence (with a GC content of 50%), in this case  each of the three termination codons - TAA, TAG and TGA - will appear, on average, once every 4^3 = 64 bp. If the GC content is > 50% then the termination codons, being AT-rich, will occur less frequently but one will still be expected every 100–200 bp. As such, ORFs that include a genuine gene should be longer than this. Most genes are longer than 50 codons: the average lengths are 317 codons for *Escherichia coli*, 483 codons for *Saccharomyces cerevisiae*, and approximately 450 codons for humans. That is not to say that genes with short sequences do not exist, but keeping these rules in mind will help us identify valid genes.  
+
+This simple methods of scanning for ORFS in a genome sequence is more complicated for eukaryotic DNA, where genes are often split by introns.  
+
+![Artemis with one tracks]({{site.baseurl}}/seq-analysis/artemis.png)
+
+Some tips for using Artemis:
+* There is a graph of GC% under the `Graph` menu
+* There is an option (`Right click`) in `Artemis` to show potential start codons as well. 
+
+When you create a feature, you can select the `Key` which is the type of feature created. There are many standard ones to pick from:
+
+* CDS - Coding sequence
+* tRNA
+* rRNA
+* misc_feature
+* ... many more
+
+Try doing a few by hand, but there are automated tools that will predict CDS. One such web based tool is [https://www.ncbi.nlm.nih.gov/orffinder/](https://www.ncbi.nlm.nih.gov/orffinder/). Command line offerings include: 
+
+* [GLIMMER](http://ccb.jhu.edu/software/glimmer/index.shtml)
+* [GeneMark](http://exon.gatech.edu/GeneMark/)
+* [Prodigal](https://github.com/hyattpd/Prodigal) (my favourite)
 
 
 [Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).
+
+
+# Manually annotate a sequence using web based homology searches
+
+If you had a problem with generating an assembly with Unicycler. Here are some results I prepared earlier. 
+
+* [long_assembly.fasta](/seq-analysis/long_assembly.fasta)
+* [long_assembly.gfa](/seq-analysis/long_assembly.gfa)
+* [unicycler.log](/seq-analysis/unicycler.log)
+
+If you have having difficulty with the amount of sequence information, try the next few exercises with this short sequence "small_contigs.fasta". If you feel more confident you may try the mystery pathogenicity island, "mystery_island.fasta" - both of these are taken from the long read assembly above. 
+
+* [small_contig.fasta](/seq-analysis/small_contig.fasta)
+* [mystery_island.fasta](/seq-analysis/mystery_island.fasta)
+
+Using a combination different tools, try to assign a function to the genes you have predicted. What can you say about the genome regions?
+
+There are web-based tools for you to use such as: 
+
+* Web BLAST - [https://blast.ncbi.nlm.nih.gov/Blast.cgi](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
+* [https://www.ebi.ac.uk/Tools/hmmer/](https://www.ebi.ac.uk/Tools/hmmer/)
+* [InterPro- https://www.ebi.ac.uk/interpro/](https://www.ebi.ac.uk/interpro/)
+
+Try to save your findings in `Artemis` by editing the different features. You may want to use fields like `/note`, `/gene`, or `/product`. 
+
+
+
+
+
+
+[Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).
+
+

@@ -2,27 +2,52 @@
 title: Compare hybrid and short-read-only assemblies
 ---
 
-# Genome assembly
 
-###  Day 2
+If you have a problem with generating an assembly with Shovill. Here are some results I prepared earlier. 
 
-#####  Overview of the day
+* [contigs.fa](/seq-analysis/contigs.fa)
+* [contigs.gfa](/seq-analysis/contigs.gfa)
+* [shovill.corrections](/seq-analysis/shovill.corrections)
+* [shovill.log](/seq-analysis/shovill.log)
 
-#####  Talk (Pallen):  *Microbial Genomics: Theory and Practice*
+If you have a problem with generating an assembly with Unicycler. Here are some results I prepared earlier. 
 
-  -  _Microbial Genomics: Theory and Practice_ ([Powerpoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/modules/sequence-analysis/_posts/2023_Week%203_Talk_Microbial_genomics.pptx))
+* [long_assembly.fasta](/seq-analysis/long_assembly.fasta)
+* [long_assembly.gfa](/seq-analysis/long_assembly.gfa)
+* [unicycler.log](/seq-analysis/unicycler.log)
 
-##### Instructions for problem-based learning on genome assembly (Alikhan)
+## Exercise: Assessing genome assembly quality 
+Many tools are available that assess sequence quality through read alignment, k-mer counting, gene finding, and other methods. 
+Your exercise now is to compare and contrast the  hybrid and short-read-only assemblies we prepared earlier  using methods like QUAST, webBlast a contig, Kraken, or looking at assembly graph with Bandage.
 
-- Exercise: [hybrid and short-read-only assembly of sequenced reads](/seq-analysis/genome-assembly)
+##### Contiguity
 
-#####  Instructions for problem-based learning on assembly QC (Alikhan)
+* Less contigs, Longer contigs
+* N50, avg. contig length, number of contigs etc.
+* Try [QUAST](https://quast.sourceforge.net/quast.html)
 
-- Exercise: [perform QC and compare hybrid and short-read-only assemblies](/seq-analysis/assembly_qc) (using QUAST, webBlast a contig, Kraken, assembly graph with bandage etc.)
-- Additional exercise: [Assess the Quality of some other (provided) assembled genomes](/seq-analysis/check_qc). Dataset will include assembled contigs of different strains that fail QC for one reason or another.
+##### Completeness
 
-#####  Talk from Mark Pallen: *Amerithrax: from genome to culprit*
+* Compare to reference genome (How to find a reference genome? Start with [web BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi))
+* Assume a genome should have single copy essential genes
+* [MLST](https://github.com/tseemann/mlst) intact?
+* [BUSCO](https://busco.ezlab.org/) panel
+* [CheckM](https://ecogenomics.github.io/CheckM) panel
 
-  - _Amerithrax: from genome to culprit_ ([Powerpoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/modules/sequence-analysis/_posts/2023_Week%203_Talk_Amerithrax.pptx))
+##### Correctness 
 
-  [Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).
+* Assembly free from errors
+* Mis-joins
+* Collapsed repeats
+* Duplication artefacts 
+* False SNPs, InDels
+* Compare to reference genome 
+* Map original reads back to assembled contigs
+* Structural rearrangement tools - [Socru](https://github.com/quadram-institute-bioscience/socru)
+* Try looking at the graph in [Bandage](https://rrwick.github.io/Bandage/)
+
+##### Contamination 
+
+Check for contamination too with [Kraken/Bracken](https://ccb.jhu.edu/software/bracken/)
+
+[Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).
