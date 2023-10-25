@@ -119,16 +119,16 @@ For Processing large datasets
 
 You can Install and control R and jupyter notebooks through `conda`.
 
-You can naturally change the name of the `conda env` (I used mapdemo here) to anything you like. I use mamba here to speed up the install process. I highly recommend mamba! I explain mamba in more detail here.
+You can naturally change the name of the `conda env` (I used mapdemo here) to anything you like.
 
-The first mamba install line is to install `jupyter` notebook, the second is for `R`, the `R` kernel for `jupyter` and common `R` packages `dplyr` and `ggplot`. The third `mamba` install line is for more specific `R` packages I want to use.
+The first `conda` install line is to install `jupyter` notebook, the second is for `R`, the `R` kernel for `jupyter` and common `R` packages `dplyr` and `ggplot`. The third `conda` install line is for more specific `R` packages I want to use.
 
 ```
 conda create -n mapdemo mamba
 conda activate mapdemo
-mamba install -y -c conda-forge pip notebook  nb_conda_kernels  jupyter_contrib_nbextensions
-mamba install -y -c conda-forge r r-irkernel r-ggplot2 r-dplyr
-mamba install -y -c conda-forge r-sf  r-ggrepel  r-cowplot r-maps
+conda install -y -c conda-forge pip notebook  nb_conda_kernels  jupyter_contrib_nbextensions
+conda install -y -c conda-forge r r-irkernel r-ggplot2 r-dplyr
+conda install -y -c conda-forge r-sf  r-ggrepel  r-cowplot r-maps
 ```
 
 #### Starting the notebook
