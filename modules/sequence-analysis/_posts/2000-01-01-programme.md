@@ -2,7 +2,7 @@
 title: Programme
 ---
 
-# Week 3: From Sequence to Consequence
+# Week 3: From Sequence to consequence
 **Week beginning November 6th 2023**
 
 _Nabil-Fareed Alikhan and Mark Pallen_
@@ -38,6 +38,4 @@ _Nabil-Fareed Alikhan and Mark Pallen_
 ### Friday
 #### Pathogen Genomics
 - **[Detecting virulence factors]({{site.baseurl}}/modules/sequence-analysis/virulence)**
-
-***
 
