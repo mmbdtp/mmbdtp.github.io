@@ -117,7 +117,7 @@ Many tools are available that assess sequence quality through read alignment, k-
 
 **How does aligning to a reference genome help assess completeness?**
 
-**How does Kraken/Bracken help assess contamination?**
+**How does Kraken help assess contamination?**
 
 ### Practical questions
 
