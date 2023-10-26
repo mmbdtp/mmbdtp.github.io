@@ -2,31 +2,35 @@
 title: Compare hybrid and short-read-only assemblies
 ---
 
+# What is a 'good' genome assembly?
 
-If you have a problem with generating an assembly with Shovill. Here are some results I prepared earlier. 
+Think carefully about the aim of genome assembly and the process used to generate data. You can review **[Hybrid and short-read-only assembly of sequenced reads]({{site.baseurl}}/modules/sequence-analysis/genome-assembly/)** and reflect what was shown in week 2. 
 
-* [contigs.fa](/seq-analysis/contigs.fa)
-* [contigs.gfa](/seq-analysis/contigs.gfa)
-* [shovill.corrections](/seq-analysis/shovill.corrections)
-* [shovill.log](/seq-analysis/shovill.log)
+Our ultimate goal is to reconstruct the original genome sequence, but to do this we have sheared, amplified the DNA and read off short sequences. There are errors introduced at each step. At the time of writing, there is no reliable method of automatically generating a perfect and complete genome sequence. We must make do with what we have, and be able to assess if the genome assembly is 'good enough' for our purposes.
 
-If you have a problem with generating an assembly with Unicycler. Here are some results I prepared earlier. 
+In this section we will look at some of the tools available to assess the quality of genome assemblies, and compare our hybrid and short-read-only assemblies. This has two purposes:
 
-* [long_assembly.fasta](/seq-analysis/long_assembly.fasta)
-* [long_assembly.gfa](/seq-analysis/long_assembly.gfa)
-* [unicycler.log](/seq-analysis/unicycler.log)
+* Help familiarise you with metrics and tools you can use to assess genome assembly quality.
+* Show you the difference read length can play in genome assembly. 
 
-## Exercise: Assessing genome assembly quality 
-Many tools are available that assess sequence quality through read alignment, k-mer counting, gene finding, and other methods. 
-Your exercise now is to compare and contrast the  hybrid and short-read-only assemblies we prepared earlier  using methods like QUAST, webBlast a contig, Kraken, or looking at assembly graph with Bandage.
+## Assessing genome assembly quality
 
-##### Contiguity
+There are many tools available to assess genome assembly quality. We will look at some of the most common ones.
+
+### Contiguity
+
+This measures how contiguous the assembled genome is. You can look at metrics like the `N50` and `L50`, which indicate the length of the longest contig and the number of contigs needed to cover a certain percentage of the genome. Higher `N50` and lower `L50` values are generally better.
+
+How can we assess contiguity?
 
 * Less contigs, Longer contigs
-* N50, avg. contig length, number of contigs etc.
+* N50, average contig length, number of contigs etc.
 * Try [QUAST](https://quast.sourceforge.net/quast.html)
 
-##### Completeness
+### Completeness
+You can assess genome completeness by comparing your assembly to a reference genome if available.
+
+How can we assess completeness?
 
 * Compare to reference genome (How to find a reference genome? Start with [web BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi))
 * Assume a genome should have single copy essential genes
@@ -34,20 +38,70 @@ Your exercise now is to compare and contrast the  hybrid and short-read-only ass
 * [BUSCO](https://busco.ezlab.org/) panel
 * [CheckM](https://ecogenomics.github.io/CheckM) panel
 
-##### Correctness 
+> You may have trouble with installing BUSCO and CheckM (the databases are quite large). You can screen your data with web resources like Galaxy. Try [https://usegalaxy.org/](https://usegalaxy.org/)
+
+### Correctness
+
+Assess the accuracy of your assembly by checking for misassemblies, such as structural errors, inversions, or translocations. Visualization tools like Artemis or Bandage can help identify such issues. Effectively we are trying to assess, is the genome assembly what we expect?
+
+How can we assess correctness?
 
 * Assembly free from errors
 * Mis-joins
 * Collapsed repeats
 * Duplication artefacts 
 * False SNPs, InDels
-* Compare to reference genome 
+* Comparison to Other Assemblies: If other assemblies of the same species are available, compare your assembly to them to identify any discrepancies. Ideally to well known reference genome.
 * Map original reads back to assembled contigs
+* Evaluation of Plasmids: If the bacterium has plasmids, confirm that they are correctly assembled and identify their sequences.
 * Structural rearrangement tools - [Socru](https://github.com/quadram-institute-bioscience/socru)
 * Try looking at the graph in [Bandage](https://rrwick.github.io/Bandage/)
 
-##### Contamination 
+### Contamination 
 
 Check for contamination too with [Kraken/Bracken](https://ccb.jhu.edu/software/bracken/)
+
+### Circumstantial 
+
+These are not direct evidence of a good genome, but can be reassuring.
+
+What are some circumstanial evidence of a good genome?
+
+* **GC Content:** Verify that the GC content of your assembly matches the expected GC content for the species. Significant deviations could indicate contamination or assembly errors.
+* **Repeat Content:** Assess the presence and handling of repetitive elements. High levels of repeats may lead to fragmented assemblies or misassemblies.
+* **Quality of Reads:** Examine the quality of the raw sequencing reads to ensure that they are of high quality, with minimal errors or biases.
+* **Coverage Depth:** Evaluate the coverage depth across the genome. Uniform coverage indicates a more reliable assembly.
+* **Visualization:** Use genome visualization tools like Artemis, IGV, or Tablet to visually inspect the assembly and confirm its quality.
+
+Remember that the quality of your bacterial genome assembly may also depend on the sequencing technology used, the software and parameters employed for assembly, and the quality of the source DNA. Careful evaluation and validation of your assembly are essential for accurate results.
+
+# Comparing hybrid and short-read-only assemblies
+
+We previously discussed the importance of read length on genome assembly. You can review **[Hybrid and short-read-only assembly of sequenced reads]({{site.baseurl}}/modules/sequence-analysis/genome-assembly/)** and reflect what was shown in week 2. With that in mind, we will now compare our hybrid and short-read-only assemblies.
+
+## Example data
+
+If you have a problem with generating an assembly with Shovill (from the previous section). Here are some results I prepared earlier. 
+
+* [contigs.fa](/seq-analysis/contigs.fa)
+* [contigs.gfa](/seq-analysis/contigs.gfa)
+* [shovill.corrections](/seq-analysis/shovill.corrections)
+* [shovill.log](/seq-analysis/shovill.log)
+
+If you have a problem with generating an assembly with Unicycler (from the previous section). Here are some results I prepared earlier. 
+
+* [long_assembly.fasta](/seq-analysis/long_assembly.fasta)
+* [long_assembly.gfa](/seq-analysis/long_assembly.gfa)
+* [unicycler.log](/seq-analysis/unicycler.log)
+
+
+## Exercise 1: Assessing genome assembly quality 
+
+Many tools are available that assess sequence quality through read alignment, k-mer counting, gene finding, and other methods. Your exercise now is to compare and contrast the hybrid and short-read-only assemblies we prepared earlier using methods testing for Contiguity, Correctness, Completeness & Contamination (see above).
+
+
+
+
+
 
 [Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).
