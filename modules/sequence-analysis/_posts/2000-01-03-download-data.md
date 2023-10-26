@@ -154,15 +154,17 @@ You will then see the `jupyter` service start up and it will tell you where you 
 
 *Data are available at [https://zenodo.org/records/10018484](https://zenodo.org/records/10018484)*
 
-**Check if you can access (or download) the data for the mystery novel pathogen we will explore this week** 
+**Check that you have your own copy of the data for the mystery novel pathogen we will explore this week.** 
 
-**Check if you can access (or download) the `additional_genomes_for_qc.zip` file** 
+You can copy the data from `~/shared-team` or download it from Zenodo.
+
+**Check that you have your own copy of the `additional_genomes_for_qc.zip` file.** 
+
+You can copy the data from `~/shared-team` or download it from Zenodo.
 
 **Check you can run each of the required software (try running each command with the help flag), if not install via conda** 
 
-_You may need to locate external instructions on installing these software packages e.g. via their github pages_ 
-
-Required software for you CLIMB-BIG-DATA notebook:
+You may need to locate external instructions on installing these software packages e.g. via their github pages. Required software for you CLIMB-BIG-DATA notebook:
 
 * `prokka` 
 * `unicycler` 
