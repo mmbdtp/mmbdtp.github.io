@@ -56,14 +56,14 @@ Assess the accuracy of your assembly by checking for misassemblies, such as stru
 
 Some common reasons for contamination in sequencing data include:
 
-* **Sample Cross-Contamination**
-* **Contaminated Reagents and Kits**
-* **Environmental Contamination**
-* **Human Contamination**
-* **Cross-Talking in Multiplexed Sequencing**
-* **Lab Equipment Contamination**
-* **Library Preparation and PCR Artifacts**
-* **Sample Mix-Up**
+* Sample Cross-Contamination
+* Contaminated Reagents and Kits
+* Environmental Contamination
+* Human Contamination
+* Cross-Talking in Multiplexed Sequencing
+* Lab Equipment Contamination
+* Library Preparation and PCR Artifacts
+* Sample Mix-Up
 
 Check for contamination with tools like [Kraken/Bracken](https://ccb.jhu.edu/software/bracken/)
 
@@ -117,7 +117,7 @@ Many tools are available that assess sequence quality through read alignment, k-
 
 **How does aligning to a reference genome help assess completeness?**
 
-**How does Kraken help assess contamination?**
+**How does using Kraken help assess contamination?**
 
 ### Practical questions
 
