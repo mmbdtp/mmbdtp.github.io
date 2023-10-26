@@ -7,6 +7,9 @@ title: Programme
 
 _Nabil-Fareed Alikhan and Mark Pallen_
 
+* **[About this week](/seq-analysis/about/)**
+* **[Further reading and additional resources]({{site.baseurl}}/modules/sequence-analysis/further-reading)**
+
 ### Monday - Sequence homology and alignment
 
 **Venue:** Monday November 6th: UG55B 9.00am to 1pm
