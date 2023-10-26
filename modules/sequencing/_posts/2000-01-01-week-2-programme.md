@@ -50,7 +50,7 @@ _Bioinformatics tutorials led by Nabil-Fareed Alikhan_
 
 ### Friday
 
-**Venue:** Thursday 3rd November:  _report to Quadram Institute reception at 9.00am._ Non-QIB students will need to be signed in at reception that day with a guest pass. We will use 01.45 Meeting room 9.00 am to 17.00 (There will be breaks!)
+**Venue:** Friday 3rd November:  _report to Quadram Institute reception at 9.00am._ Non-QIB students will need to be signed in at reception that day with a guest pass. We will use 01.45 Meeting room 9.00 am to 17.00 (There will be breaks!)
 
 _Bioinformatics tutorials led by Nabil-Fareed Alikhan_
 
