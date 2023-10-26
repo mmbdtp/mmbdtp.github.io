@@ -19,32 +19,27 @@ There are many tools available to assess genome assembly quality. We will look a
 
 ### Contiguity
 
-This measures how contiguous the assembled genome is. You can look at metrics like the `N50` and `L50`, which indicate the length of the longest contig and the number of contigs needed to cover a certain percentage of the genome. Higher `N50` and lower `L50` values are generally better.
-
-How can we assess contiguity?
+This measures how contiguous the assembled genome is. You can look at metrics like the `N50` and `L50`, which indicate the length of the longest contig and the number of contigs needed to cover a certain percentage of the genome. Higher `N50` and lower `L50` values are generally better. How can we assess contiguity?
 
 * Less contigs, Longer contigs
 * N50, average contig length, number of contigs etc.
 * Try [QUAST](https://quast.sourceforge.net/quast.html)
 
 ### Completeness
-You can assess genome completeness by comparing your assembly to a reference genome if available.
-
-How can we assess completeness?
+You can assess genome completeness by comparing your assembly to a reference genome if available. How can we assess completeness?
 
 * Compare to reference genome (How to find a reference genome? Start with [web BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi))
-* Assume a genome should have single copy essential genes
-* [MLST](https://github.com/tseemann/mlst) intact?
-* [BUSCO](https://busco.ezlab.org/) panel
-* [CheckM](https://ecogenomics.github.io/CheckM) panel
+* Use QUAST to compare to reference genome via different metrics, or align the two genomes and inspect via [Mauve](https://darlinglab.org/mauve/mauve.html) or [Artemis](https://www.sanger.ac.uk/tool/artemis/).
+* Assume a genome should have single copy essential genes:
+    * [MLST](https://github.com/tseemann/mlst) intact?
+    * [BUSCO](https://busco.ezlab.org/) panel
+    * [CheckM](https://ecogenomics.github.io/CheckM) panel
 
-> You may have trouble with installing BUSCO and CheckM (the databases are quite large). You can screen your data with web resources like Galaxy. Try [https://usegalaxy.org/](https://usegalaxy.org/)
+> You may have trouble with installing BUSCO and CheckM (the databases are quite large). You can screen your data with web resources like Galaxy. Try [https://usegalaxy.eu/](https://usegalaxy.eu/)
 
 ### Correctness
 
-Assess the accuracy of your assembly by checking for misassemblies, such as structural errors, inversions, or translocations. Visualization tools like Artemis or Bandage can help identify such issues. Effectively we are trying to assess, is the genome assembly what we expect?
-
-How can we assess correctness?
+Assess the accuracy of your assembly by checking for misassemblies, such as structural errors, inversions, or translocations. Visualization tools like Artemis or Bandage can help identify such issues. Effectively we are trying to assess, is the genome assembly what we expect? How can we assess correctness?
 
 * Assembly free from errors
 * Mis-joins
@@ -99,7 +94,26 @@ If you have a problem with generating an assembly with Unicycler (from the previ
 
 Many tools are available that assess sequence quality through read alignment, k-mer counting, gene finding, and other methods. Your exercise now is to compare and contrast the hybrid and short-read-only assemblies we prepared earlier using methods testing for Contiguity, Correctness, Completeness & Contamination (see above).
 
+_You can try these different options on your own, or work in groups, or divide the different criteria between yourselves_ 
 
+**What is N50?**
+
+**What is GC Content?** 
+
+**How does BUSCO measure completeness?** 
+
+**How does aligning to a reference genome help assess completeness?**
+
+**How does Kraken/Bracken help assess contamination?**
+
+**What is the difference in N50, number of contigs, and L50 between the hybrid and short-read-only assemblies?**
+
+**What is the difference in completeness between the hybrid and short-read-only assemblies?**
+
+**Which assembly graph looks better between the hybrid and short-read-only assemblies (use Bandage)?**
+
+
+[Answers to exercises](/seq-analysis/genome-assembly-qc-answers/)
 
 
 
