@@ -13,7 +13,7 @@ This week will cover genome sequence analysis. Topics include:
 * Microbial genome annotation (single isolate)
 * Basic detection of virulence factors (single isolate data only)
 
-Each submodule (listed in the [programme]({{site.baseurl}}/modules/sequence-analysis/programme/)) will have a brief introduction, followed by a practical exercise. The pratical exercises will use real world data (or simulated data that mimics real world data). Participants are expected to be mostly self guided through the material but you are encouraged to ask questions of the instructors.
+Each submodule (listed in the [programme]({{site.baseurl}}/modules/sequence-analysis/programme/)) will have a brief introduction, followed by a practical exercise. The practical exercises will use real world data (or simulated data that mimics real world data). You are expected to guide yourself through the material but you are encouraged to ask questions of the instructors.
 
 # Learning outcomes 
 
