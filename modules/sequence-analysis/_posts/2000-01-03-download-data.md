@@ -104,51 +104,13 @@ conda install blast -y
 A quick aside, "how should I organise my projects?" in the long term. 
 
 * Use `conda` for package management (https://docs.conda.io/en/latest/)
-* `Jupyter` notebooks (offered via CLIMB=BIG-DATA but free available for other setups) for exploring data and plotting figures (https://jupyter.org/)
+* `Jupyter` notebooks (offered via CLIMB-BIG-DATA but freely available for you to install on your own machine) for exploring data and plotting figures (https://jupyter.org/)
 
 For Processing large datasets
 
 * Use workflow languages (`nextflow`)
 * [Bactopia](https://bactopia.github.io/) is a good all-included workflow to start
 
-
-### Some guidance on getting Jupyter notebooks up and running
-
-> This is for future reference, and is not covered in this course.
-
-You can Install and control R and jupyter notebooks through `conda`.
-
-You can naturally change the name of the `conda env` (I used mapdemo here) to anything you like.
-
-The first `conda` install line is to install `jupyter` notebook, the second is for `R`, the `R` kernel for `jupyter` and common `R` packages `dplyr` and `ggplot`. The third `conda` install line is for more specific `R` packages I want to use.
-
-```
-conda create -n mapdemo mamba
-conda activate mapdemo
-conda install -y -c conda-forge pip notebook  nb_conda_kernels  jupyter_contrib_nbextensions
-conda install -y -c conda-forge r r-irkernel r-ggplot2 r-dplyr
-conda install -y -c conda-forge r-sf  r-ggrepel  r-cowplot r-maps
-```
-
-#### Starting the notebook
-Once these are all installed you can start the `jupyter` notebook from a diretory of your choosing. Here I just make a demo directory
-
-```
-mkdir demo
-jupyter notebook
-```
-
-You will then see the `jupyter` service start up and it will tell you where you can access it i.e. `http://localhost:8888/`
-
-```
-(mapdemo) ubuntu@chomp:~/code/demo$ jupyter notebook
-[I 10:36:03.954 NotebookApp] [nb_conda_kernels] enabled, 8 kernels found
-[I 10:36:04.186 NotebookApp] [jupyter_nbextensions_configurator] enabled 0.4.1
-[I 10:36:04.188 NotebookApp] Serving notebooks from local directory: /home/ubuntu/code/demo
-[I 10:36:04.188 NotebookApp] Jupyter Notebook 6.4.11 is running at:
-[I 10:36:04.188 NotebookApp] http://localhost:8888/
-[I 10:36:04.188 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
-```
 
 # Exercise 1: Preparing our data and installing our software 
 
