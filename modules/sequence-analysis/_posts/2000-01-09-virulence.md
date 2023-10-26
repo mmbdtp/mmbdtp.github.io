@@ -5,7 +5,6 @@ title: Detecting virulence factors
 # Pathogen genomics - Detecting virulence factors and AMR
 Pathogen genomics, a pivotal field in the realm of infectious disease research, has witnessed remarkable advancements since the advent of high-throughput sequencing technologies. In the quest to understand and combat disease-causing microorganisms, pathogen genomics delves into the genetic intricacies of bacteria, viruses, fungi, and parasites. By decoding the complete genetic sequences of these pathogens, scientists gain insights into their virulence factors, transmission dynamics, and mechanisms of antimicrobial resistance.
 
-## Looking for antimicrobial resistance (AMR)
 With the decreasing costs, whole genome sequencing has become a viable antimicrobial resistance surveillance tool. Several methods and tools have been published in recent years for detecting genetic determinants of antimicrobial resistance from whole-genome sequencing (WGS) and whole-metagenome sequencing (WMS) data. 
 
 Each of these tools are performing some kind of alignment or search in your sequence of interest. The program are looking for known virulence/AMR genes in published databases. The tools may accept sequence reads or assembled contigs are input. The databases are build with slightly different so the results may not be the same when using different tools. See review for more details [Boolchandani, D'Souza & Dantas, (2019)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6525649/).
@@ -75,16 +74,15 @@ There are a number of tools for detecting plasmids and prophage. You can apply t
 
 There are a number of tools for detecting plasmids, some of which are listed below.
 
-* [MOB-Suite](https://github.com/phac-nml/mob-suite). Try this one.
-* [Plasmidfinder](https://cge.food.dtu.dk/services/PlasmidFinder/) - Web tool. Try this one.
-* [Abricate](https://github.com/tseemann/abricate) (plasmidfinder). Try this one.
+* [MOB-Suite](https://github.com/phac-nml/mob-suite).
+* [Plasmidfinder](https://cge.food.dtu.dk/services/PlasmidFinder/) - Web tool. 
+* [Abricate](https://github.com/tseemann/abricate) (plasmidfinder). 
 * [ARIBA](https://github.com/sanger-pathogens/ariba) (plasmidfinder)
-* [PLACNET](https://castillo.dicom.unican.es/upload/) - Web tool. Try this one.
-* [COPLA](https://castillo.dicom.unican.es/copla_guide/) - Web tool. Try this one.
+* [PLACNET](https://castillo.dicom.unican.es/upload/) - Web tool. 
+* [COPLA](https://castillo.dicom.unican.es/copla_guide/) - Web tool. 
 * [PlasFlow](https://github.com/smaegol/PlasFlow)
 
-
-Again, you can use `abricate`, just to see what some predictions look like.
+You can try the tools above on your chosen data. Or you can use `abricate`, just to see what some predictions look like.
 
 ```
 abricate oh/assembly.fasta --db plasmidfinder
@@ -130,8 +128,6 @@ Arndt D, Marcu A, Liang Y, Wishart DS. PHAST, PHASTER and PHASTEST: Tools for fi
 
 # Exercise 1: Detecting virulence factors and AMR genes
 
-**Use any tools (web or CLI) to detect virulence factors and AMR genes in your genome of interest.**
-
 If you had a problem with generating an assembly. Here are some results I prepared earlier. 
 
 * [long_assembly.fasta](/seq-analysis/long_assembly.fasta)
@@ -140,20 +136,38 @@ I have provided another plasmid genome, which is totally unrelated to our data. 
 
 * [some_plasmid.fasta](/seq-analysis/some_plasmid.fasta)
 
-This exercise is open-ended,The text above will give you some ideas of how to approach this; however, you may want to try other tools. You can work in groups, or divide the different criteria between yourselves. We are aiming to say something about: 
+This exercise is open-ended, the text above will give you some ideas of how to approach this; however, you may want to try other tools. You can work in groups, or divide the different criteria between yourselves. We are aiming to say something about: 
 
 * What virulence factors are present?
 * What AMR genes are present?
 * What plasmids are present (and their composition)?
 * What prophages are present (and their composition)?
 
+## Theory questions
+
+**What is the difference between the contents of the VFDB and CARD databases**
+
+**What does FimTyper base its typing on? Why is this useful to know?**
+
+**What does PlasmidFinder base its typing on? Why is this useful to know?**
+
+**What is a prophage?**
+
+## Practical questions 
+
+_If the number of different tools presented here are overwhelming, try to focus on using `abricate` and work through the questions below_
+
 **Try running your chosen sequence through `abricate` with the different databases.**
 
-**Can you locate the abricate results in `Artemis`?**
+**Can you locate the `abricate` results in `Artemis`?**
 
-**Use the automated annotation we made using `prokka` - Does this annotation agree with the `abricate` results?**
+**Refer back to the automated annotation we made using `prokka` - Does this annotation agree with the `abricate` results?**
 
-**Try at least three of the suggsted tools**
+**How many prophages are predicted in the [PHASTER example](https://phaster.ca/submissions/NC_000913)**
+
+**Try at least three of the other suggested tools. What can you find?**
+
+[Answers to exercises](/seq-analysis/virulence-answers/)
 
 
 [Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).
