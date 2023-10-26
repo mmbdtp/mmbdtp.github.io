@@ -62,7 +62,6 @@ You need `conda` version 22.11 and above for this to work.
 
 ###### In this course, you should use conda or containers (from week one) to manage your software
 
-
 ### Install the software for week 3 
 Week three will need certain software, please install these packages for week for via conda/mamba. 
 
@@ -150,5 +149,35 @@ You will then see the `jupyter` service start up and it will tell you where you 
 [I 10:36:04.188 NotebookApp] http://localhost:8888/
 [I 10:36:04.188 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 ```
+
+# Exercise 1: Preparing our data and installing our software 
+
+*Data are available at [https://zenodo.org/records/10018484](https://zenodo.org/records/10018484)*
+
+**Check if you can access (or download) the data for the mystery novel pathogen we will explore this week** 
+
+**Check if you can access (or download) the `additional_genomes_for_qc.zip` file** 
+
+**Check you can run each of the required software (try running each command with the help flag), if not install via conda** 
+
+_You may need to locate external instructions on installing these software packages e.g. via their github pages_ 
+
+Required software for you CLIMB-BIG-DATA notebook:
+
+* `prokka` 
+* `unicycler` 
+* `shovill`
+
+**Install graphical software on your local machine**
+
+`Artemis`, `bandage` and `mauve` are software with a graphical interface you **should run on your local computer**. Follow the instructions at:
+
+* [https://rrwick.github.io/Bandage/](https://rrwick.github.io/Bandage/)
+* [https://darlinglab.org/mauve/user-guide/viewer.html](https://darlinglab.org/mauve/user-guide/viewer.html)
+* [https://www.sanger.ac.uk/tool/artemis/](https://www.sanger.ac.uk/tool/artemis/)
+
+_The information above will help you with all of these tasks, read it carefully. Check with the instructor if you are unsure_ 
+
+
 
 [Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).
