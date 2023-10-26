@@ -131,6 +131,9 @@ You may need to locate external instructions on installing these software packag
 * `prokka` 
 * `unicycler` 
 * `shovill`
+* `mlst`
+* `quast`
+
 
 **Install graphical software on your local machine**
 
