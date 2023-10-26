@@ -176,11 +176,7 @@ The important output files:
 
 # Exercise 1: Short read and hybrid assembly
 
-**Assemble the genome of our novel pathogen using short reads only** 
-
-**Assemble the genome of  our novel pathogen using both long and short reads (as a hybrid assembly)**
-
-_We will compare the results of these assemblies in the next exercise_
+## Theory questions
 
 **Define "Read 1" and "Read 2" in the context of paired-end sequencing. What is the direction of extension for each?**
 
@@ -189,6 +185,15 @@ _We will compare the results of these assemblies in the next exercise_
 **Why is it important for read lengths to span repeated sequences in the genome during assembly?**
 
 **What issues do some sequencing platforms encounter when dealing with GC-rich or AT-rich DNA sequences?**
+
+## Practical questions
+
+**Assemble the genome of our novel pathogen using short reads only** 
+
+**Assemble the genome of  our novel pathogen using both long and short reads (as a hybrid assembly)**
+
+_We will compare the results of these assemblies in the next exercise_
+
 
 [Answers to the exercises](/seq-analysis/genome-assembly-answers)
 
