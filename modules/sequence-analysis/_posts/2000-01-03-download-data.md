@@ -133,6 +133,7 @@ You may need to locate external instructions on installing these software packag
 * `shovill`
 * `mlst`
 * `quast`
+* `abricate`
 * `prodigal`
 
 **Install graphical software on your local machine**

@@ -2,23 +2,10 @@
 title: Detecting virulence factors
 ---
 
-# Pathogen genomics
+# Pathogen genomics - Detecting virulence factors and AMR
+Pathogen genomics, a pivotal field in the realm of infectious disease research, has witnessed remarkable advancements since the advent of high-throughput sequencing technologies. In the quest to understand and combat disease-causing microorganisms, pathogen genomics delves into the genetic intricacies of bacteria, viruses, fungi, and parasites. By decoding the complete genetic sequences of these pathogens, scientists gain insights into their virulence factors, transmission dynamics, and mechanisms of antimicrobial resistance.
 
-### Day 4
-
-- Exercise: [Detecting virulence factors](/seq-analysis/detect_vir) in our genome, using web tools (including resfinder etc).
-- Additional Exercise: [Detecting virulence factors](/seq-analysis/detect_vir_cli) in our genome using command line tools.
-
-
-
-# Detecting virulence factors and AMR
-
-If you had a problem with generating an assembly. Here are some results I prepared earlier. 
-
-* [long_assembly.fasta](/seq-analysis/long_assembly.fasta)
-
-##### In this exercise, use the Galaxy or other web based tools to locate virulence factors and anitmicrobial resistance in a genome. 
-
+## Looking for antimicrobial resistance (AMR)
 With the decreasing costs, whole genome sequencing has become a viable antimicrobial resistance surveillance tool. Several methods and tools have been published in recent years for detecting genetic determinants of antimicrobial resistance from whole-genome sequencing (WGS) and whole-metagenome sequencing (WMS) data. 
 
 Each of these tools are performing some kind of alignment or search in your sequence of interest. The program are looking for known virulence/AMR genes in published databases. The tools may accept sequence reads or assembled contigs are input. The databases are build with slightly different so the results may not be the same when using different tools. See review for more details [Boolchandani, D'Souza & Dantas, (2019)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6525649/).
@@ -41,49 +28,15 @@ There are numerous databases for different gene panels - AMR, virulence, serotyp
 If you have a particular interest in AMR, please review the content from this 
 [Workshop on Antimicrobial Resistance](https://www.climb.ac.uk/amr-workshop/)
 
+### Software to try (abricate)
 
-#### Software to try
+One software you can try is [abricate](https://github.com/tseemann/abricate) - with different databases. Is `abricate` installed? Please see the [Installing software](seq-analysis/installing) section. To understand what the output actually means, see the documentation, [abricate](https://github.com/tseemann/abricate)
 
-In Galaxy try:
-
-* [abricate](https://github.com/tseemann/abricate) - with different databases
-
-What does the output actually mean? See the documentation, [abricate](https://github.com/tseemann/abricate)
-
-```
-#FILE	SEQUENCE	START	END	GENE	COVERAGE	COVERAGE_MAP	GAPS	%COVERAGE	%IDENTITY	DATABASE	ACCESSION	PRODUCT
-test_sample	1	610199	614052	entF	1-3854/3882	===============	0/0	99.28	95.67	vfdb	NP_752604	(entF) enterobactin synthase multienzyme complex component ATP-dependent [Enterobactin (VF0228)] [Escherichia coli CFT073]
-test_sample	1	615427	616242	fepC	1-816/816	===============	0/0	100.00	97.30	vfdb	NP_752606	(fepC) ferrienterobactin ABC transporter ATPase [Enterobactin (VF0228)] [Escherichia coli CFT073]
-test_sample	1	616239	617231	fepG	1-993/993	===============	0/0	100.00	94.06	vfdb	NP_752607	(fepG) iron-enterobactin ABC transporter permease [Enterobactin (VF0228)] [Escherichia coli CFT073]
-```
-N.B. The co-ordinates in your genome may not match the co-ordinates above
-
-Can you locate these genes in `Artemis`? Use the automated annotation - Do these annotations agree?
-
-Other online tools you can try, include: 
-
-* FimTyper: [https://cge.food.dtu.dk/services/FimTyper/](https://cge.food.dtu.dk/services/FimTyper/)
-* ResFinder: [https://cge.food.dtu.dk/services/ResFinder/](https://cge.food.dtu.dk/services/ResFinder/)
-
-Using these tools what can you say about the genome?
-
-[Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).
-
-
-
-# Detecting virulence factors - CLI
-Is `abricate` installed? Please see the [Installing software](seq-analysis/installing) section. 
-
-If you had a problem with generating an assembly. Here are some results I prepared earlier. 
-
-* [long_assembly.fasta](/seq-analysis/long_assembly.fasta)
-
-Try using `abricate` on the command line with the different databases
+Try using `abricate` on the command line with the different databases.
 
 ```
 abricate oh/assembly.fasta 
 ```
-
 
 You can use `--list` to see what databases are available. 
 
@@ -97,10 +50,9 @@ ncbi	4324	2018-Jul-16
 plasmidfinder	263	2018-Jul-16
 resfinder	2280	2018-Jul-16
 vfdb	2597	2018-Jul-16
-
 ```
 
-The output will be the same as with the web-based example. What does it mean? Try using `grep` or `cut` to filter the results.
+Try using `grep` or `cut` to filter the results.
 
 ```
 #FILE	SEQUENCE	START	END	GENE	COVERAGE	COVERAGE_MAP	GAPS	%COVERAGE	%IDENTITY	DATABASE	ACCESSION	PRODUCT
@@ -109,22 +61,19 @@ test_sample	1	615427	616242	fepC	1-816/816	===============	0/0	100.00	97.30	vfdb
 test_sample	1	616239	617231	fepG	1-993/993	===============	0/0	100.00	94.06	vfdb	NP_752607	(fepG) iron-enterobactin ABC transporter permease [Enterobactin (VF0228)] [Escherichia coli CFT073]
 ```
 
-[Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).
+N.B. The co-ordinates in your genome may not match the co-ordinates above
 
+Other online tools you can try, include: 
 
+* FimTyper: [https://cge.food.dtu.dk/services/FimTyper/](https://cge.food.dtu.dk/services/FimTyper/)
+* ResFinder: [https://cge.food.dtu.dk/services/ResFinder/](https://cge.food.dtu.dk/services/ResFinder/)
 
 # Detecting plasmids and prophages
-There are a number of tools for detecting plasmids and prophage. Some of these are on galaxy. You can apply these tools to your assembled genome.
-
-If you had a problem with generating an assembly. Here are some results I prepared earlier. 
-
-* [long_assembly.fasta](/seq-analysis/long_assembly.fasta)
-
-I have provided another plasmid genome, which is totally unrelated to our data. You can run this too to see how results can differ with the various tools:
-
-* [some_plasmid.fasta](/seq-analysis/some_plasmid.fasta)
+There are a number of tools for detecting plasmids and prophage. You can apply these tools to your assembled genome.
 
 ### Plasmid detection 
+
+There are a number of tools for detecting plasmids, some of which are listed below.
 
 * [MOB-Suite](https://github.com/phac-nml/mob-suite). Try this one.
 * [Plasmidfinder](https://cge.food.dtu.dk/services/PlasmidFinder/) - Web tool. Try this one.
@@ -134,7 +83,26 @@ I have provided another plasmid genome, which is totally unrelated to our data. 
 * [COPLA](https://castillo.dicom.unican.es/copla_guide/) - Web tool. Try this one.
 * [PlasFlow](https://github.com/smaegol/PlasFlow)
 
+
+Again, you can use `abricate`, just to see what some predictions look like.
+
+```
+abricate oh/assembly.fasta --db plasmidfinder
+```
+
+What does the output mean? Try using `grep` or `cut` to filter the results.
+
+```
+Using database plasmidfinder:  263 sequences -  2018-Jul-16
+#FILE	SEQUENCE	START	END	GENE	COVERAGE	COVERAGE_MAP	GAPS	%COVERAGE	%IDENTITY	DATABASE	ACCESSION	PRODUCT
+Processing: oh/assembly.fasta
+Found 1 genes in oh/assembly.fasta
+oh/assembly.fasta	2	8821	8951	ColRNAI_1	1-130/130	========/======	1/1	100.00	87.02	plasmidfinder	DQ298019	ColRNAI_1__DQ298019
+```
+
 ### Phages
+
+There are a number of tools for detecting bacteriophages, some of which are listed below.
 
 * [PHAST/PHASTER](https://phaster.ca/) - Web tool. Try this one.
 * [VirSorter 2](https://github.com/jiarong/VirSorter2)
@@ -159,13 +127,10 @@ How PHASTER works - Finding prophages
 
 Arndt D, Marcu A, Liang Y, Wishart DS. PHAST, PHASTER and PHASTEST: Tools for finding prophage in bacterial genomes. Brief Bioinform. 2019;20(4):1560-1567. doi:[10.1093/bib/bbx121](https://academic.oup.com/bib/article/20/4/1560/4222653)
 
-[Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).
 
+# Exercise 1: Detecting virulence factors and AMR genes
 
-
-# Detecting plasmids - CLI
-
-Is `abricate` installed? Please see the [Installing software](seq-analysis/installing) section. 
+**Use any tools (web or CLI) to detect virulence factors and AMR genes in your genome of interest.**
 
 If you had a problem with generating an assembly. Here are some results I prepared earlier. 
 
@@ -175,44 +140,20 @@ I have provided another plasmid genome, which is totally unrelated to our data. 
 
 * [some_plasmid.fasta](/seq-analysis/some_plasmid.fasta)
 
-Try using `abricate` on the command line with the different databases
+This exercise is open-ended,The text above will give you some ideas of how to approach this; however, you may want to try other tools. You can work in groups, or divide the different criteria between yourselves. We are aiming to say something about: 
 
-```
-abricate oh/assembly.fasta --db plasmidfinder
-```
+* What virulence factors are present?
+* What AMR genes are present?
+* What plasmids are present (and their composition)?
+* What prophages are present (and their composition)?
 
+**Try running your chosen sequence through `abricate` with the different databases.**
 
-You can use `--list` to see what databases are available. 
+**Can you locate the abricate results in `Artemis`?**
 
-```
-abricate --list 
-DATABASE	SEQUENCES	DATE
-argannot	1749	2018-Jul-16
-card	2220	2018-Jul-16
-ecoh	597	2018-Jul-16
-ncbi	4324	2018-Jul-16
-plasmidfinder	263	2018-Jul-16
-resfinder	2280	2018-Jul-16
-vfdb	2597	2018-Jul-16
+**Use the automated annotation we made using `prokka` - Does this annotation agree with the `abricate` results?**
 
-```
-
-The output will be the same as with the web-based example. What does it mean? Try using `grep` or `cut` to filter the results.
-
-```
-Using database plasmidfinder:  263 sequences -  2018-Jul-16
-#FILE	SEQUENCE	START	END	GENE	COVERAGE	COVERAGE_MAP	GAPS	%COVERAGE	%IDENTITY	DATABASE	ACCESSION	PRODUCT
-Processing: oh/assembly.fasta
-Found 1 genes in oh/assembly.fasta
-oh/assembly.fasta	2	8821	8951	ColRNAI_1	1-130/130	========/======	1/1	100.00	87.02	plasmidfinder	DQ298019	ColRNAI_1__DQ298019
-```
-
-You can also try other tools such as: 
-
-* [MOB-Suite](https://github.com/phac-nml/mob-suite).
-
-
-
+**Try at least three of the suggsted tools**
 
 
 [Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).
