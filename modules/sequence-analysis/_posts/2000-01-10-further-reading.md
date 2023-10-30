@@ -15,6 +15,7 @@ title: Further reading and additional resources
 * [Pathogen Genomics in Public Health](https://www.nejm.org/doi/full/10.1056/nejmsr1813907)
 * [Towards a genomics-informed, real-time, global pathogen surveillance system](https://www.nature.com/articles/nrg.2017.88)
 * [Bacterial genome sequencing in clinical microbiology: a pathogen-oriented review](https://link.springer.com/article/10.1007/s10096-017-3024-6)
+* [Introduction to MLST as it applies to _E. coli_](/seq-analysis/ecoli-intro)
 
 # Python tutorials
 * [W3 schools python tutorial](https://www.w3schools.com/python/default.asp)
