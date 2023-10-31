@@ -15,7 +15,7 @@ cp -r ~/shared-team/week2/short-read-qc ~/
 cd ~/short-read-qc
 ```
 
->If you are part of our 2023 cohort, we should have the sequencing data from what we did earlier in the week.
+>If you are part of our 2023 cohort, we should have the sequencing data from what we did earlier in the week. See `~/shared-team/week2/sequence-data/`
 
 **You should run tools on our sequenced data as described below and also [Kraken2 to figure out what we sequenced]({{site.baseurl}}/modules/sequencing/read-classification/)**
 
