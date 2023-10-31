@@ -1,5 +1,9 @@
 # Read classification of our sequenced data
 
+If you are part of our 2023 cohort, we should have the sequencing data from what we did earlier in the week. One of the things to help us understand what's in our data is to classify the reads using Kraken2. We can use Kraken2 to classify reads against a database of known sequences. This is a quick way to get an idea of what is in our data.
+
+Kraken 2 is a bioinformatics tool and software platform designed for the taxonomic classification of DNA sequences in metagenomic data. Metagenomics involves the study of genetic material collected from environmental samples, such as soil, water, or clinical specimens, to understand the microbial diversity present in these samples. Kraken 2 is a popular tool in this field, as it allows researchers to assign taxonomic labels to the sequences, helping them identify the microorganisms present in the samples.
+
 ## Installing Kraken2 and Krona
 We will need the following software:
 
