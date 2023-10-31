@@ -17,6 +17,8 @@ cd ~/short-read-qc
 
 >If you are part of our 2023 cohort, we should have the sequencing data from what we did earlier in the week.
 
+**You should run tools on our sequenced data as described below and also [Kraken2 to figure out what we sequenced]({{site.baseurl}}/modules/sequencing/read-classification/)**
+
 **If you are not using a CLIMB-BIG-DATA notebook, you will need to download the example data.**
 ```
 wget -O female_oral2.fastq.gz https://zenodo.org/record/3977236/files/female_oral2.fastq-4143.gz?download=1
@@ -138,6 +140,8 @@ Can you explain what each of the options does?
 **What can you say about some of the other metrics?**
 
 [Answers to exercise 3](/seq-data/short-read-qc-answers2)
+
+**If you are part of our 2023 cohort, you can also explore the sequenced data we did earlier in the week**
 
 
 ### Citation

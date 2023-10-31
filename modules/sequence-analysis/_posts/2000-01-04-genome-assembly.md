@@ -190,7 +190,7 @@ The important output files:
 
 **Assemble the genome of our novel pathogen using short reads only** 
 
-**Assemble the genome of  our novel pathogen using both long and short reads (as a hybrid assembly)**
+**Assemble the genome of our novel pathogen using both long and short reads (as a hybrid assembly)**
 
 _We will compare the results of these assemblies in the next exercise_
 
