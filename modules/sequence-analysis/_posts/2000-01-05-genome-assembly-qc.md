@@ -25,6 +25,24 @@ This measures how contiguous the assembled genome is. You can look at metrics li
 * N50, average contig length, number of contigs etc.
 * Try [QUAST](https://quast.sourceforge.net/quast.html)
 
+**Running QUAST**
+
+```bash
+quast.py assembly.fasta
+```
+
+QUAST offers various options and parameters to customize the analysis and output. You can specify different options to generate specific reports or change the output format. For example, you can use the -o flag to specify a different output directory, or use -R to provide a reference genome for alignment if available.
+
+Here's an example of a more customized command:
+
+```bash
+quast.py -o custom_output_folder -R reference.fasta -g gene_annotation.gff assembly.fasta
+```
+
+This command specifies a custom output folder, uses a reference genome for alignment, and provides a gene annotation file for additional analysis.
+
+Please refer to the QUAST documentation for a full list of available options and their descriptions. The specific options and settings you use may depend on your analysis goals and the characteristics of your data.
+
 ### Completeness
 You can assess genome completeness by comparing your assembly to a reference genome if available. How can we assess completeness?
 
@@ -36,6 +54,21 @@ You can assess genome completeness by comparing your assembly to a reference gen
     * [CheckM](https://ecogenomics.github.io/CheckM) panel
 
 > You may have trouble with installing BUSCO and CheckM (the databases are quite large). You can screen your data with web resources like Galaxy. Try [https://usegalaxy.eu/](https://usegalaxy.eu/)
+
+
+**Running BUSCO**
+
+Here is some example code to run BUSCO on our example data.
+
+```
+conda activate week2 
+conda install -c conda-forge -c bioconda busco=5.5.0
+busco --list-datasets
+wget https://mmbdtp.github.io/seq-analysis/long_assembly.fasta
+busco -i long_assembly.fasta  --out assembly-busco  --mode genome -l bacteria_odb10
+cat assembly-busco/short_summary.specific.bacteria_odb10.test-busco.txt
+```
+
 
 ### Correctness
 
@@ -52,6 +85,8 @@ Assess the accuracy of your assembly by checking for misassemblies, such as stru
 * Structural rearrangement tools - [Socru](https://github.com/quadram-institute-bioscience/socru)
 * Try looking at the graph in [Bandage](https://rrwick.github.io/Bandage/)
 
+**Try using Mauve or Artemis for this step**
+
 ### Contamination 
 
 Some common reasons for contamination in sequencing data include:
@@ -66,6 +101,18 @@ Some common reasons for contamination in sequencing data include:
 * Sample Mix-Up
 
 Check for contamination with tools like [Kraken/Bracken](https://ccb.jhu.edu/software/bracken/)
+
+**Using Kraken2**
+
+Here is some example code to run Kraken2 on our example data.
+
+```
+conda activate week2 
+conda install -y kraken2 
+kraken2 du -h -d1 /shared/public/db/kraken2
+kraken2 --threads 8 --db /shared/public/db/kraken2/k2_standard_08gb/ --output long.hits.txt --report long.report.txt  --use-names long_assembly.fasta
+```
+
 
 ### Circumstantial 
 

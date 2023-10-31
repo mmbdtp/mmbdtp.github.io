@@ -78,6 +78,7 @@ How does Kraken work? Kraken employs a k-mer-based approach to classify reads. K
 
 #### Try other tools and test for Contiguity, Correctness, Completeness & Contamination
 
+
 _You can try these different options on your own, or work in groups, or divide the different criteria between yourselves_ 
 
 [Back to Compare hybrid and short-read-only assemblies]({{site.baseurl}}/modules/sequence-analysis/genome-assembly-qc)

@@ -57,34 +57,29 @@ du -h -d1 /shared/public/db/kraken2
 
 We can run Kraken2 directly within this JupyterHub notebook which is running in a container. A standard container has 8 CPu cores and 64Gb of memory. Kraken2 doesn't run well unless the database fits into memory, so we can use one of the smaller databases for now such a k2_standard_16gb which contains archaea, bacteria, viral, plasmid, human and UniVec_Core sequences from RefSeq, but subsampled down to a 16Gb database. This will be fast, but we trade off specificity and sensitivity against bigger databases.
 
-```
-kraken2 --threads 8 \
-   --db /shared/public/db/kraken2/k2_standard_16gb \
-   --output canalseq.hits.txt \
-   --report canalseq.report.txt \
-   canalseq.fasta
+```bash
+kraken2 --threads 8 --db /shared/public/db/kraken2/k2_standard_08gb/ --output dtp2-2.hits.txt --report dtp2-2.report.txt  --use-names  ~/shared-team/week2/sequence-data/DTP-2-2_S10_L001_R1_001.fastq.gz
 
 Loading database information... done.
-37407 sequences (91.32 Mbp) processed in 4.876s (460.3 Kseq/m, 1123.76 Mbp/m).
-  12486 sequences classified (33.38%)
-  24921 sequences unclassified (66.62%)
-About a third of sequences were classified and two-thirds were not.
+155338 sequences (23.46 Mbp) processed in 0.636s (14643.6 Kseq/m, 2211.19 Mbp/m).
+  140136 sequences classified (90.21%)
+  15202 sequences unclassified (9.79%)
 ```
 
-The canalseq.report.txt gives a human-readable output from Kraken2.
+The dtp2-2.report.txt  gives a human-readable output from Kraken2.
 
 ```
-cat canalseq.report.txt
+cat dtp2-2.report.txt  
 ```
 
 It's easier to look at Kraken2 results visually using a Krona plot:
 
 ```
-ktImportTaxonomy -t 5 -m 3 canalseq.report.txt -o KronaReport.html
+ktImportTaxonomy -t 5 -m 3 dtp2-2.report.txt   -o KronaReport.html
 
    [ WARNING ]  Score column already in use; not reading scores.
 Loading taxonomy...
-Importing canalseq.report.txt...
+Importing dtp2-2.report.txt...
 Writing KronaReport.html...
 ```
 
@@ -93,23 +88,21 @@ We can look at the Krona report directly within the browser by using the file na
 With the `extract_kraken_reads.py` script in krakentools we can quite easily extract a set of reads that we are interested in for further exploration: perhaps to use a more specific method like BLAST against a large protein database, or to extract for de novo assembly.
 
 ```
-extract_kraken_reads.py -k canalseq.hits.txt -s canalseq.fasta -r canalseq.report.txt -t 171 -o leptospira.fasta --include-children
-
-extract_kraken_reads.py -k canalseq.hits.txt -s canalseq.fasta -r canalseq.report.txt -t 173 -o linterrogens.fasta --include-children
+extract_kraken_reads.py -k dtp2-2.hits.txt  -s ~/shared-team/week2/sequence-data/DTP-2-2_S10_L001_R1_001.fastq.gz -r dtp2-2.report.txt -t 70863 -o whatisthis.fasta --include-children
 ```
 
 ```
-PROGRAM START TIME: 04-16-2023 18:40:00
->> STEP 0: PARSING REPORT FILE canalseq.report.txt
-    1 taxonomy IDs to parse
->> STEP 1: PARSING KRAKEN FILE FOR READIDS canalseq.hits.txt
-    0.04 million reads processed
-    2 read IDs saved
+PROGRAM START TIME: 10-31-2023 16:59:32
+>> STEP 0: PARSING REPORT FILE dtp1.report.txt
+        2 taxonomy IDs to parse
+>> STEP 1: PARSING KRAKEN FILE FOR READIDS dtp1.hits.txt
+        0.16 million reads processed
+        121338 read IDs saved
 >> STEP 2: READING SEQUENCE FILES AND WRITING READS
-    2 read IDs found (0.02 mill reads processed)
-    2 reads printed to file
-    Generated file: linterrogens.fasta
-PROGRAM END TIME: 04-16-2023 18:40:00
+        121338 read IDs found (0.16 mill reads processed)
+        121338 reads printed to file
+        Generated file: whatisthis.fasta
+PROGRAM END TIME: 10-31-2023 16:59:37
 ```
 
 If you wished you could go and take these reads and BLAST them over at NCBI-BLAST. There is also the `nr` BLAST database available on CLIMB-BIG-DATA if you wanted to run blastx on them. The BLAST databases are found in `/shared/team/db/blast`.
