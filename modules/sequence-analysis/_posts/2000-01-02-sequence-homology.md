@@ -22,8 +22,7 @@ title: Sequence alignment and homology searches
 
 ##### Instructions for problem-based learning on alignment (Alikhan)
 
-- Exercise: [Download and access simulated read data.](/seq-analysis/download-simulated-data)
-- Exercise: [Check environment, software, and tools ready for later exercises](/seq-analysis/installing)
+- Follow links in the side menu or below to consecutuve pages
 - Additional Exercise: [If you're unsure how a computer works, please review Crash Course Computer Science episodes 1 - 20](https://www.youtube.com/watch?v=O5nskjZ_GoI&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=2)
 
 [Back to Programme]({{site.baseurl}}/modules/sequence-analysis/programme/).
