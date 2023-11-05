@@ -12,7 +12,7 @@ _Nabil-Fareed Alikhan and Mark Pallen_
 
 ### Monday - Sequence homology and alignment
 
-**Venue:** Monday November 6th: UG55B 9.00am to 1pm
+**Venue:** Monday November 6th: UG55B 9.30am to 1pm
 
 - **Talk:** _Sequence homology_ ([Powerpoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/modules/sequence-analysis/_posts/Sequence%20homology_2023.pptx))
 - **[Sequence alignment and homology searches]({{site.baseurl}}/modules/sequence-analysis/sequence-homology/)**
