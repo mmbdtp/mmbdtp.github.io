@@ -135,6 +135,8 @@ You may need to locate external instructions on installing these software packag
 * `quast`
 * `abricate`
 * `prodigal`
+* `kraken2`
+* `busco`
 
 **Install graphical software on your local machine**
 
@@ -144,7 +146,7 @@ You may need to locate external instructions on installing these software packag
 * [https://darlinglab.org/mauve/user-guide/viewer.html](https://darlinglab.org/mauve/user-guide/viewer.html)
 * [https://www.sanger.ac.uk/tool/artemis/](https://www.sanger.ac.uk/tool/artemis/)
 
-_The information above will help you with all of these tasks, read it carefully. Check with the instructor if you are unsure_ 
+_The information above will help you with all of these tasks, read it carefully. Check with the instructor if you are unsure._ 
 
 
 
