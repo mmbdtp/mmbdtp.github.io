@@ -30,6 +30,8 @@ title: Sequence alignment and homology searches
 
 - **What happens when we do `water` vs `water`?**
 
+- **What happens when we do `water` vs `watar`? What happens when you change the mismatch penalty -3 to -2**
+
 - **What happens when we do `water` vs `waiter`?**
 
 - **What happens when we do `waaaaater` vs `waiters`?**
