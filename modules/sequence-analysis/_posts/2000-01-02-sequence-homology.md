@@ -20,9 +20,9 @@ title: Sequence alignment and homology searches
   - <https://www.ncbi.nlm.nih.gov/protein/THT06242.1> 
 
 
-### Exercise: thinking about alignent
+#####  Instructions for problem-based learning on sequence alignment
 
-- **Visit [https://alignment.sandbox.bio/](https://alignment.sandbox.bio/) and play with the parameters to see how the different alignment tools behave. You can use any alphabet characters you like.**
+- **Exercise: Visit [https://alignment.sandbox.bio/](https://alignment.sandbox.bio/) and play with the parameters to see how the different alignment tools behave. You can use any alphabet characters you like.**
 
 ![WATER VS WAITER](image.png)
 
