@@ -22,7 +22,7 @@ title: Sequence alignment and homology searches
 
 ### Exercise: thinking about alignent
 
-- **Visit https://alignment.sandbox.bio/ and play with the parameters to see how the different alignment tools behave. You can use any alphabet characters you like.**
+- **Visit [https://alignment.sandbox.bio/](https://alignment.sandbox.bio/) and play with the parameters to see how the different alignment tools behave. You can use any alphabet characters you like.**
 - Additional Exercise: [If you're unsure how a computer works, please review Crash Course Computer Science episodes 1 - 20](https://www.youtube.com/watch?v=O5nskjZ_GoI&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo&index=2)
 
 
