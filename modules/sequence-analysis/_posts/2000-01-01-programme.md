@@ -34,7 +34,7 @@ _Nabil-Fareed Alikhan and Mark Pallen_
 
 ### Thursday - Genome annotation
 
-**Venue:** Thursday November 9th: UG44B 9.00am to 5pm
+**Venue:** Thursday November 9th: UG44B 9.30am to 5pm
 
 - **[Genome browsers and annotation]({{site.baseurl}}/modules/sequence-analysis/annotation)**
 - **[Automated annotation]({{site.baseurl}}/modules/sequence-analysis/auto-annotation)**
@@ -45,7 +45,7 @@ _We may spend time completing remaining modules from previous days_
 
 ### Friday - Pathogen Genomics
 
-**Venue:** Friday November 10th: UG55B 9.00am to 5pm
+**Venue:** Friday November 10th: UG55B 9.30am to 5pm
 
 - **[Detecting virulence factors]({{site.baseurl}}/modules/sequence-analysis/virulence)**
 
