@@ -42,6 +42,7 @@ conda install scoary
 **Dataset:** _A set of Salmonella enterica serovar Typhi samples that have been sequenced_
 
 **Tasks:** 
+
 - Compare the results of using short and long read sequencing to map to a reference. 
 - What is similar, what is different and what impact does this have on the overall interpretation?
 - What isn’t included when you do analysis using a reference genome?  
@@ -62,6 +63,7 @@ conda install scoary
 **Topic:** _Pan-genomes and mobile genetic elements_ 
 
 **Tasks:**
+
 - Construct a pan-genome of the dataset from Monday. 
 - What is core to all of the genomes and what is accessory. 
 - What is actually in the accessory genome, what do the genes do and why does it matter? 
@@ -80,6 +82,7 @@ conda install scoary
 **Topic:**_Genome comparison_ 
 
 **Tasks:**
+
 - Can you identify and visualise large structural variation?
 - Why is this important?  
 - Can you identify large insertions and deletions?
