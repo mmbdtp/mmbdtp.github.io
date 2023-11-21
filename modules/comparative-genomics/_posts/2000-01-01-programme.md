@@ -4,7 +4,8 @@ title: Comparative Genomics
 
 # Comparative Genomics 
   
-### Instructors and assistants:
+**Instructors and assistants:**
+
 - Dr Gemma Langridge (lead): Gemma.Langridge@quadram.ac.uk
 - Dr Emma Waters
 - Alice Nisbet
