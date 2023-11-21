@@ -11,7 +11,11 @@ title: Comparative Genomics
 - Alice Nisbet
 - Eleanor Hayles 
 
+***
+
 **Venue:** UB44A
+
+***
 
 **Required software**
 To be installed in new Conda environment compgen
