@@ -38,6 +38,7 @@ conda install scoary
 
 ### Monday 
 **Topic:** _Mapping and variant calling_  
+
 **Dataset:** _A set of Salmonella enterica serovar Typhi samples that have been sequenced_
 
 **Tasks:** 
@@ -97,7 +98,9 @@ conda install scoary
 ***
  
 ### Friday 
+
 **Topic:**_Outbreak investigation_  
+
 **Dataset:** 
 
 | biosample_acc | strain       | genBankAssembly | SRArun_acc |
