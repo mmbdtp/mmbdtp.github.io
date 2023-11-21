@@ -49,6 +49,7 @@ conda install scoary
 - How do you choose a reference to use?  
 
 **Schedule:**  
+
 9:00-10:00 – Introduction and setup of task; installation of software  
 10:00-12:00 – Task    
 13:00- 15:00 - Task  
@@ -67,6 +68,7 @@ conda install scoary
 - How do you tell between a mis-assembly, an integron, a plasmid etc... 
 
 **Schedule:**  
+
 9:00-10:00 – Introduction and setup of task  
 10:00-12:00 – Task  
 13:00-15:00 - Task  
@@ -85,6 +87,7 @@ conda install scoary
 - Can you distinguish between an informatics artefact and a real signal? 
 
 **Schedule:**  
+
 9:00-10:00 – Introduction and setup of task  
 10:00-12:00 – Task  
 13:00-15:00 - Task  
@@ -131,11 +134,13 @@ conda install scoary
 
 
 **Tasks:** 
+
 - This is a dataset from a real outbreak investigation. Time is critical. 
 - Are the samples linked? 
 - What information can you find out about these samples to aid the epidemiologists?  
 
 **Schedule:**  
+
 9:00-9:15 – Introduction and setup of task  
 9:15-11:30 – Task  
 11:30-12:30 – Wrap up  
