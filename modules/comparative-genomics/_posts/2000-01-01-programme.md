@@ -49,8 +49,8 @@ conda install scoary
 - How do you choose a reference to use?  
 
 **Schedule:**  
-9:00-10:00 – Introduction and setup of task; installation of software
-10:00-12:00 – Task   
+9:00-10:00 – Introduction and setup of task; installation of software  
+10:00-12:00 – Task    
 13:00- 15:00 - Task  
 15:00-16:00 – Talk from Dr Claire Jenkins, UKHSA  
 16:00-17:00 – Wrap up  
