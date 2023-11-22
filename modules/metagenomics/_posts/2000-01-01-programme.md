@@ -73,8 +73,8 @@ Note that to fit in with room availability, this week's course runs as follows
   -  https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR8926188/SRR8926188 (Raphael)
   -  https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR8926300/SRR8926300 (Ryan)
 - K-mer analysis using Kraken and Bracken. Use bacterial reference library and full reference library
-- Binning sequences
-- 
+- Binning sequences to create metagenome-assembled genomes (MAGs)
+
 ***
 
 ### Thursday 7th Dec
@@ -96,9 +96,7 @@ Note that to fit in with room availability, this week's course runs as follows
 **Venue:** Quadram Institute Room UG55A 9.00am to 12.00pm; Room UB55C 12.00pm  to 5.00pm
 
 - **Bioinformatics Task**
-- Download dataset of metadata on bacterial genomes in GTDB: 
-  - Try it on your own
-  - Then ask ChatGPT to help
-  - Consider adding extra features to make your script as versatile and powerful and use-friendly as possible
-
+- Download dataset of metadata on bacterial genomes in GTDB: https://data.gtdb.ecogenomic.org/releases/latest/bac120_metadata.tsv.gz
+ -Write a Python script that extracts and analyses relevant information to provide a list of phyla ranked according to average genome size and a list of phyla ranked according to average GC content.
+ 
 ***
