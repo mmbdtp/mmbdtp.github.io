@@ -6,11 +6,10 @@ published: true
 
 ## Bioinformatics Training for the MRC Microbes, Microbiomes and Bioinformatics Doctoral Training Programme at UEA
 
-This is the website for the 6-week Mandatory Bioinformatics Training for the **Microbes, Microbiomes and Bioinformatics** doctoral training program, which will be held
+This is the website for the 6-week Mandatory Bioinformatics Training for the **Microbes, Microbiomes and Bioinformatics** doctoral training program, held
 from October to December 2023. 
-* The website is  under construction
-* You can access content for each week through the banner above.
-* Currently weeks 1-3 are largely complete, but work continues on weeks 4-6.
+
+Use the tabs above to select the course modules
 
 ---
 
