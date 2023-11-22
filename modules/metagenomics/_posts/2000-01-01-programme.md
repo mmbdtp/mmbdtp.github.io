@@ -97,6 +97,6 @@ Note that to fit in with room availability, this week's course runs as follows
 
 - **Bioinformatics Task**
 - Download dataset of metadata on bacterial genomes in GTDB: https://data.gtdb.ecogenomic.org/releases/latest/bac120_metadata.tsv.gz
- -Write a Python script that extracts and analyses relevant information to provide a list of phyla ranked according to average genome size and a list of phyla ranked according to average GC content.
+- Write a Python script that extracts and analyses relevant information to provide a list of phyla ranked according to average genome size and a list of phyla ranked according to average GC content.
  
 ***
