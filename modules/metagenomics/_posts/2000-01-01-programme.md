@@ -14,15 +14,17 @@ Note that to fit in with room availability, this week's course runs as follows
 ***
 
 ### Tuesday 5th Dec
-**Venue:** Quadram Institute ([https://what3words.com/bricks.areas.modern](https://what3words.com/bricks.areas.modern)) Room UG55A 9.00am to 5.00pm
+**Venue:** Quadram Institute Room UG55A 9.00am to 5.00pm
+
 *Morning*
+
 - **Introduction to the module**
 - **Talk from Mark Pallen**:
   -  _Adventures in Metagenomics Part 1: Tick microbiomes_
-- **Talk frok Andrea Telatin**
+- **Talk from Andrea Telatin**
   - _Overview of 16S rRNA gene sequence analysis_
     
-- Download dataset from _Rhipicephalus australis_:
+- Download dataset from _Rhipicephalus australis_ from _Greay et al study_ [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8906098/]:
 
   - https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR12461974/SRR12461974
   - https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR12461975/SRR12461975
@@ -53,18 +55,20 @@ Note that to fit in with room availability, this week's course runs as follows
 
 ### Wednesday 6th Dec
 
-**Venue:** Quadram Institute ([https://what3words.com/bricks.areas.modern](https://what3words.com/bricks.areas.modern)) Room UG55A 9.00am to 5.00pm
+**Venue:** Quadram Institute Room UG55A 9.00am to 5.00pm
 
+- **Talk from Mark Pallen**:
+  -  _Adventures in Metagenomics Part 2: ICU gut microbiomes_
 
 ***
 
 ### Thursday 7th Dec
-**Venue:** Quadram Institute ([https://what3words.com/bricks.areas.modern](https://what3words.com/bricks.areas.modern)) Room UG55A 9.00am to 5.00pm
+**Venue:** Quadram Institute Room UG55A 9.00am to 5.00pm
 
 
 ***
 
 ### Friday 8th Dec
-**Venue:** Quadram Institute ([https://what3words.com/bricks.areas.modern](https://what3words.com/bricks.areas.modern)) Room UG55A 9.00am to 12.00pm; Room UB55C 12.00pm  to 5.00pm
+**Venue:** Quadram Institute Room UG55A 9.00am to 12.00pm; Room UB55C 12.00pm  to 5.00pm
 
 ***
