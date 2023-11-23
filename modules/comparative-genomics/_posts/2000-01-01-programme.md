@@ -19,6 +19,7 @@ title: Comparative Genomics
 
 **Required software**
 To be installed in new Conda environment compgen
+
 ```
 conda create --name compgen
 conda activate compgen
@@ -36,7 +37,6 @@ conda install shovill
 conda install roary
 conda install artemis
 conda install scoary
-
 ```
 
 ***
@@ -45,7 +45,7 @@ conda install scoary
  
 ***
 
-**Topic:** _Mapping and variant calling_  
+**Topic:** _Mapping and variant calling_ ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day1_MMB_Week4_mapping_variant_calling.pdf))
 
 **Dataset:** _A set of Salmonella enterica serovar Typhi samples that have been sequenced_
 
@@ -71,7 +71,7 @@ conda install scoary
 
 ***
 
-**Topic:** _Pan-genomes and mobile genetic elements_ 
+**Topic:** _Pan-genomes and mobile genetic elements_  ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day2_MMB_Week4_pangenomes_MGEs.pdf))
 
 **Tasks:**
 
@@ -93,7 +93,7 @@ conda install scoary
  
 ***
 
-**Topic:**_Genome comparison_ 
+**Topic:**_Genome comparison_  ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day3_MMBDTP_Week4_genome_comparisons.pdf))
 
 **Tasks:**
 
@@ -121,7 +121,7 @@ conda install scoary
  
 ***
 
-**Topic:**_Outbreak investigation_  
+**Topic:**_Outbreak investigation_  ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day4_MMBDTP_outbreak_analysis.pdf))
 
 **Dataset:** 
 
