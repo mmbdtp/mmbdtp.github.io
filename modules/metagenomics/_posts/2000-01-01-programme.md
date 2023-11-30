@@ -1,8 +1,8 @@
 ---
-title: Metagenomics and Python
+title: Metagenomics
 ---
 
-# Week 5: Metagenomics and Python
+# Week 5: Metagenomics
 **Week beginning December 4th 2023**
 
 **Tutors**: **Mark Pallen** ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk)) and **Andrea Telatin** ([andrea.telatin@quadram.ac.uk](mailto:andrea.telatin))
@@ -10,6 +10,8 @@ title: Metagenomics and Python
 Note that to fit in with room availability, this week's course runs as follows
 - Tuesday, Wednesday, Friday all day
 - Thursday afternoon
+
+Note that although we initially intended to cover Python this week, in response to feedback, we have stuck to the simpler option of just covering metagenomics. We will run a masterclass in Python next year.
 
 ### Topics
 
