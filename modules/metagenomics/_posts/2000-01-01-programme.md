@@ -22,9 +22,8 @@ Note that to fit in with room availability, this week's course runs as follows
 ### Dataset
 
 We will use some samples from [a paper](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000293) from
-Mark Pallen's group about comprehensive analysis of faecal metagenome samples from healthy individuals and patients with *Clostridium difficile* infection (CDI). 
-They found that CDI patients had significant alterations in their faecal microbiome composition, 
-including depletion of beneficial bacteria and an increase in potentially pathogenic species. The study also identified specific microbial signatures associated with CDI severity. 
+Mark Pallen's group about comprehensive analysis of faecal metagenome samples from patients on the Intensive Care Unit (ICU). 
+They found that ICU patients had significant alterations in their faecal microbiome composition, including depletion of beneficial bacteria and an increase in potentially pathogenic species. 
 
 ***
 
