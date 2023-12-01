@@ -13,7 +13,7 @@ title: Reading list
 ## General overviews
 
 1. Liu 2020, [A practical guide to amplicon and metagenomic analysis of microbiome data](https://link.springer.com/article/10.1007/s13238-020-00724-8): This review provides a comprehensive overview of current microbiome research methodologies, discussing the advantages and limitations of various tools and pipelines for amplicon and metagenomic analyses, and offers guidance on statistical and visualization methods, aiming to assist researchers in effective data analysis and tool selection for uncovering the biological significance of their data.
-2. [A Metagenomics workflow](https://rpubs.com/ednachiang/MetaG_Pipeline)
+2. [A Metagenomics workflow](https://rpubs.com/ednachiang/MetaG_Pipeline) by Edna Chiang outlines a comprehensive metagenomic analysis pipeline, providing step-by-step instructions and recommendations for software and methods tailored to paired-end data analysis in metagenomics.
 3. Yang 2021, [A review of computational tools for generating metagenome-assembled genomes from metagenomic sequencing data](https://www.sciencedirect.com/science/article/pii/S2001037021004931)
 
 ## Some methodological research papers
