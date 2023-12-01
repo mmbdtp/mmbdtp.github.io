@@ -5,8 +5,9 @@ title: Reading list
 ## Learn more
 
 1. [Anvi'o tutorials](https://anvio.org/learn/) - a fantastic curated list of tutorials based on Anvi'o from metagenomics to pan-genome analysis
-   * [Video: Basics of metagenomic read recruitment](https://www.youtube.com/watch?t=344&v=MqD4aN1p1qA&feature=youtu.be)
+   * :star: [Video: Basics of metagenomic read recruitment](https://www.youtube.com/watch?t=344&v=MqD4aN1p1qA&feature=youtu.be)
    * [Tutorial: Read recruitment](https://merenlab.org/tutorials/read-recruitment/) 
+   * :star: [Video: Reconstructing genomes from  metagenomes](https://www.youtube.com/watch?v=RjNdHGK4ruo)
 2. [bioBakery](https://huttenhower.sph.harvard.edu/tools/) - tools and tutorials for MetaPhlAn, HUMAnN, and other tools
 
 
