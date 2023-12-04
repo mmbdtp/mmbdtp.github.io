@@ -4,7 +4,7 @@ title: Programme
 
 **Week 6 Beginning 11 December 2023**
 
-## Functional analysis: how can we understand what does what?**
+## Functional analysis: how can we understand what does what?
 
 **Professor Mark Webber, Professor Cynthia Whitchurch.**
 
@@ -38,10 +38,10 @@ Datasets to use will be derived from both _E. coli_ and _P. aeruginosa_ after ex
 ### Structure of the week
 
 
-| | Mon | Tue | Wed | Thu | Fri |
-| --- | --- | --- | --- | --- | --- |
-| AM  | Free | Intro to the week, Image analysis I | Image analysis II | RNAseq data II | TraDIS data analysis II |
-| PM | Free | Free | Intro to transcriptomic, RNAseq data I | Introduction to TnSeq  TraDIS data analysis I | Hypothesis building and wrap up |
+|          | Mon | Tue | Wed | Thu | Fri |
+| -------- | --- | --- | --- | --- | --- |
+| **AM**   | _Free_ | Intro, Image analysis I | Image analysis II | RNAseq data II | TraDIS data analysis II |
+| **PM**   | _Free_ | _Free_ | Intro, RNAseq data I | TnSeq,  TraDIS data analysis I | Hypothesis building and wrap up |
 
 ## Tuesday – Introduction and importance of bacterial behaviour
 
@@ -64,15 +64,13 @@ _Schedule_
 - Expression analysis introduction – Greg Wickham and Muhammed Yasir. 1-1.30
 - RNAseq analysis – 1.30-close
 
-## Thursday -Transcriptomics II and Transposon mutagenesis
+## Thursday - Transcriptomics II and Transposon mutagenesis
 
-Transposon mutagenesis is a massively parallel method to study the functions of genes in a condition. Libraries of mutants with transposons randomly inserted within their genomes are constructed and the survival of each mutant assayed in parallel. There are various of these 'Tn-seq' methods reviewed here:
+Transposon mutagenesis is a massively parallel method to study the functions of genes in a condition. Libraries of mutants with transposons randomly inserted within their genomes are constructed and the survival of each mutant assayed in parallel. There are various of these 'Tn-seq' methods reviewed here: [www.nature.com/articles/s41576-020-0244-x](https://www.nature.com/articles/s41576-020-0244-x)
 
-[https://www.nature.com/articles/s41576-020-0244-x](https://www.nature.com/articles/s41576-020-0244-x)
+We will concentrate on TraDIS-Xpress, a variation of these methods developed at the Quadram Institute: [genome.cshlp.org/content/30/2/239](https://genome.cshlp.org/content/30/2/239)
 
-We will concentrate on TraDIS-Xpress, a variation of these methods developed at the Quadram Institute: [https://genome.cshlp.org/content/30/2/239](https://genome.cshlp.org/content/30/2/239)
-
-You will be given datasets and instruction on how to analyse them using the QuaTraDIS pipeline: [https://github.com/quadram-institute-bioscience/QuaTradis](https://github.com/quadram-institute-bioscience/QuaTradis)
+You will be given datasets and instruction on how to analyse them using the QuaTraDIS pipeline: [github.com/quadram-institute-bioscience/QuaTradis](https://github.com/quadram-institute-bioscience/QuaTradis)
 
 _Schedule_
 
