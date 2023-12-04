@@ -43,7 +43,12 @@ They found that ICU patients had significant alterations in their faecal microbi
 - **Bioinformatics Task**  
   - Setting up Anvi'o
   - Exploring datasets with Anvi'o
-  
+
+- **Goals**  
+  - [ ] Anvi'o installation
+  - [ ] Dataset subsampling
+  - [ ] Inspection of Kraken profiles (MultiQC,...)
+
 ***
 
 ### Wednesday 6th Dec
@@ -51,11 +56,18 @@ They found that ICU patients had significant alterations in their faecal microbi
 **Venue:** Quadram Institute Room UG55A 9.00am to 5.00pm
 
 - **Talk from Mark Pallen**:
-  -  _Adventures in Metagenomics Part 2_: [Powerpoint Slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/modules/metagenomics/_posts/adventures-in-metagenomics2.pptx)
+  - Adventures in Metagenomics Part 2_: [Powerpoint Slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/modules/metagenomics/_posts/adventures-in-metagenomics2.pptx)
 
 - **Bioinformatics Tasks**  
   - Profiling of Whole Metagenome Shotgun
   - MultiQC report of Kraken profiles
+  - *De novo* assembly
+
+- **Goals**  
+  - [ ] Inspection of Kraken profiles
+  - [ ] Overview of other profilers
+  - [ ] Understanding how to generate MultiQC reports
+  - [ ] *De novo* assembly of metagenomes
 
 ***
 
@@ -65,9 +77,8 @@ They found that ICU patients had significant alterations in their faecal microbi
 
  
 - **Bioinformatics Task**
-- Assembly
-- Backmapping and the concept of coverage
-- Automatic binning (SemiBin2) and manual binning (Anvi'o)
+  - Backmapping and the concept of coverage
+  - Automatic binning (SemiBin2) and manual binning (Anvi'o)
 
 ***
 
