@@ -34,4 +34,18 @@ You will find the results in `/shared/team/week5/reports`:
 1. Inspect the output files with methods you already tried before (e.g. Krona, Pavian)
 2. Try "MultiQC" with one of the databases
 
+### MultiQC
 
+[MultiQC](https://multiqc.info/) is a tool that aggregates results from bioinformatics analyses across many samples into a single report. It's very useful to quickly inspect the results of a pipeline, and it's very easy to use.
+
+```bash
+# Install MultiQC
+mamba create -y -n multiqc python=3.9 multiqc
+```
+
+```bash
+# Run multiqc on the kraken "nt" dataset
+multiqc -o multiqc-nt /shared/team/week5/reports/kraken-nt/
+```
+
+Download the output report HTML and open it!
