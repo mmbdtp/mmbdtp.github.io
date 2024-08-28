@@ -46,3 +46,4 @@ Note that these sessions are part of your mandatory training. Please email the o
  	-	pencilled in session with Gemma Kay at QIB
 
 
+NOTE: Nabil's material on QC needs moving probably to week 1?
