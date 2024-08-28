@@ -36,13 +36,13 @@ Note that these sessions are part of your mandatory training. Please email the o
 ### Thursday
 
 **Venue:** Thursday October 24th: to be determined
-(pencilled in session with Richard Leggett at Earlham Institute)
+ 	-	pencilled in session with Richard Leggett at Earlham Institute
 
 ***
 
 ### Friday
 
 **Venue:** Friday October 25th: to be determined
-(pencilled in session with Gemma Kay at QIB)
+ 	-	pencilled in session with Gemma Kay at QIB
 
 
