@@ -36,6 +36,7 @@ Note that these sessions are part of your mandatory training. Please email the o
 ### Thursday
 
 **Venue:** Thursday October 24th: to be determined
+
  	-	pencilled in session with Richard Leggett at Earlham Institute
 
 ***
@@ -43,7 +44,8 @@ Note that these sessions are part of your mandatory training. Please email the o
 ### Friday
 
 **Venue:** Friday October 25th: to be determined
+
  	-	pencilled in session with Gemma Kay at QIB
 
 
-NOTE: Nabil's material on QC needs moving probably to week 1?
+NOTE: Nabil's material on QC needs moving, probably to week 1. Stored as files with "_old_" prefix.
