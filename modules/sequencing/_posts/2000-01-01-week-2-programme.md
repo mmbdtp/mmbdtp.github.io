@@ -38,6 +38,7 @@ Note that these sessions are part of your mandatory training. Please email the o
 **Venue:** Thursday October 24th: to be determined
 (pencilled in session with Richard Leggett at Earlham Institute)
 
+***
 
 ### Friday
 
