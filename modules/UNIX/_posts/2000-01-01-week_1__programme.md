@@ -4,7 +4,7 @@ title: Programme
 
 
 # Week 1: Unix and the Command Line
-**Week beginning October 16th 2023**
+**Week beginning October 14th 2024**
 
 **Tutors**: **Mark Pallen** ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk)) and **Andrea Telatin** ([andrea.telatin@quadram.ac.uk](mailto:andrea.telatin))
 
@@ -32,7 +32,7 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 
 ### Tuesday
 
-**Venue:** Quadram Institute Room UG55C from 9.00 am to 13.00; UG55B from 15.00 to 17.00
+**Venue:** Quadram Institute Room UG55C from 9.00am
 - **Talk from Mark Pallen**
   -  _CLIMB, the cloud, and virtual notebook servers_ ([Powerpoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/githubio/2023_course/week_1/2023_Week1_CLIMB_cloud_notebooks.pptx))
 - **Bioinformatics Tutorial led by Andrea Telatin**
@@ -43,7 +43,7 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 ***
 
 ### Thursday 
-**Venue:** Quadram Institute Room UG55C from 9.00am
+**Venue:** Quadram Institute Board Room from 9.00am
 - **Discussion led by Mark Pallen**
   -  _On sequence file formats_
 - **Bioinformatics Tutorial led by Andrea Telatin**
@@ -54,7 +54,7 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 ***
 
 ### Friday
-**Venue:** Quadram Institute Room UG55C from 12.00 to 16.00
+**Venue:** Quadram Institute Board Room from 9.00am to 1.00pm
 - **Discussion led by Mark Pallen**
   -  _On how sequences evolve_
 - **Bioinformatics Tutorial led by Andrea Telatin**
