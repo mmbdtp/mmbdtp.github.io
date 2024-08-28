@@ -6,7 +6,7 @@ published: true
 
 ## Bioinformatics Training for the MRC Microbes, Microbiomes and Bioinformatics Doctoral Training Partnership at UEA
 
-This is the website for the 6-week Mandatory Bioinformatics Training for the MRC [Microbes, Microbiomes and Bioinformatics Doctoral Training Partnership](https://www.uea.ac.uk/research/research-with-us/postgraduate-research/latest-phds-and-research-studentships/partnerships-in-doctoral-training/mmb) held from October to December 2023. 
+This is the website for the 6-week Mandatory Bioinformatics Training for the MRC [Microbes, Microbiomes and Bioinformatics Doctoral Training Partnership](https://www.uea.ac.uk/research/research-with-us/postgraduate-research/latest-phds-and-research-studentships/partnerships-in-doctoral-training/mmb) held from October to December 2024. 
 
 **DTP and Course Director**: Mark Pallen, mark.pallen@quadram.ac.uk
 
