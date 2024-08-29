@@ -34,4 +34,4 @@ _Evelien Adriaenssens (Evelien.Adriaenssens@quadram.ac.uk) and her team_
 
 ***
 
-Note that files from this module in the 2023 course have been archived in https://mmbdtp.github.io/tree/gh-pages/modules/old_sequence_analysis
+Note that files from this module in the 2023 course have been archived in https://mmbdtp.github.io/modules/old_sequence_analysis
