@@ -1,15 +1,17 @@
 ---
-title: Programme
+title: Week 2: Creating and handling sequences
 ---
 # Week 2: Creating and handling sequences
 
 **Week beginning October 21st, 2024**
 
+***
+
+
 **Tutors:**
 - David Baker (david.baker@quadram.ac.uk)
 - Gemma Kay (Gemma.Kay@nanoporetech.com)
 - Richard Leggett (Richard.Leggett@earlham.ac.uk)
-
 
 
 Note that these sessions are part of your mandatory training. Please email the organisers if you are going to be late or are unable to attend through illness. For Thursday/Friday, Please bring your MacBooks and ensure that you can log on to Eduroam.
