@@ -2,51 +2,32 @@
 title: Programme
 ---
 
-# Week 3: From Sequence to consequence
-**Week beginning November 6th 2023**
+# Week 3: From Sequence to Consequence
+**Week beginning October 28th 2024**
 
-_Nabil-Fareed Alikhan and Mark Pallen_
+_Evelien Adriaenssens (Evelien.Adriaenssens@quadram.ac.uk) and her team_
 
 * **[About this week](/seq-analysis/about/)**
 * **[Further reading and additional resources]({{site.baseurl}}/modules/sequence-analysis/further-reading)**
 
-### Monday - Sequence homology and alignment
+### Monday - Details to follow
 
-**Venue:** Monday November 6th: UG55B 9.30am to 1pm
-
-- **Talk:** _Sequence homology_ ([Powerpoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/modules/sequence-analysis/_posts/Sequence%20homology_2023.pptx))
-- **[Sequence alignment and homology searches]({{site.baseurl}}/modules/sequence-analysis/sequence-homology/)**
-- **[Preparing our data and environment]({{site.baseurl}}/modules/sequence-analysis/download-data/)**
+**Venue:** Monday October 28th: UG55B
 
 ***
 
-### Tuesday - Genome assembly
+### Tuesday - Details to follow
 
-**Venue:** Tuesday November 7th: UG55B 9.00am to 5pm
-
-- **Talk:** _Microbial Genomics: Theory and Practice_ ([Powerpoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/modules/sequence-analysis/_posts/2023_Week%203_Talk_Microbial_genomics.pptx))
-- **[Hybrid and short-read-only assembly of sequenced reads]({{site.baseurl}}/modules/sequence-analysis/genome-assembly/)**
-- **[Compare hybrid and short-read-only assemblies]({{site.baseurl}}/modules/sequence-analysis/genome-assembly-qc)**
-- **[Assess the quality of some other (provided) assembled genomes]({{site.baseurl}}/modules/sequence-analysis/check-qc)**
-- **Talk:** _Amerithrax: from genome to culprit_ ([Powerpoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/modules/sequence-analysis/_posts/2023_Week%203_Talk_Amerithrax.pptx))
+**Venue:** Tuesday October 29th: UG55C
 
 ***
 
-### Thursday - Genome annotation
+### Thursday - Details to follow
 
-**Venue:** Thursday November 9th: UG44B 9.30am to 5pm
-
-- **[Genome browsers and annotation]({{site.baseurl}}/modules/sequence-analysis/annotation)**
-- **[Automated annotation]({{site.baseurl}}/modules/sequence-analysis/auto-annotation)**
-
-_We may spend time completing remaining modules from previous days_
+**Venue:** Thursday October 31st: QIB Board Room Meeting Room
 
 ***
 
-### Friday - Pathogen Genomics
+### Friday - Details to follow
 
-**Venue:** Friday November 10th: UG55B 9.30am to 5pm
-
-- **[Detecting virulence factors]({{site.baseurl}}/modules/sequence-analysis/virulence)**
-
-_We may spend time completing remaining modules from previous days_
+**Venue:** Friday November 1st: UG55C
