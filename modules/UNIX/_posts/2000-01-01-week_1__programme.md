@@ -1,7 +1,3 @@
-Here's a tidied and consistent version of the markdown:
-
----
-
 **title**: Programme
 
 ---
