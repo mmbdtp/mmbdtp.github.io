@@ -39,7 +39,7 @@ Datasets to use will be derived from both _E. coli_ and _P. aeruginosa_ after ex
 
 ***
 
-## Monday – Introduction and importance of bacterial behaviour
+**Monday – Introduction and importance of bacterial behaviour**
 
 Not all adaptation requires mutation – some bacterial behaviours (changes in morphology, formation of a biofilm etc) can impact their ability to survive without mutation or gain of any DNA. This can be observed using sophisticated microscopy and data can be extracted which allows powerful analysis. We will demonstrate how image data can be used to understand bacterial stress adaptations and explain some of the informatics approaches used.
 
@@ -56,14 +56,14 @@ Expression of genes alters in response to stress and understanding which genes a
 
 ***
 
-## Tuesday – Transcriptomics: how gene expression can identify routes to survival
+**Tuesday – Transcriptomics: how gene expression can identify routes to survival**
 - Expression analysis introduction – Greg Wickham and Muhammed Yasir. 9.00-9.30
 - RNAseq analysis – 9.30-close
 
 ***
 
 
-## Thursday - Transposon mutagenesis: TraDIS
+**Thursday - Transposon mutagenesis: TraDIS**
 
 Transposon mutagenesis is a massively parallel method to study the functions of genes in a condition. Libraries of mutants with transposons randomly inserted within their genomes are constructed and the survival of each mutant assayed in parallel. There are various of these 'Tn-seq' methods reviewed here: [www.nature.com/articles/s41576-020-0244-x](https://www.nature.com/articles/s41576-020-0244-x)
 
@@ -80,7 +80,7 @@ _Schedule_
 
 ***
 
-## Friday – TraDIS II and wrap up
+**Friday – TraDIS continued and wrap up**
 
 _Schedule_
 
