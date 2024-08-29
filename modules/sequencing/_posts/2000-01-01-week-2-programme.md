@@ -1,5 +1,5 @@
 ---
-title: Week 2: Creating and handling sequences
+title: Programme
 ---
 # Week 2: Creating and handling sequences
 
