@@ -21,7 +21,7 @@ Note that these sessions are part of your mandatory training. Please email the o
 **Venue:** Monday October 21st: UG55B
 
 - **Hands on sequencing demonstration run by David Baker**
- 	-	exciting chance to see sequences are generated on the Illumina platform
+ 	-	exciting chance to see how sequences are generated on the Illumina platform
 
 ***
 
@@ -30,7 +30,7 @@ Note that these sessions are part of your mandatory training. Please email the o
 **Venue:** Tuesday October 22nd: UG55B
 
 - **Hands on sequencing demonstration run by Gemma Kay**
- 	-	exciting chance to see sequences are generated on the Oxford Nanopore platform
+ 	-	exciting chance to see how sequences are generated on the Oxford Nanopore platform
 
 ***
 
