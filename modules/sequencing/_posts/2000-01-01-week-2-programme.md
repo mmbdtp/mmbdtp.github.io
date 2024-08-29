@@ -3,6 +3,8 @@ title: Programme
 ---
 # Week 2: Creating and handling sequences
 
+***
+
 **Week beginning October 21st, 2024**
 
 ***
