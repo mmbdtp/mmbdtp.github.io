@@ -7,9 +7,6 @@ title: Programme
 
 _Evelien Adriaenssens (Evelien.Adriaenssens@quadram.ac.uk) and her team_
 
-* **[About this week](/seq-analysis/about/)**
-* **[Further reading and additional resources]({{site.baseurl}}/modules/sequence-analysis/further-reading)**
-
 ### Monday - Details to follow
 
 **Venue:** Monday October 28th: UG55B
