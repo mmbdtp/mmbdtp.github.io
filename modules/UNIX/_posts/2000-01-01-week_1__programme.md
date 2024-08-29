@@ -6,14 +6,16 @@
 
 **Week beginning October 14th, 2024**
 
-**Tutors**: **Mark Pallen** ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk)) and **Andrea Telatin** ([andrea.telatin@quadram.ac.uk](mailto:andrea.telatin@quadram.ac.uk))
+**Tutors**: 
+- **Mark Pallen** ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk)) 
+- **Andrea Telatin** ([andrea.telatin@quadram.ac.uk](mailto:andrea.telatin@quadram.ac.uk))
 
 Note that these sessions are part of your mandatory training. Please email the organizers if you will be late or unable to attend due to illness.  
 Please bring your MacBooks and ensure that you can log on to Eduroam.
 
 ***
 
-### Monday
+### Monday October 14th
 
 **Venue:** Quadram Institute, Room UG55C from 9:00 am ([what3words location](https://what3words.com/bricks.areas.modern))
 
@@ -31,7 +33,7 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 
 ***
 
-### Tuesday
+### Tuesday October 15th
 
 **Venue:** Quadram Institute, Room UG55C from 9:00 am
 
@@ -44,7 +46,7 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 
 ***
 
-### Thursday
+### Thursday October 17th
 
 **Venue:** Quadram Institute, Board Room from 9:00 am
 
@@ -57,7 +59,7 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 
 ***
 
-### Friday
+### Friday October 18th
 
 **Venue:** Quadram Institute, Board Room from 9:00 am to 1:00 pm
 
