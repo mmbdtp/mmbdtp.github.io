@@ -18,7 +18,7 @@ Note that these sessions are part of your mandatory training. Please email the o
 
 ### Monday
 
-**Venue:** Monday October 21st: report to Quadram Institute reception at 9.00am
+**Venue:** Monday October 21st: UG55B
 
 - **Hands on sequencing demonstration run by David Baker**
  	-	exciting chance to see sequences are generated on the Illumina platform
@@ -27,7 +27,7 @@ Note that these sessions are part of your mandatory training. Please email the o
 
 ### Tuesday 
 
-**Venue:** Tuesday October 22nd: report to Quadram Institute reception at 9.00am
+**Venue:** Tuesday October 22nd: UG55B
 
 - **Hands on sequencing demonstration run by Gemma Kay**
  	-	exciting chance to see sequences are generated on the Oxford Nanopore platform
