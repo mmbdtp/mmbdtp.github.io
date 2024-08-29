@@ -1,4 +1,4 @@
-**title**: Programme
+**Title**: Programme
 
 ---
 
@@ -6,8 +6,8 @@
 
 **Week beginning October 14th, 2024**
 
-**Tutors**: 
-- **Mark Pallen** ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk)) 
+**Tutors**:
+- **Mark Pallen** ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk))
 - **Andrea Telatin** ([andrea.telatin@quadram.ac.uk](mailto:andrea.telatin@quadram.ac.uk))
 
 Note that these sessions are part of your mandatory training. Please email the organizers if you will be late or unable to attend due to illness.  
@@ -15,9 +15,9 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 
 ***
 
-### Monday October 14th
+### Monday, October 14th
 
-**Venue:** Quadram Institute, Room UG55C from 9:00 am ([what3words location](https://what3words.com/bricks.areas.modern))
+**Venue:** Quadram Institute, Room UG55C from 9:00 am to 5:00 pm ([What3words location](https://what3words.com/bricks.areas.modern))
 
 - **Introduction to the course and to the week**
   - Install/join Discord
@@ -33,9 +33,9 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 
 ***
 
-### Tuesday October 15th
+### Tuesday, October 15th
 
-**Venue:** Quadram Institute, Room UG55C from 9:00 am
+**Venue:** Quadram Institute, Room UG55C from 9:00 am to 5:00 pm
 
 - **Talk by Mark Pallen**:  
   _CLIMB, the Cloud, and Virtual Notebook Servers_ ([PowerPoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/githubio/2023_course/week_1/2023_Week1_CLIMB_cloud_notebooks.pptx))
@@ -46,9 +46,9 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 
 ***
 
-### Thursday October 17th
+### Thursday, October 17th
 
-**Venue:** Quadram Institute, Board Room from 9:00 am
+**Venue:** Quadram Institute, Board Room from 9:00 am to 5:00 pm
 
 - **Discussion led by Mark Pallen**:  
   _On Sequence File Formats_
@@ -59,7 +59,7 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 
 ***
 
-### Friday October 18th
+### Friday, October 18th
 
 **Venue:** Quadram Institute, Board Room from 9:00 am to 1:00 pm
 
@@ -68,4 +68,3 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 - **Bioinformatics Tutorial led by Andrea Telatin**
   - Mapping short reads against a reference genome
 
-***  
