@@ -7,8 +7,9 @@ title: Programme
 
 Tutors: 
 - David Baker (david.baker@quadram.ac.uk)
-- Richard Leggett (Richard.Leggett@earlham.ac.uk)
 - Gemma Kay (Gemma.Kay@nanoporetech.com)
+- Richard Leggett (Richard.Leggett@earlham.ac.uk)
+
 
 
 Note that these sessions are part of your mandatory training. Please email the organisers if you are going to be late or are unable to attend through illness. For Thursday/Friday, Please bring your MacBooks and ensure that you can log on to Eduroam.
@@ -28,24 +29,24 @@ Note that these sessions are part of your mandatory training. Please email the o
 
 **Venue:** Tuesday October 22nd: report to Quadram Institute reception at 9.00am
 
-- **Hands on sequencing demonstration run by David Baker**
+- **Hands on sequencing demonstration run by Gemma Kay**
  	-	exciting chance to see sequences are generated on the Oxford Nanopore platform
 
 ***
 
 ### Thursday
 
-**Venue:** Thursday October 24th: to be determined
+**Venue:** Thursday October 24th: QIB Board Room 
 
--	pencilled in session with Richard Leggett at Earlham Institute
+-	Analyses of sequences created earlier in the week
 
 ***
 
 ### Friday
 
-**Venue:** Friday October 25th: to be determined
+**Venue:** Friday October 25th: report to reception at the Earlham Institute
 
--	pencilled in session with Gemma Kay at QIB
+-	pencilled in session with Richard Leggett and colleagues at the Earlham Institute, covering adaptive sequencing, PacBio and single-cell sequencing
 
 
 NOTE: Nabil's material on QC needs moving, probably to week 1. Stored as files with "_old_" prefix.
