@@ -3,9 +3,9 @@ title: Programme
 ---
 # Week 2: Creating and handling sequences
 
-**Week beginning October 21st 2024**
+**Week beginning October 21st, 2024**
 
-Tutors: 
+**Tutors:**
 - David Baker (david.baker@quadram.ac.uk)
 - Gemma Kay (Gemma.Kay@nanoporetech.com)
 - Richard Leggett (Richard.Leggett@earlham.ac.uk)
@@ -16,35 +16,35 @@ Note that these sessions are part of your mandatory training. Please email the o
 
 ***
 
-### Monday
+### Monday October 21st
 
-**Venue:** Monday October 21st: UG55B
+**Venue:** UG55B
 
 - **Hands on sequencing demonstration run by David Baker**
  	-	exciting chance to see how sequences are generated on the Illumina platform
 
 ***
 
-### Tuesday 
+### Tuesday October 22nd
 
-**Venue:** Tuesday October 22nd: UG55B
+**Venue:** UG55B
 
 - **Hands on sequencing demonstration run by Gemma Kay**
  	-	exciting chance to see how sequences are generated on the Oxford Nanopore platform
 
 ***
 
-### Thursday
+### Thursday October 24th
 
-**Venue:** Thursday October 24th: QIB Board Room 
+**Venue:** QIB Board Room 
 
 -	Analyses of sequences created earlier in the week
 
 ***
 
-### Friday
+### Friday October 25th
 
-**Venue:** Friday October 25th: report to reception at the Earlham Institute
+**Venue:** report to reception at the Earlham Institute
 
 -	pencilled in session with Richard Leggett and colleagues at the Earlham Institute, covering adaptive sequencing, PacBio and single-cell sequencing
 
