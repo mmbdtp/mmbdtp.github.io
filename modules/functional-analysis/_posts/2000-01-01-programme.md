@@ -6,7 +6,10 @@ title: Programme
 
 ## Functional analysis: how can we understand what does what?
 
-**Mark Webber, James Lazenby**
+***
+
+
+**Tutors**: Mark Webber, James Lazenby
 
 ***
 
