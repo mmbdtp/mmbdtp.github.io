@@ -7,6 +7,9 @@ title: Programme
 
 _Evelien Adriaenssens (Evelien.Adriaenssens@quadram.ac.uk) and her team_
 
+
+***
+
 ### Monday - Details to follow
 
 **Venue:** Monday October 28th: UG55B
@@ -28,3 +31,6 @@ _Evelien Adriaenssens (Evelien.Adriaenssens@quadram.ac.uk) and her team_
 ### Friday - Details to follow
 
 **Venue:** Friday November 1st: UG55C
+
+***
+
