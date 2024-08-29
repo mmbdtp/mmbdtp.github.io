@@ -124,7 +124,7 @@ conda install scoary
 
 ***
 
-**Topic:**_Outbreak investigation_  ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day4_MMBDTP_outbreak_analysis.pdf))
+**Topic:** _Outbreak investigation_  ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day4_MMBDTP_outbreak_analysis.pdf))
 
 **Dataset:** 
 ```
