@@ -1,64 +1,73 @@
----
-title: Programme
+Here's a tidied and consistent version of the markdown:
+
 ---
 
+**title**: Programme
+
+---
 
 # Week 1: Unix and the Command Line
-**Week beginning October 14th 2024**
 
-**Tutors**: **Mark Pallen** ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk)) and **Andrea Telatin** ([andrea.telatin@quadram.ac.uk](mailto:andrea.telatin))
+**Week beginning October 14th, 2024**
 
-Note that these sessions are part of your mandatory training. Please email the organisers if you are going to be late or are unable to attend through illness.
+**Tutors**: **Mark Pallen** ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk)) and **Andrea Telatin** ([andrea.telatin@quadram.ac.uk](mailto:andrea.telatin@quadram.ac.uk))
+
+Note that these sessions are part of your mandatory training. Please email the organizers if you will be late or unable to attend due to illness.  
 Please bring your MacBooks and ensure that you can log on to Eduroam.
 
 ***
 
 ### Monday
-**Venue:** Quadram Institute ([https://what3words.com/bricks.areas.modern](https://what3words.com/bricks.areas.modern)) Room UG55C from 9.00am
+
+**Venue:** Quadram Institute, Room UG55C from 9:00 am ([what3words location](https://what3words.com/bricks.areas.modern))
 
 - **Introduction to the course and to the week**
-	-  Install/join Discord
-- **Talk from Mark Pallen**:
-  -  _Unix and the Command Line_ ([Powerpoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/githubio/2023_course/week_1/2023_Week1_Command_line_Unix.pptx))
+  - Install/join Discord
+- **Talk by Mark Pallen**:  
+  _Unix and the Command Line_ ([PowerPoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/githubio/2023_course/week_1/2023_Week1_Command_line_Unix.pptx))
 - **Bioinformatics Tutorial led by Mark Pallen**
-  -  _Comparing and contrasting file handling within the Finder and the Terminal on MacOS_
-  -  _Basic Unix commands_
-- **Bioinformatics Tutorial  led by Andrea Telatin**
-  -  _Installing programs, setting up your Mac, and handling Conda environments_
-     -  [Conda environments tutorial](https://telatin.github.io/microbiome-bioinformatics/Install-Miniconda/) (website)
-     -  [Linux CLI Slides](https://github.com/telatin/learn_bash/releases/download/2022/telatin-unix.pdf) (PDF)
+  - Comparing and contrasting file handling within the Finder and the Terminal on macOS
+  - Basic Unix commands
+- **Bioinformatics Tutorial led by Andrea Telatin**
+  - Installing programs, setting up your Mac, and handling Conda environments
+  - [Conda environments tutorial](https://telatin.github.io/microbiome-bioinformatics/Install-Miniconda/) (website)
+  - [Linux CLI Slides](https://github.com/telatin/learn_bash/releases/download/2022/telatin-unix.pdf) (PDF)
 
 ***
 
 ### Tuesday
 
-**Venue:** Quadram Institute Room UG55C from 9.00am
-- **Talk from Mark Pallen**
-  -  _CLIMB, the cloud, and virtual notebook servers_ ([Powerpoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/githubio/2023_course/week_1/2023_Week1_CLIMB_cloud_notebooks.pptx))
+**Venue:** Quadram Institute, Room UG55C from 9:00 am
+
+- **Talk by Mark Pallen**:  
+  _CLIMB, the Cloud, and Virtual Notebook Servers_ ([PowerPoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/githubio/2023_course/week_1/2023_Week1_CLIMB_cloud_notebooks.pptx))
 - **Bioinformatics Tutorial led by Andrea Telatin**
-  -  _Handling files and commands within the Jupyter Hub environment_
+  - Handling files and commands within the Jupyter Hub environment
 - **Bioinformatics Tutorial led by Andrea Telatin**
-  -  _Handling text files in Unix environment_
+  - Handling text files in a Unix environment
 
 ***
 
-### Thursday 
-**Venue:** Quadram Institute Board Room from 9.00am
-- **Discussion led by Mark Pallen**
-  -  _On sequence file formats_
+### Thursday
+
+**Venue:** Quadram Institute, Board Room from 9:00 am
+
+- **Discussion led by Mark Pallen**:  
+  _On Sequence File Formats_
 - **Bioinformatics Tutorial led by Andrea Telatin**
-  -  _Downloading and analyzing FASTA files_
+  - Downloading and analyzing FASTA files
 - **Bioinformatics Tutorial led by Andrea Telatin**
-  -  _Mapping sequences, the BAM file format_
+  - Mapping sequences and understanding the BAM file format
 
 ***
 
 ### Friday
-**Venue:** Quadram Institute Board Room from 9.00am to 1.00pm
-- **Discussion led by Mark Pallen**
-  -  _On how sequences evolve_
+
+**Venue:** Quadram Institute, Board Room from 9:00 am to 1:00 pm
+
+- **Discussion led by Mark Pallen**:  
+  _On How Sequences Evolve_
 - **Bioinformatics Tutorial led by Andrea Telatin**
-  -  _Mapping short reads against a reference genome_
+  - Mapping short reads against a reference genome
 
-***
-
+***  
