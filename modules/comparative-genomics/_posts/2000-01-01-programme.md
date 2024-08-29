@@ -3,17 +3,14 @@ title: Comparative Genomics
 ---
 
 # Comparative Genomics 
-  
+**Week beginning November 18th 2024**
+
 **Instructors and assistants:**
 
 - Dr Gemma Langridge (lead): Gemma.Langridge@quadram.ac.uk
 - Dr Emma Waters
 - Alice Nisbet
 - Eleanor Hayles 
-
-***
-
-**Venue:** UB44A
 
 ***
 
@@ -41,8 +38,10 @@ conda install scoary
 
 ***
 
-### Monday 
- 
+### Monday November 18th
+
+**Venue: UG55B**
+
 ***
 
 **Topic:** _Mapping and variant calling_ ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day1_MMB_Week4_mapping_variant_calling.pdf))
@@ -67,7 +66,10 @@ conda install scoary
  
 ***
 
-### Tuesday 
+### Tuesday November 19th
+
+
+**Venue: UG55B**
 
 ***
 
@@ -89,11 +91,13 @@ conda install scoary
 
 ***
 
-### Wednesday 
+### Thursday november 21st
+
+**Venue: UG44B**
  
 ***
 
-**Topic:**_Genome comparison_  ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day3_MMBDTP_Week4_genome_comparisons.pdf))
+**Topic:** _Genome comparison_  ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day3_MMBDTP_Week4_genome_comparisons.pdf))
 
 **Tasks:**
 
@@ -113,12 +117,11 @@ conda install scoary
 
 ***
 
-### Thursday  - Free
+### Friday November 22nd
+ 
 
-***
- 
-### Friday 
- 
+**Venue: UG55B**
+
 ***
 
 **Topic:**_Outbreak investigation_  ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day4_MMBDTP_outbreak_analysis.pdf))
