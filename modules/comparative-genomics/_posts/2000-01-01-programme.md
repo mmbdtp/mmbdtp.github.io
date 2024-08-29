@@ -38,7 +38,7 @@ conda install scoary
 
 ***
 
-### Monday November 18th
+**Monday November 18th**
 
 **Venue: UG55B**
 
@@ -66,7 +66,7 @@ conda install scoary
  
 ***
 
-### Tuesday November 19th
+**Tuesday November 19th**
 
 
 **Venue: UG55B**
@@ -91,7 +91,7 @@ conda install scoary
 
 ***
 
-### Thursday november 21st
+**Thursday november 21st**
 
 **Venue: UG44B**
  
@@ -117,7 +117,7 @@ conda install scoary
 
 ***
 
-### Friday November 22nd
+**Friday November 22nd**
  
 
 **Venue: UG55B**
@@ -127,7 +127,7 @@ conda install scoary
 **Topic:**_Outbreak investigation_  ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day4_MMBDTP_outbreak_analysis.pdf))
 
 **Dataset:** 
-
+```
 | biosample_acc | strain       | genBankAssembly | SRArun_acc |
 |---------------|--------------|-----------------|------------|
 | SAMN00860590  | CFSAN000191  | GCA_000698635.1 | SRR498369  |
@@ -153,7 +153,7 @@ conda install scoary
 | SAMN01942296  | CFSAN000970  | GCA_000749415.1 | SRR498444  |
 | SAMN01942300  | CFSAN000958  | GCA_000748465.1 | SRR498431  |
 | SAMN01942313  | CFSAN000952  | GCA_000749165.1 | SRR498423  |
-
+```
 
 **Tasks:** 
 
