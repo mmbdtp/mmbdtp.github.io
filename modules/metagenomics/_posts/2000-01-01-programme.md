@@ -3,15 +3,12 @@ title: Metagenomics
 ---
 
 # Week 5: Metagenomics
-**Week beginning December 4th 2023**
+**Week beginning November 25th 2024**
 
-**Tutors**: **Mark Pallen** ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk)) and **Andrea Telatin** ([andrea.telatin@quadram.ac.uk](mailto:andrea.telatin))
-
-Note that to fit in with room availability, this week's course runs as follows
-- Tuesday, Wednesday, Friday all day
-- Thursday afternoon
-
-Note that although we initially intended to cover Python this week, in response to feedback, we have stuck to the simpler option of just covering metagenomics. We will run a masterclass in Python next year.
+**Tutors**: 
+- **Mark Pallen** ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk)) 
+- **Alise Ponsaro**
+- **Andrea Telatin** ([andrea.telatin@quadram.ac.uk](mailto:andrea.telatin))
 
 ### Topics
 
@@ -29,9 +26,9 @@ They found that ICU patients had significant alterations in their faecal microbi
 
 ***
 
-### Tuesday 5th Dec
+### Monday November 25th
 
-**Venue:** Quadram Institute Room UG55A 9.00am to 5.00pm
+**Venue:** UG55C
 
 *Morning*
 
@@ -51,9 +48,9 @@ They found that ICU patients had significant alterations in their faecal microbi
 
 ***
 
-### Wednesday 6th Dec
+### Tuesday November 26th
 
-**Venue:** Quadram Institute Room UG55A 9.00am to 5.00pm
+**Venue:** UG55C
 
 - **Talk from Mark Pallen**:
   - Adventures in Metagenomics Part 2_: [Powerpoint Slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/modules/metagenomics/_posts/adventures-in-metagenomics2.pptx)
@@ -71,20 +68,19 @@ They found that ICU patients had significant alterations in their faecal microbi
 
 ***
 
-### Thursday 7th Dec
+### Thursday November 28th
 
-**Venue:** Quadram Institute Room UG55A 1.00pm to 5.00pm
+**Venue:** Board Room
 
- 
 - **Bioinformatics Task**
   - Backmapping and the concept of coverage
   - Automatic binning (SemiBin2) and manual binning (Anvi'o)
 
 ***
 
-### Friday 8th Dec
+### Friday November 29th
 
-**Venue:** Quadram Institute Room UG55A 9.00am to 12.00pm; Room UB55C 12.00pm  to 5.00pm
+**Venue:** QUG55C
 
 - **Bioinformatics Task**
   - After binning: assessing the quality, taxonomy and functional content of MAGs
