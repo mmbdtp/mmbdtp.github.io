@@ -2,7 +2,6 @@
 Title: Manipulating files
 ---
 
-
 **Monday afternoon: Manipulating files in Unix**
 
 If we want to copy a file, we use the `cp` command. Let's copy the file `grandeur.txt` to create a new file called `Darwin.txt`
@@ -152,11 +151,7 @@ grep Patagonia 944.txt.utf-8 > Patagonia.txt
 - How can you find out what is in the file Patagonia.txt
 - What has this command done?
 
----
-title: File Permissions in Unix
----
-
-## File Permissions in Unix
+### File Permissions in Unix
 
 
 Unix-based systems, including macOS, manage file and directory access through permissions. These permissions determine who can read, write, or execute files and directories. Permissions are divided into three categories for each file: user, group, and others. For more details, check the [https://en.wikipedia.org/wiki/File-system_permissions](Wikipedia page on Unix file permissions).
@@ -199,7 +194,7 @@ This output provides comprehensive information about the file's permissions, own
 
 ###Changing File Permissions
 
-**`chmod`: Changing Permissions**
+***`chmod`: Changing Permissions**
 To modify permissions, use the `chmod` command. Permissions are assigned using a numerical code or symbolic notation.
 
 **Numerical Mode:**
@@ -356,36 +351,32 @@ Always exercise caution and avoid using sudo unless necessary.
 macOS includes security features like Gatekeeper and SIP (System Integrity Protection) that restrict the execution of programs and scripts to ensure system integrity. You may encounter permission issues when running scripts or software downloaded from the internet. To overcome this, you can adjust security settings in the System Preferences to allow execution of specific applications and scripts. Always be vigilant about the security implications when modifying these settings to protect your system.
 
 
-### Time for a break
+## End of Day 1
 
-Okay, so you are now bioinformaticians. It may not feel like it, but you have started your journey into microbial bioinformatics! Your brain has been rewired and you need a rest.
+### Additional resources (optional)
+Here are some links to additional resources that you might want to explore in your own time to reinforce your learning. 
 
-Finally, a few Unix in-jokes to end this session
+#### Video tutorials
 
-How do Unix geeks sit down for lunch?
+* [Command Line Crash Course](https://www.youtube.com/watch?v=yz7nYlnXLfE)
+* [Beginner's guide to the Bash terminal](https://www.youtube.com/watch?v=oxuRxtrO2Ag)
+  
+#### Lockdown Learning Bioinformatics-along**:
 
-```
-~$ grep food menu
+* [The linux file system](https://www.youtube.com/watch?v=P8OmVPd82NI&list=PLzfP3sCXUnxGpXB3NsG2WOk2txomLIwX6&index=2)
+* [Working with Files](https://www.youtube.com/watch?v=QHmDPMgeheA&list=PLzfP3sCXUnxGpXB3NsG2WOk2txomLIwX6&index=3)
+* [File manipulation](https://www.youtube.com/watch?v=_4G6kTZCP4c&list=PLzfP3sCXUnxGpXB3NsG2WOk2txomLIwX6&index=4)
 
-```
-
-Which command do Unix files hate to play hide-and-seek with?
-
-- `ls`, because it always finds out where they are and what they have permission to do
-
-Why bioinformatics students always feel nostalgic?
-
-- Because every time they feel lost, they'd just cd ~ and find themselves back home.
+#### Online tutorials
 
 
-You hate Unix??
 
-Take a look at this old classic, which has a good moan about many aspects of Unix: 
+#### Learning resources
+* *Happy Belly Bioinformatics*: a great website from "Astrobiomike" which includes [Unix training](https://astrobiomike.github.io/unix/)
 
-- [The Unix-haters handbook](https://web.mit.edu/~simsong/www/ugh.pdf)
-
-
----
+* [Learn the linux command line with Ubuntu](https://ubuntu.com/tutorials/command-line-for-beginners#4-creating-folders-and-files) - A tutorial by Canonical (the company backing Ubuntu, the most popular linux distribution) to learn the linux command line.
+* [Linux Professional Institute - Learning](https://learning.lpi.org/en/learning-materials/010-160/2/2.1/) - *Learning* is an initiative of the Linux Professional Institute (LPI) and supports you in preparing for our Linux and open source certifications. 
+* [duke-hts-2018](https://people.duke.edu/~ccc14/duke-hts-2018/slides.html) - A full Linux training for beginner from Duke University. It is based on Python notebooks, which we will be covering later in the course.
 
 [Back to the Programme for this week](week_1__programme.md)
 
