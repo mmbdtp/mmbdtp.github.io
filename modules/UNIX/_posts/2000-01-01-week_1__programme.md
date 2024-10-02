@@ -9,7 +9,7 @@
 **Tutors**:
 - **Mark Pallen** ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk))
 - **Leonardo de Oliveira Martins** ([Leonardo.de-Oliveira-Martins@quadram.ac.uk](Leonardo.de-Oliveira-Martins@quadram.ac.uk))
-- **Sam Haynes** ([Sam.Haynes@quadram.ac.uk](Sam.Haynes@quadram.ac.uk)
+- **Sam Haynes** ([Sam.Haynes@quadram.ac.uk](Sam.Haynes@quadram.ac.uk))
 - **MMB DTP student** 
 
 
