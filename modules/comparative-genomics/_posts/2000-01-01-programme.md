@@ -60,8 +60,8 @@ conda install scoary
 
 9:00-10:00 – Introduction and setup of task; installation of software  
 10:00-12:00 – Task    
-13:00- 15:00 - Task  
-15:00-16:00 – Talk from Dr Claire Jenkins, UKHSA  
+13:00- 15:00 – Task  
+15:00-16:00 – Talk from UKHSA  
 16:00-17:00 – Wrap up  
  
 ***
@@ -91,9 +91,9 @@ conda install scoary
 
 ***
 
-**Thursday november 21st**
+**Wednesday November 20th**
 
-**Venue: UG44B**
+**Venue: UG44A**
  
 ***
 
