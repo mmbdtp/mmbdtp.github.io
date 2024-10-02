@@ -183,6 +183,9 @@ Note that in Unix both commands and file names are generally case sensitive. mac
 
 ---
 
+###Coffee break!
+___
+
 
 ### Moving around
 On Unix-like systems, files and directories are managed in a hierarchical structure, where files and directories sit within folders, which in turn can in turn sit within directories higher up in the hierarchy.
