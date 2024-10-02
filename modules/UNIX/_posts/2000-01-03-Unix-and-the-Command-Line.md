@@ -315,3 +315,23 @@ clear
 
 ```
 
+### Time for lunch
+
+Okay, so you are now bioinformaticians. It may not feel like it, but you have started your journey into microbial bioinformatics! Your brain has been rewired and you need a rest.
+
+Finally, a couple of Unix in-jokes to end this session
+
+Which command do Unix files hate to play hide-and-seek with?
+
+- `ls`, because it always finds out where they are and what they have permission to do
+
+Why bioinformatics students always feel nostalgic?
+
+- Because every time they feel lost, they'd just cd ~ and find themselves back home.
+
+
+You hate Unix??
+
+Take a look at this old classic, which has a good moan about many aspects of Unix: 
+
+- [The Unix-haters handbook](https://web.mit.edu/~simsong/www/ugh.pdf)
