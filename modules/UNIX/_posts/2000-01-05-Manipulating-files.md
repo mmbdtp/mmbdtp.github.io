@@ -3,7 +3,7 @@ Title: Manipulating files
 ---
 
 
-**Manipulating files**
+**Monday afternoon: Manipulating files in Unix**
 
 If we want to copy a file, we use the `cp` command. Let's copy the file `grandeur.txt` to create a new file called `Darwin.txt`
 
