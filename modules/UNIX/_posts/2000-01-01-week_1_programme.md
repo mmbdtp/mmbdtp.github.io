@@ -38,7 +38,7 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 **Venue:** Quadram Institute, Room UG55C from 9:00 am to 5:00 pm
 
 
-- **Morning: Juypiter Notebooks**
+- **Morning: Jupyter Notebooks**
   - Leo leads with help from Mark and Sam
 
 - **Afternoon: Installing software and Conda environments**
