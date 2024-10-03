@@ -1,8 +1,8 @@
 ---
-title: Unix and the Command Line
+title: Monday Morning: Unix and the Command Line
 ---
 
-##  Week 1 Monday Morning: Unix and the Command Line
+## Monday Morning: Unix and the Command Line
 
 Welcome to an introductory tutorial on using the Unix command line on your MacBooks. The command line is a powerful tool, enabling users to perform tasks more efficiently and automate processes. In this tutorial, we will explore the basics of navigating the file structure, creating and deleting files and directories and some essential Unix commands.
 
