@@ -1,8 +1,8 @@
 ---
-title: Notebook servers
+title: Tuesday Morning — Notebook servers
 ---
 
-## Handling files and commands within a Jupyter Hub 
+## Tuesday Morning — Notebook servers 
 
 ### How to launch and access a notebook server
 
