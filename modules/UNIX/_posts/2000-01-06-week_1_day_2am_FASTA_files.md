@@ -1,6 +1,8 @@
 ---
-title: FASTA files
+title: Thursday — Sequence file formats 
 ---
+
+# Thursday — Sequence file formats 
 
 ## FASTA files
  
