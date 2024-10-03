@@ -362,7 +362,7 @@ Why bioinformatics students always feel nostalgic?
 - Because every time they feel lost, they'd just cd ~ and find themselves back home.
 
 
-You hate Unix??
+You already hate Unix??
 
 Take a look at this old classic, which has a good moan about many aspects of Unix: 
 
