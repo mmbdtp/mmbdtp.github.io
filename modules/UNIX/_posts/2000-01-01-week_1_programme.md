@@ -1,7 +1,5 @@
 ---
-
 Title: Programme
-
 ---
 
 # Week 1: Unix and the Command Line
