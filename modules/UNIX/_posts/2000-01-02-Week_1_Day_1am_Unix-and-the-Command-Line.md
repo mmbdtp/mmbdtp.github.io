@@ -1,5 +1,5 @@
 ---
-title: Monday Morning: Unix and the Command Line
+title: Monday Morning — Unix and the Command Line
 ---
 
 ## Monday Morning — Unix and the Command Line
