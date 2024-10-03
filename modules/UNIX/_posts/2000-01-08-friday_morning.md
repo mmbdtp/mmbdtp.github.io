@@ -111,21 +111,3 @@ Here we will try to map the reads of one sample against the reference genome.
 
 
 --- 
-
-
-## A completely different task
-
-This is a bonus track you can open under the tree during the festive season.
-It's a non-bioinformatics task.
-
-1. Watch an [interesting video](https://www.youtube.com/watch?v=fCn8zs912OE)
-2. Try to see how we can takle the problem with UNIX, and programming languages (Python, R, Perl, etc)
-
-Track: [Word distribution: theory and some exercises](https://telatin.github.io/microbiome-bioinformatics/Words-distribution/)
-
-
-
-
----
-
-[Back to the Programme for this week](week_1__programme.md)
