@@ -1,6 +1,7 @@
 ---
-title: SAM files and sequence mapping
+title: Thursday afternoon — SAM files and sequence mapping
 ---
+# Thursday afternoon — SAM files and sequence mapping
 
 SAM format
 ==========
