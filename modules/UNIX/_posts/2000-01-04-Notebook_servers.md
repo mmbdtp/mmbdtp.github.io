@@ -2,7 +2,7 @@
 title: Tuesday Morning — Notebook servers and Conda Environments
 ---
 
-## Tuesday Morning — Notebook servers and Conda Environments 
+# Tuesday Morning — Notebook servers and Conda Environments 
 
 ## Handling files and commands within a Jupyter Notebook 
 
@@ -19,7 +19,7 @@ title: Tuesday Morning — Notebook servers and Conda Environments
 
 ---
 
-### Finding your way around the JupyterLab interface#
+### Finding your way around the JupyterLab interface
 
 Spend a few moments familiarizing yourself with the basic JupyterLab interface. Head on over to the [JupyterLab interface docs](https://jupyterlab.readthedocs.io/en/stable/user/interface.html) to get started.
 
@@ -114,7 +114,6 @@ To solve this, Conda allows you to create **isolated environments**, where each 
 Conda makes it easy to manage software and environments, helping you keep your projects organized and free from conflicts.
 
 
-
 ### Default .condarc#
 
 When you first launch a notebook server, we generate a default .condarc in your home directory. This sets the path for your new environments to 
@@ -132,7 +131,7 @@ envs_dirs:
 ```
 ---
 
-###Creating new conda environments#
+### Creating new conda environments
 
 Understanding the above, you can create new conda environments in the usual way. The only caveat is that if you wish to use this environment with ipython notebooks, you must install `ipykernel`.
 
@@ -158,9 +157,9 @@ conda install ipykernel -y
 ```
 ---
 
-###A quick analysis of an *E. coli* genome
+### A quick analysis of an *E. coli* genome
 
-Let's do a quick analysis of an •E. coli• genome
+Let's do a quick analysis of an *E. coli* genome
 
 
 ```
