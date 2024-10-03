@@ -1,8 +1,10 @@
 ---
-title: Tuesday Morning — Notebook servers
+title: Tuesday Morning — Notebook servers and Conda Environments
 ---
 
-## Tuesday Morning — Notebook servers 
+## Tuesday Morning — Notebook servers and Conda Environments 
+
+## Handling files and commands within a Jupyter Notebook 
 
 ### How to launch and access a notebook server
 
@@ -56,30 +58,62 @@ jovyan:~$ pwd
 
 ---
 
-### What about sudo?
-jovyan doesn't have sudo privileges. This may seem restrictive, but we've pre-configured the climb-jupyter base image with everything you'd likely need sudo for pre-installed. Everything else should be installable via package managers, such as conda. 
 
-You'll also be able to run ``Nextflow``, a workflow management system, specifically designed to handle and orchestrate computational pipelines popular in the bioinformatics community for its ability to streamline the analysis of large datasets.'out-of-the-box'.
+## Handling Conda Environments
+
+In this tutorial, we will cover the importance of using **Conda** for managing environments, especially when working in Jupyter Notebooks or complex data science and bioinformatics projects.
+
+---
+
+### What is Conda?
+
+**Conda** is an open-source package management and environment management system. It allows you to easily install, update, and manage software packages, as well as create isolated environments for different projects. Conda supports multiple programming languages, such as Python, R, Ruby, and others, making it a versatile tool for various domains.
 
 ---
 
-### How do I install software?
-Its critical to understand how conda works with notebook servers as things are not quite the same as on a traditional Unix box or a MacBook.
+### Why is Conda Useful?
 
-Firstly, understand that you cannot install new software to the base conda environment. Lets have a look at why.
+Conda is especially useful in the following scenarios:
 
-```
-conda info --envs
-base                     /opt/conda
-```
+- **Environment Isolation**: Conda helps you create isolated environments where you can install different versions of the same software without conflicts. This is crucial in projects that require different libraries or dependencies that may not work well together.
+  
+- **Package Management**: Conda simplifies the installation of software packages, whether they are Python libraries, system libraries, or software written in other programming languages.
 
-The base conda env is installed at /opt/conda. Since we are running instide a container, any changes made to this part of the filesystem will not be retained once the container is stopped and restarted (unlike your home dir and shares, which are persisted).
+- **Cross-Platform Compatibility**: Conda works across various operating systems, including Linux and Windows. This ensures consistency when working on collaborative projects with team members on different systems or when deploying solutions on servers.
 
-We've made the base environment read only to prevent any confustion.
-
-**Tip**: You must create a new conda environment before installing software!
+- **Jupyter Notebooks**: When working in a Jupyter Notebook environment, Conda allows you to create and switch between environments effortlessly. This is helpful when running notebooks that require different software packages or specific versions of libraries without causing issues across the system.
 
 ---
+
+### Conda vs Other Package Managers
+
+Compared to other package managers, Conda has a few distinct advantages:
+
+- **Language-Agnostic**: Unlike `pip`, which primarily manages Python packages, Conda can handle packages written in multiple languages.
+  
+- **Environment Management**: While tools like `virtualenv` only isolate Python environments, Conda manages the entire environment, including system libraries.
+
+- **Package Compatibility**: Conda ensures that all dependencies are compatible with one another, reducing the risk of installation issues or conflicting versions. This is especially crucial for scientific computing or bioinformatics projects, which often require various tools to work together seamlessly.
+
+---
+
+### Setting Up Conda Environments
+
+Conda simplifies installing packages, but a common issue arises with **conflicting versions**:
+
+- You may want to use a new version of a program like`samtools`, but another tool or pipeline might require an older version, say `samtoolsv1.1`.
+- A typical bioinformatics workflow involves dozens of different tools, each requiring specific libraries and dependencies.
+- Installing everything in one environment can result in conflicts between versions of the same tool.
+
+To solve this, Conda allows you to create **isolated environments**, where each environment has its own set of packages, libraries, and configurations, independent of other environments. This ensures that tools in one environment don’t conflict with those in another.
+
+---
+
+### Creating and Managing Conda Environments
+
+Conda makes it easy to manage software and environments, helping you keep your projects organized and free from conflicts.
+
+
 
 ### Default .condarc#
 
@@ -126,7 +160,7 @@ conda install ipykernel -y
 
 ###A quick analysis of an *E. coli* genome
 
-Let's do what we did yesterday on your Macs, but here in this new sophisticated setting!
+Let's do a quick analysis of an •E. coli• genome
 
 
 ```
@@ -154,4 +188,3 @@ Time for a break!
 
 ---
 
-[Back to the Programme for this week](week_1__programme.md)
