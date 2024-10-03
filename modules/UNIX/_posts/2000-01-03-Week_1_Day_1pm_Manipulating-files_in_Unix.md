@@ -1,7 +1,6 @@
 ---
-Title: Monday Afternoon — Manipulating Files in Unix
+title: Monday Afternoon — Manipulating Files in Unix
 ---
-
 
 ### Monday Afternoon — Manipulating Files in Unix
 
