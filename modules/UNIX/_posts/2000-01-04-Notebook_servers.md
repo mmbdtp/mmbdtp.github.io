@@ -150,23 +150,53 @@ If you try listing channels, you'll see you already have conda-forge and biocond
 conda config --show channels
 ```
 
-Let's remember to install ipykernel in this environment
+### Installing Programs in Conda Environments
 
+**Bioconda** is a distribution of bioinformatics software for the Conda package manager. Conda is an open-source package manager that can install software and manage environments. While Conda is general-purpose and can manage software written in any language, Bioconda specifically targets the bioinformatics community, with a collection of over 7,000 bioinformatics packages, making it one of the largest and most comprehensive software distributions available for computational biology.
+
+A straightforward `bioconda` tool that can calculate the GC percentage for sequences is `seqkit`, which provides a variety of functionalities for sequence file manipulations. Among its many utilities, it has a subcommand to compute the GC content.
+
+To check if the program `seqkit` is available in `bioonda`, and which versions:
+
+```bash
+conda search -c bioconda seqkit
 ```
-conda install ipykernel -y
+
+
+To install a package, simply replace `search` with `install`. If you also add `-y` you will not be prompted and will try to install directly.
+
+```bash
+conda install -y -c bioconda seqkit
 ```
+
+**Demonstrate GC Percentage Calculation**
+
+- First, create a sample FASTA file:
+
+```bash
+echo ">sample_sequence" > sample.fasta
+echo "AGCTAGCTAGCTAGCTA" >> sample.fasta
+```
+
+- Note that using `>>` means the text is added to the end of the existing file. If we typed `>` the current file would be overwritten.
+
+- Now, compute the GC content:
+
+```bash
+seqkit fx2tab sample.fasta --gc
+```
+
+This command will give you the GC content of the sequence in sample.fasta.
+
+NB: `seqkit` is versatile and offers many other sequence-related utilities, so it's not just limited to computing the GC content. But for the sake of simplicity and demonstration to beginners, the GC content computation serves as an easy-to-understand example.
+
 ---
 
 ### A quick analysis of an *E. coli* genome
 
-Let's do a quick analysis of an *E. coli* genome
+Let's do a quick analysis of an *E. coli* genome with `seqkit`.
 
-
-```
-conda install -y -c bioconda seqkit
-```
-
-And let's download and analyse a real genome
+Let's download and analyse a real genome!
 
 ```
 wget "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000005845.2/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCF_000005845.2.zip" -O coligenome.zip
