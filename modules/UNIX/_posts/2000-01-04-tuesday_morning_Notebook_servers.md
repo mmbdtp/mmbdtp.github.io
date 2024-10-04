@@ -148,7 +148,8 @@ To solve this, Conda allows you to create **isolated environments**, where each 
 
 Conda makes it easy to manage software and environments, helping you keep your projects organized and free from conflicts. You can use Conda on any Unix machine, but one important caveat applies when using it here on the CLIMB-BIG-DATA Notebook servers. In Conda, the **base environment** refers to the default environment that is created when Conda is first installed. It is the environment that contains the core system packages and dependencies needed for Conda to function, as well as a minimal set of commonly used packages (like Python). But on CLIMB-BIG-DATA Notebook servers, you cannot install new software to the base Conda environment. Let's have a look at why.
 
-```conda info --envs
+```
+conda info --envs
 base                     /opt/conda
 ```
 The base Conda environment is installed at /opt/conda. Since we are running inside a container, any changes made to this part of the filesystem will not be retained once the container is stopped and restarted (unlike your home dir and shares, which are persisted).
