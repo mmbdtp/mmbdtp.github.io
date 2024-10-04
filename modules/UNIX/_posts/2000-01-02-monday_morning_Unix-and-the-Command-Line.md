@@ -12,12 +12,15 @@ If you want to raise questions or share insights, please also feel free to add t
 
 * [https://tinyurl.com/MMBDTP-doc](https://tinyurl.com/MMBDTP-doc)
 
+This is mainly a hands-on session, but before you get your hands dirty, let's start with a brief PowerPoint presentation to set the scene:  [PowerPoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/githubio/2023_course/week_1/2023_Week1_Command_line_Unix.pptx)
+
+
 ---
 
 
 ### Opening the Terminal App
 
-Click on the magnifying glass icon (Spotlight) in the top-right corner of your screen.
+Okay, let's get started! Click on the magnifying glass icon (Spotlight) in the top-right corner of your MacBook screen.
 
 Type `Terminal` and press `Enter`.
 
