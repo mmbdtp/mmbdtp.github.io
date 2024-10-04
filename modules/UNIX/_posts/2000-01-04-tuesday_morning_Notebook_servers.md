@@ -4,11 +4,22 @@ title: Tuesday Morning — Notebook servers and Conda Environments
 
 # Tuesday Morning — Notebook servers and Conda Environments 
 
-## Handling files and commands within a Jupyter Notebook 
+## Handling files and commands within a Jupyter Notebook Server
+
+Although your MacBooks run a version of Unix, most bioinformaticians prefer to use Linux and so most programs and pipelines work best on Linux. In bioinformatics, most researchers also prefer to use remote virtual servers over their own personal (bare metal) machines for several important reasons:
+ - Bioinformatics analyses, such as genome assembly, sequence alignment, or large-scale data mining, can require substantial computational resources (e.g., CPU power, memory, and storage). 
+- Personal computers, particularly laptops, often do not have the processing power or memory to handle these large datasets effectively. 
+- By contrast, remote servers provide access to high-performance computing resources, which are specifically optimized for demanding tasks, ensuring faster and more efficient data processing. Here we are using a cloud platform, CLIMB-BIG-DATA, offering dynamic scalable resources.
+- Virtualization allows multiple users to share the same physical hardware while operating in isolated environments, making it a more cost-effective solution. 
+- Virtual servers can be easily scaled up or down based on demand, meaning researchers only pay for the computing power they use, which is especially beneficial when dealing with fluctuating project needs. Virtual servers also offer enhanced redundancy and fault tolerance, meaning that if hardware fails, another server can quickly take over without data loss or significant downtime. This reliability is crucial for long-running bioinformatics computations, which could otherwise be disrupted by hardware failures.
+
+We will be using a Jupyter notebook server, which is an easy-to-access web-based platform that allows users to create and interact with Jupyter Notebooks, which in turn are documents that can contain live code, equations, visualizations, and text. The server runs the computational backend that provides command line access to a Linux shell, but can also processes code cells written in languages like Python, R, or Julia, and returns the output to the browser interface where users can view and manipulate results.
+
+Before we get stuck in to using a Notebook server, let's set the scene with a short Powerpoint presentation.
 
 ### How to launch and access a notebook server
 
-* First, follow the instructions on how to get CLIMB-BIG-DATA's web interface 
+* !Need to add instructions on how to get to CLIMB-BIG-DATA's web interface! 
 * Using the navigation menu on the left hand side, select 'Notebook servers' under the 'Compute' subheading
 * Click the 'Launch notebook server' green action button on the right hand side
 * Select a 'Standard server'
@@ -21,7 +32,7 @@ title: Tuesday Morning — Notebook servers and Conda Environments
 
 ### Finding your way around the JupyterLab interface
 
-Spend a few moments familiarizing yourself with the basic JupyterLab interface. Head on over to the [JupyterLab interface docs](https://jupyterlab.readthedocs.io/en/stable/user/interface.html) to get started.
+Let's now spend a few minutes exploring the JupyterLab interface using the [documentation provided by JupyterLab](https://jupyterlab.readthedocs.io/en/stable/user/interface.html) to get started. Open the link in a fresh browser window and then return here when you have worked through the documentation there. Don't worry about covering all the details there. Just work out how we can use the Notebook terminal together with the added benefits of having a graphical user interface to work with files. Don't worry  
 
 Fundamentally, your screen is divided into a few areas. You'll see context menus at the top (File, Edit, View, Run etc.), a file browser pane on the left, and an activity area that initially displays a launcher interface with tiles. Clicking on one of these tiles will open a new tab in the activity area.
 
@@ -37,9 +48,18 @@ Select File -> New -> Terminal, or click the Terminal icon on the launcher pane.
 
 
 ### Who is jovyan?
-Looking at your bash prompt, you'll notice that your username is jovyan (there's a backstory, but it means 'related to Jupyter'). Why is everyone's username the same? Your notebook server is running as a container. The container instance is private and linked to your Bryn user's storage, but the image it runs is the same for everyone. As a result, it is not necessary or desirable to have unique system users.
 
-TLDR: don't worry about it. Inside your notebook server, your username is jovyan
+Looking at your bash prompt, you’ll notice that your username is **jovyan** (derived from "Jupyter"). Why does everyone have the same username in this environment? That’s because your notebook server is running inside a **container**. Containers are lightweight, self-contained environments that bundle an application (in this case, the Jupyter notebook server) together with its dependencies, ensuring that it runs consistently across different systems. 
+
+The **container** instance is private and linked to your specific user storage on the system, but the actual image (which includes the software, configurations, and libraries) is the same for everyone using the platform. This is why it’s unnecessary to have unique system users for each individual—everyone operates within the same standardized environment, hence the shared username.
+
+### What is a container?
+
+A **container** is a technology that allows you to package up an application, along with all of its dependencies, libraries, and configurations, into a single isolated environment. This guarantees that the application runs consistently, no matter where it’s deployed. Unlike virtual machines, which simulate an entire operating system, containers are more lightweight because they share the host system’s kernel, making them faster and less resource-intensive.
+
+In a Jupyter Notebook server context, containers allow multiple users to have their own private instances, even though they all use the same underlying software image. This ensures consistency across users, simplifies deployment, and provides isolation—what happens in your container doesn’t affect others. It's a key technology in environments where reproducibility and ease of scaling are important, like in data science and bioinformatics workflows.
+
+**TLDR:** Don’t worry about it! Inside your notebook server, everyone’s username is set to **jovyan** because you’re working inside a standardized container environment that provides all the necessary tools and libraries for your Jupyter notebooks.
 
 ---
 
