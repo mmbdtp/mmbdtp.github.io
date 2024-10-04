@@ -4,6 +4,9 @@ title: Monday Afternoon — Manipulating Files in Unix
 
 ### Monday Afternoon — Manipulating Files in Unix
 
+Welcome back, newbie bioinformaticians!
+
+Let's get stuck into some more Unix commands. 
 If we want to copy a file, we use the `cp` command. Let's copy the file `grandeur.txt` to create a new file called `Darwin.txt`
 
 ```
@@ -156,8 +159,8 @@ grep Patagonia voyage_of_the_beagle.txt > Patagonia.txt
 - How can you find out what is in the file Patagonia.txt
 - What has this command done?
 
-### File permissions in Unix
 
+### File permissions in Unix
 
 Unix-based systems, including macOS, manage file and directory access through permissions. These permissions determine who can read, write, or execute files and directories. permissions are divided into three categories for each file: user, group, and others. For more details, check the [https://en.wikipedia.org/wiki/File-system_permissions](Wikipedia page on Unix file permissions).
 
@@ -357,11 +360,11 @@ macOS includes security features like Gatekeeper and SIP (System Integrity Prote
 
 ---
 
-###Time for lunch!
+### Time for coffee!
 
 ---
 
-##Text files and the command line
+## Text files and the command line
 
 This afternoon we will learn how to manipulate and analyse text files on the Unix command line.
 
@@ -486,8 +489,6 @@ ls -lh ~/learn_bash/files/*.png
 
 **Text files**
 
-
-
 The [`wc`](https://manpages.org/wc) command is used to count the number of lines, words and characters in a file. This only applies to simple text files.
 
 ```
@@ -528,7 +529,6 @@ A useful option for `less` is `-S`, which will not wrap long lines, meaning that
 
 **grep again**
 
-
 The [`grep`](https://manpages.org/grep) command is used to search for a pattern in a file, and it prints the lines matching the pattern. The general syntax is ‚'grep PATTERN FILE(s)‚'.
 
 ```
@@ -551,7 +551,6 @@ Some useful options:
 *   `-w` matches only whole words (not substrings)
 
 **cut**
-
 
 The [`cut`](https://manpages.org/cut) command is used to extract columns from a file. The general syntax is ‚'_cut -d DELIMITER -f FIELDS FILE(s)_‚'. By default the delimiter is a tab, so you don't need to specify
 
@@ -589,7 +588,6 @@ sed 's/,/---/' ~/learn_bash/files/cars.csv
 
 **sort**
 
-
 The [`sort`](https://manpages.org/sort) command is used to sort the lines of a file. By default, it sorts alphabetically.
 
 ```
@@ -618,7 +616,6 @@ wget -O origin.txt \
 Note that when you type a backslash at the end of a line and then press enter, the shell will print a different prompt (usually a `>`), which means that the command is not finished yet. The greater-than is not to be confused with the redirection operator.
 
 And that's enough for one day!
-
 
 ## End of Day 1
 
