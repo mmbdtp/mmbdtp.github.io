@@ -4,6 +4,8 @@ title: Tuesday Morning — Notebook servers and Conda Environments
 
 # Tuesday Morning — Notebook servers and Conda Environments 
 
+---
+
 ## Handling files and commands within a Jupyter Notebook Server
 
 Although your MacBooks run a version of Unix, most bioinformaticians prefer to use Linux and so most programs and pipelines work best on Linux. In bioinformatics, most researchers also prefer to use remote virtual servers over their own personal (bare metal) machines for several important reasons:
@@ -16,6 +18,9 @@ Although your MacBooks run a version of Unix, most bioinformaticians prefer to u
 We will be using a Jupyter notebook server, which is an easy-to-access web-based platform that allows users to create and interact with Jupyter Notebooks, which in turn are documents that can contain live code, equations, visualizations, and text. The server runs the computational backend that provides command line access to a Linux shell, but can also processes code cells written in languages like Python, R, or Julia, and returns the output to the browser interface where users can view and manipulate results.
 
 Before we get stuck in to using a Notebook server, let's set the scene with a short Powerpoint presentation.
+
+---
+
 
 ### How to launch and access a notebook server
 
@@ -44,16 +49,13 @@ The terminal allows us to access a system shell (just like on ypur MacBooks), so
 
 Select File -> New -> Terminal, or click the Terminal icon on the launcher pane. You'll get a new terminal tab in the activity bar, and find yourself in a bash shell.
 
----
-
-
-### Who is jovyan?
+**Who is jovyan?**
 
 Looking at your bash prompt, you’ll notice that your username is **jovyan** (derived from "Jupyter"). Why does everyone have the same username in this environment? That’s because your notebook server is running inside a **container**. Containers are lightweight, self-contained environments that bundle an application (in this case, the Jupyter notebook server) together with its dependencies, ensuring that it runs consistently across different systems. 
 
 The **container** instance is private and linked to your specific user storage on the system, but the actual image (which includes the software, configurations, and libraries) is the same for everyone using the platform. This is why it’s unnecessary to have unique system users for each individual—everyone operates within the same standardized environment, hence the shared username.
 
-### What is a container?
+**What is a container?**
 
 A **container** is a technology that allows you to package up an application, along with all of its dependencies, libraries, and configurations, into a single isolated environment. This guarantees that the application runs consistently, no matter where it’s deployed. Unlike virtual machines, which simulate an entire operating system, containers are more lightweight because they share the host system’s kernel, making them faster and less resource-intensive.
 
@@ -61,9 +63,7 @@ In a Jupyter Notebook server context, containers allow multiple users to have th
 
 **TLDR:** Don’t worry about it! Inside your notebook server, everyone’s username is set to **jovyan** because you’re working inside a standardized container environment that provides all the necessary tools and libraries for your Jupyter notebooks.
 
----
-
-### Where am I? Who am I?#
+**Where am I? Who am I?**
 
 By default, you're in a bash shell running against the base operating system of the climb-jupyterhub container image (which is based on a flavour of Linux called Ubuntu). You'll see in your bash prompt that you're in your home directory (represented by the tilde character ~).
 
@@ -76,12 +76,40 @@ jovyan:~$ pwd
 /home/jovyan
 ```
 
+Within the Terminal here, you can do almost all the things we did yesterday using Unix on your MacBooks.
+
+Let's just have a play and re-do some of them.
+
+```
+touch testfile.txt
+curl -o voyage_of_the_beagle.txt https://www.gutenberg.org/cache/epub/944/pg944.txt
+cat voyage_of_the_beagle.txt
+head voyage_of_the_beagle.txt
+tail voyage_of_the_beagle.txt
+wc voyage_of_the_beagle.txt
+grep naked voyage_of_the_beagle.txt
+ls -l
+rm testfile.txt
+ls -l
+```
+
+Feel free to try out whatever other commands interest you!
+
+One Unix command that you cannot use on this Notebook server is `sudo`. Try it
+```
+sudo touch file.txt
+```
+`jovyan` doesn't have sudo privileges. This may seem restrictive, but we've pre-configured the climb-jupyter base image with everything you'd likely need sudo for pre-installed. Everything else should be installable via package managers, such as Conda, which we are going to learn more about after coffee. 
+
 ---
 
+## Coffee break
 
-## Handling Conda Environments
+---
 
-In this tutorial, we will cover the importance of using **Conda** for managing environments, especially when working in Jupyter Notebooks or complex data science and bioinformatics projects.
+## Conda
+
+We will now cover the importance of using a package manager called **Conda** for installing software and managing environments, especially when working in Jupyter Notebooks on complex bioinformatics projects.
 
 ---
 
@@ -95,37 +123,24 @@ In this tutorial, we will cover the importance of using **Conda** for managing e
 
 Conda is especially useful in the following scenarios:
 
+- **Package Management**: Conda simplifies the installation of software packages, whether they are bioinformatics programs or various libraries they need to run.
+
 - **Environment Isolation**: Conda helps you create isolated environments where you can install different versions of the same software without conflicts. This is crucial in projects that require different libraries or dependencies that may not work well together.
-  
-- **Package Management**: Conda simplifies the installation of software packages, whether they are Python libraries, system libraries, or software written in other programming languages.
 
 - **Cross-Platform Compatibility**: Conda works across various operating systems, including Linux and Windows. This ensures consistency when working on collaborative projects with team members on different systems or when deploying solutions on servers.
 
 - **Jupyter Notebooks**: When working in a Jupyter Notebook environment, Conda allows you to create and switch between environments effortlessly. This is helpful when running notebooks that require different software packages or specific versions of libraries without causing issues across the system.
 
----
-
-### Conda vs Other Package Managers
-
-Compared to other package managers, Conda has a few distinct advantages:
-
-- **Language-Agnostic**: Unlike `pip`, which primarily manages Python packages, Conda can handle packages written in multiple languages.
-  
-- **Environment Management**: While tools like `virtualenv` only isolate Python environments, Conda manages the entire environment, including system libraries.
-
-- **Package Compatibility**: Conda ensures that all dependencies are compatible with one another, reducing the risk of installation issues or conflicting versions. This is especially crucial for scientific computing or bioinformatics projects, which often require various tools to work together seamlessly.
-
----
 
 ### Setting Up Conda Environments
 
 Conda simplifies installing packages, but a common issue arises with **conflicting versions**:
 
-- You may want to use a new version of a program like`samtools`, but another tool or pipeline might require an older version, say `samtoolsv1.1`.
+- You may want to use the latest version of `your_favourite_program` when using it on its own, which might say be `your_favourite_programv3.13`, but if you are running a pipeline that might require an older version, say `your_favourite_programv2.4` and if the pipeline just tries to call on the latest version that uyou have installed, it will fail to progress.
 - A typical bioinformatics workflow involves dozens of different tools, each requiring specific libraries and dependencies.
-- Installing everything in one environment can result in conflicts between versions of the same tool.
+- Installing everything in what is called an **environment** can result in conflicts between versions of the same tool.
 
-To solve this, Conda allows you to create **isolated environments**, where each environment has its own set of packages, libraries, and configurations, independent of other environments. This ensures that tools in one environment don’t conflict with those in another.
+To solve this, Conda allows you to create **isolated environments**, where each environment is an isolated, self-contained workspace with its own set of packages, libraries, and configurations, independent of other environments. Each environment operates independently, meaning you can have multiple environments with different versions of the same software, avoiding conflicts between dependencies. This ensures that tools in one environment don’t conflict with those in another.
 
 ---
 
