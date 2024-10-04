@@ -26,7 +26,6 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 
 - **Morning: Introduction to the course, Unix and the Command Line** 
   - Mark leads, with help from Sam and Wing
-  - [PowerPoint slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/githubio/2023_course/week_1/2023_Week1_Command_line_Unix.pptx)
 
 - **Afternoon: More Unix** 
   - Sam leads, with help from Mark and Wing
