@@ -1,5 +1,5 @@
 ---
-title: Programme for MMB DTP Bioinformatics Course Week 1 — Unix and the Command Line
+title: MMB DTP Bioinformatics Course Week 1 — Unix and the Command Line
 ---
 
 # Week 1 — Unix and the Command Line
