@@ -1,8 +1,8 @@
 ---
-Title: Programme
+title: Programme for Week 1 — Unix and the Command Line
 ---
 
-# Week 1: Unix and the Command Line
+# Week 1 — Unix and the Command Line
 
 **Week beginning October 14th, 2024**
 
