@@ -146,31 +146,21 @@ To solve this, Conda allows you to create **isolated environments**, where each 
 
 ### Creating and Managing Conda Environments
 
-Conda makes it easy to manage software and environments, helping you keep your projects organized and free from conflicts.
+Conda makes it easy to manage software and environments, helping you keep your projects organized and free from conflicts. You can use Conda on any Unix machine, but one important caveat applies when using it here on the CLIMB-BIG-DATA Notebook servers. In Conda, the **base environment** refers to the default environment that is created when Conda is first installed. It is the environment that contains the core system packages and dependencies needed for Conda to function, as well as a minimal set of commonly used packages (like Python). But on CLIMB-BIG-DATA Notebook servers, you cannot install new software to the base Conda environment. Let's have a look at why.
 
-
-### Default .condarc#
-
-When you first launch a notebook server, we generate a default .condarc in your home directory. This sets the path for your new environments to 
+```conda info --envs
+base                     /opt/conda
 ```
-/shared/team/conda/$JUPYTER_USERNAME. 
-```
+The base Conda environment is installed at /opt/conda. Since we are running inside a container, any changes made to this part of the filesystem will not be retained once the container is stopped and restarted (unlike your home dir and shares, which are persisted).
 
-Why? You are working in a team and your home directory is relatively small vs your team share, so it makes sense to use the larger mount. In additon, it becomes easy to share conda environments with other team members.
+We've made the base environment read only to prevent any confusion.
 
-```
-cat ~/.condarc
-envs_dirs:
-  - /shared/team/conda/demouser.andy-bryn-dev-t
-[...]
-```
----
+Tip: You must create a new Conda environment before installing software!
+
 
 ### Creating new conda environments
 
-Understanding the above, you can create new conda environments in the usual way. The only caveat is that if you wish to use this environment with ipython notebooks, you must install `ipykernel`.
-
-**Warning**: *If you don't install `ipykernel` in a new conda environment, it won't show up on the launcher or be available to select within the python notebooks interface. However, you can use the environment just fine within a terminal.*
+Let's see how we can create new conda environments.
 
 Let's start with an environment called `bioinfo_fun`. 
 
@@ -191,39 +181,77 @@ conda config --show channels
 
 A straightforward `bioconda` tool that can calculate the GC percentage for sequences is `seqkit`, which provides a variety of functionalities for sequence file manipulations. Among its many utilities, it has a subcommand to compute the GC content.
 
-To check if the program `seqkit` is available in `bioonda`, and which versions:
+To check if the program `seqkit` is available in `bioconda`, and which versions:
 
-```bash
+```
 conda search -c bioconda seqkit
 ```
 
 
-To install a package, simply replace `search` with `install`. If you also add `-y` you will not be prompted and will try to install directly.
+To install a package, we simply replace `search` with `install`. If we also add `-y` we will not be prompted with messages and conda will try to install directly.
 
-```bash
+```
 conda install -y -c bioconda seqkit
 ```
 
 **Demonstrate GC Percentage Calculation**
+Let's check that seqkit has been installed.
+
+```
+conda seqkit -h
+```
+
+This should bring up help information for the program.
+
+Now let's do a toy exercise to see it working.
 
 - First, create a sample FASTA file:
 
-```bash
+```
 echo ">sample_sequence" > sample.fasta
 echo "AGCTAGCTAGCTAGCTA" >> sample.fasta
 ```
 
 - Note that using `>>` means the text is added to the end of the existing file. If we typed `>` the current file would be overwritten.
+- check what the file looks like
 
+```
+cat sample.fasta
+```
+- 
 - Now, compute the GC content:
 
-```bash
+```
 seqkit fx2tab sample.fasta --gc
 ```
 
 This command will give you the GC content of the sequence in sample.fasta.
 
-NB: `seqkit` is versatile and offers many other sequence-related utilities, so it's not just limited to computing the GC content. But for the sake of simplicity and demonstration to beginners, the GC content computation serves as an easy-to-understand example.
+Here’s a detailed breakdown of the command:
+
+### Command Breakdown:
+
+- **`seqkit`**: This is the main tool you're calling. SeqKit is a command-line program for manipulating and analyzing FASTA/Q files. It has many subcommands for tasks like searching, filtering, and converting sequences.
+
+- **`fx2tab`**: This is one of SeqKit's subcommands. It converts sequences in FASTA/Q format into tabular (tab-delimited) format. This is useful for making sequence data easier to handle, analyze, or integrate into pipelines that work with tabular data.
+
+    In the tabular format:
+    - Each sequence will appear as a single row.
+    - Default columns typically include information like sequence ID and sequence data.
+
+- **`sample.fasta`**: This is the input file. It is the name of the FASTA file that contains the DNA or protein sequences. FASTA is a text-based format for representing nucleotide sequences or peptide sequences, with one header line (starting with `>`), followed by the sequence data.
+
+- **`--gc`**: This flag instructs SeqKit to calculate and include the **GC content** in the output. GC content is the percentage of guanine (G) and cytosine (C) bases in a given DNA sequence, which is often used as a metric in genomics and bioinformatics to assess sequence composition.
+
+### What This Command Does:
+
+This command reads the `sample.fasta` file, extracts each sequence, and outputs it in a tabular format. Along with the sequence ID and sequence data, the GC content for each sequence will also be calculated and included as a separate column in the output.
+
+### Use Case:
+
+This command is useful when you want to summarize the sequences in a FASTA file, especially if you're interested in the GC content of each sequence, which can provide insights into the composition and structure of DNA regions or genomes. It’s also a useful preprocessing step if you’re preparing data for further analysis in a spreadsheet or another tool that works with tabular data.
+
+NB: `seqkit` is versatile and offers many other sequence-related utilities, so it's not just limited to computing the GC content. 
 
 ---
 
@@ -242,13 +270,49 @@ seqkit stats -T -a -G -i ncbi_dataset/data/GCF_000005845.2/GCF_000005845.2_ASM58
 ```
 
 Using the menu for the JupyterLab interface, select the `New Launcher` option. 
-Now have a play with the interface's graphical user interface. Find and take a look at the files you have downloaded and unzipped and the .tsv file showing the results of the analysis.
 
+Now have a play with the interface's graphical user interface. Find and take a look at the files you have downloaded and unzipped and the .tsv file showing the results of the analysis. Download it on to your Mac and open it with Excel.
+
+
+PS. Here's a detailed explanation of what you just did.
+### Command Breakdown:
+
+```
+wget "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000005845.2/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCF_000005845.2.zip" -O coligenome.zip
+```
+
+1. **`wget`**:
+   - This is a command-line utility used to **download files** from the internet. It is commonly used in Linux environments but is also available on other platforms.
+
+2. **`"https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000005845.2/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCF_000005845.2.zip"`**:
+   - This is the **URL** being passed to `wget`. It is a request to the NCBI Datasets API to download the genome data associated with the accession number **`GCF_000005845.2`**, which corresponds to a particular genome (in this case, *Escherichia coli str. K-12 substr. MG1655*).
+
+   - The URL includes several important parameters:
+     - **`accession/GCF_000005845.2/download`**: This is the NCBI identifier (GCF_000005845.2) for a specific genome assembly, and the command is asking for the download of this genome.
+     - **`include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT`**: This specifies the **types of annotations** to include in the download. Specifically, it is asking for:
+       - **GENOME_FASTA**: The genome sequence in FASTA format.
+       - **GENOME_GFF**: Genome feature information in GFF (General Feature Format).
+       - **RNA_FASTA**: RNA sequences in FASTA format.
+       - **CDS_FASTA**: Coding sequences (CDS) in FASTA format.
+       - **PROT_FASTA**: Protein sequences in FASTA format.
+       - **SEQUENCE_REPORT**: A report about the sequence, usually in a structured or tabular format.
+     - **`filename=GCF_000005845.2.zip`**: This specifies the **filename** for the ZIP file that will be downloaded from the NCBI. The ZIP file contains all the requested data.
+
+3. **`-O coligenome.zip`**:
+   - The **`-O` option** in `wget` specifies the **output filename** for the downloaded file.
+   - In this case, instead of saving the file with the default name (`GCF_000005845.2.zip`), the file will be saved locally as **`coligenome.zip`**.
+
+### Summary of the Command:
+
+This command uses `wget` to download a ZIP file from NCBI's Datasets API that contains various types of genomic data for the genome assembly **`GCF_000005845.2`** (which corresponds to *E. coli str. K-12 MG1655*, the most commonly used lab strain). The downloaded file will include the genome sequence in FASTA format, annotations in GFF format, RNA sequences, coding sequences, protein sequences, and a sequence report. The file is saved locally as `coligenome.zip`.
+
+### Expected Output:
+After running the command, you will have a ZIP file (`coligenome.zip`) that contains the genome and associated annotation files for *Escherichia coli str. K-12 substr. MG1655* from the NCBI Datasets API.
 
 ---
 
 
-Time for a break!
+**Time for lunch!**
 
 ---
 
