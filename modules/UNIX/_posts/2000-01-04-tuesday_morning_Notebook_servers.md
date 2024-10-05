@@ -212,6 +212,9 @@ We've made the base environment read only to prevent any confusion.
 
 Tip: You must create a new Conda environment before installing software!
 
+---
+
+
 
 ### Creating new conda environments
 
@@ -229,6 +232,9 @@ If you try listing channels, you'll see you already have conda-forge and biocond
 ```
 conda config --show channels
 ```
+
+---
+
 
 ### Installing Programs in Conda Environments
 
@@ -248,6 +254,9 @@ To install a package, we simply replace `search` with `install`. If we also add 
 ```
 conda install -y -c bioconda seqkit
 ```
+
+---
+
 
 **Demonstrate GC Percentage Calculation**
 Let's check that seqkit has been installed.
@@ -282,9 +291,11 @@ seqkit fx2tab sample.fasta --gc
 
 This command will give you the GC content of the sequence in sample.fasta.
 
-Here’s a detailed breakdown of the command:
+---
 
 ### Command Breakdown:
+
+Here’s a detailed breakdown of the command:
 
 - **`seqkit`**: This is the main tool you're calling. SeqKit is a command-line program for manipulating and analyzing FASTA/Q files. It has many subcommands for tasks like searching, filtering, and converting sequences.
 
