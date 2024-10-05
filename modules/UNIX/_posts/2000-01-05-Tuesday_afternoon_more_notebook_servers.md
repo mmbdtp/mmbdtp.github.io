@@ -126,6 +126,38 @@ You can open `coli_genome_stats.tsv` in any text editor, spreadsheet program (li
 
 What do you think these statistics are telling us? Why are they important? Don't worry of it all looks confusing. We will be covering sequence file formats and QC later.
 
+## More uses of SeqKit
+
+Here are some more examples of using `seqkit` on thr *E. coli* DNA or protain sequences. 
+
+Look at the [documentation](https://bioinf.shenwei.me/seqkit/usage/) and the outputs you get and see if you can work out what each command is doing.
+
+```
+seqkit seq -m 1000 ncbi_dataset/data/GCF_000005845.2/protein.faa
+```
+
+```
+seqkit head -n 100 ncbi_dataset/data/GCF_000005845.2/protein.faa
+```
+
+```
+seqkit stats ncbi_dataset/data/GCF_000005845.2/protein.faa
+```
+
+```
+seqkit grep -p "NP_414651.1" ncbi_dataset/data/GCF_000005845.2/protein.faa
+```
+
+```
+seqkit sort -l -r ncbi_dataset/data/GCF_000005845.2/protein.faa
+```
+
+```
+seqkit subseq -r 1000:2000 ncbi_dataset/data/GCF_000005845.2/GCF_000005845.2_ASM584v2_genomic.fna
+```
+
+
+
 
 ---
 
