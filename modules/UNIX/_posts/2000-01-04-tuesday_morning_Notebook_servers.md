@@ -43,17 +43,22 @@ Fundamentally, your screen is divided into a few areas. You'll see context menus
 
 ---
 
-
 ### The Terminal
 The terminal allows us to access a system shell (just like on ypur MacBooks), so let's start there.
 
 Select File -> New -> Terminal, or click the Terminal icon on the launcher pane. You'll get a new terminal tab in the activity bar, and find yourself in a bash shell.
+
+---
+
 
 **Who is jovyan?**
 
 Looking at your bash prompt, you’ll notice that your username is **jovyan** (derived from "Jupyter"). Why does everyone have the same username in this environment? That’s because your notebook server is running inside a **container**. Containers are lightweight, self-contained environments that bundle an application (in this case, the Jupyter notebook server) together with its dependencies, ensuring that it runs consistently across different systems. 
 
 The **container** instance is private and linked to your specific user storage on the system, but the actual image (which includes the software, configurations, and libraries) is the same for everyone using the platform. This is why it’s unnecessary to have unique system users for each individual—everyone operates within the same standardized environment, hence the shared username.
+
+
+---
 
 **What is a container?**
 
@@ -62,6 +67,9 @@ A **container** is a technology that allows you to package up an application, al
 In a Jupyter Notebook server context, containers allow multiple users to have their own private instances, even though they all use the same underlying software image. This ensures consistency across users, simplifies deployment, and provides isolation—what happens in your container doesn’t affect others. It's a key technology in environments where reproducibility and ease of scaling are important, like in data science and bioinformatics workflows.
 
 **TLDR:** Don’t worry about it! Inside your notebook server, everyone’s username is set to **jovyan** because you’re working inside a standardized container environment that provides all the necessary tools and libraries for your Jupyter notebooks.
+
+
+---
 
 **Where am I? Who am I?**
 
@@ -76,25 +84,57 @@ jovyan:~$ pwd
 /home/jovyan
 ```
 
+
+---
+
+**Using the Notebook terminal**
+
 Within the Terminal here, you can do almost all the things we did yesterday using Unix on your MacBooks.
 
 Let's just have a play and re-do some of them.
 
 ```
 touch testfile.txt
+```
+
+```
 curl -o voyage_of_the_beagle.txt https://www.gutenberg.org/cache/epub/944/pg944.txt
+```
+
+```
 cat voyage_of_the_beagle.txt
+```
+
+```
 head voyage_of_the_beagle.txt
+```
+
+```
 tail voyage_of_the_beagle.txt
-wc voyage_of_the_beagle.txt
+```
+
+```wc voyage_of_the_beagle.txt
+```
+
+```
 grep naked voyage_of_the_beagle.txt
+```
+
+```
 ls -l
+```
+
+```
 rm testfile.txt
+```
+
+```
 ls -l
 ```
 
 Feel free to try out whatever other commands interest you!
 
+**There is no sudo here**
 One Unix command that you cannot use on this Notebook server is `sudo`. Try it
 ```
 sudo touch file.txt
