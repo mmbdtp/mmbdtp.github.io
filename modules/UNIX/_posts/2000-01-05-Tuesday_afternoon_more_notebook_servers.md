@@ -210,12 +210,12 @@ seqfu tail ncbi_dataset/data/GCF_000005845.2/protein.faa
 
 Take a look at the documentation and play with the options: [[https://telatin.github.io/seqfu2/]](https://telatin.github.io/seqfu2/).
 
-
+If you have some time to spare, try installing other software from the [Bioconda repository] (https://bioconda.github.io/conda-package_index.html)
 
 ---
 
 **Sequence File Formats**
-On Thirsday you are going to start analysing sequences more extensively. To get started, you will need to unstand sequence file formats, so we will end today with a brief Powerpoint pressentation on Sequence File Formats. 
+On Thursday you are going to start analysing sequences more extensively. To get started, you will need to understand sequence file formats, so we will end today with a brief Powerpoint pressentation on Sequence File Formats. 
 
 
 ---
