@@ -4,6 +4,7 @@ title: Tuesday Afternoon— Using programs on Notebook servers
 
 ## More fun with programs 
 
+---
 
 ### Quick analysis of an *E. coli* genome
 
@@ -34,14 +35,13 @@ Now have a play with the interface's graphical user interface. Find and take a l
 
 ---
 
-## Command Breakdown
+*Command Breakdown*
 
 Here's a detailed explanation of what you just did.
 
-
 ---
 
-### First command
+**First command**
 
 `wget "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000005845.2/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCF_000005845.2.zip" -O coligenome.zip`
 
@@ -74,8 +74,7 @@ After running the command, you will have a ZIP file (`coligenome.zip`) that cont
 
 ---
 
-
-### Second command
+**Second command**
 
 `seqkit stats -T -a -G -i ncbi_dataset/data/GCF_000005845.2/GCF_000005845.2_ASM584v2_genomic.fna > coli_genome_stats.tsv`
 
@@ -103,7 +102,7 @@ This command is using the **SeqKit** tool to generate statistics about a genome 
 
 6. **`ncbi_dataset/data/GCF_000005845.2/GCF_000005845.2_ASM584v2_genomic.fna`**:
    - This is the **input file**. It is the path to the FASTA file containing the genomic sequences for which you want to generate statistics.
-   - This specific file is likely a genomic FASTA file for *Escherichia coli* strain K-12 (genome assembly ID: **GCF_000005845.2**).
+   - This specific file is a genomic FASTA file for *Escherichia coli* strain K-12 (genome assembly ID: **GCF_000005845.2**).
 
 7. **`> coli_genome_stats.tsv`**:
    - The **`>` operator** is used to **redirect the output** of the command to a file.
@@ -125,36 +124,41 @@ The output will be a TSV (tab-separated values) file named `coli_genome_stats.ts
 
 You can open `coli_genome_stats.tsv` in any text editor, spreadsheet program (like Excel), or data analysis software for further exploration.
 
-What do you think these statistics are telling us? Why are they important? Don't worry of it all looks conusing. We will be covering sequence file formats and QC later.
+What do you think these statistics are telling us? Why are they important? Don't worry of it all looks confusing. We will be covering sequence file formats and QC later.
 
 
 ---
 
-## Let's play with SeqFu
+## Let's play with SeqFu and lambda phage
 
 **SeqFu** is a fast and lightweight bioinformatics toolkit designed for working with sequencing data, particularly in FASTA and FASTQ formats. It provides a variety of utilities for tasks such as sequence manipulation, quality control, and statistics calculation. SeqFu is known for its simplicity and efficiency, making it popular for handling large datasets in genomics pipelines. It can perform tasks such as splitting sequences, filtering reads, trimming, and calculating sequence statistics.
 
- - [https://telatin.github.io/seqfu2/]
- - [https://www.mdpi.com/2306-5354/8/5/59]
+ - [https://telatin.github.io/seqfu2/](https://telatin.github.io/seqfu2/)
+ - [https://www.mdpi.com/2306-5354/8/5/59](https://www.mdpi.com/2306-5354/8/5/59)
 
-SeqFu was developed by Andrea Telatin, head of bioinformatics at the Quadram Institute.
+SeqFu was developed by [Andrea Telatin](https://quadram.ac.uk/people/andrea-telatin/), head of bioinformatics at the Quadram Institute.
 
+---
 
-Using [mamba (or conda)](/microbiome-bioinformatics/Install-Miniconda/) we can install the [`seqfu`](https://telatin.github.io/seqfu2/) tool:
+**Installing SeqFu**
+
+First we are going to have to install SeqFu. Remember that you cannot do this in your base Conda environment, so take care tp ensure you are already in the `bioinfo_fun` environment or activate it if you aren't!
+
+Now install SeqFu! See if you can work out how to do that for yourselves!
+
+---
+
+Let's check you have SeqFu installed:
+
+```
+seqfu version
+```
+
+Now we can use the `seqfu` tool to count the number of protein sequences associated with the *E. coli* genome:
 
     
 ```
-# We request a version above 1.9 (at the time of writing, the last version is 1.16)
-mamba install -c bioconda -c conda-forge "seqfu>1.9"
-    
-```
-    
-
-Now we can use the `seqfu` tool to count the number of sequences:
-
-    
-```
- seqfu count vir_protein.faa.gz
+ seqfu count ncbi_dataset/data/GCF_000005845.2/protein.faa
     
 ```
     
@@ -163,7 +167,7 @@ And we can collect more statistics with `seqfu stats`:
 
     
 ```
-seqfu stats -nt vir_protein.faa.gz dummy.fa
+seqfu stats -nt ncbi_dataset/data/GCF_000005845.2/protein.faa
     
 ```
     
@@ -176,31 +180,34 @@ the output should be:
 
     
 ```    
-    ┌-----------------┬------┬----------┬-------┬-----┬-----┬-------┐
-    │ File            │ #Seq │ Total bp │ Avg   │ N50 │ Min │  Max  │
-    ├-----------------┼------┼----------┼-------┼-----┼-----┼-------┤
-    │ vir_protein.faa │ 73   │ 14,866   │ 203.6 │ 246 │ 28  │ 1,132 │
-    │ dummy.fa        │ 1    │ 8        │ 8.00  │ 8   │ 8   │ 8     │
-    └-----------------┴------┴----------┴-------┴-----┴-----┴-------┘
-```
     
+┌───────────────────────────────────────────────┬───────┬───────────┬────────┬─────┬─────┬─────┬────────┬─────┬───────┐
+│ File                                          │ #Seq  │ Total bp  │ Avg    │ N50 │ N75 │ N90 │ auN    │ Min │ Max   │
+├───────────────────────────────────────────────┼───────┼───────────┼────────┼─────┼─────┼─────┼────────┼─────┼───────┤
+│ ncbi_dataset/data/GCF_000005845.2/protein.faa │ 4,298 │ 1,329,980 │ 309.44 │ 393 │ 271 │ 180 │ 452.98 │ 8   │ 2,358 │
+└───────────────────────────────────────────────┴───────┴───────────┴────────┴─────┴─────┴─────┴────────┴─────┴───────┘
+```
 
-(We used also our dummy file to check that the tool works as expected!)
+**SeqFu** has a long list of tools, some are modeled after the Unix tools we have seen so far, but with a more powerful syntax and more options.
 
-[**SeqFu**](https://telatin.github.io/seqfu2/) has a long list of tools, some are modeled after the Unix tools we have seen so far, but with a more powerful syntax and more options.
+Let's work through some examples looking at protein and DNA sequences.
 
-For example:
+`seqfu head` prints the first _n_ sequences (also taking 1 every _y_)
+```
+seqfu head ncbi_dataset/data/GCF_000005845.2/protein.faa
+```
 
-*   `seqfu head` will print the first _n_ sequences (also taking 1 every _y_)
-*   `seqfu tail` will print the last _n_ sequences
-*   `seqfu grep` can select sequences by name or by sequence, including degenerate IUPAC primers and partial matches, or matches in reverse complement
-*   `seqfu cat` will concatenate sequences, with filters to remove short/long sequences or truncate/trim them
+`seqfu tail` will print the last _n_ sequences
+```
+seqfu tail ncbi_dataset/data/GCF_000005845.2/protein.faa
+```
 
-In addition there are sequence specific tools, such as:
+`seqfu bases` counts the number of A, C, G, T and Ns in a DNA file.
 
-*   `seqfu rc` to reverse complement one or more sequences
-*   `seqfu bases` to print the composition of DNA sequences
-*   `seqfu qual` to check the quality scores of FASTQ files
+```seqfu bases -n ncbi_dataset/data/GCF_000005845.2/GCF_000005845.2_ASM584v2_genomic.fna
 
-And many more...
+```
+
+Take a look at the documentation and play with the options: [[https://telatin.github.io/seqfu2/]](https://telatin.github.io/seqfu2/).
+
 
