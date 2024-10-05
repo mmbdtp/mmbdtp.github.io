@@ -29,14 +29,12 @@ Using the menu for the JupyterLab interface, select the `New Launcher` option.
 
 Now have a play with the interface's graphical user interface. Find and take a look at the files you have downloaded and unzipped and the .tsv file showing the results of the analysis. Download it on to your Mac and open it with Excel.
 
-
-::::::::::::::::::::::::::::::::::::::: 
-Command Breakdown
+**Command Breakdown**
 Here's a detailed explanation of what you just did.
 
-```
-wget "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000005845.2/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCF_000005845.2.zip" -O coligenome.zip
-```
+***First command***
+
+`wget "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000005845.2/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCF_000005845.2.zip" -O coligenome.zip`
 
 1. **`wget`**:
    - This is a command-line utility used to **download files** from the internet. It is commonly used in Linux environments but is also available on other platforms.
@@ -65,6 +63,7 @@ This command uses `wget` to download a ZIP file from NCBI's Datasets API that co
 
 After running the command, you will have a ZIP file (`coligenome.zip`) that contains the genome and associated annotation files for *Escherichia coli str. K-12 substr. MG1655* from the NCBI Datasets API.
 
+***Second command***
 
 `seqkit stats -T -a -G -i ncbi_dataset/data/GCF_000005845.2/GCF_000005845.2_ASM584v2_genomic.fna > coli_genome_stats.tsv`
 
