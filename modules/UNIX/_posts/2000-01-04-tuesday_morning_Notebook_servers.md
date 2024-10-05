@@ -136,6 +136,9 @@ ls -l
 Feel free to try out whatever other commands interest you!
 
 
+---
+
+
 **There is no sudo here**
 
 One Unix command that you cannot use on this Notebook server is `sudo`. Try it
