@@ -17,7 +17,7 @@ Although your MacBooks run a version of Unix, most bioinformaticians prefer to u
 
 We will be using a Jupyter notebook server, which is an easy-to-access web-based platform that allows users to create and interact with Jupyter Notebooks, which in turn are documents that can contain live code, equations, visualizations, and text. The server runs the computational backend that provides command line access to a Linux shell, but can also processes code cells written in languages like Python, R, or Julia, and returns the output to the browser interface where users can view and manipulate results.
 
-Before we get stuck in to using a Notebook server, let's set the scene with a short Powerpoint presentation.
+Before we get stuck in to using a Notebook server, let's set the scene with a short **Powerpoint presentation**.
 
 ---
 
@@ -136,6 +136,7 @@ ls -l
 Feel free to try out whatever other commands interest you!
 
 **There is no sudo here**
+
 One Unix command that you cannot use on this Notebook server is `sudo`. Try it
 ```
 sudo touch file.txt
@@ -144,9 +145,10 @@ sudo touch file.txt
 
 ---
 
-## Coffee break
+**Coffee break**
 
 ---
+
 
 ## Conda
 
@@ -157,6 +159,10 @@ We will now cover the importance of using a package manager called **Conda** for
 ### What is Conda?
 
 **Conda** is an open-source package management and environment management system. It allows you to easily install, update, and manage software packages, as well as create isolated environments for different projects. Conda supports multiple programming languages, such as Python, R, Ruby, and others, making it a versatile tool for various domains.
+
+ - [https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html)
+ - [https://en.wikipedia.org/wiki/Conda_(package_manager)](https://en.wikipedia.org/wiki/Conda_(package_manager))
+
 
 ---
 
