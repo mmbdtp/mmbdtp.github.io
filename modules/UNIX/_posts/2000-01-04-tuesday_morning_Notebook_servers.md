@@ -319,12 +319,18 @@ Here’s a detailed breakdown of the command:
 
 - **`--gc`**: This flag instructs SeqKit to calculate and include the **GC content** in the output. GC content is the percentage of guanine (G) and cytosine (C) bases in a given DNA sequence, which is often used as a metric in genomics and bioinformatics to assess sequence composition.
 
+
+---
+
 **What This Command Does**
 
 This command reads the `sample.fasta` file, extracts each sequence, and outputs it in a tabular format. Along with the sequence ID and sequence data, the GC content for each sequence will also be calculated and included as a separate column in the output.
 
 NB: `seqkit` is versatile and offers many other sequence-related utilities, so it's not just limited to computing the GC content. 
 We will play with it again after lunch.
+
+
+---
 
 **Time for lunch!**
 
