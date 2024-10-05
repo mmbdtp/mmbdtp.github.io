@@ -129,7 +129,7 @@ What do you think these statistics are telling us? Why are they important? Don't
 
 ---
 
-## Let's play with SeqFu and lambda phage
+## Let's play with another program, SeqFu
 
 **SeqFu** is a fast and lightweight bioinformatics toolkit designed for working with sequencing data, particularly in FASTA and FASTQ formats. It provides a variety of utilities for tasks such as sequence manipulation, quality control, and statistics calculation. SeqFu is known for its simplicity and efficiency, making it popular for handling large datasets in genomics pipelines. It can perform tasks such as splitting sequences, filtering reads, trimming, and calculating sequence statistics.
 
