@@ -254,65 +254,7 @@ This command reads the `sample.fasta` file, extracts each sequence, and outputs 
 This command is useful when you want to summarize the sequences in a FASTA file, especially if you're interested in the GC content of each sequence, which can provide insights into the composition and structure of DNA regions or genomes. It’s also a useful preprocessing step if you’re preparing data for further analysis in a spreadsheet or another tool that works with tabular data.
 
 NB: `seqkit` is versatile and offers many other sequence-related utilities, so it's not just limited to computing the GC content. 
-
----
-
-### A quick analysis of an *E. coli* genome
-
-Let's do a quick analysis of an *E. coli* genome with `seqkit`.
-
-Let's download and analyse a real genome!
-
-```
-wget "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000005845.2/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCF_000005845.2.zip" -O coligenome.zip
-unzip coligenome.zip
-
-seqkit stats -T -a -G -i ncbi_dataset/data/GCF_000005845.2/GCF_000005845.2_ASM584v2_genomic.fna > coli_genome_stats.tsv
-
-```
-
-Using the menu for the JupyterLab interface, select the `New Launcher` option. 
-
-Now have a play with the interface's graphical user interface. Find and take a look at the files you have downloaded and unzipped and the .tsv file showing the results of the analysis. Download it on to your Mac and open it with Excel.
-
-
-PS. Here's a detailed explanation of what you just did.
-### Command Breakdown:
-
-```
-wget "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000005845.2/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCF_000005845.2.zip" -O coligenome.zip
-```
-
-1. **`wget`**:
-   - This is a command-line utility used to **download files** from the internet. It is commonly used in Linux environments but is also available on other platforms.
-
-2. **`"https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000005845.2/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCF_000005845.2.zip"`**:
-   - This is the **URL** being passed to `wget`. It is a request to the NCBI Datasets API to download the genome data associated with the accession number **`GCF_000005845.2`**, which corresponds to a particular genome (in this case, *Escherichia coli str. K-12 substr. MG1655*).
-
-   - The URL includes several important parameters:
-     - **`accession/GCF_000005845.2/download`**: This is the NCBI identifier (GCF_000005845.2) for a specific genome assembly, and the command is asking for the download of this genome.
-     - **`include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT`**: This specifies the **types of annotations** to include in the download. Specifically, it is asking for:
-       - **GENOME_FASTA**: The genome sequence in FASTA format.
-       - **GENOME_GFF**: Genome feature information in GFF (General Feature Format).
-       - **RNA_FASTA**: RNA sequences in FASTA format.
-       - **CDS_FASTA**: Coding sequences (CDS) in FASTA format.
-       - **PROT_FASTA**: Protein sequences in FASTA format.
-       - **SEQUENCE_REPORT**: A report about the sequence, usually in a structured or tabular format.
-     - **`filename=GCF_000005845.2.zip`**: This specifies the **filename** for the ZIP file that will be downloaded from the NCBI. The ZIP file contains all the requested data.
-
-3. **`-O coligenome.zip`**:
-   - The **`-O` option** in `wget` specifies the **output filename** for the downloaded file.
-   - In this case, instead of saving the file with the default name (`GCF_000005845.2.zip`), the file will be saved locally as **`coligenome.zip`**.
-
-### Summary of the Command:
-
-This command uses `wget` to download a ZIP file from NCBI's Datasets API that contains various types of genomic data for the genome assembly **`GCF_000005845.2`** (which corresponds to *E. coli str. K-12 MG1655*, the most commonly used lab strain). The downloaded file will include the genome sequence in FASTA format, annotations in GFF format, RNA sequences, coding sequences, protein sequences, and a sequence report. The file is saved locally as `coligenome.zip`.
-
-### Expected Output:
-After running the command, you will have a ZIP file (`coligenome.zip`) that contains the genome and associated annotation files for *Escherichia coli str. K-12 substr. MG1655* from the NCBI Datasets API.
-
----
-
+We will play with it again after lunch.
 
 **Time for lunch!**
 
