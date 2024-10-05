@@ -1,12 +1,8 @@
 ---
-
 title: Tuesday Afternoon— Using programs on Notebook servers 
-
-
 ---
 
 ## More fun with programs 
-
 
 
 ### Quick analysis of an *E. coli* genome
@@ -16,11 +12,8 @@ Let's do a quick analysis of an *E. coli* genome with `seqkit`.
 - **What is *E. coli*?**
   - *E. coli* is a rod-shaped bacterium that can survive under a wide variety of conditions including variable temperatures, nutrient availability, and oxygen levels. Most strains are harmless, but some are associated with food-poisoning.
 
-[](https://species.wikimedia.org/wiki/Escherichia_coli#/media/File:EscherichiaColi_NIAID.jpg)
-
 - **Why is *E. coli* important?**
   - *E. coli* is one of the most well-studied model organisms in science. As a single-celled organism, *E. coli* reproduces rapidly, typically doubling its population every 20 minutes, which means it can be manipulated easily in experiments. In addition, most naturally occurring strains of *E. coli* are harmless. Most importantly, the genetics of *E. coli* are fairly well understood and can be manipulated to study adaptation and evolution.
-
 
 Let's download and analyse a real *E. coli* genome—that of the most commonly used lab strain MG1655!
 
@@ -37,7 +30,8 @@ Using the menu for the JupyterLab interface, select the `New Launcher` option.
 Now have a play with the interface's graphical user interface. Find and take a look at the files you have downloaded and unzipped and the .tsv file showing the results of the analysis. Download it on to your Mac and open it with Excel.
 
 
-::::::::::::::::::::::::::::::::::::::: Command Breakdown
+::::::::::::::::::::::::::::::::::::::: 
+Command Breakdown
 Here's a detailed explanation of what you just did.
 
 ```
