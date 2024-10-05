@@ -266,6 +266,21 @@ conda install -y -c bioconda seqkit
 
 ---
 
+**A few words on FASTA files**
+The FASTA format is a simple text file format, and it’s as widely used as it is old (1985). Each sequence has a name, extra information (comments) and the sequence itself, and one or more sequences can be stored in the same file, one after the other. The sequence itself can span multiple lines.
+
+Here an example:
+
+>P01013 GENE X PROTEIN (OVALBUMIN-RELATED)
+QIKDLLVSSSTDLDTTLVLVNAIYFKGMWKTAFNAEDTREMPFHVTKQESKPVQMMCMNNSFNVATLPAE
+KMKILELPFASGDLSMLVLLPDEVSDLERIEKTINFEKLTEWTNPNTMEKRRVKVYLPQMKIEEKYNLTS
+VLMALGMTDLFIPSANLTGISSAESLKISQAVHGAFMELSEDGIEMAGSTGVIEDIKHSPESEQFRADHP
+FLFLIKHNPTNTIVYFGRYWSP
+
+The header line must start with a “>” character.
+The sequence identifier, or sequence name, it’s P01013 (the first word before a white space)
+The sequence comment, in this example, is “GENE X PROTEIN (OVALBUMIN-RELATED)”
+The sequence itself is a protein sequence, commonly stored in uppercase (but for DNA it’s commont to find lowercase sequences too).
 
 **Demonstrate GC Percentage Calculation**
 Let's check that seqkit has been installed.
@@ -278,7 +293,7 @@ This should bring up help information for the program.
 
 Now let's do a toy exercise to see it working.
 
-First, create a sample FASTA file:
+First, let's create a sample FASTA file:
 
 ```
 echo ">sample_sequence" > sample.fasta
