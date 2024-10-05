@@ -156,8 +156,9 @@ seqkit sort -l -r ncbi_dataset/data/GCF_000005845.2/protein.faa
 seqkit subseq -r 1000:2000 ncbi_dataset/data/GCF_000005845.2/GCF_000005845.2_ASM584v2_genomic.fna
 ```
 
+---
 
-
+**Coffee break**
 
 ---
 
