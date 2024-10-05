@@ -113,7 +113,8 @@ head voyage_of_the_beagle.txt
 tail voyage_of_the_beagle.txt
 ```
 
-```wc voyage_of_the_beagle.txt
+```
+wc voyage_of_the_beagle.txt
 ```
 
 ```
