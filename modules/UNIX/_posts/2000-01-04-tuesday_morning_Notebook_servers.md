@@ -278,7 +278,7 @@ This should bring up help information for the program.
 
 Now let's do a toy exercise to see it working.
 
-- First, create a sample FASTA file:
+First, create a sample FASTA file:
 
 ```
 echo ">sample_sequence" > sample.fasta
@@ -286,13 +286,14 @@ echo "AGCTAGCTAGCTAGCTA" >> sample.fasta
 ```
 
 - Note that using `>>` means the text is added to the end of the existing file. If we typed `>` the current file would be overwritten.
-- check what the file looks like
+
+Check what the file looks like
 
 ```
 cat sample.fasta
 ```
-- 
-- Now, compute the GC content:
+ 
+Now, compute the GC content:
 
 ```
 seqkit fx2tab sample.fasta --gc
