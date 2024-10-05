@@ -15,6 +15,8 @@ Let's do a quick analysis of an *E. coli* genome with `seqkit`.
 - **Why is *E. coli* important?**
   - *E. coli* is one of the most well-studied model organisms in science. As a single-celled organism, *E. coli* reproduces rapidly, typically doubling its population every 20 minutes, which means it can be manipulated easily in experiments. In addition, most naturally occurring strains of *E. coli* are harmless. Most importantly, the genetics of *E. coli* are fairly well understood and can be manipulated to study adaptation and evolution.
 
+---
+
 Let's download and analyse a real *E. coli* genome—that of the most commonly used lab strain MG1655!
 
 ```
@@ -24,12 +26,20 @@ unzip coligenome.zip
 seqkit stats -T -a -G -i ncbi_dataset/data/GCF_000005845.2/GCF_000005845.2_ASM584v2_genomic.fna > coli_genome_stats.tsv
 ```
 
+---
+
 Using the menu for the JupyterLab interface, select the `New Launcher` option. 
 
 Now have a play with the interface's graphical user interface. Find and take a look at the files you have downloaded and unzipped and the .tsv file showing the results of the analysis. Download it on to your Mac and open it with Excel.
 
+---
+
 ## Command Breakdown
+
 Here's a detailed explanation of what you just did.
+
+
+---
 
 ### First command
 
@@ -62,7 +72,10 @@ This command uses `wget` to download a ZIP file from NCBI's Datasets API that co
 
 After running the command, you will have a ZIP file (`coligenome.zip`) that contains the genome and associated annotation files for *Escherichia coli str. K-12 substr. MG1655* from the NCBI Datasets API.
 
-###Second command
+---
+
+
+### Second command
 
 `seqkit stats -T -a -G -i ncbi_dataset/data/GCF_000005845.2/GCF_000005845.2_ASM584v2_genomic.fna > coli_genome_stats.tsv`
 
@@ -112,11 +125,20 @@ The output will be a TSV (tab-separated values) file named `coli_genome_stats.ts
 
 You can open `coli_genome_stats.tsv` in any text editor, spreadsheet program (like Excel), or data analysis software for further exploration.
 
+What do you think these statistics are telling us? Why are they important? Don't worry of it all looks conusing. We will be covering sequence file formats and QC later.
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Using SeqFu
------------------------------
+---
+
+## Let's play with SeqFu
+
+**SeqFu** is a fast and lightweight bioinformatics toolkit designed for working with sequencing data, particularly in FASTA and FASTQ formats. It provides a variety of utilities for tasks such as sequence manipulation, quality control, and statistics calculation. SeqFu is known for its simplicity and efficiency, making it popular for handling large datasets in genomics pipelines. It can perform tasks such as splitting sequences, filtering reads, trimming, and calculating sequence statistics.
+
+ - [https://telatin.github.io/seqfu2/]
+ - [https://www.mdpi.com/2306-5354/8/5/59]
+
+SeqFu was developed by Andrea Telatin, head of bioinformatics at the Quadram Institute.
+
 
 Using [mamba (or conda)](/microbiome-bioinformatics/Install-Miniconda/) we can install the [`seqfu`](https://telatin.github.io/seqfu2/) tool:
 
