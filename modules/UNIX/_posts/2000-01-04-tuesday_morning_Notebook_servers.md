@@ -188,6 +188,9 @@ Conda is especially useful in the following scenarios:
 - **Jupyter Notebooks**: When working in a Jupyter Notebook environment, Conda allows you to create and switch between environments effortlessly. This is helpful when running notebooks that require different software packages or specific versions of libraries without causing issues across the system.
 
 
+---
+
+
 ### Setting Up Conda Environments
 
 Conda simplifies installing packages, but a common issue arises with **conflicting versions**:
