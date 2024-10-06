@@ -4,9 +4,12 @@ title: Monday Afternoon — Manipulating Files in Unix
 
 ### Monday Afternoon — Manipulating Files in Unix
 
-Welcome back, newbie bioinformaticians!
+Welcome back, newly formed bioinformaticians!
 
 Let's get stuck into some more Unix commands. 
+
+Make sure you are back in the directory `bioinfo_adventures`!
+
 If we want to copy a file, we use the `cp` command. Let's copy the file `grandeur.txt` to create a new file called `Darwin.txt`
 
 ```
@@ -147,17 +150,77 @@ The `grep` command is another powerful command.
 Let's use it in a very simple way to find all the lines in which Darwin mentions Patagonia
 
 ```
-grep Patagonia voyage_of_the_beagle.txt
+grep handsome voyage_of_the_beagle.txt
 
 ```
+
+Lots listed! Might be worth using that `clear` command.
+
 Remember we can redirect the output of a command using `>`
 
 ```
-grep Patagonia voyage_of_the_beagle.txt > Patagonia.txt
+grep handsome voyage_of_the_beagle.txt > handsome.txt
 
 ```
-- How can you find out what is in the file Patagonia.txt
-- What has this command done?
+- How can you find out what is in the file handsome.txt
+
+
+### More grep 
+Here are a few useful variations of the `grep` command using different flags to demonstrate its flexibility. We’ll use "handsome" as the target word in *Voyage of the Beagle*.
+
+
+### Case-Insensitive Search
+The `-i` flag makes the search case-insensitive, so it will match "Handsome," "handsome," or any other capitalization.
+
+```bash
+grep -i "handsome" voyage_of_the_beagle.txt
+```
+
+### Print Line Numbers
+The `-n` flag adds line numbers to the output, which can be handy for reference.
+
+```bash
+grep -n "handsome" voyage_of_the_beagle.txt
+```
+
+### Invert Match (Lines that *Don't* Contain the Word)
+The `-v` flag inverts the match, showing all lines that *don't* contain the search term.
+
+```bash
+grep -v "handsome" voyage_of_the_beagle.txt
+```
+
+### Count Matches
+The `-c` flag counts the number of lines that contain matches, instead of displaying them.
+
+```bash
+grep -c "handsome" voyage_of_the_beagle.txt
+```
+
+###  Show Context (Before and After Matches)
+The `-B` and `-A` flags show the number of lines before and after each match, respectively. Here's how to show 3 lines before and after each match:
+
+```bash
+grep -B 3 -A 3 "handsome" voyage_of_the_beagle.txt
+```
+ - what was Darwin forced to admit about the ladies of Buenos Aires?
+   
+### Show Only Matching Words
+The `-o` flag will print only the matched part of the line. 
+
+```bash
+grep -o "handsome" voyage_of_the_beagle.txt
+```
+
+
+### Show Whole Words Only
+The `-w` flag ensures that `grep` only matches whole words. Without it, `grep` would also match substrings (e.g., "handsome" would match part of "handsomest").
+
+```bash
+grep -w "handsome" voyage_of_the_beagle.txt
+```
+
+These variations of `grep` make it a powerful tool for finding exactly what you're looking for in any text!
 
 
 ### File permissions in Unix
@@ -356,7 +419,7 @@ Always exercise caution and avoid using sudo unless necessary.
 
 **macOS Security Considerations**
 
-macOS includes security features like Gatekeeper and SIP (System Integrity Protection) that restrict the execution of programs and scripts to ensure system integrity. You may encounter permission issues when running scripts or software downloaded from the internet. To overcome this, you can adjust security settings in the System Preferences to allow execution of specific applications and scripts. Always be vigilant about the security implications when modifying these settings to protect your system.
+macOS includes security features like Gatekeeper and SIP (System Integrity Protection) that restrict the execution of programs and scripts to ensure system integrity. You may encounter permission issues when running scripts or software downloaded from the internet. To overcome this, you can adjust security settings in the System Preferences to allow execution of specific applications and scripts. Always be vigilant about the security implications when modifying these settings to protect your system. It's because macOS is so fussy about such things that we will be moving ton to Notebook servers tomorrow and not trying to install any software on your MacBooks.
 
 ---
 
@@ -414,7 +477,7 @@ We have a column specifying the size of the file, and the last column is the nam
 To make our tutorials easier, we will now rename the directory to learn_bash:
 
 ```
-mv ~/learn_bash-2022 ~/learn_bash
+mv learn_bash-2022 learn_bash
 ```
 
 **find**
@@ -431,7 +494,7 @@ Some examples:
 ```
 # Remember that [tab] just means to press Tab, to autocomplete
 
-find ~/learn_b[tab]
+find learn_b[tab]
 
 ```
 
@@ -441,18 +504,16 @@ Lots listed! Might be worth using that `clear` command.
 
 ```
 # If you type `-type f` you will print only the files instead
-find ~/learn_bash -type d
+find learn_bash -type d
 
 ```
 
 *   List only items ending by ‚'.faa‚':
 
 ```
-find ~/learn_bash -name "*.faa"
+find learn_bash -name "*.faa"
 
 ```
-
-Did you notice that find will report the absolute paths of the files?
 
 **wild characters and shell expansion**
 
@@ -462,28 +523,18 @@ We introduced with the last command a special character, the asterisk `*`, that 
 We will now try to exemplify the power of shell expansion.
 
 *   `*` matches **any string**, including the empty string. 
-	*   For example, `find ~/learn_bash -name "*.faa"` will match all files ending by `.faa`, while `find ~/learn_bash -name "*gene*"` will list all files containing the string `gene`.
+	*   For example, `find learn_bash -name "*.faa"` will match all files ending by `.faa`, while `find learn_bash -name "*gene*"` will list all files containing the string `gene`.
 *   `?` matches any **single** character. 
-	*   For example, `find ~/learn_bash -name "*R?.fastq.gz"` will match all files with the string `R` followed by exactly one more character, then a dot and ending with any string. Examples are ‚'sample1_R1.fastq.gz', ‚'sample2_R1.fastq.gz' etc but this woulr not work for `sample2_R11.fastq.gz`
+	*   For example, `find learn_bash -name "*R?.fastq.gz"` will match all files with the string `R` followed by exactly one more character, then a dot and ending with any string. Examples are ‚'sample1_R1.fastq.gz', ‚'sample2_R1.fastq.gz' etc but this woulr not work for `sample2_R11.fastq.gz`
 *   `[A-Z]`, `[a-z]` or `[0-9]` matches any character in the range. 
-	*   For example, `find ~/learn_bash -name "sample[0-9].*"` will match all files with the string `sample` followed by a digit, then a dot and ending with any string. Examples are again 'sample1_R1.fastq.gz', ‚'sample2_R1.fastq.gz' etc but not ‚'sample1_R11.fastq.gz', ‚'sample2_R1345.fastq.gz' etc'.
+	*   For example, `find learn_bash -name "sample[0-9].*"` will match all files with the string `sample` followed by a digit, then a dot and ending with any string. Examples are again 'sample1_R1.fastq.gz', ‚'sample2_R1.fastq.gz' etc but not ‚'sample1_R11.fastq.gz', ‚'sample2_R1345.fastq.gz' etc'.
 *   `{this,that}` matches any of the strings separated by commas. 
-	*   For example, `find ~/learn_bash -name "*_R{1,2}.fastq.gz"`' will match all files ending by ‚'\_R1.fastq.gz‚' and ‚'\_R2.fastq.gz‚'.
+	*   For example, `find learn_bash -name "*_R{1,2}.fastq.gz"`' will match all files ending by ‚'\_R1.fastq.gz‚' and ‚'\_R2.fastq.gz‚'.
 
-When we use this syntax, the command will receive the expanded list of matching files. Try with ‚'echo‚' to see what happens:
-
-```
-cd ~/learn_bash/files/
-echo LIST: *.png
-cd -
+When we use this syntax, the command will receive the expanded list of matching files. Try with 'ls' to see what happens:
 
 ```
-
-
-and try to use the `ls` command with the same pattern.
-
-```
-ls -lh ~/learn_bash/files/*.png
+ls -lh learn_bash/files/*.png
 
 ```
 
@@ -492,20 +543,20 @@ ls -lh ~/learn_bash/files/*.png
 The [`wc`](https://manpages.org/wc) command is used to count the number of lines, words and characters in a file. This only applies to simple text files.
 
 ```
-wc ~/learn_bash/README.md
+wc learn_bash/README.md
 
 ```
 
 If we want, we can print only the lines (with `-l`), words (with `-w`) or characters (with `-c`).
 
-How many lines are there in `~/learn_bash/files/README.md`?
+How many lines are there in `learn_bash/files/README.md`?
 
 
 You have now met the commands _wc_, _head_ and _tail_: they are all non-interactive commands. To interactively browse a file, we can use the [`less`](https://manpages.org/less) command.
 
 ```
 
-less ~/learn_bash/files/origin.txt 
+less learn_bash/files/origin.txt 
 
 ```
 
@@ -527,29 +578,6 @@ To exit `less` and return to the shell prompt, press the `q` key. This action cl
 
 A useful option for `less` is `-S`, which will not wrap long lines, meaning that long lines will not be split. 
 
-**grep again**
-
-The [`grep`](https://manpages.org/grep) command is used to search for a pattern in a file, and it prints the lines matching the pattern. The general syntax is ‚'grep PATTERN FILE(s)‚'.
-
-```
-grep "Darwin" ~/learn_bash/files/origin.txt
-
-```
-
-The pattern can be [more complicated](https://manpages.org/regexp) than a simple string, but we will not cover this here. To match a pattern insensitive to case, we can use the `-i` option.
-
-```
-grep -i "evolve" ~/learn_bash/files/origin.txt
-
-```
-
-Some useful options:
-
-*   `-c` prints the number of matching lines, instead of the lines themselves.
-*   `-v` prints the lines that do not match the pattern (inVert match)
-*   `-n` prints the line number before the line itself.
-*   `-w` matches only whole words (not substrings)
-
 **cut**
 
 The [`cut`](https://manpages.org/cut) command is used to extract columns from a file. The general syntax is ‚'_cut -d DELIMITER -f FIELDS FILE(s)_‚'. By default the delimiter is a tab, so you don't need to specify
@@ -557,32 +585,33 @@ The [`cut`](https://manpages.org/cut) command is used to extract columns from a 
 ```
 
 # Check the first two lines of the file first
-head -n 2 ~/learn_bash/files/cars.csv
+head -n 2 learn_bash/files/cars.csv
 
 # Print only the columns model and cyl (1 and 3)
-cut -d "," -f 1,3 ~/learn_bash/files/cars.csv
+cut -d "," -f 1,3 learn_bash/files/cars.csv
 
 ```
 
-Extract the same columns, but from the file `~/learn_bash/files/cars.tsv` (tab-separated).
+ - How could we extract the same columns, but from the file `learn_bash/files/cars.tsv` (tab-separated)?
 
 **sed**
 
-The [`sed`](https://manpages.org/sed) command is used to search and replace text in a file. The general syntax is ‚'_sed -e ‚Äòs/OLD/NEW/g‚Äô FILE(s)_‚'.
+The [`sed`](https://manpages.org/sed) command is used to search and replace text in a file. The general syntax is `sed -e 's/OLD/NEW/g' FILE(s)`
+
 
 
 ```
 # We can replace the "," with a "|"
-sed 's/,/|/g' ~/learn_bash/files/cars.csv
+sed 's/,/|/g' learn_bash/files/cars.csv
 
 ```
 
-Here we used an obscure syntax, which will become familiar with practice, as it‚Äôs borrowed by other tools and even programming languages: `s/SOMETHING/OTHER/g`. The `s` means ‚'substitute‚', the `g` means ‚'global‚' (i.e. replace all the occurrences.
+Here we used an obscure syntax, which will become familiar with practice, as it's borrowed by other tools and even programming languages: `s/SOMETHING/OTHER/g`. The `s` means ‚'substitute‚', the `g` means ‚'global‚' (i.e. replace all the occurrences.
 
 Try to replace only the first occurrence, removing the `g`:
 
 ```
-sed 's/,/---/' ~/learn_bash/files/cars.csv
+sed 's/,/---/' learn_bash/files/cars.csv
 
 ```
 
@@ -591,7 +620,7 @@ sed 's/,/---/' ~/learn_bash/files/cars.csv
 The [`sort`](https://manpages.org/sort) command is used to sort the lines of a file. By default, it sorts alphabetically.
 
 ```
-sort ~/learn_bash/files/cars.csv
+sort learn_bash/files/cars.csv
 ```
 
 Some options:
@@ -601,7 +630,7 @@ Some options:
 *   `-n` to sort numerically (this is a switch)
 *   `-r` to sort in reverse order (this is a switch)
 
-sort -n -t, -k 2 ~/learn_bash/files/cars.csv
+sort -n -t, -k 2 learn_bash/files/cars.csv
 
 **Typing multi-line commands**
 
@@ -616,6 +645,8 @@ wget -O origin.txt \
 Note that when you type a backslash at the end of a line and then press enter, the shell will print a different prompt (usually a `>`), which means that the command is not finished yet. The greater-than is not to be confused with the redirection operator.
 
 And that's enough for one day!
+You really are now bioinformaticians, even if it doesn't yet feel like it!
+
 
 ## End of Day 1
 
