@@ -179,14 +179,6 @@ $ mkdir bioinfo_fun
 
 ```
 
-Let's get rid of the directory `bioinfo fun` with an allied command rmdir:
-
-```bash
-$ rmdir bioinfo\ fun
-
-```
-How else could you have specified that directory to the `rmdir` command?
-
 And now let's move into `bioinfo_fun`
 
 ```bash
@@ -297,19 +289,12 @@ Using the `cd -` command, you can return to this previous directory.
 If you use `cd -`  again, you will go back to the directory you originally came from.
 
   
-- As noted, the tilde character `~` is a shortcut for the home directory of the current user, so if "Steve" is the active user, the home directory is
- 
-```bash
-$ /users/admin/steve 
-```
-
-which can be written as
-
+- As noted, the tilde character `~` is a shortcut for the home directory of the current user, so if "Steve" is the active user, the home directory is ` /users/admin/steve ` which can be written as `~ `, so you can also cd to your home directory with
 
 ```bash
-$ ~ 
+$ cd ~
 
-```
+``` 
 
 ---
 
