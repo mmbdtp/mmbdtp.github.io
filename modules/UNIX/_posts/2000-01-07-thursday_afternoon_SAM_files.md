@@ -532,36 +532,9 @@ already know the tools we need to use to automate this workflow and run it on as
 single line of code. Those tools are: wildcards, for loops, and bash scripts. We will use all three in the next
 lesson.
 
+---
 
+## That's enough for today!
+As a reward for all your hard work, you should now take a look at this rap video that features Richard Lenski's research group along with Mark Pallen and his colleagues when he worked at Warwick.
 
-### Installing software
-
-It is worth noting that all of the software we are using for
-this workshop has been pre-installed on our remote computer.
-This saves us a lot of time - installing software can be a
-time-consuming and frustrating task - however, this does mean that
-you will not be able to walk out the door and start doing these
-analyses on your own computer. You will need to install
-the software first. Look at the [setup instructions](https://datacarpentry.org/genomics-workshop/index.html#setup) for more information
-on installing these software packages.
-
-
-
-### BWA alignment options
-
-BWA consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence
-reads up to 100bp, while the other two are for sequences ranging from 70bp to 1Mbp. BWA-MEM and BWA-SW share similar features such
-as long-read support and split alignment, but BWA-MEM, which is the latest, is generally recommended for high-quality queries as it
-is faster and more accurate.
-
-
-
-
-## Keypoints
-
-- Bioinformatic command line tools are collections of commands that can be used to carry out bioinformatic analyses.
-- To use most powerful bioinformatic tools, you will need to use the command line.
-- There are many different file formats for storing genomics data. It is important to understand what type of information is contained in each file, and how it was derived.
-
-
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/swoDROzsjXg?si=5n_GWma2mJFPA-fH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
