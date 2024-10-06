@@ -133,6 +133,8 @@ rm testfile.txt
 ls -l
 ```
 
+Note how files appear and disappear in the column to left. You can also view and search and edit the files with that interface!
+
 Feel free to try out whatever other commands interest you!
 
 
@@ -149,15 +151,7 @@ sudo touch file.txt
 
 ---
 
-
-
-
 **Coffee break**
-
-
-
-
-
 
 ---
 
