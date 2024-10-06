@@ -3,8 +3,6 @@ title: Thursday afternoon — SAM files and sequence mapping
 ---
 # Thursday afternoon — SAM files and sequence mapping
 
-
-
 ## How do I find sequence variants between my sample and a reference genome?
 
 We mentioned before that we are working with files from a long-term evolution study of an *E. coli* population (designated Ara-3). Now that we have looked at our data to make sure that it is high quality, and removed low-quality base calls, we can perform variant calling to see how the population changed over time. We care how this population changed relative to the original population, *E. coli* strain REL606. Therefore, we will align each of our samples to the *E. coli* REL606 reference genome, and see what differences exist in our reads versus the genome.
@@ -34,29 +32,6 @@ $ curl -L -o data/ref_genome/ecoli_rel606.fasta.gz ftp://ftp.ncbi.nlm.nih.gov/ge
 $ gunzip data/ref_genome/ecoli_rel606.fasta.gz
 ```
 
-
-### Exercise
-
-We saved this file as `data/ref_genome/ecoli_rel606.fasta.gz` and then decompressed it.
-What is the real name of the genome?
-
-
-
-### Solution
-
-```bash
-$ head data/ref_genome/ecoli_rel606.fasta
-```
-
-The name of the sequence follows the `>` character. The name is `CP000819.1 Escherichia coli B str. REL606, complete genome`.
-Keep this chromosome name (`CP000819.1`) in mind, as we will use it later in the lesson.
-
-
-
-
-
-
-
 We will also download a set of trimmed FASTQ files to work with. These are small subsets of our real trimmed data,
 and will enable us to run our variant calling workflow quite quickly.
 
@@ -77,6 +52,8 @@ $ mkdir -p results/sam results/bam results/bcf results/vcf
 #### Index the reference genome
 
 Our first step is to index the reference genome for use by BWA. Indexing allows the aligner to quickly find potential alignment sites for query sequences in a genome, which saves time during alignment. Indexing the reference only has to be run once. The only reason you would want to create a new index is if you are working with a different reference genome or you are using a different tool for alignment.
+
+You need to install `bwa` using conda! Then you can run it.
 
 ```bash
 $ bwa index data/ref_genome/ecoli_rel606.fasta
@@ -112,9 +89,7 @@ Have a look at the [bwa options page](https://bio-bwa.sourceforge.net/bwa.shtml)
 parameters here, your use case might require a change of parameters. *NOTE: Always read the manual page for any tool before using
 and make sure the options you use are appropriate for your data.*
 
-We are going to start by aligning the reads from just one of the
-samples in our dataset (`SRR2584866`). Later, we will be
-iterating this whole process on all of our sample files.
+We are going to start by aligning the reads from just one of the samples in our dataset (`SRR2584866`). Later, we will be iterating this whole process on all of our sample files.
 
 ```bash
 $ bwa mem data/ref_genome/ecoli_rel606.fasta data/trimmed_fastq_small/SRR2584866_1.trim.sub.fastq data/trimmed_fastq_small/SRR2584866_2.trim.sub.fastq > results/sam/SRR2584866.aligned.sam
@@ -150,18 +125,18 @@ that follows corresponds to alignment information for a single read. Each alignm
 mapping information and a variable number of other fields for aligner specific information. An example entry from a SAM file is
 displayed below with the different fields highlighted.
 
-![](https://datacarpentry.org/wrangling-genomics/fig/sam_bam.png){alt='sam\_bam1'}
+![](https://datacarpentry.org/wrangling-genomics/fig/sam_bam.png)
 
-![](https://datacarpentry.org/wrangling-genomics/fig/sam_bam3.png){alt='sam\_bam2'}
+![](https://datacarpentry.org/wrangling-genomics/fig/sam_bam3.png)
 
-We will convert the SAM file to BAM format using the `samtools` program with the `view` command and tell this command that the input is in SAM format (`-S`) and to output BAM format (`-b`):
+We will convert the SAM file to BAM format using the `samtools` program.
+
+First install samtools!
+
+Then with the `view` command and tell this command that the input is in SAM format (`-S`) and to output BAM format (`-b`):
 
 ```bash
 $ samtools view -S -b results/sam/SRR2584866.aligned.sam > results/bam/SRR2584866.aligned.bam
-```
-
-```output
-[samopen] SAM header is present: 1 sequences.
 ```
 
 #### Sort BAM file by coordinates
@@ -217,8 +192,11 @@ variants.
 #### Step 1: Calculate the read coverage of positions in the genome
 
 Do the first pass on variant calling by counting read coverage with
-[bcftools](https://samtools.github.io/bcftools/bcftools.html). We will
-use the command `mpileup`. The flag `-O b` tells bcftools to generate a
+[bcftools](https://samtools.github.io/bcftools/bcftools.html). 
+
+Install bcftools
+
+We will then use the command `mpileup`. The flag `-O b` tells bcftools to generate a
 bcf format output file, `-o` specifies where to write the output file, and `-f` flags the path to the reference genome:
 
 ```bash
