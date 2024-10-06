@@ -198,9 +198,9 @@ SeqFu was developed by [Andrea Telatin](https://quadram.ac.uk/people/andrea-tela
 
 **Installing SeqFu**
 
-First we are going to have to install SeqFu. Remember that you cannot do this in your base Conda environment, so take care tp ensure you are already in the `bioinfo_fun` environment or activate it if you aren't!
+First we are going to have to install SeqFu. Remember that you cannot do this in your base Conda environment, so take care to ensure you are already in the `bioinfo_fun` environment or activate it if you aren't!
 
-Now install SeqFu! See if you can work out how to do that for yourselves!
+Now install SeqFu! See if you can work out how to do that for yourselves using Conda!
 
 ---
 
