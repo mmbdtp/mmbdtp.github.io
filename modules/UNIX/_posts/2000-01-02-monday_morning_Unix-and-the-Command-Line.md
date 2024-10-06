@@ -73,7 +73,7 @@ A few links
 
 Navigate to your home directory and then to the Desktop directory using the Finder. Now let's navigate to the Desktop on the Terminal and create some directories and files there.
 
-```
+```bash
 cd Desktop
 
 ```
@@ -96,7 +96,7 @@ ChatGPT ([https://chatgpt.com](https://chatgpt.com)) will also give good answers
 ### Making directories and files
 Let's make a new directory in the Desktop folder
 
-```
+```bash
 mkdir bioinfo_adventures
 
 ```
@@ -106,7 +106,7 @@ Take a fresh look at the Desktop folder using the Finder and you will see this n
 
 Let's move inside that new directory using the command line.
 
-```
+```bash
 cd bioinfo_adventures
 
 ```
@@ -114,13 +114,13 @@ Let's use the `touch` command to create an empty file
 
 Look at it on the Finder. Click on it. You will see it is empty.
 
-```
+```bash
 touch grandeur.txt
 
 ```
 Let's add some text.
 
-```
+```bash
 echo "There is grandeur in this view of life" > grandeur.txt
 
 ```
@@ -146,7 +146,7 @@ This flexibility allows users and programs to handle files more efficiently with
 Let's see what happens when we make a directory on the command line with a name containing spaces.
 
 
-```
+```bash
 mkdir "bioinfo fun"
 
 ```
@@ -156,7 +156,7 @@ Putting quotes around the name allows us to create a file or directory name that
 
 An alternative approach is to escape the space using a backslash `\`
 
-```
+```bash
 mkdir bioinfo\ fun
 
 ```
@@ -166,7 +166,7 @@ If you type those two commands one after another, you will get an error message 
 
 If you look via the Finder you will see the directory `bioinfo fun` is sitting there. But what happens when you try to move into it on the command line?
 
-```
+```bash
 cd bioinfo fun
 
 ```
@@ -174,14 +174,14 @@ You get told `no such file or directory`!
 
 To avoid this problem, we generally use the underscore character `_` to represent white spaces in Unix file names, which also means we don't need the quote marks.
 
-```
+```bash
 mkdir bioinfo_fun
 
 ```
 
 Let's get rid of the directory `bioinfo fun` with an allied command rmdir:
 
-```
+```bash
 rmdir bioinfo\ fun
 
 ```
@@ -189,7 +189,7 @@ How else could you have specified that directory to the `rmdir` command?
 
 And now let's move into `bioinfo_fun`
 
-```
+```bash
 cd bioinfo_fun
 
 ```
@@ -214,13 +214,13 @@ On Unix-like systems, files and directories are managed in a hierarchical struct
 
 To find out where you are in the hierarchy use the `pwd ` command, which stands for "print working directory"
 
-```
+```bash
 pwd
 
 ```
 The result will look something like this.
 
-```
+```bash
 /Users/username/Desktop/bioinfo_adventures/bioinfo_fun
 
 ```
@@ -232,13 +232,13 @@ Every location (file or directory) in the file system can be described either:
 
     - for example
   
-```
+```bash
   /users/admin/steve
 ```
   
 - as a `relative path`, that is the path from the current directory to the location, so if we are inside a directory called `jon` within the directory called `admin` it would be
 
-```
+```bash
 ../admin/steve
 ```
   
@@ -251,14 +251,14 @@ Let's clarify these concepts:
 
 - This is an absolute path for a directory
   
-```
+```bash
 /users/admin/steve
 ```
 
 
 - This is an absolute path for a file
  
-```
+```bash
 /users/admin/list.txt
 ```
 
@@ -269,7 +269,7 @@ Let's clarify these concepts:
  - The parent directory is represented by `..`
  - Example: this means that you want to access a file inside a directory that is two levels above your current directory
 
-``` 
+```bash
 ../../directory/file.txt
 ```
 
@@ -278,7 +278,7 @@ Remember that if you don't know where you are, you can always use `pwd` to print
 If we want to go up to the directory above us, we can use this double dot `..` shortcut
 
 
-```
+```bash
 cd ..
 
 ```
@@ -299,14 +299,14 @@ If you use `cd -`  again, you will go back to the directory you originally came 
   
 - As noted, the tilde character `~` is a shortcut for the home directory of the current user, so if "Steve" is the active user, the home directory is
  
-```
+```bash
 /users/admin/steve 
 ```
 
 which can be written as
 
 
-```
+```bash
 ~ 
 
 ```
@@ -317,31 +317,32 @@ which can be written as
 
 If we want to find out what is inside a directory we use the `ls` command (short for "list")
 
-```
+```bash
 ls
 
 ```
 Sometimes files and directories are hidden from us by the operating system, usually if they start with a dot. To reveal all the files, we apply the flag `-a` to the command that alters its behaviour to list all files and directories. This a typical thing to do with Unix commands, where the flags are usually one or two characters prefaced by a dash.
 
-```
+```bash
 ls -a
 ```
-```
-. .. bioinfo fun bioinfo_fun grandeur.txt
 
+```bash
+. .. bioinfo fun bioinfo_fun grandeur.txt
 ```
+
 In this case, it reveals shortcuts to the directory above with two dots `..` and a single dot `.`, which is a shortcut referring to the current directory.
 
 If you specify a directory, the ls command will list the contents of that directory.
 
-```
+```bash
 ls ~/Desktop
 
 ```
 
 - Tip: if your screen gets cluttered with outputs of previous commands, type `clear` to clear it up
 
-```
+```bash
 clear
 
 ```
