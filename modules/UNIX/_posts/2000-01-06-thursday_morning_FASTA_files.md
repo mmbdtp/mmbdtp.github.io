@@ -17,7 +17,7 @@ title: Thursday morning — Sequence Quality Control
 
 ### View the metadata
 
-We will be working with three sample events from the **Ara-3** strain of this experiment, one from 5,000 generations, one from 15,000 generations, and one from 50,000 generations. The population changed substantially during the course of the experiment, and we will be exploring how (the evolution of a **Cit+** mutant and **hypermutability**) with our variant calling workflow. The metadata file associated with this lesson can be [downloaded directly here](files/Ecoli_metadata_composite.csv) or [viewed in Github](https://github.com/datacarpentry/wrangling-genomics/blob/main/episodes/files/Ecoli_metadata_composite.csv). If you would like to know details of how the file was created, you can look at [some notes and sources here](https://github.com/datacarpentry/wrangling-genomics/blob/main/episodes/files/Ecoli_metadata_composite_README.md).
+We will be working with three sample events from the **Ara-3** strain of this experiment, one from 5,000 generations, one from 15,000 generations, and one from 50,000 generations. The population changed substantially during the course of the experiment, and we will be exploring how (the evolution of a **Cit+** mutant and **hypermutability**) with our variant calling workflow. The metadata file associated with this lesson can be  [viewed in Github](https://github.com/datacarpentry/wrangling-genomics/blob/main/episodes/files/Ecoli_metadata_composite.csv). If you would like to know details of how the file was created, you can look at [some notes and sources here](https://github.com/datacarpentry/wrangling-genomics/blob/main/episodes/files/Ecoli_metadata_composite_README.md).
 
 This metadata describes information on the *Ara-3* clones and the columns represent:
 
@@ -65,7 +65,7 @@ When working with high-throughput sequencing data, the raw reads you get off of 
 
 An example of the workflow we will be using for our variant calling analysis is provided below with a brief description of each step.
 
-![](https://datacarpentry.org/wrangling-genomics/fig/variant_calling_workflow.png){alt='workflow'}
+![](https://datacarpentry.org/wrangling-genomics/fig/variant_calling_workflow.png)
 
 1. Quality control - Assessing quality using FastQC
 2. Quality control - Trimming and/or filtering reads (if necessary)
@@ -194,26 +194,9 @@ very poor (`#` = a quality score of 2).
 
 ### Exercise
 
-What is the last read in the `SRR2584863_1.fastq ` file? How confident
-are you in this read?
+What is the last read in the `SRR2584863_1.fastq ` file? How confident are you in this read?
 
-### Solution
 
-```bash
-$ tail -n 4 SRR2584863_1.fastq
-```
-
-```output
-@SRR2584863.1553259 HWI-ST957:245:H73R4ADXX:2:2216:21048:100894/1
-CTGCAATACCACGCTGATCTTTCACATGATGTAAGAAAAGTGGGATCAGCAAACCGGGTGCTGCTGTGGCTAGTTGCAGCAAACCATGCAGTGAACCCGCCTGTGCTTCGCTATAGCCGTGACTGATGAGGATCGCCGGAAGCCAGCCAA
-+
-CCCFFFFFHHHHGJJJJJJJJJHGIJJJIJJJJIJJJJIIIIJJJJJJJJJJJJJIIJJJHHHHHFFFFFEEEEEDDDDDDDDDDDDDDDDDCDEDDBDBDDBDDDDDDDDDBDEEDDDD7@BDDDDDD>AA>?B?<@BDD@BDC?BDA?
-```
-
-This read has more consistent quality at its end than the first
-read that we looked at, but still has a range of quality scores,
-most of them high. We will look at variations in position-based quality
-in just a moment.
 
 ---
 
@@ -224,7 +207,7 @@ At this point, let's install the program `fastqc`
 conda install fastqc
 ```
 
-Let's check it has intsalled correctedly.
+Let's check it has installed correctedly.
 
 ```bash
 $ fastqc -h
@@ -401,21 +384,6 @@ How big are the files?
 file sizes.)
 
 
-### Solution
-
-```bash
-$ ls -l -h
-```
-
-```output
--rw-rw-r-- 1 dcuser dcuser 545M Jul  6 20:27 SRR2584863_1.fastq
--rw-rw-r-- 1 dcuser dcuser 183M Jul  6 20:29 SRR2584863_2.fastq.gz
--rw-rw-r-- 1 dcuser dcuser 309M Jul  6 20:34 SRR2584866_1.fastq.gz
--rw-rw-r-- 1 dcuser dcuser 296M Jul  6 20:37 SRR2584866_2.fastq.gz
--rw-rw-r-- 1 dcuser dcuser 124M Jul  6 20:22 SRR2589044_1.fastq.gz
--rw-rw-r-- 1 dcuser dcuser 128M Jul  6 20:24 SRR2589044_2.fastq.gz
-```
-
 There are six FASTQ files ranging from 124M (124MB) to 545M.
 
 
@@ -470,15 +438,10 @@ SRR2584863_2_fastqc.zip   SRR2584866_2_fastqc.zip   SRR2589044_2_fastqc.zip
 SRR2584863_2.fastq.gz     SRR2584866_2.fastq.gz     SRR2589044_2.fastq.gz
 ```
 
-For each input FASTQ file, FastQC has created a `.zip` file and a
+For each input FASTQ file, FastQC has created a `.zip` file and a `.html` file. The `.zip` file extension indicates that this is
+actually a compressed set of multiple output files. We will be working with these output files soon. The `.html` file is a stable webpage displaying the summary report for each of our samples.
 
-`.html` file. The `.zip` file extension indicates that this is
-actually a compressed set of multiple output files. We will be working
-with these output files soon. The `.html` file is a stable webpage
-displaying the summary report for each of our samples.
-
-We want to keep our data files and our results files separate, so we
-will move these
+We want to keep our data files and our results files separate, so we will move these
 output files into a new directory within our `results/` directory.
 
 ```bash
@@ -494,96 +457,31 @@ inspection of our output files.
 $ cd ~/dc_workshop/results/fastqc_untrimmed_reads/
 ```
 
-
 ---
-
 
 ### Viewing the FastQC results
 
-If we were working on our local computers, we would be able to look at
-each of these HTML files by opening them in a web browser.
+Use the Notebooks graphical user interface in the left hand column to take you to `~/dc_workshop/results/fastqc_untrimmed_reads`
 
-However, these files are currently sitting on our remote AWS
-instance, where our local computer can not see them.
-And, since we are only logging into the AWS instance via the
-command line - it does not have any web browser setup to display
-these files either.
+Click on the first HTML file in the list. You are now vieiwing it in a new window. Work through that FastQC Report, focusing on the "Per base sequence quality" FastQC graph
 
-So the easiest way to look at these webpage summary reports will be
-to transfer them to our local computers (i.e. your laptop).
-
-To transfer a file from a remote server to our own machines, we will
-use `scp`, which we learned yesterday in the Shell Genomics lesson.
-
-First we
-will make a new directory on our computer to store the HTML files
-we are transferring. Let's put it on our desktop for now. Open a new
-tab in your terminal program (you can use the pull down menu at the
-top of your screen or the Cmd+t keyboard shortcut) and type:
-
-```bash
-$ mkdir -p ~/Desktop/fastqc_html
-```
-
-Now we can transfer our HTML files to our local computer using `scp`.
-
-```bash
-$ scp dcuser@ec2-34-238-162-94.compute-1.amazonaws.com:~/dc_workshop/results/fastqc_untrimmed_reads/*.html ~/Desktop/fastqc_html
-```
-
-As a reminder, the first part
-of the command `dcuser@ec2-34-238-162-94.compute-1.amazonaws.com` is
-the address for your remote computer. Make sure you replace everything
-after `dcuser@` with your instance number (the one you used to log in).
-
-The second part starts with a `:` and then gives the absolute path
-of the files you want to transfer from your remote computer. Do not
-forget the `:`. We used a wildcard (`*.html`) to indicate that we want all of
-the HTML files.
-
-The third part of the command gives the absolute path of the location
-you want to put the files. This is on your local computer and is the
-directory we just created `~/Desktop/fastqc_html`.
-
-You should see a status output like this:
-
-```output
-SRR2584863_1_fastqc.html                      100%  249KB 152.3KB/s   00:01
-SRR2584863_2_fastqc.html                      100%  254KB 219.8KB/s   00:01
-SRR2584866_1_fastqc.html                      100%  254KB 271.8KB/s   00:00
-SRR2584866_2_fastqc.html                      100%  251KB 252.8KB/s   00:00
-SRR2589044_1_fastqc.html                      100%  249KB 370.1KB/s   00:00
-SRR2589044_2_fastqc.html                      100%  251KB 592.2KB/s   00:00
-```
-
-Now we can go to our new directory and open the 6 HTML files.
-
-Depending on your system, you should be able to select and open them all at once via a right click menu
-in your file browser.
-
+Then work through all the others, again focusing on "Per base sequence quality" FastQC graphs
 
 ---
-
 
 ### Exercise
 
-Discuss your results with a neighbor. Which sample(s) looks the best
-in terms of per base sequence quality? Which sample(s) look the
-worst?
-
-
-### Solution
-
-All of the reads contain usable data, but the quality decreases toward
-the end of the reads.
-
+Discuss your results with a neighbour. 
+Which sample(s) looks the best in terms of per base sequence quality? 
+Which sample(s) look the worst?
 
 ---
 
-
 ### Decoding the other FastQC outputs
 
-We have now looked at quite a few "Per base sequence quality" FastQC graphs, but there are nine other graphs that we have not talked about! Below we have provided a brief overview of interpretations for each of these plots. For more information, please see the FastQC documentation [here](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/)
+We have now looked at quite a few "Per base sequence quality" FastQC graphs, but there are nine other graphs that we have not talked about! 
+
+Below we have provided a brief overview of interpretations for each of these plots. For more information, please see the FastQC documentation [here](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/)
 
 - [**Per tile sequence quality**](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/12%20Per%20Tile%20Sequence%20Quality.html): the machines that perform sequencing are divided into tiles. This plot displays patterns in base quality along these tiles. Consistently low scores are often found around the edges, but hot spots can also occur in the middle if an air bubble was introduced at some point during the run.
 - [**Per sequence quality scores**](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/3%20Per%20Sequence%20Quality%20Scores.html): a density plot of quality for all reads at all positions. This plot shows what quality scores are most common.
@@ -601,11 +499,8 @@ We have now looked at quite a few "Per base sequence quality" FastQC graphs, but
 
 ### Working with the FastQC text output
 
-Now that we have looked at our HTML reports to get a feel for the data,
-let's look more closely at the other output files. Go back to the tab
-in your terminal program that is connected to your AWS instance
-(the tab label will start with `dcuser@ip`) and make sure you are in
-our results subdirectory.
+Now that we have looked at our HTML reports to get a feel for the data, let's look more closely at the other output files. Go back to the tab
+in your terminal and make sure you are in our results subdirectory.
 
 ```bash
 $ cd ~/dc_workshop/results/fastqc_untrimmed_reads/
@@ -619,11 +514,7 @@ SRR2584863_2_fastqc.html  SRR2584866_2_fastqc.html  SRR2589044_2_fastqc.html
 SRR2584863_2_fastqc.zip   SRR2584866_2_fastqc.zip   SRR2589044_2_fastqc.zip
 ```
 
-Our `.zip` files are compressed files. They each contain multiple
-different types of output files for a single input FASTQ file. To
-view the contents of a `.zip` file, we can use the program `unzip`
-to decompress these files. Let's try doing them all at once using a
-wildcard.
+Our `.zip` files are compressed files. They each contain multiple different types of output files for a single input FASTQ file. To view the contents of a `.zip` file, we can use the program `unzip` to decompress these files. Let's try doing them all at once using a wildcard.
 
 ```bash
 $ unzip *.zip
@@ -638,15 +529,11 @@ caution: filename not matched:  SRR2589044_1_fastqc.zip
 caution: filename not matched:  SRR2589044_2_fastqc.zip
 ```
 
-This did not work. We unzipped the first file and then got a warning
-message for each of the other `.zip` files. This is because `unzip`
-expects to get only one zip file as input. We could go through and
-unzip each file one at a time, but this is very time consuming and
+This did not work. We unzipped the first file and then got a warning message for each of the other `.zip` files. This is because `unzip`
+expects to get only one zip file as input. We could go through and unzip each file one at a time, but this is very time consuming and
 error-prone. Someday you may have 500 files to unzip!
 
-A more efficient way is to use a `for` loop like we learned in the Shell Genomics lesson to iterate through all of
-our `.zip` files. Let's see what that looks like and then we will
-discuss what we are doing with each line of our loop.
+A more efficient way is to use a `for` loop like we learned earlier in the week to iterate through all of our `.zip` files. Let's see what that looks like and then we will discuss what we are doing with each line of our loop.
 
 ```bash
 $ for filename in *.zip
@@ -656,13 +543,10 @@ $ for filename in *.zip
 ```
 
 In this example, the input is six filenames (one filename for each of our `.zip` files).
-Each time the loop iterates, it will assign a file name to the variable `filename`
-and run the `unzip` command.
-The first time through the loop,
-`$filename` is `SRR2584863_1_fastqc.zip`.
+Each time the loop iterates, it will assign a file name to the variable `filename` and run the `unzip` command.
+The first time through the loop, `$filename` is `SRR2584863_1_fastqc.zip`.
 The interpreter runs the command `unzip` on `SRR2584863_1_fastqc.zip`.
-For the second iteration, `$filename` becomes
-`SRR2584863_2_fastqc.zip`. This time, the shell runs `unzip` on `SRR2584863_2_fastqc.zip`.
+For the second iteration, `$filename` becomes `SRR2584863_2_fastqc.zip`. This time, the shell runs `unzip` on `SRR2584863_2_fastqc.zip`.
 It then repeats this process for the four other `.zip` files in our directory.
 
 When we run our `for` loop, you will see output that starts like this:
@@ -691,11 +575,8 @@ Archive:  SRR2589044_2_fastqc.zip
   inflating: SRR2589044_2_fastqc/fastqc.fo
 ```
 
-The `unzip` program is decompressing the `.zip` files and creating
-a new directory (with subdirectories) for each of our samples, to
-store all of the different output that is produced by FastQC. There
-
-are a lot of files here. The one we are going to focus on is the
+The `unzip` program is decompressing the `.zip` files and creating a new directory (with subdirectories) for each of our samples, to
+store all of the different output that is produced by FastQC. There are a lot of files here. The one we are going to focus on is the
 `summary.txt` file.
 
 If you list the files in our directory now you will see:
@@ -765,14 +646,11 @@ us whether this sample passed, failed, or is borderline (`WARN`). Remember, to q
 
 ### Documenting our work
 
-We can make a record of the results we obtained for all our samples
-
-by concatenating all of our `summary.txt` files into a single file
-using the `cat` command. We will call this `fastqc_summaries.txt` and move
-it to `~/dc_workshop/docs`.
+We can make a record of the results we obtained for all our samples by concatenating all of our `summary.txt` files into a single file
+using the `cat` command. We will call this `fastqc_summaries.txt` and move it to `~/dc_workshop/`.
 
 ```bash
-$ cat */summary.txt > ~/dc_workshop/docs/fastqc_summaries.txt
+$ cat */summary.txt > ~/dc_workshop/fastqc_summaries.txt
 ```
 
 
@@ -782,8 +660,7 @@ $ cat */summary.txt > ~/dc_workshop/docs/fastqc_summaries.txt
 
 ### Exercise
 
-Which samples failed at least one of FastQC's quality tests? What
-test(s) did those samples fail?
+Which samples failed at least one of FastQC's quality tests? What test(s) did those samples fail? Can you use `grep` to find out?
 
 
 
@@ -813,63 +690,23 @@ FAIL    Adapter Content SRR2589044_2.fastq.gz
 
 ---
 
-
-## Other notes  -- optional
-
-### Quality encodings vary
-
-Although we have used a particular quality encoding system to demonstrate interpretation of
-read quality, different sequencing machines use different encoding systems. This means that,
-depending on which sequencer you use to generate your data, a `#` may not be an indicator of
-a poor quality base call.
-
-This mainly relates to older Solexa/Illumina data,
-but it is essential that you know which sequencing platform was
-used to generate your data, so that you can tell your quality control program which encoding
-to use. If you choose the wrong encoding, you run the risk of throwing away good reads or
-(even worse) not throwing away bad reads!
-
-
----
-
-### Same symbols, different meanings
-
-Here we see `>` being used as a shell prompt, whereas `>` is also
-used to redirect output.
-Similarly, `$` is used as a shell prompt, but, as we saw earlier,
-it is also used to ask the shell to get the value of a variable.
-
-If the *shell* prints `>` or `$` then it expects you to type something,
-and the symbol is a prompt.
-
-If *you* type `>` or `$` yourself, it is an instruction from you that
-the shell should redirect output or get the value of a variable.
-
-
-- Quality encodings vary across sequencing platforms.
-- `for` loops let you perform the same set of operations on multiple files with a single command.
-
----
-
 ### Time for lunch
 
 ---
 
 
-
 ## Cleaning reads
 
-In the previous episode, we took a high-level look at the quality
-of each of our samples using FastQC. We visualized per-base quality
-graphs showing the distribution of read quality at each base across
-all reads in a sample and extracted information about which samples
-fail which quality checks. Some of our samples failed quite a few quality metrics used by FastQC. This does not mean,
-though, that our samples should be thrown out! It is very common to have some quality metrics fail, and this may or may not be a problem for your downstream application. For our variant calling workflow, we will be removing some of the low quality sequences to reduce our false positive rate due to sequencing error.
+In the previous episode, we took a high-level look at the quality of each of our samples using FastQC. We visualized per-base quality
+graphs showing the distribution of read quality at each base across all reads in a sample and extracted information about which samples
+fail which quality checks. Some of our samples failed quite a few quality metrics used by FastQC. This does not mean, though, that our samples should be thrown out! It is very common to have some quality metrics fail, and this may or may not be a problem for your downstream application. 
+
+For our variant calling workflow, we will be removing some of the low quality sequences to reduce our false positive rate due to sequencing error.
 
 We will use a program called
-[Trimmomatic](https://www.usadellab.org/cms/?page=trimmomatic) to
-filter poor quality reads and trim poor quality bases from our samples.
+[Trimmomatic](https://www.usadellab.org/cms/?page=trimmomatic) to filter poor quality reads and trim poor quality bases from our samples.
 
+You should have the hang of installing propgrams with Comda by now. Get on and install `Trimmomatic`!
 
 ---
 
@@ -893,8 +730,10 @@ Usage:
 ```
 
 This output shows us that we must first specify whether we have paired end (`PE`) or single end (`SE`) reads.
+
 Next, we specify what flag we would like to run. For example, you can specify `threads` to indicate the number of
 processors on your computer that you want Trimmomatic to use. In most cases using multiple threads (processors) can help to run the trimming faster. These flags are not necessary, but they can give you more control over the command. The flags are followed by positional arguments, meaning the order in which you specify them is important.
+
 In paired end mode, Trimmomatic expects the two input files, and then the names of the output files. These files are described below. While, in single end mode, Trimmomatic will expect 1 file as input, after which you can enter the optional settings and lastly the name of the output file.
 
 | option         | meaning                                                                                                      | 
@@ -979,7 +818,7 @@ While using FastQC we saw that Nextera adapters were present in our samples.
 The adapter sequences came with the installation of trimmomatic, so we will first copy these sequences into our current directory.
 
 ```bash
-$ cp ~/.miniconda3/pkgs/trimmomatic-0.38-0/share/trimmomatic-0.38-0/adapters/NexteraPE-PE.fa .
+$ cp /home/jovyan/.conda/pkgs/trimmomatic-0.39-hdfd78af_2/share/trimmomatic-0.39-2/adapters/NexteraPE-PE.fa .
 ```
 
 We will also use a sliding window of size 4 that will remove bases if their
@@ -1029,14 +868,11 @@ following questions.
 
 
 
-## Solution
+---
 
-1) 0\.23%
-2) 79\.96%
-  
-  
-You may have noticed that Trimmomatic automatically detected the
-quality encoding of our sample. It is always a good idea to
+
+
+You may have noticed that Trimmomatic automatically detected the quality encoding of our sample. It is always a good idea to
 double-check this or to enter the quality encoding manually.
 
 We can confirm that we have our output files:
@@ -1080,18 +916,17 @@ gzip SRR2584863_1.fastq
 
 ```bash
 $ for infile in *_1.fastq.gz
-> do
->   base=$(basename ${infile} _1.fastq.gz)
->   trimmomatic PE ${infile} ${base}_2.fastq.gz \
->                ${base}_1.trim.fastq.gz ${base}_1un.trim.fastq.gz \
->                ${base}_2.trim.fastq.gz ${base}_2un.trim.fastq.gz \
->                SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:NexteraPE-PE.fa:2:40:15 
-> done
+do
+   base=$(basename ${infile} _1.fastq.gz)
+   trimmomatic PE ${infile} ${base}_2.fastq.gz \
+                ${base}_1.trim.fastq.gz ${base}_1un.trim.fastq.gz \
+                ${base}_2.trim.fastq.gz ${base}_2un.trim.fastq.gz \
+                SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:NexteraPE-PE.fa:2:40:15 
+done
 ```
 
-Go ahead and run the for loop. It should take a few minutes for
-Trimmomatic to run for each of our six input files. Once it is done
-running, take a look at your directory contents. You will notice that even though we ran Trimmomatic on file `SRR2589044` before running the for loop, there is only one set of files for it. Because we matched the ending `_1.fastq.gz`, we re-ran Trimmomatic on this file, overwriting our first results. That is ok, but it is good to be aware that it happened.
+Go ahead and run the for loop. It should take a few minutes for Trimmomatic to run for each of our six input files. Once it is done
+running, take a look at your directory contents. You will notice that even though we ran Trimmomatic on file `SRR2589044` before running the for loop, there is only one set of files for it. Because we matched the ending `_1.fastq.gz`, we re-ran Trimmomatic on this file, overwriting our first results. That is ok, but it is good to be aware that it happened. Unix commands often overwrite exosting files without telling you.
 
 ```bash
 $ ls
@@ -1113,25 +948,11 @@ SRR2584863_2un.trim.fastq.gz  SRR2589044_1.fastq.gz
 
 ## Exercise
 
-We trimmed our fastq files with Nextera adapters,
-but there are other adapters that are commonly used.
-What other adapter files came with Trimmomatic?
+We trimmed our fastq files with Nextera adapters, but there are other adapters that are commonly used.
+What other adapter files came with Trimmomatic? Take a look in `/home/jovyan/.conda/pkgs/trimmomatic-0.39-hdfd78af_2/share/trimmomatic-0.39-2/adapters/`
 
 
-## Solution
-
-```bash
-$ ls ~/miniconda3/pkgs/trimmomatic-0.38-0/share/trimmomatic-0.38-0/adapters/
-```
-
-```output
-NexteraPE-PE.fa  TruSeq2-SE.fa    TruSeq3-PE.fa
-TruSeq2-PE.fa    TruSeq3-PE-2.fa  TruSeq3-SE.fa
-```
-
-
-We have now completed the trimming and filtering steps of our quality
-control process! Before we move on, let's move our trimmed FASTQ files
+We have now completed the trimming and filtering steps of our quality control process! Before we move on, let's move our trimmed FASTQ files
 to a new subdirectory within our `data/` directory.
 
 ```bash
@@ -1149,59 +970,14 @@ SRR2584863_2.trim.fastq.gz    SRR2584866_2.trim.fastq.gz    SRR2589044_2.trim.fa
 SRR2584863_2un.trim.fastq.gz  SRR2584866_2un.trim.fastq.gz  SRR2589044_2un.trim.fastq.gz
 ```
 
-
 ---
 
+## And before we finish for the morning
+
+Now that our samples have gone through quality control, they should perform better on the quality tests run by FastQC. Go ahead and re-run FastQC on your trimmed FASTQ files and visualize the HTML files to see whether your per base sequence quality is higher after trimming.
 
 
-## Bonus exercise (advanced)
-
-Now that our samples have gone through quality control, they should perform
-better on the quality tests run by FastQC. Go ahead and re-run
-FastQC on your trimmed FASTQ files and visualize the HTML files
-to see whether your per base sequence quality is higher after
-trimming.
-
-
-
-## Solution
-
-In your terminal window do:
-
-```bash
-$ fastqc ~/dc_workshop/data/trimmed_fastq/*.fastq*
-```
-
-In a new tab in your terminal do:
-
-```bash
-$ mkdir ~/Desktop/fastqc_html/trimmed
-$ scp dcuser@ec2-34-203-203-131.compute-1.amazonaws.com:~/dc_workshop/data/trimmed_fastq/*.html ~/Desktop/fastqc_html/trimmed
-```
-
-Then take a look at the html files in your browser.
-
-Remember to replace everything between the `@` and `:` in your scp
-command with your AWS instance number.
-
-After trimming and filtering, our overall quality is much higher,
-we have a distribution of sequence lengths, and more samples pass
-adapter content. However, quality trimming is not perfect, and some
-programs are better at removing some sequences than others. Because our
-sequences still contain 3' adapters, it could be important to explore
-other trimming tools like [cutadapt](https://cutadapt.readthedocs.io/en/stable/) to remove these, depending on your
-downstream application. Trimmomatic did pretty well though, and its performance
-is good enough for our workflow.
-
-
-
----
-
-
-## Keypoints
-
-- The options you set for the command-line tools you use are important!
-- Data cleaning is an essential step in a genomics workflow.
+After trimming and filtering, what we hope is that our overall quality is much higher, we have a distribution of sequence lengths, and more samples pass adapter content. However, quality trimming is not perfect, and some programs are better at removing some sequences than others. Because our sequences still contain 3' adapters, it could be important to explore other trimming tools like [cutadapt](https://cutadapt.readthedocs.io/en/stable/) to remove these, depending on your downstream application. Trimmomatic did pretty well though, and its performance is good enough for our workflow.
 
 ___
 
