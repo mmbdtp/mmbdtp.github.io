@@ -6,19 +6,15 @@ title: Friday morning — Bioinformatics Task
 
 > Today you will be working on your own on a small project, putting together all the things you learned so far.
 
-
 ## objectives
 
 - Understand the steps involved in variant calling.
 - Describe the types of data formats encountered during variant calling.
 - Use command line tools to perform variant calling.
 
-
-
 ## questions
 
 - How do I find sequence variants between my sample and a reference genome?
-
 
 
 We mentioned before that we are working with files from a long-term evolution study of an *E. coli* population (designated Ara-3). Now that we have looked at our data to make sure that it is high quality, and removed low-quality base calls, we can perform variant calling to see how the population changed over time. We care how this population changed relative to the original population, *E. coli* strain REL606. Therefore, we will align each of our samples to the *E. coli* REL606 reference genome, and see what differences exist in our reads versus the genome.
@@ -50,12 +46,8 @@ $ gunzip data/ref_genome/ecoli_rel606.fasta.gz
 
 ##  challenge
 
-### Exercise
-
 We saved this file as `data/ref_genome/ecoli_rel606.fasta.gz` and then decompressed it.
 What is the real name of the genome?
-
-  solution
 
 ### Solution
 
@@ -65,12 +57,6 @@ $ head data/ref_genome/ecoli_rel606.fasta
 
 The name of the sequence follows the `>` character. The name is `CP000819.1 Escherichia coli B str. REL606, complete genome`.
 Keep this chromosome name (`CP000819.1`) in mind, as we will use it later in the lesson.
-
-
-
-
-
-
 
 We will also download a set of trimmed FASTQ files to work with. These are small subsets of our real trimmed data,
 and will enable us to run our variant calling workflow quite quickly.
@@ -263,8 +249,6 @@ Filter the SNVs for the final output in VCF format, using `vcfutils.pl`:
 $ vcfutils.pl varFilter results/vcf/SRR2584866_variants.vcf  > results/vcf/SRR2584866_final_variants.vcf
 ```
 
-
-
 ### Filtering
 
 The `vcfutils.pl varFilter` call filters out variants that do not meet minimum quality default criteria, which can be changed through
@@ -402,11 +386,6 @@ $ grep -v "#" results/vcf/SRR2584866_final_variants.vcf | wc -l
 There are 766 variants in this file.
 
 
-
-
-
-
-
 ### Assess the alignment (visualization) - optional step
 
 It is often instructive to look at your data in a genome browser. Visualization will allow you to get a "feel" for
@@ -492,11 +471,6 @@ Then type `g`. In the dialogue box, type `CP000819.1:4377265`.
 in the gene *mutL*, which controls DNA mismatch repair.
 
 
-
-
-
-
-
 #### Viewing with IGV
 
 [IGV](https://www.broadinstitute.org/igv/) is a stand-alone browser, which has the advantage of being installed locally and providing fast access. Web-based genome browsers, like [Ensembl](https://www.ensembl.org/index.html) or the [UCSC browser](https://genome.ucsc.edu/), are slower, but provide more functionality. They not only allow for more polished and flexible visualization, but also provide easy access to a wealth of annotations and external data sources. This makes it straightforward to relate your data with information about repeat regions, known genes, epigenetic features or areas of cross-species conservation, to name just a few.
@@ -552,41 +526,4 @@ time consuming and error-prone, and would become impossible as we gathered more 
 already know the tools we need to use to automate this workflow and run it on as many files as we want using a
 single line of code. Those tools are: wildcards, for loops, and bash scripts. We will use all three in the next
 lesson.
-
-
-
-### Installing software
-
-It is worth noting that all of the software we are using for
-this workshop has been pre-installed on our remote computer.
-This saves us a lot of time - installing software can be a
-time-consuming and frustrating task - however, this does mean that
-you will not be able to walk out the door and start doing these
-analyses on your own computer. You will need to install
-the software first. Look at the [setup instructions](https://datacarpentry.org/genomics-workshop/index.html#setup) for more information
-on installing these software packages.
-
-
-
-
-
-
-### BWA alignment options
-
-BWA consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence
-reads up to 100bp, while the other two are for sequences ranging from 70bp to 1Mbp. BWA-MEM and BWA-SW share similar features such
-as long-read support and split alignment, but BWA-MEM, which is the latest, is generally recommended for high-quality queries as it
-is faster and more accurate.
-
-
-
-
-:## keypoints
-
-- Bioinformatic command line tools are collections of commands that can be used to carry out bioinformatic analyses.
-- To use most powerful bioinformatic tools, you will need to use the command line.
-- There are many different file formats for storing genomics data. It is important to understand what type of information is contained in each file, and how it was derived.
-
-
-
 
