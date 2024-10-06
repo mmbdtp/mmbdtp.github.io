@@ -1205,9 +1205,6 @@ is good enough for our workflow.
 
 ___
 
-That's enough for today!
-As a reward fro all your hard work, you should now take a look at this rap video that features Richard Lenski's research group along with Mark Pallen and his colleagues when he worked at Warwick.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/swoDROzsjXg?si=5n_GWma2mJFPA-fH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+### Lunchtime!
 
 ---
