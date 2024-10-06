@@ -50,10 +50,10 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 
 **Venue:** Quadram Institute, Board Room from 9:00 am to 5:00 pm
 
-- **Morning: Handling sequence files**
+- **Morning: Sequence Quality Control**
   - Sam leads, with help from Mark and Wing
 
-- **Afternoon: SAM files and sequence mapping**
+- **Afternoon: Trimming Sequence Files**
   - Sam leads, with help Wing ± Mark
 
 ***
@@ -63,6 +63,6 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 **Venue:** Quadram Institute, Board Room from 9:00 am to 1:00 pm
 
 
-- **Morning: Sequence mapping exercise**
+- **Morning: Finding Sequence Variants**
   - Leo leads with help from Sam
 
