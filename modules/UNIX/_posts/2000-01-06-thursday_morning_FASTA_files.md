@@ -1,8 +1,8 @@
 ---
-title: Thursday morning — Sequence file formats 
+title: Thursday morning — Sequence Quality Control 
 ---
 
-# Thursday morning — Sequence file formats 
+# Thursday morning — Sequence Quality Control 
 
 ## The data
 
@@ -11,6 +11,9 @@ title: Thursday morning — Sequence file formats
 - The experiment was designed to assess adaptation in *E. coli*. A population was propagated for more than 40,000 generations in a glucose-limited minimal medium (in most conditions glucose is the best carbon source for *E. coli*, providing faster growth than other sugars). This medium was supplemented with citrate, which *E. coli* cannot metabolize in the aerobic conditions of the experiment. Sequencing of the populations at regular time points revealed that spontaneous citrate-using variant (**Cit+**) appeared between 31,000 and 31,500 generations, causing an increase in population size and diversity. In addition, this experiment showed hypermutability in certain regions. Hypermutability is important and can help accelerate adaptation to novel environments, but also can be selected against in well-adapted populations.
 
 - To see a timeline of the experiment to date, check out this [figure](https://en.wikipedia.org/wiki/E._coli_long-term_evolution_experiment#/media/File:LTEE_Timeline_as_of_May_28,_2016.png), and this paper [Blount et al. 2008: Historical contingency and the evolution of a key innovation in an experimental population of *Escherichia coli*](https://www.pnas.org/content/105/23/7899).
+
+
+---
 
 ### View the metadata
 
@@ -33,6 +36,9 @@ This metadata describes information on the *Ara-3* clones and the columns repres
 | sequencing\_depth | depth of sequencing                             | 
 | cit              | citrate-using mutant status                     | 
 
+
+---
+
 ### Challenge
 
 Based on the metadata, can you answer the following questions?
@@ -49,15 +55,15 @@ Based on the metadata, can you answer the following questions?
 3. 10 citrate+ mutants
 4. 6 hypermutable mutants
 
+---
+
+
 
 ## Bioinformatic workflows
 
-When working with high-throughput sequencing data, the raw reads you get off of the sequencer will need to pass
-through a number of  different tools in order to generate your final desired output. The execution of this set of
-tools in a specified order is commonly referred to as a *workflow* or a *pipeline*.
+When working with high-throughput sequencing data, the raw reads you get off of the sequencer will need to pass through a number of  different tools in order to generate your final desired output. The execution of this set of tools in a specified order is commonly referred to as a *workflow* or a *pipeline*.
 
-An example of the workflow we will be using for our variant calling analysis is provided below with a brief
-description of each step.
+An example of the workflow we will be using for our variant calling analysis is provided below with a brief description of each step.
 
 ![](https://datacarpentry.org/wrangling-genomics/fig/variant_calling_workflow.png){alt='workflow'}
 
@@ -67,11 +73,10 @@ description of each step.
 4. Perform post-alignment clean-up
 5. Variant calling
 
-These workflows in bioinformatics adopt a plug-and-play approach in that the output of one tool can be easily
-used as input to another tool without any extensive configuration. Having standards for data formats is what
-makes this feasible. Standards ensure that data is stored in a way that is generally accepted and agreed upon
-within the community. The tools that are used to analyze data at different stages of the workflow are therefore
-built under the assumption that the data will be provided in a specific format.
+These workflows in bioinformatics adopt a plug-and-play approach in that the output of one tool can be easily used as input to another tool without any extensive configuration. Having standards for data formats is what makes this feasible. Standards ensure that data is stored in a way that is generally accepted and agreed upon within the community. The tools that are used to analyze data at different stages of the workflow are therefore built under the assumption that the data will be provided in a specific format.
+
+
+---
 
 ## Starting with data
 
@@ -85,7 +90,6 @@ To download the data, run the commands below.
 
 Here we are using the `-p` option for `mkdir`. This option allows `mkdir` to create the new directory, even if one of the parent directories does not already exist. It also supresses errors if the directory already exists, without overwriting that directory.
 
-It will take about 15 minutes to download the files.
 
 ```bash
 mkdir -p ~/dc_workshop/data/untrimmed_fastq/
@@ -106,11 +110,16 @@ The data comes in a compressed format, which is why there is a `.gz` at the end 
 $ gunzip SRR2584863_1.fastq.gz
 ```
 
+---
+
 ## Quality control
 
 We will now assess the quality of the sequence reads contained in our fastq files.
 
 ![](https://datacarpentry.org/wrangling-genomics/fig/var_calling_workflow_qc.png){alt='workflow\_qc'}
+
+
+---
 
 ### Details on the FASTQ format
 
@@ -180,6 +189,9 @@ CCCFFFFFGHHHHJIJJJJIJJJIIJJJJIIIJJGFIIIJEDDFEGGJIFHHJIJJDECCGGEGIIJFHFFFACD:BBBD
 we can now see that there is a range of quality scores, but that the end of the sequence is
 very poor (`#` = a quality score of 2).
 
+
+---
+
 ### Exercise
 
 What is the last read in the `SRR2584863_1.fastq ` file? How confident
@@ -205,9 +217,10 @@ in just a moment.
 
 ---
 
+##FASTQC
 At this point, let's install the program `fastqc`
 
-```
+```bash
 conda install fastqc
 ```
 
@@ -329,6 +342,9 @@ BUGS
     or in www.bioinformatics.babraham.ac.uk/bugzilla/
 ```
 
+---
+
+
 ### Assessing quality using FastQC
 
 In real life, you will not be assessing the quality of your reads by visually inspecting your
@@ -363,6 +379,9 @@ Now let's take a look at a quality plot on the other end of the spectrum.
 
 Here, we see positions within the read in which the boxes span a much wider range. Also, quality scores drop quite low into the "bad" range, particularly on the tail end of the reads. The FastQC tool produces several other diagnostic plots to assess sample quality, in addition to the one plotted above.
 
+
+---
+
 ### Running FastQC
 
 We will now assess the quality of the reads that we downloaded. First, make sure you are still in the `untrimmed_fastq` directory
@@ -370,6 +389,9 @@ We will now assess the quality of the reads that we downloaded. First, make sure
 ```bash
 $ cd ~/dc_workshop/data/untrimmed_fastq/
 ```
+
+
+---
 
 
 ### Exercise
@@ -472,6 +494,10 @@ inspection of our output files.
 $ cd ~/dc_workshop/results/fastqc_untrimmed_reads/
 ```
 
+
+---
+
+
 ### Viewing the FastQC results
 
 If we were working on our local computers, we would be able to look at
@@ -536,6 +562,8 @@ Depending on your system, you should be able to select and open them all at once
 in your file browser.
 
 
+---
+
 
 ### Exercise
 
@@ -549,6 +577,8 @@ worst?
 All of the reads contain usable data, but the quality decreases toward
 the end of the reads.
 
+
+---
 
 
 ### Decoding the other FastQC outputs
@@ -565,6 +595,9 @@ We have now looked at quite a few "Per base sequence quality" FastQC graphs, but
 - [**Overrepresented sequences**](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/9%20Overrepresented%20Sequences.html): A list of sequences that occur more frequently than would be expected by chance.
 - [**Adapter Content**](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/10%20Adapter%20Content.html): a graph indicating where adapater sequences occur in the reads.
 - [**K-mer Content**](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/11%20Kmer%20Content.html): a graph showing any sequences which may show a positional bias within the reads.
+
+
+---
 
 ### Working with the FastQC text output
 
@@ -727,6 +760,9 @@ WARN    Adapter Content SRR2584863_1.fastq
 The summary file gives us a list of tests that FastQC ran, and tells
 us whether this sample passed, failed, or is borderline (`WARN`). Remember, to quit from `less` you must type `q`.
 
+
+---
+
 ### Documenting our work
 
 We can make a record of the results we obtained for all our samples
@@ -738,6 +774,9 @@ it to `~/dc_workshop/docs`.
 ```bash
 $ cat */summary.txt > ~/dc_workshop/docs/fastqc_summaries.txt
 ```
+
+
+---
 
 
 
@@ -772,6 +811,9 @@ FAIL    Per base sequence content       SRR2589044_2.fastq.gz
 FAIL    Adapter Content SRR2589044_2.fastq.gz
 ```
 
+---
+
+
 ## Other notes  -- optional
 
 ### Quality encodings vary
@@ -786,6 +828,9 @@ but it is essential that you know which sequencing platform was
 used to generate your data, so that you can tell your quality control program which encoding
 to use. If you choose the wrong encoding, you run the risk of throwing away good reads or
 (even worse) not throwing away bad reads!
+
+
+---
 
 ### Same symbols, different meanings
 
@@ -808,6 +853,9 @@ the shell should redirect output or get the value of a variable.
 
 ### Time for lunch
 
+---
+
+
 
 ## Cleaning reads
 
@@ -821,6 +869,9 @@ though, that our samples should be thrown out! It is very common to have some qu
 We will use a program called
 [Trimmomatic](https://www.usadellab.org/cms/?page=trimmomatic) to
 filter poor quality reads and trim poor quality bases from our samples.
+
+
+---
 
 ## Trimmomatic options
 
@@ -899,12 +950,18 @@ In this example, we have told Trimmomatic:
 | `SLIDINGWINDOW:4:20`               | to use a sliding window of size 4 that will remove bases if their phred score is below 20                    | 
 
 
+---
+
+
 
 ## Multi-line commands
 
 Some of the commands we ran in this lesson are long! When typing a long
 command into your terminal, you can use the `\` character
 to separate code chunks onto separate lines. This can make your code more readable.
+
+
+---
 
 
 
@@ -956,6 +1013,9 @@ Quality encoding detected as phred33
 Input Read Pairs: 1107090 Both Surviving: 885220 (79.96%) Forward Only Surviving: 216472 (19.55%) Reverse Only Surviving: 2850 (0.26%) Dropped: 2548 (0.23%)
 TrimmomaticPE: Completed successfully
 ```
+
+
+---
 
 
 
@@ -1048,6 +1108,9 @@ SRR2584863_2un.trim.fastq.gz  SRR2589044_1.fastq.gz
 ```
 
 
+---
+
+
 ## Exercise
 
 We trimmed our fastq files with Nextera adapters,
@@ -1085,6 +1148,9 @@ SRR2584863_1un.trim.fastq.gz  SRR2584866_1un.trim.fastq.gz  SRR2589044_1un.trim.
 SRR2584863_2.trim.fastq.gz    SRR2584866_2.trim.fastq.gz    SRR2589044_2.trim.fastq.gz
 SRR2584863_2un.trim.fastq.gz  SRR2584866_2un.trim.fastq.gz  SRR2589044_2un.trim.fastq.gz
 ```
+
+
+---
 
 
 
@@ -1127,6 +1193,9 @@ other trimming tools like [cutadapt](https://cutadapt.readthedocs.io/en/stable/)
 downstream application. Trimmomatic did pretty well though, and its performance
 is good enough for our workflow.
 
+
+
+---
 
 
 ## Keypoints
