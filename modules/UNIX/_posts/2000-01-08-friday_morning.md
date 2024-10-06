@@ -58,7 +58,7 @@ $ mkdir -p results/sam results/bam results/bcf results/vcf
 ---
 
 
-#### Index the reference genome
+### Index the reference genome
 
 Our first step is to index the reference genome for use by BWA. Indexing allows the aligner to quickly find potential alignment sites for query sequences in a genome, which saves time during alignment. Indexing the reference only has to be run once. The only reason you would want to create a new index is if you are working with a different reference genome or you are using a different tool for alignment.
 
@@ -85,7 +85,7 @@ While the index is created, you will see output that looks something like this:
 ---
 
 
-#### Align reads to reference genome
+### Align reads to reference genome
 
 The alignment process consists of choosing an appropriate reference genome to map our reads against and then deciding on an
 aligner. We will use the BWA-MEM algorithm, which is the latest and is generally recommended for high-quality queries as it
@@ -125,7 +125,7 @@ You will see output that starts like this:
 ---
 
 
-##### SAM/BAM format
+#### SAM/BAM format
 
 The [SAM file](https://genome.sph.umich.edu/wiki/SAM),
 is a tab-delimited text file that contains information for each individual read and its alignment to the genome. While we do not
@@ -157,7 +157,7 @@ $ samtools view -S -b results/sam/SRR2584866.aligned.sam > results/bam/SRR258486
 ---
 
 
-#### Sort BAM file by coordinates
+### Sort BAM file by coordinates
 
 Next we sort the BAM file using the `sort` command from `samtools`. `-o` tells the command where to write the output.
 
@@ -200,13 +200,16 @@ This will give you the following statistics about your sorted bam file:
 ---
 
 
-### Variant calling
+## Variant calling
 
 A variant call is a conclusion that there is a nucleotide difference vs. some reference at a given position in an individual genome
 or transcriptome, often referred to as a Single Nucleotide Variant (SNV). The call is usually accompanied by an estimate of
 variant frequency and some measure of confidence. Similar to other steps in this workflow, there are a number of tools available for
 variant calling. In this workshop we will be using `bcftools`, but there are a few things we need to do before actually calling the
 variants.
+
+---
+
 
 ![](https://datacarpentry.org/wrangling-genomics/fig/variant_calling_workflow.png){alt='workflow'}
 
@@ -230,6 +233,9 @@ $ bcftools mpileup -O b -o results/bcf/SRR2584866_raw.bcf \
 
 We have now generated a file with coverage information for every base.
 
+---
+
+
 #### Step 2: Detect the single nucleotide variants (SNVs)
 
 Identify SNVs using bcftools `call`. We have to specify ploidy with the flag `--ploidy`, which is one for the haploid *E. coli*. `-m` allows for multiallelic and rare-variant calling, `-v` tells the program to output variant sites only (not every site in the genome), and `-o` specifies where to write the output file:
@@ -237,6 +243,9 @@ Identify SNVs using bcftools `call`. We have to specify ploidy with the flag `--
 ```bash
 $ bcftools call --ploidy 1 -m -v -o results/vcf/SRR2584866_variants.vcf results/bcf/SRR2584866_raw.bcf 
 ```
+
+---
+
 
 #### Step 3: Filter and report the SNV variants in variant calling format (VCF)
 
@@ -357,12 +366,18 @@ The Broad Institute's [VCF guide](https://www.broadinstitute.org/gatk/guide/arti
 to learn more about the VCF file format.
 
 
+---
+
+
 ### Exercise
 
 Use the `grep` and `wc` commands you have learned to assess how many variants are in the vcf file.
 
 
 Cheat answer: there are 766 variants in this file, but work that out for yourself!
+
+
+---
 
 
 ### Assess the alignment (visualization)
@@ -379,6 +394,9 @@ In order for us to visualize the alignment files, we will need to index the BAM 
 ```bash
 $ samtools index results/bam/SRR2584866.aligned.sorted.bam
 ```
+
+---
+
 
 #### Viewing with `tview`
 
@@ -431,6 +449,9 @@ this box, type the name of the "chromosome" followed by a colon and the position
 (e.g. for this sample, type `CP000819.1:50` to view the 50th base. Type `Ctrl^C` or `q` to exit `tview`.
 
 
+---
+
+
 ### Exercise
 
 Visualize the alignment of the reads for our `SRR2584866` sample. What variant is present at
@@ -444,6 +465,10 @@ Then type `g`. In the dialogue box, type `CP000819.1:4377265`.
 `G` is the variant. `A` is canonical. This variant possibly changes the phenotype of this sample to hypermutable. It occurs
 in the gene *mutL*, which controls DNA mismatch repair.   # Automating a Variant Calling Workflow
 
+
+---
+
+# Bonus exercise if time ane energy and skill permit!
 
 ## What is a shell script?
 
