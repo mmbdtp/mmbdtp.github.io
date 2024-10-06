@@ -46,8 +46,6 @@ Here's a detailed explanation of what you just did.
 
 ---
 
-**First command**
-
 `wget "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000005845.2/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCF_000005845.2.zip" -O coligenome.zip`
 
 1. **`wget`**:
@@ -78,8 +76,28 @@ This command uses `wget` to download a ZIP file from NCBI's Datasets API that co
 After running the command, you will have a ZIP file (`coligenome.zip`) that contains the genome and associated annotation files for *Escherichia coli str. K-12 substr. MG1655* from the NCBI Datasets API.
 
 ---
+The command `unzip coligenome.zip` is used to extract the contents of a ZIP archive file named `coligenome.zip`. Here's a breakdown of the command:
 
-**Second command**
+- **`unzip`**: This is the command that extracts files from a ZIP archive. It's used to decompress files that have been compressed using the ZIP format.
+  
+- **`coligenome.zip`**: This is the name of the ZIP file that you want to extract. In this case, it's a file named `coligenome.zip`.
+
+When you run the command, `unzip` will:
+1. Open the `coligenome.zip` archive.
+2. Extract its contents into the current directory.
+3. List the files it has extracted.
+
+If the ZIP file contains directories, `unzip` will also recreate the directory structure as it was in the original compressed archive.
+
+If you want to extract the files into a specific directory, you can use the `-d` option like this:
+
+```
+unzip coligenome.zip -d /path/to/destination
+```
+
+This would extract the contents of `coligenome.zip` into the specified directory.
+
+---
 
 `seqkit stats -T -a -G -i ncbi_dataset/data/GCF_000005845.2/GCF_000005845.2_ASM584v2_genomic.fna > coli_genome_stats.tsv`
 
