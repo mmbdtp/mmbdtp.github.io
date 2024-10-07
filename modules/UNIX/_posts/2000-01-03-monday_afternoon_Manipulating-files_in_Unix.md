@@ -98,7 +98,6 @@ cat Darwin.txt
 
 ### Downloading and searching a text file
 
-
 `curl` is a command-line tool used to transfer data to or from a server using various protocols, including HTTPS, FTP, and many more. It supports a wide range of operations, from downloading files and web pages to interacting with applications. Its versatility makes it a staple tool for developers and system administrators for tasks like web content retrieval, API testing, and file transfers.
 
 It's a very powerful yet complex  tool, but we will use it in a very simple way.
@@ -165,6 +164,9 @@ grep handsome voyage_of_the_beagle.txt > handsome.txt
 - How can you find out what is in the file handsome.txt
 
 
+---
+
+
 ### More grep 
 Here are a few useful variations of the `grep` command using different flags to demonstrate its flexibility. We’ll use "handsome" as the target word in *Voyage of the Beagle*.
 
@@ -222,6 +224,9 @@ grep -w "handsome" voyage_of_the_beagle.txt
 
 These variations of `grep` make it a powerful tool for finding exactly what you're looking for in any text!
 
+---
+
+
 
 ### File permissions in Unix
 
@@ -263,10 +268,16 @@ Here's how to interpret it:
 
 This output provides comprehensive information about the file's permissions, ownership, size, modification timestamp, and more, making it a useful reference when working with files and directories in a Unix-based system.
 
+
+---
+
 **Changing File permissions**
 
 ***`chmod`: Changing permissions**
 To modify permissions, use the `chmod` command. permissions are assigned using a numerical code or symbolic notation.
+
+
+---
 
 **Numerical Mode:**
 
@@ -282,6 +293,9 @@ Each permission is represented by a digit, with the sum of these digits represen
 * `g`: Group
 * `o`: Others
 * `a`: All (user, group, and others)
+
+
+---
 
 **Give read and write permissions to the user and group**
 
@@ -299,6 +313,9 @@ chmod u=rw,g=rw filename
 
 In this example, the 664 in numerical mode or u=rw,g=rw in symbolic mode grant read and write permissions to the user and group, while others have no permissions (o=).
 
+
+---
+
 **Give yourself permission to execute a file**
 
 *Numerical Mode:*
@@ -314,6 +331,9 @@ chmod u=rwx filename
 ```
 
 In this example, the 700 in numerical mode or u=rwx in symbolic mode grants read, write, and execute permissions to the user, while the group and others have no permissions (g=,o=).
+
+
+---
 
 **Give everyone full permissions to do anything to a file**
 
@@ -333,6 +353,8 @@ chmod a=rwx filename
 In this example, 777 in numerical mode grants read, write, and execute permissions to the user, group, and others. This setting allows anyone to do anything to the file.
 
 Remember that it's essential to use file permissions responsibly, especially when granting extensive permissions like 777, as it can pose security risks. Always consider the implications and only apply such permissive settings when necessary.
+
+---
 
 **Creating a Shell Script**
 
@@ -356,6 +378,9 @@ EOF
 ```
 Use ls -l to look at the file and its permissions.
 
+---
+
+
 **Making the Script Executable**
 
 To make the script executable, use the chmod command:
@@ -363,6 +388,9 @@ To make the script executable, use the chmod command:
 ```
 chmod +x replace_spaces.sh
 ```
+
+
+---
 
 
 **Running the Script**
@@ -387,6 +415,8 @@ In Unix-like operating systems, including macOS, when you want to run a script o
 
 By requiring `./`, Unix-like systems make it clear that you are running a command from the current directory intentionally, reducing the risk of accidentally executing a potentially harmful script with the same name as a system command. It's a safety measure to ensure that you explicitly indicate the location of the script you want to run.
 
+---
+
 **Editing permissions Using Finder**
 
 You can also change file permissions using the macOS Finder:
@@ -396,6 +426,8 @@ You can also change file permissions using the macOS Finder:
 * Expand the "Sharing & permissions" section.
 * Click the lock icon and enter your password to make changes.
 * Use the dropdown menus to adjust permissions for users and groups.
+
+---
 
 **Understanding "Root" and `sudo`**
 
@@ -409,13 +441,16 @@ Try this
 touch /etc/test_file.txt     
 ```
 
-To run a command as a superuser using sudo:
+To run a command as a superuser using `sudo`:
 
 ```
 sudo touch /etc/test_file.txt     
 ```
 
-Always exercise caution and avoid using sudo unless necessary.
+Always exercise caution and avoid using `sudo` unless necessary.
+
+
+---
 
 **macOS Security Considerations**
 
@@ -480,6 +515,9 @@ To make our tutorials easier, we will now rename the directory to learn_bash:
 mv learn_bash-2022 learn_bash
 ```
 
+---
+
+
 **find**
 
 
@@ -515,6 +553,9 @@ find learn_bash -name "*.faa"
 
 ```
 
+---
+
+
 **wild characters and shell expansion**
 
 
@@ -537,6 +578,9 @@ When we use this syntax, the command will receive the expanded list of matching 
 ls -lh learn_bash/files/*.png
 
 ```
+
+---
+
 
 **Text files**
 
@@ -578,6 +622,9 @@ To exit `less` and return to the shell prompt, press the `q` key. This action cl
 
 A useful option for `less` is `-S`, which will not wrap long lines, meaning that long lines will not be split. 
 
+
+---
+
 **cut**
 
 The [`cut`](https://manpages.org/cut) command is used to extract columns from a file. The general syntax is ‚'_cut -d DELIMITER -f FIELDS FILE(s)_‚'. By default the delimiter is a tab, so you don't need to specify
@@ -615,6 +662,9 @@ sed 's/,/---/' learn_bash/files/cars.csv
 
 ```
 
+
+---
+
 **sort**
 
 The [`sort`](https://manpages.org/sort) command is used to sort the lines of a file. By default, it sorts alphabetically.
@@ -632,6 +682,9 @@ Some options:
 
 sort -n -t, -k 2 learn_bash/files/cars.csv
 
+
+---
+
 **Typing multi-line commands**
 
 Sometimes our terminal can become too crammed with text, and we would like to type a command in multiple lines. This is possible with the `\` character, which tells the shell that the command continues on the next line. This can be useful to make commands clearer to read:
@@ -644,11 +697,15 @@ wget -O origin.txt \
 
 Note that when you type a backslash at the end of a line and then press enter, the shell will print a different prompt (usually a `>`), which means that the command is not finished yet. The greater-than is not to be confused with the redirection operator.
 
+---
+
+## End of Day 1
+
 And that's enough for one day!
 You really are now bioinformaticians, even if it doesn't yet feel like it!
 
 
-## End of Day 1
+
 
 ### Additional resources (optional)
 Follow the links in the column to the left to additional resources that you might want to explore in your own time to reinforce your learning. 
