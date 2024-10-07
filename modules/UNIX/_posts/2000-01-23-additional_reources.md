@@ -18,7 +18,7 @@ Here are some links to additional resources that you might want to explore in yo
 
 #### Online tutorials
 
-
+Explore Andrea Telatin's material here: [https://www.telatin.com](https://www.telatin.com)
 
 #### Learning resources
 * *Happy Belly Bioinformatics*: a great website from "Astrobiomike" which includes [Unix training](https://astrobiomike.github.io/unix/)
