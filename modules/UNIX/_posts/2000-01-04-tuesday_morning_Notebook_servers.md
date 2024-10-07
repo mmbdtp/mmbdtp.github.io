@@ -6,7 +6,7 @@ title: Tuesday Morning — Notebook servers and Conda Environments
 
 ---
 
-![]()
+![](https://github.com/mmbdtp/mmbdtp.github.io/blob/gh-pages/modules/UNIX/_posts/jupyter.jpg)
 
 ## Handling files and commands within a Jupyter Notebook Server
 
