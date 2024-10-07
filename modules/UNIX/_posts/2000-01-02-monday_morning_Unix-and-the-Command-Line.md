@@ -196,7 +196,7 @@ But most Unix-like systems will fail to recognise the file name if any character
 
 ---
 
-##Coffee break!
+## Coffee break!
 
 Let's now stop for 15 minutes  for a comfort and coffee break.
 
