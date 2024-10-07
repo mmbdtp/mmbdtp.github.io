@@ -6,7 +6,6 @@ title: Monday Morning — Introducing Unix
 
 Credits for today's sessions: material reworked from previous workshops by Andrea Telatin and fresh material from Mark Pallen
 
----
 
 ## Be excited! Be very excited! 
 
