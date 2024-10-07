@@ -161,7 +161,7 @@ What is the last read in the `SRR2584863_1.fastq ` file? How confident are you i
 
 ---
 
-##FASTQC
+## FASTQC
 At this point, let's install the program `fastqc`
 
 ```bash
