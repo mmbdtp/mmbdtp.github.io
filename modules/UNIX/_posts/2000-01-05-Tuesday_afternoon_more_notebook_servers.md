@@ -1,5 +1,5 @@
 ---
-title: Tuesday Afternoon— Using programs on Notebook servers 
+title: Tuesday Afternoon — Using programs on Notebook servers 
 ---
 
 ## More fun with programs 
@@ -48,24 +48,26 @@ Here's a detailed explanation of what you just did.
 
 `wget "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000005845.2/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCF_000005845.2.zip" -O coligenome.zip`
 
-1. `wget`:
+1. `wget`
    - This is a command-line utility used to **download files** from the internet. It is commonly used in Linux environments but is also available on other platforms.
 
-2. `"https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000005845.2/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCF_000005845.2.zip"`**:
+2. `"https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000005845.2/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCF_000005845.2.zip"`
    - This is the **URL** being passed to `wget`. It is a request to the NCBI Datasets API to download the genome data associated with the accession number **`GCF_000005845.2`**, which corresponds to a particular genome (in this case, *Escherichia coli str. K-12 substr. MG1655*).
 
    - The URL includes several important parameters:
-     - `accession/GCF_000005845.2/download`**: This is the NCBI identifier (GCF_000005845.2) for a specific genome assembly, and the command is asking for the download of this genome.
-     - `include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT`**: This specifies the **types of annotations** to include in the download. Specifically, it is asking for:
+     - `accession/GCF_000005845.2/download`: This is the NCBI identifier (GCF_000005845.2) for a specific genome assembly, and the command is asking for the download of this genome.
+     - `include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT`**: This specifies the **types of annotations** to include in the download.
+     
+   - Specifically, it is asking for:
        - **GENOME_FASTA**: The genome sequence in FASTA format.
        - **GENOME_GFF**: Genome feature information in GFF (General Feature Format).
        - **RNA_FASTA**: RNA sequences in FASTA format.
        - **CDS_FASTA**: Coding sequences (CDS) in FASTA format.
        - **PROT_FASTA**: Protein sequences in FASTA format.
        - **SEQUENCE_REPORT**: A report about the sequence, usually in a structured or tabular format.
-     - **`filename=GCF_000005845.2.zip`**: This specifies the **filename** for the ZIP file that will be downloaded from the NCBI. The ZIP file contains all the requested data.
+       - **`filename=GCF_000005845.2.zip`**: This specifies the **filename** for the ZIP file that will be downloaded from the NCBI. The ZIP file contains all the requested data.
 
-3. `-O coligenome.zip`**:
+3. `-O coligenome.zip`
    - The **`-O` option** in `wget` specifies the **output filename** for the downloaded file.
    - In this case, instead of saving the file with the default name (`GCF_000005845.2.zip`), the file will be saved locally as **`coligenome.zip`**.
 
@@ -104,30 +106,30 @@ This would extract the contents of `coligenome.zip` into the specified directory
 This command is using the **SeqKit** tool to generate statistics about a genome file in FASTA format, and then save the results to a file named `coli_genome_stats.tsv`.
 
 
-1. `seqkit stats`**:
+1. `seqkit stats`
    - This is the **subcommand** of the SeqKit tool used to calculate various statistics about sequences in a FASTA or FASTQ file. It provides information such as sequence length, GC content, number of sequences, and other useful metrics for analyzing genomic data.
 
-2. `-T`**:
+2. `-T`
    - This flag tells SeqKit to output the statistics in a **tabular format**, using tab-delimited columns. It makes the output easier to import into spreadsheet software or to process further in other tools.
 
-3. `-a`**:
+3. `-a`
    - The `-a` flag tells SeqKit to calculate and display **additional statistics**, including:
      - N50 (the sequence length at which 50% of the genome is covered by contigs of that length or longer).
      - N90 (same concept as N50, but with 90% coverage).
      - Total sequence length, etc.
    These additional metrics are useful for assessing genome assembly quality.
 
-4. `-G`**:
+4. `-G`
    - This flag **includes the GC content** in the statistics. GC content is a commonly analyzed metric that refers to the percentage of nucleotides in the sequences that are either guanine (G) or cytosine (C). The GC content can give insights into the composition and properties of the genome.
 
-5. `-i`**:
+5. `-i`
    - This flag **includes file information** (such as file name and file type) in the output. This can be helpful for keeping track of which file the statistics were calculated from, especially when handling multiple datasets.
 
-6. `ncbi_dataset/data/GCF_000005845.2/GCF_000005845.2_ASM584v2_genomic.fna`**:
+6. `ncbi_dataset/data/GCF_000005845.2/GCF_000005845.2_ASM584v2_genomic.fna`
    - This is the **input file**. It is the path to the FASTA file containing the genomic sequences for which you want to generate statistics.
    - This specific file is a genomic FASTA file for *Escherichia coli* strain K-12 (genome assembly ID: **GCF_000005845.2**).
 
-7. `> coli_genome_stats.tsv`**:
+7. `> coli_genome_stats.tsv`
    - The **`>` operator** is used to **redirect the output** of the command to a file.
    - In this case, the statistics calculated by SeqKit will be written to a file named **`coli_genome_stats.tsv`** instead of being displayed on the screen (standard output).
    - **`coli_genome_stats.tsv`** will be a tab-separated file (due to the `-T` flag) containing the genome statistics, which can be easily opened in a text editor or spreadsheet software for analysis.
