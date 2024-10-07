@@ -24,9 +24,11 @@ Before we get stuck in to using a Notebook server, let's set the scene with a sh
 ---
 
 
-### How to launch and access a notebook server
+### How to launch and access a CLIMB BIG DATA notebook server
 
-* !Need to add instructions on how to get to CLIMB-BIG-DATA's web interface! 
+* You have been sent an email invitation that explains how to access the CLIMB-BIG_DATA account interface Bryn [https://bryn.climb.ac.uk/](https://bryn.climb.ac.uk/) and set up an account.
+* Read this information about authentication:
+  * [https://docs.climb.ac.uk/getting-started/authentication/](https://docs.climb.ac.uk/getting-started/authentication/)
 * Using the navigation menu on the left hand side, select 'Notebook servers' under the 'Compute' subheading
 * Click the 'Launch notebook server' green action button on the right hand side
 * Select a 'Standard server'
