@@ -4,7 +4,7 @@ title: Thursday morning — Sequence Quality Control
 
 # Thursday morning — Sequence Quality Control 
 
-Credit: this material has been adapted from the [Data Carpentry](https://datacarpentry.org) lesson [Data Wrangling and Processing for Genomics](https://datacarpentry.org/wrangling-genomics/). The adaptations principally include making sure commands work on the CLIMB-BIG-DATA Notebook servers. All Carpentries instructional material is made available under the Creative Commons Attribution license. See [https://github.com/datacarpentry/wrangling-genomics/blob/main/LICENSE.md](https://github.com/datacarpentry/wrangling-genomics/blob/main/LICENSE.md).
+Credit: this material has been adapted from the [Data Carpentry](https://datacarpentry.org) lesson [Data Wrangling and Processing for Genomics](https://datacarpentry.org/wrangling-genomics/). The adaptations principally include making sure commands work on the CLIMB-BIG-DATA Notebook servers. All Carpentries instructional material, and therefore all material here, is made available under the Creative Commons Attribution license. See [https://github.com/datacarpentry/wrangling-genomics/blob/main/LICENSE.md](https://github.com/datacarpentry/wrangling-genomics/blob/main/LICENSE.md).
 
 
 
