@@ -4,7 +4,7 @@ title: Monday Morning — Introducing Unix
 
 # Monday Morning — Introducing Unix
 
-Credits for today's sessions: material reworked from previous workshops by Andrea Telatin and fresh material from Mark Pallen
+Credits for today's sessions: material reworked from previous workshops by Andrea Telatin and fresh material from Mark Pallen. ChatGPT used to proofread, expand on points and create images.
 
 
 ## Be excited! Be very excited! 
