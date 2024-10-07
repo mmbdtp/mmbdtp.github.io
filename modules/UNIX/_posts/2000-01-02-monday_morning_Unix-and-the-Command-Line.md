@@ -4,6 +4,8 @@ title: Monday Morning — Introducing Unix
 
 # Monday Morning — Introducing Unix
 
+Credits: material from previous workshops by Andrea Telatin and from Mark Pallen
+
 ---
 
 ## Be excited! Be very excited! 
