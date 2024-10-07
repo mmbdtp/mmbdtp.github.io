@@ -699,13 +699,17 @@ Note that when you type a backslash at the end of a line and then press enter, t
 
 ---
 
-## End of Day 1
+# End of Day 1
 
 And that's enough for one day!
-You really are now bioinformaticians, even if it doesn't yet feel like it!
+Okay, so you are now bioinformaticians. It may not feel like it, but you have started your journey into microbial bioinformatics! 
+
+Your brain has been rewired and you need a rest.
+
+![](https://raw.githubusercontent.com/mmbdtp/mmbdtp.github.io/gh-pages/modules/UNIX/_posts/rewired.jpg)
 
 
+---
 
-
-### Additional resources (optional)
-Follow the links in the column to the left to additional resources that you might want to explore in your own time to reinforce your learning. 
+### Additional resources 
+Follow the links in the column to the left to additional resources  and to the glossary that you might want to explore to reinforce your learning. 
