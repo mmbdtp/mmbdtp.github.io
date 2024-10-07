@@ -4,6 +4,7 @@ title: Tuesday Afternoon— Using programs on Notebook servers
 
 ## More fun with programs 
 
+---
 
 ### Quick analysis of an *E. coli* genome
 
