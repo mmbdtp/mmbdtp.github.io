@@ -4,7 +4,7 @@ title: Tuesday Morning — Notebook servers and Conda Environments
 
 # Tuesday Morning — Notebook servers and Conda Environments 
 
-Credits for today's sessions: material from previous tutorials by Andrea Telatin, CLIMB BIG DATA documentation, fresh material from Mark Pallen, Powerpoint presentation from Phil Ashton. ChatGPT used to proofread and to expand on some points.
+Credits for today's sessions: material from previous tutorials by Andrea Telatin, CLIMB BIG DATA documentation, fresh material from Mark Pallen, Powerpoint presentation from Phil Ashton, ChatGPT used to proofread, to expand on some points and create images.
 
 ---
 
