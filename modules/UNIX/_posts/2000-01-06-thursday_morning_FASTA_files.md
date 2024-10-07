@@ -18,52 +18,6 @@ title: Thursday morning — Sequence QC
 - To see a timeline of the experiment to date, check out this [figure](https://en.wikipedia.org/wiki/E._coli_long-term_evolution_experiment#/media/File:LTEE_Timeline_as_of_May_28,_2016.png), and this paper [Blount et al. 2008: Historical contingency and the evolution of a key innovation in an experimental population of *Escherichia coli*](https://www.pnas.org/content/105/23/7899).
 
 
----
-
-### View the metadata
-
-We will be working with three sample events from the **Ara-3** strain of this experiment, one from 5,000 generations, one from 15,000 generations, and one from 50,000 generations. The population changed substantially during the course of the experiment, and we will be exploring how (the evolution of a **Cit+** mutant and **hypermutability**) with our variant calling workflow. The metadata file associated with this lesson can be  [viewed in Github](https://github.com/datacarpentry/wrangling-genomics/blob/main/episodes/files/Ecoli_metadata_composite.csv). If you would like to know details of how the file was created, you can look at [some notes and sources here](https://github.com/datacarpentry/wrangling-genomics/blob/main/episodes/files/Ecoli_metadata_composite_README.md).
-
-This metadata describes information on the *Ara-3* clones and the columns represent:
-
-| Column           | Description                                     | 
-| ---------------- | ----------------------------------------------- |
-| strain           | strain name                                     | 
-| generation       | generation when sample frozen                   | 
-| clade            | based on parsimony-based tree                   | 
-| reference        | study the samples were originally sequenced for | 
-| population       | ancestral population group                      | 
-| mutator          | hypermutability mutant status                   | 
-| facility         | facility samples were sequenced at              | 
-| run              | Sequence read archive sample ID                 | 
-| read\_type        | library type of reads                           | 
-| read\_length      | length of reads in sample                       | 
-| sequencing\_depth | depth of sequencing                             | 
-| cit              | citrate-using mutant status                     | 
-
-
----
-
-### Challenge
-
-Based on the metadata, can you answer the following questions?
-
-1. How many different generations exist in the data?
-2. How many rows and how many columns are in this data?
-3. How many citrate+ mutants have been recorded in **Ara-3**?
-4. How many hypermutable mutants have been recorded in **Ara-3**?
-
-### Solution
-
-1. 25 different generations
-2. 62 rows, 12 columns
-3. 10 citrate+ mutants
-4. 6 hypermutable mutants
-
----
-
-
-
 ## Bioinformatic workflows
 
 When working with high-throughput sequencing data, the raw reads you get off of the sequencer will need to pass through a number of  different tools in order to generate your final desired output. The execution of this set of tools in a specified order is commonly referred to as a *workflow* or a *pipeline*.
