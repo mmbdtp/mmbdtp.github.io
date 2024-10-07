@@ -12,9 +12,9 @@ title: Thursday afternoon — Cleaning reads
 
 ## Cleaning reads
 
-In the previous episode, we took a high-level look at the quality of each of our samples using FastQC. We visualized per-base quality
+In the previous episode, we took a high-level look at the quality of each of our samples using `FastQC`. We visualized per-base quality
 graphs showing the distribution of read quality at each base across all reads in a sample and extracted information about which samples
-fail which quality checks. Some of our samples failed quite a few quality metrics used by FastQC. This does not mean, though, that our samples should be thrown out! It is very common to have some quality metrics fail, and this may or may not be a problem for your downstream application. 
+fail which quality checks. Some of our samples failed quite a few quality metrics used by `FastQC`. This does not mean, though, that our samples should be thrown out! It is very common to have some quality metrics fail, and this may or may not be a problem for your downstream application. 
 
 For our variant calling workflow, we will be removing some of the low quality sequences to reduce our false positive rate due to sequencing error.
 
@@ -27,7 +27,7 @@ You should have the hang of installing propgrams with Comda by now. Get on and i
 
 ## Trimmomatic options
 
-Trimmomatic has a variety of options to trim your reads. If we run the following command, we can see some of our options.
+`Trimmomatic` has a variety of options to trim your reads. If we run the following command, we can see some of our options.
 
 ```bash
 $ trimmomatic
@@ -49,7 +49,7 @@ This output shows us that we must first specify whether we have paired end (`PE`
 Next, we specify what flag we would like to run. For example, you can specify `threads` to indicate the number of
 processors on your computer that you want Trimmomatic to use. In most cases using multiple threads (processors) can help to run the trimming faster. These flags are not necessary, but they can give you more control over the command. The flags are followed by positional arguments, meaning the order in which you specify them is important.
 
-In paired end mode, Trimmomatic expects the two input files, and then the names of the output files. These files are described below. While, in single end mode, Trimmomatic will expect 1 file as input, after which you can enter the optional settings and lastly the name of the output file.
+In paired end mode, `Trimmomatic` expects the two input files, and then the names of the output files. These files are described below. While, in single end mode, Trimmomatic will expect 1 file as input, after which you can enter the optional settings and lastly the name of the output file.
 
 | option         | meaning                                                                                                      | 
 | -------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -60,7 +60,7 @@ In paired end mode, Trimmomatic expects the two input files, and then the names 
 | \<outputFile2P> | Output file that contains surviving pairs from the `_2` file.                                                          | 
 | \<outputFile2U> | Output file that contains orphaned reads from the `_2` file.                                                           | 
 
-The last thing trimmomatic expects to see is the trimming parameters:
+The last thing `Trimmomatic` expects to see is the trimming parameters:
 
 | step           | meaning                                                                                                      | 
 | -------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -79,7 +79,7 @@ analysis. It is important to understand the steps you are using to
 clean your data. For more information about the Trimmomatic arguments
 and options, see [the Trimmomatic manual](https://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf).
 
-However, a complete command for Trimmomatic will look something like the command below. This command is an example and will not work, as we do not have the files it refers to:
+However, a complete command for `Trimmomatic` will look something like the command below. This command is an example and will not work, as we do not have the files it refers to:
 
 ```bash
 $ trimmomatic PE -threads 4 SRR_1056_1.fastq SRR_1056_2.fastq  \
@@ -88,7 +88,7 @@ $ trimmomatic PE -threads 4 SRR_1056_1.fastq SRR_1056_2.fastq  \
               ILLUMINACLIP:SRR_adapters.fa SLIDINGWINDOW:4:20
 ```
 
-In this example, we have told Trimmomatic:
+In this example, we have told `Trimmomatic`:
 
 | code           | meaning                                                                                                      | 
 | -------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -110,9 +110,7 @@ In this example, we have told Trimmomatic:
 
 ## Multi-line commands
 
-Some of the commands we ran in this lesson are long! When typing a long
-command into your terminal, you can use the `\` character
-to separate code chunks onto separate lines. This can make your code more readable.
+Some of the commands we ran in this lesson are long! When typing a long command into your terminal, you can use the `\` character to separate code chunks onto separate lines. This can make your code more readable.
 
 
 ---
@@ -120,15 +118,15 @@ to separate code chunks onto separate lines. This can make your code more readab
 
 
 
-## Running Trimmomatic
+## Running `Trimmomatic`
 
-Now we will run Trimmomatic on our data. To begin, navigate to your `untrimmed_fastq` data directory:
+Now we will run `Trimmomatic` on our data. To begin, navigate to your `untrimmed_fastq` data directory:
 
 ```bash
 $ cd ~/dc_workshop/data/untrimmed_fastq
 ```
 
-We are going to run Trimmomatic on one of our paired-end samples.
+We are going to run `Trimmomatic` on one of our paired-end samples.
 While using FastQC we saw that Nextera adapters were present in our samples.
 The adapter sequences came with the installation of trimmomatic, so we will first copy these sequences into our current directory.
 
@@ -175,7 +173,7 @@ TrimmomaticPE: Completed successfully
 
 ## Exercise
 
-Use the output from your Trimmomatic command to answer the
+Use the output from your `Trimmomatic` command to answer the
 following questions.
 
 1) What percent of reads did we discard from our sample?
@@ -187,7 +185,7 @@ following questions.
 
 
 
-You may have noticed that Trimmomatic automatically detected the quality encoding of our sample. It is always a good idea to
+You may have noticed that `Trimmomatic` automatically detected the quality encoding of our sample. It is always a good idea to
 double-check this or to enter the quality encoding manually.
 
 We can confirm that we have our output files:
@@ -217,10 +215,8 @@ $ ls SRR2589044* -l -h
 -rw-rw-r-- 1 dcuser dcuser 271K Jul  6 22:33 SRR2589044_2un.trim.fastq.gz
 ```
 
-We have just successfully run Trimmomatic on one of our FASTQ files!
-However, there is some bad news. Trimmomatic can only operate on
-one sample at a time and we have more than one sample. The good news
-is that we can use a `for` loop to iterate through our sample files
+We have just successfully run `Trimmomatic` on one of our FASTQ files! However, there is some bad news. `Trimmomatic` can only operate on
+one sample at a time and we have more than one sample. The good news is that we can use a `for` loop to iterate through our sample files
 quickly!
 
 We unzipped one of our files before to work with it, let's compress it again before we run our for loop.
@@ -266,7 +262,6 @@ SRR2584863_2un.trim.fastq.gz  SRR2589044_1.fastq.gz
 We trimmed our fastq files with Nextera adapters, but there are other adapters that are commonly used.
 What other adapter files came with Trimmomatic? Take a look in `/home/jovyan/.conda/pkgs/trimmomatic-0.39-hdfd78af_2/share/trimmomatic-0.39-2/adapters/`
 
-
 We have now completed the trimming and filtering steps of our quality control process! Before we move on, let's move our trimmed FASTQ files
 to a new subdirectory within our `data/` directory.
 
@@ -291,8 +286,9 @@ SRR2584863_2un.trim.fastq.gz  SRR2584866_2un.trim.fastq.gz  SRR2589044_2un.trim.
 
 Now that our samples have gone through quality control, they should perform better on the quality tests run by FastQC. Go ahead and re-run FastQC on your trimmed FASTQ files and visualize the HTML files to see whether your per base sequence quality is higher after trimming.
 
-
 After trimming and filtering, what we hope is that our overall quality is much higher, we have a distribution of sequence lengths, and more samples pass adapter content. However, quality trimming is not perfect, and some programs are better at removing some sequences than others. Because our sequences still contain 3' adapters, it could be important to explore other trimming tools like [cutadapt](https://cutadapt.readthedocs.io/en/stable/) to remove these, depending on your downstream application. Trimmomatic did pretty well though, and its performance is good enough for our workflow.
 
 ___
 
+## End of Today's session
+And that's it for today. See you on Friday!
