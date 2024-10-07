@@ -623,31 +623,9 @@ $ cat */summary.txt > ~/dc_workshop/fastqc_summaries.txt
 
 Which samples failed at least one of FastQC's quality tests? What test(s) did those samples fail? Can you use `grep` to find out?
 
-
-
 ### Solution
 
-We can get the list of all failed tests using `grep`.
-
-```bash
-$ cd ~/dc_workshop/docs
-$ grep FAIL fastqc_summaries.txt
-```
-
-```output
-FAIL    Per base sequence quality       SRR2584863_2.fastq.gz
-FAIL    Per tile sequence quality       SRR2584863_2.fastq.gz
-FAIL    Per base sequence content       SRR2584863_2.fastq.gz
-FAIL    Per base sequence quality       SRR2584866_1.fastq.gz
-FAIL    Per base sequence content       SRR2584866_1.fastq.gz
-FAIL    Adapter Content SRR2584866_1.fastq.gz
-FAIL    Adapter Content SRR2584866_2.fastq.gz
-FAIL    Adapter Content SRR2589044_1.fastq.gz
-FAIL    Per base sequence quality       SRR2589044_2.fastq.gz
-FAIL    Per tile sequence quality       SRR2589044_2.fastq.gz
-FAIL    Per base sequence content       SRR2589044_2.fastq.gz
-FAIL    Adapter Content SRR2589044_2.fastq.gz
-```
+We can get the list of all failed tests using `grep` with the term FAIL.
 
 ---
 
