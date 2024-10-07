@@ -296,6 +296,8 @@ $ cd ~
 
 ``` 
 
+ - Unix nerd joke: There's no place like ~
+
 ---
 
 ### Listing files
@@ -350,12 +352,29 @@ Why bioinformatics students always feel nostalgic?
 
 - Because every time they feel lost, they'd just cd ~ and find themselves back home.
 
+A few silly commands for you to try:
 
-You already hate Unix??
+```bash
+$ yes you_must_stop_this_using_Ctrl_Z
+```
+
+```bash
+$ Say I hate Unix already, let me out of here
+```
+
+You say you already hate Unix??
 
 Take a look at this old classic, which has a good moan about many aspects of Unix: 
 
 - [The Unix-Haters handbook](https://web.mit.edu/~simsong/www/ugh.pdf)
+
+Or this track:
+- [Everybody hates Linux](https://www.youtube.com/watch?v=lb2MOSCJIw8)
+
+A few quotes on Unix:
+- "UNIX was not designed to stop you from doing stupid things, because that would also stop you from doing clever things."
+- "Unix is user-friendly. It's just picky about who its friends are."
+
 
 
 ---
