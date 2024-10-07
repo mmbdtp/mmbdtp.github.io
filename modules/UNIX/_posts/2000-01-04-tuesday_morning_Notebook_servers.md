@@ -19,7 +19,7 @@ Although your MacBooks run a version of Unix, most bioinformaticians prefer to u
 
 We will be using a Jupyter notebook server, which is an easy-to-access web-based platform that allows users to create and interact with Jupyter Notebooks, which in turn are documents that can contain live code, equations, visualizations, and text. The server runs the computational backend that provides command line access to a Linux shell, but can also processes code cells written in languages like Python, R, or Julia, and returns the output to the browser interface where users can view and manipulate results.
 
-Before we get stuck in to using a Notebook server, let's set the scene with a short **Powerpoint presentation**.
+Before we get stuck in to using a Notebook server, let's set the scene with a short [Powerpoint presentation](https://raw.githubusercontent.com/mmbdtp/mmbdtp.github.io/gh-pages/modules/UNIX/_posts/2000-01-10-jupyter_notebooks.pptx).
 
 ---
 
