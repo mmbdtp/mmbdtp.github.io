@@ -4,6 +4,11 @@ title: Thursday morning — Sequence Quality Control
 
 # Thursday morning — Sequence Quality Control 
 
+Credit: this material has been adapted from the [Data Carprentry](https://datacarpentry.org) lesson [Data Wrangling and Processing for Genomics](https://datacarpentry.org/wrangling-genomics/). The adaptations principally include making sure commands work on the CLIMB-BIG-DATA Notebook servers. All Carpentries instructional material is made available under the Creative Commons Attribution license. See [https://github.com/datacarpentry/wrangling-genomics/blob/main/LICENSE.md])(https://github.com/datacarpentry/wrangling-genomics/blob/main/LICENSE.md).
+
+
+
+
 ## The data
 
 - The data we are going to use is part of a long-term evolution experiment led by [Richard Lenski](https://en.wikipedia.org/wiki/E._coli_long-term_evolution_experiment).
