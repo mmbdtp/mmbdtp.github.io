@@ -167,6 +167,8 @@ We will now cover the importance of using a package manager called **Conda** for
 ![](https://raw.githubusercontent.com/mmbdtp/mmbdtp.github.io/gh-pages/modules/UNIX/_posts/Conda_logo.svg)
 
 
+Let's start with a [Powerpoint presentation](https://raw.githubusercontent.com/mmbdtp/mmbdtp.github.io/gh-pages/modules/UNIX/_posts/conda.pptx). 
+
 ---
 
 ### What is Conda?
