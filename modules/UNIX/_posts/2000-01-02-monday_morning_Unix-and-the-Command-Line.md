@@ -4,9 +4,11 @@ title: Monday Morning — Introducing Unix
 
 # Monday Morning — Introducing Unix
 
+---
+
 ## Be excited! Be very excited! 
 
-![](https://github.com/mmbdtp/mmbdtp.github.io/blob/gh-pages/modules/UNIX/_posts/excited.jpg)
+![](https://raw.githubusercontent.com/mmbdtp/mmbdtp.github.io/gh-pages/modules/UNIX/_posts/excited.jpg)
 
 Welcome to this introductory tutorial on using the Unix command line on your MacBooks. The command line is a powerful tool, enabling users to perform tasks more efficiently and automate processes. In this tutorial, we will explore the basics of navigating the file structure, creating and deleting files and directories and some essential Unix commands.
 
