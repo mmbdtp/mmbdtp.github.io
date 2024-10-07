@@ -346,8 +346,7 @@ Okay, so you are now bioinformaticians. It may not feel like it, but you have st
 
 ![](rewired.jpg)
 
-
-Finally, a couple of Unix in-jokes to end this session
+So how about a few Unix in-jokes to end this session
 
 Which command do Unix files hate to play hide-and-seek with?
 
