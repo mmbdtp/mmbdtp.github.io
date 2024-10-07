@@ -14,7 +14,7 @@ Welcome to this introductory tutorial on using the Unix command line on your Mac
 
 As we go along feel free to interrupt and ask questions if anything is unclear or not working for you. Demonstrators will be walking around the room checking that all is well. 
 
-If you want to raise questions or share insights, please also feel free to add text or links to this Google Doc:
+If you want to raise questions or share insights, please add text or links to this Google Doc:
 
 * [https://tinyurl.com/MMBDTP-doc](https://tinyurl.com/MMBDTP-doc)
 
