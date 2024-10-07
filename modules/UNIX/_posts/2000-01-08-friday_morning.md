@@ -4,6 +4,10 @@ title: Friday morning — Finding sequence variants
 
 # Finding sequence variants
 
+**Credit**: this material has been adapted from the [Data Carpentry](https://datacarpentry.org) lesson [Data Wrangling and Processing for Genomics](https://datacarpentry.org/wrangling-genomics/). The adaptations principally include making sure commands work on the CLIMB-BIG-DATA Notebook servers. All Carpentries instructional material, and therefore all material here, is made available under the Creative Commons Attribution license. See [https://github.com/datacarpentry/wrangling-genomics/blob/main/LICENSE.md](https://github.com/datacarpentry/wrangling-genomics/blob/main/LICENSE.md).
+
+
+
 ## How do I find sequence variants between my sample and a reference genome?
 
 We mentioned before that we are working with files from a long-term evolution study of an *E. coli* population (designated Ara-3). Now that we have looked at our data to make sure that it is high quality, and removed low-quality base calls, we can perform variant calling to see how the population changed over time. We care how this population changed relative to the original population, *E. coli* strain REL606. Therefore, we will align each of our samples to the *E. coli* REL606 reference genome, and see what differences exist in our reads versus the genome.
