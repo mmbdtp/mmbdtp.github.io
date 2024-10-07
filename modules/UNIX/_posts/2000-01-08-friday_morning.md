@@ -7,6 +7,9 @@ title: Friday morning — Finding sequence variants
 **Credit**: this material has been adapted from the [Data Carpentry](https://datacarpentry.org) lesson [Data Wrangling and Processing for Genomics](https://datacarpentry.org/wrangling-genomics/). The adaptations principally include making sure commands work on the CLIMB-BIG-DATA Notebook servers. All Carpentries instructional material, and therefore all material here, is made available under the Creative Commons Attribution license. See [https://github.com/datacarpentry/wrangling-genomics/blob/main/LICENSE.md](https://github.com/datacarpentry/wrangling-genomics/blob/main/LICENSE.md).
 
 
+---
+
+
 
 ## How do I find sequence variants between my sample and a reference genome?
 
@@ -479,6 +482,10 @@ in the gene *mutL*, which controls DNA mismatch repair.   # Automating a V
 if you are realy keen, work through the final lesson from the Data Carprentry course: [https://datacarpentry.org/wrangling-genomics/05-automation.html](https://datacarpentry.org/wrangling-genomics/05-automation.html)
 
 But note that you will probably have to adapt some of the commands to ensure they work okay on your Jupyter notebook server, as the Data Carprentry course is set up to run on Amazon Web Services (AWS) instances. Not for the faint-hearted.
+
+
+---
+
 
 ## That's enough for this week!
 As a reward for all your hard work, you should now take a look at this rap video that features Richard Lenski's research group along with Mark Pallen and his colleagues when he worked at Warwick. Have a great weekend!
