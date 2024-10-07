@@ -5,6 +5,7 @@ title: Tuesday Afternoon — Using programs on Notebook servers
 ## More fun with programs 
 
 ---
+![](https://raw.githubusercontent.com/mmbdtp/mmbdtp.github.io/gh-pages/modules/UNIX/_posts/coli.webp)
 
 ### Quick analysis of an *E. coli* genome
 
