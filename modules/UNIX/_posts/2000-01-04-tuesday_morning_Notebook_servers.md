@@ -6,6 +6,8 @@ title: Tuesday Morning — Notebook servers and Conda Environments
 
 ---
 
+![]()
+
 ## Handling files and commands within a Jupyter Notebook Server
 
 Although your MacBooks run a version of Unix, most bioinformaticians prefer to use Linux and so most programs and pipelines work best on Linux. In bioinformatics, most researchers also prefer to use remote virtual servers over their own personal (bare metal) machines for several important reasons:
