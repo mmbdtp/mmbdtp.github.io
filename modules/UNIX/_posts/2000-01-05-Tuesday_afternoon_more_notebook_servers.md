@@ -10,7 +10,7 @@ title: Tuesday Afternoon— Using programs on Notebook servers
 
 Let's do a quick analysis of an *E. coli* genome with `seqkit`.
 
-- **What is *E. coli*?**
+- **What is *Escherichia coli*?**
   - *E. coli* is a rod-shaped bacterium that can survive under a wide variety of conditions including variable temperatures, nutrient availability, and oxygen levels. Most strains are harmless, but some are associated with food-poisoning.
 
 - **Why is *E. coli* important?**
