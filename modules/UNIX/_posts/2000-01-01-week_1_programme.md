@@ -38,7 +38,7 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 
 
 - **Morning: Jupyter Notebooks**
-  - Leo leads with help from Mark and Sam
+  - Leo leads with help from Sam ± Mark
 
 - **Afternoon: Installing software and Conda environments**
   - Leo leads with help from Sam ± Mark
@@ -54,7 +54,7 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
   - Sam leads, with help from Mark and Wing
 
 - **Afternoon: Trimming Sequence Files**
-  - Sam leads, with help Wing ± Mark
+  - Sam leads, with help from Wing and Leo
 
 ***
 
