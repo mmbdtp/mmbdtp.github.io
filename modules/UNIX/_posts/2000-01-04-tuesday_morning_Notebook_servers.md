@@ -164,6 +164,9 @@ sudo touch file.txt
 
 We will now cover the importance of using a package manager called **Conda** for installing software and managing environments, especially when working in Jupyter Notebooks on complex bioinformatics projects.
 
+![](https://raw.githubusercontent.com/mmbdtp/mmbdtp.github.io/gh-pages/modules/UNIX/_posts/conda.svg)
+
+
 ---
 
 ### What is Conda?
