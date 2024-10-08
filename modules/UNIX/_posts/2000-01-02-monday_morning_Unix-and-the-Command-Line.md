@@ -13,7 +13,7 @@ Credits for today's sessions: material reworked from previous workshops by Andre
 
 Welcome to this introductory tutorial on using the Unix command line on your MacBooks. The command line is a powerful tool, enabling users to perform tasks more efficiently and automate processes. In this tutorial, we will explore the basics of navigating the file structure, creating and deleting files and directories and some essential Unix commands.
 
-As we go along feel free to interrupt and ask questions if anything is unclear or not working for you. Demonstrators will be walking around the room checking that all is well. 
+As we go along feel free to interrupt and ask questions, if anything is unclear or not working for you. Demonstrators will be walking around the room checking that all is well. 
 
 If you want to raise questions or share insights, please add text or links to this Google Doc:
 
@@ -29,15 +29,15 @@ Most of the week will be taken up with hands-on sessions, but before you get you
 
 Okay, let's get started! 
 
-Click on the magnifying glass icon (Spotlight) in the top-right corner of your MacBook screen.
+Click on the magnifying glass icon (`Spotlight`) in the top-right corner of your MacBook screen.
 
-Type `Terminal` and press `Enter`.
+Type `Terminal` and press `Enter`. then double-click on `Terminal.app`
 
-Alternatively, you can open the *Applications* folder, then *Utilities* and double-click on *Terminal*.
+Alternatively, you can open the `Applications` folder, then `Utilities` and double-click on `Terminal`.
 
-- After you have opened the Terminal, if you mouse over the icon for the Terminal in the Dock and select _Options_, you can tell macOS to keep the icon available in your Dock.
+- After you have opened the `Terminal` , if you mouse over the icon for the `Terminal`  in the Dock and select _Options_, you can tell macOS to keep the icon available in your Dock.
 
-You should now see a window with a command-line prompt.
+You should now see a window with a **command-line prompt**.
 
 
 ```
@@ -46,21 +46,23 @@ computername:~ username$
 ```
 The command-line prompt typically displays the name of your computer, the current working directory and your username. It ends with a `$` sign, waiting for you to enter a command. 
 
-When you first open the Terminal app, you are likely to find yourself in your home directory associated with your username and account on the MacBook. The tilde sign ~ represents a shortcut designation for that directory within Unix file systems.
+When you first open the `Terminal` app, you are likely to find yourself in your **home directory** associated with your username and account on the MacBook. The tilde sign `~` represents a shortcut designation for that directory within Unix file systems.
 
-The terms `terminal` and `shell` are often used interchangeably, but they refer to different things.
+The terms `Terminal` and `shell` are often used interchangeably, but they refer to different things.
 
-* `Terminal`: This is the actual interface or program that opens a window and lets you interact with the shell. The terminal displays input and output. It's the graphical or text-based application you run, like the Terminal app on macOS or programs like iTerm2.
-* `Shell`: The shell is the environment or command-line interpreter that processes commands. When you type commands into a terminal, it's the shell that reads, interprets, and executes those commands. There are various shells available, with `bash` being one of the most common, especially on Linux. You will see lots of online material mentioning the `bash` shell. Others include `sh, zsh, csh`, and `fish`.
+* **Terminal**: This is the actual interface or program that opens a window and lets you interact with the shell. The terminal displays input and output. It's the graphical or text-based application you run, like the Terminal app on macOS or programs like iTerm2.
+* **Shell**: The shell is the environment or command-line interpreter that processes commands. When you type commands into a terminal, it's the shell that reads, interprets, and executes those commands. There are various shells available, with `bash` being one of the most common, especially on Linux. You will see lots of online material mentioning the `bash` shell. Others include `sh, zsh, csh`, and `fish`.
 
-When you're using the Terminal app on macOS, you're typically using the Z shell `zsh` within that terminal to execute commands. If you need to switch to another shell, say `bash`, you type its name. 
+When you're using the `Terminal` app on macOS, you're typically using the Z shell or  `zsh` within that terminal to execute commands. If you need to switch to another shell, say `bash`, you type its name. 
 
-Let's switch to `bash` and then back to `zsh`. 
+Let's switch to `bash`. 
 
 
 ```
 bash
 ```
+
+And then back to `zsh`. 
 
 ```
 zsh
@@ -74,19 +76,18 @@ A few links
 
 ---
 
-
 ### Navigation: macOS Finder vs Terminal
 
 - **Finder** : You navigate through files and folders by clicking on them.
 - **Terminal** : You navigate by typing commands then pressing the Return key
 
-Navigate to your home directory and then to the Desktop directory using the Finder. Now let's navigate to the Desktop on the Terminal and create some directories and files there.
+Navigate to your `home directory` and then to the `Desktop` directory using the Finder. Now let's navigate to the `Desktop` on the `Terminal` and create some directories and files there.
 
 ```bash
 $ cd Desktop
 
 ```
-In this command `cd` (short for "change directory") changes your current directory to the Desktop directory. You type the command, then a space and then the name of the file or directory you want the command to act on. This is how most Unix commands work. 
+In this command `cd` (short for "change directory") changes your current directory to the `Desktop` directory. You type the command, then a space and then the name of the file or directory you want the command to act on. This is how most Unix commands work. 
 
 Almost all Unix commands also have Wikipedia entries.
 
@@ -97,13 +98,12 @@ Almost all Unix commands also have Wikipedia entries.
 Here's a cheat sheet of UNIX commands from Fosswire: 
 - [Unix/Linux Command Cheat Sheet](https://files.fosswire.com/2007/08/fwunixref.pdf)
 
-ChatGPT ([https://chatgpt.com](https://chatgpt.com)) will also give good answers to well posed questions about what a Unix command does and how to get the best out of it.
+ChatGPT ([https://chatgpt.com](https://chatgpt.com)) will also give good answers to well posed questions about what a Unix command does and how to get the best out of it. Try asking it to tell you about the command `cd`, the common problems with using `cd` or a joke related to `cd`.
 
 ---
 
-
 ### Making directories and files
-Let's make a new directory in the Desktop folder
+Let's make a new directory in the `Desktop` folder
 
 ```bash
 $ mkdir bioinfo_adventures
@@ -120,30 +120,40 @@ $ cd bioinfo_adventures
 
 ```
 Let's use the `touch` command to create an empty file
+- Note that the touch command in Unix-like operating systems is primarily used for creating empty files or updating the timestamps of existing files.
 
-Look at it on the Finder. Click on it. You will see it is empty.
+
 
 ```bash
 $ touch grandeur.txt
 
 ```
+
+Look at the file `grandeur.txt` on the Finder. Click on it. You will see it is empty.
+
 Let's add some text.
 
 ```bash
 $ echo "There is grandeur in this view of life" > grandeur.txt
 
 ```
+
 `echo` makes the shell return the text as an output and the `>` redirects that output into the file named `grandeur.txt`. 
 
 - See [https://en.wikipedia.org/wiki/Redirection_(computing)](https://en.wikipedia.org/wiki/Redirection_(computing))
 
 Click on the `grandeur.txt` file in the Finder and you can see it now contains the text.
 
-In Unix, file names can have extensions (such as .txt, .jpg, or .sh) to indicate the file type or its intended use, but these extensions are not mandatory for the system to recognize or handle the file. Unlike some operating systems (e.g., Windows), Unix doesn’t rely on file extensions to determine a file's type. Instead, Unix uses a file’s metadata or inspects the file contents through tools like file to identify its format.
+---
 
-For example, while a text file might have a .txt extension for clarity, Unix would still be able to manipulate the file based on the actual content or the program interacting with the file.
 
-This flexibility allows users and programs to handle files more efficiently without strictly depending on extensions for functionality.
+### File extensions
+In Unix, file names can have extensions (such as .txt, .jpg, or .sh) to indicate the file type or its intended use, but these extensions are not mandatory for the system to recognize or handle the file. Unlike some operating systems (e.g., Windows), Unix doesn’t rely on file extensions to determine a file's type. Instead, Unix uses a file’s metadata or inspects the file contents through programs like `file` to identify its format. For example, while a text file might have a .txt extension for clarity, Unix would still be able to manipulate the file without an extension based on the actual content or the program interacting with the file.
+
+```bash
+$ file grandeur.txt
+
+```
 
 ---
 
@@ -200,10 +210,150 @@ macOS is forgiving if you type `Cd Bioinfo_fun` or `CD bioinfo_fun` instead of `
 
 But most Unix-like systems will fail to recognise the file name if any character is not in the right case.
 
+### Escape characters
+
+It's worth spending a few minutes picking up on that idea of escape characters.
+
+In Unix-like operating systems, certain characters have special meanings in the shell, which can cause issues when used in file names. These characters might be interpreted as commands or part of the command syntax. **Escape characters** allow you to handle these special characters in file names by neutralizing their effects, ensuring they are treated as literal characters.
+
+### Common Special Characters in File Names:
+Some characters that need to be escaped or handled carefully include:
+- **Spaces** (` `)
+- **Dollar sign** (`$`)
+- **Asterisk** (`*`)
+- **Ampersand** (`&`)
+- **Exclamation mark** (`!`)
+- **Backslash** (`\`)
+- **Parentheses** (`(` and `)`)
+- **Brackets** (`[` and `]`)
+- **Single quote** (`'`)
+- **Double quote** (`"`)
+- **Pipe** (`|`)
+- **Semicolon** (`;`)
+- **Angle brackets** (`<` and `>`)
+- **Tilde** (`~`)
+
+If these characters are used in file names without proper handling, the shell may interpret them as commands, arguments, or metacharacters (wildcards), leading to unexpected behavior.
+
+### Ways to Escape Characters in File Names:
+
+1. **Backslash (`\`) Escape:**
+   - Use a backslash before a special character to escape it, so the shell interprets it as a literal character rather than a special one.
+   - Example: Escaping a space in a file name.
+     ```bash
+     touch file\ name.txt
+     ```
+     This will create a file called `file name.txt` instead of interpreting the space as a separator.
+
+   - Another example: Escaping an ampersand (`&`).
+     ```bash
+     mv file\&name.txt newfile.txt
+     ```
+
+2. **Single Quotes (`' '`) Around the File Name:**
+   - Enclosing the file name in single quotes treats everything inside as a literal string, including special characters.
+   - Example: Creating a file name with a space and exclamation mark.
+     ```bash
+     touch 'file name!.txt'
+     ```
+     This will create a file named `file name!.txt`.
+
+   - Single quotes are useful when dealing with complex combinations of special characters, as they neutralize everything inside the quotes.
+
+3. **Double Quotes (`" "`) Around the File Name:**
+   - Double quotes work similarly to single quotes but allow for variable and command substitution (unlike single quotes, which treat everything literally).
+   - Example:
+     ```bash
+     touch "file name with spaces.txt"
+     ```
+     This will create a file called `file name with spaces.txt`.
+
+4. **Using `\` or Quotes in File Paths:**
+   - You can use backslashes or quotes when dealing with paths that contain special characters.
+   - Example:
+     ```bash
+     cd /home/user/special\ folder/
+     ```
+     or
+     ```bash
+     cd "/home/user/special folder/"
+     ```
+
+### Special Characters and Their Effects:
+
+1. **Spaces (` `):**
+   - If not escaped, spaces are interpreted as separating arguments. For instance:
+     ```bash
+     mv file name.txt
+     ```
+     This will try to move `file` and `name.txt` separately, which is not the intention. Escaping spaces:
+     ```bash
+     mv file\ name.txt
+     ```
+     or
+     ```bash
+     mv "file name.txt"
+     ```
+
+2. **Dollar Sign (`$`):**
+   - The dollar sign is used for variable substitution. If you have `$` in a file name, it must be escaped.
+   ```bash
+   touch \$file.txt
+   ```
+
+3. **Asterisk (`*`):**
+   - `*` is a wildcard character used to match multiple files. To handle a file that contains an asterisk, escape it:
+   ```bash
+   touch file\*.txt
+   ```
+
+4. **Ampersand (`&`):**
+   - The ampersand runs commands in the background. Escaping it ensures it’s treated as part of the file name:
+   ```bash
+   touch file\&name.txt
+   ```
+
+5. **Parentheses (`(` and `)`):**
+   - Parentheses are used for grouping commands. To use them in file names, escape them:
+   ```bash
+   touch file\(test\).txt
+   ```
+
+6. **Single Quote (`'`):**
+   - Single quotes inside file names can be tricky. Escape each individual quote:
+   ```bash
+   touch file\'s_name.txt
+   ```
+
+7. **Exclamation Mark (`!`):**
+   - The exclamation mark is used for command history. Escape it:
+   ```bash
+   touch file\!.txt
+   ```
+
+8. **Backslash (`\`):**
+   - The backslash itself is an escape character, so you need to escape it when used in file names:
+   ```bash
+   touch file\\name.txt
+   ```
+
+### Using `ls` and Wildcards Carefully:
+When listing files with wildcards, be careful with special characters in file names, as they can cause confusion. For example:
+```bash
+ls *.txt
+```
+This lists all `.txt` files, but won’t correctly handle files with special characters unless they are escaped or quoted.
+
+### Summary:
+- Special characters in Unix file names may need to be **escaped** using backslashes (`\`), single quotes (`' '`), or double quotes (`" "`).
+- The most common characters that require escaping include spaces, `$`, `*`, `&`, `!`, and `()`.
+- Understanding how to escape characters ensures that file names are correctly interpreted by the shell.
 
 ---
 
 ## Coffee break!
+
+![](https://m.media-amazon.com/images/I/517VAiwmYHL._AC_SL1200_.jpg)
 
 Let's now stop for 15 minutes  for a comfort and coffee break.
 
