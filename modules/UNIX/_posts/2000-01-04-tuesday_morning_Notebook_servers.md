@@ -147,7 +147,7 @@ Feel free to try out whatever other commands interest you!
 ---
 
 
-**There is no sudo here**
+**There is no `sudo` here**
 
 One Unix command that you cannot use on this Notebook server is `sudo`. Try it
 ```
@@ -157,7 +157,9 @@ sudo touch file.txt
 
 ---
 
-**Coffee break**
+## Coffee break
+
+![](https://i.etsystatic.com/23518642/r/il/c25800/3730770915/il_1588xN.3730770915_ioh0.jpg)
 
 ---
 
