@@ -568,7 +568,8 @@ You say you already hate Unix??
 
 Take a look at this old classic, which has a good moan about many aspects of Unix: 
 
-- [The Unix-Haters handbook](https://web.mit.edu/~simsong/www/ugh.pdf)
+ - [![The Unix-Haters Handbook](https://upload.wikimedia.org/wikipedia/en/3/35/UNIX-HATERS_Handbook_cover_ISBN_1-56884-203-1.png)](https://web.mit.edu/~simsong/www/ugh.pdf)
+
 
 Or this track:
 - [Everybody hates Linux](https://www.youtube.com/watch?v=lb2MOSCJIw8)
