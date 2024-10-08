@@ -36,20 +36,88 @@ An example of the workflow we will be using for our variant calling analysis is 
 
 These workflows in bioinformatics adopt a plug-and-play approach in that the output of one tool can be easily used as input to another tool without any extensive configuration. Having standards for data formats is what makes this feasible. Standards ensure that data is stored in a way that is generally accepted and agreed upon within the community. The tools that are used to analyze data at different stages of the workflow are therefore built under the assumption that the data will be provided in a specific format.
 
+---
+
+## Sequence data
+
+### Representing nucleotides 
+During sequencing, the nucleotide bases in a DNA or RNA sample (library) are determined by the sequencer. For each fragment in the library, a sequence is generated, also called a read, which is simply a succession of nucleotides. The sequence of a read is represented by a string of letters, where each letter represents a nucleotide base. The most common nucleotide bases are adenine (A), cytosine (C), guanine (G), and thymine (T). In RNA, thymine is replaced by uracil (U). 
+
+Sequencing instruments may also give ambiguous signals, which are represented by the letters R, Y, S, W, K, M, B, D, H, V, and N. This convention was set by the International Union of Pure and Applied Chemistry (IUPAC) in 1985. These letters represent the following combinations of nucleotides:
+
+| IUPAC nucleotide code | Base                |
+|-----------------------|---------------------|
+| A                     | Adenine             |
+| C                     | Cytosine            |
+| G                     | Guanine             |
+| T (or U)              | Thymine (or Uracil) |
+| R                     | A or G              |
+| Y                     | C or T              |
+| S                     | G or C              |
+| W                     | A or T              |
+| K                     | G or T              |
+| M                     | A or C              |
+| B                     | C or G or T         |
+| D                     | A or G or T         |
+| H                     | A or C or T         |
+| V                     | A or C or G         |
+| N                     | any base            |
+| . or -                | gap                 |
+
+> N means the base could not be determined. This is different from a gap, which means the base is not present in the sequence.
+
+Read [Johnson 2010](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2865858/) for more details. 
+ 
+**Quick task: Convert the following sequences to all possible combinations**
+
+```
+ATGRCTAYCGTG
+```
+
+```
+ATGNATC-GTG
+```
 
 ---
 
-## Starting with data
 
-Often times, the first step in a bioinformatic workflow is getting the data you want to work with onto a computer where you can work with it. If you have outsourced sequencing of your data, the sequencing center will usually provide you with a link that you can use to download your data. Today we will be working with publicly available sequencing data.
+## Sequence file formats
+While we talk about file "formats" for sequencing data these are not the same as file formats for commercial programs such as MS Word or binary file formats. These are simply text files with a particular structure. This means that you can open these files and read them as plain text even if the file extension is `.fastq`, `.fasta` and so on. 
+
+Here are some common genomics sequence file formats, some of which we have worked or will soon be working on;. 
+
+| Format               | Description                                            |
+|----------------------|--------------------------------------------------------|
+| _FASTA_                | A text-based format for representing nucleotide or protein sequences. Each sequence is represented by a header line starting with '>', followed by the sequence data.       |
+| _FASTQ_                | A format for representing both nucleotide sequences and their corresponding quality scores. Each record contains a sequence and quality scores in a readable text format.        |
+| _SAM (Sequence Alignment/Map)_ | A tab-delimited text format for storing sequence alignment data, often used for mapping short reads to a reference genome.      |
+| _BAM (Binary Alignment/Map)_ | A binary version of the SAM format, which is more compact and efficient for large datasets. Used for storing sequence alignment data.        |
+| _VCF (Variant Call Format)_ | A text-based format for representing genetic variations, including single nucleotide polymorphisms (SNPs), insertions, deletions, and structural variants.        |
+| _BCF (Binary Call Format)_ |  A binary version of the VCF format, which is more compact and efficient for large datasets.        |
+| _BED (Browser Extensible Data)_ | A text-based format for representing genomic intervals, such as regions of interest, gene annotations, and functional elements.        |
+| _GFF/GTF (General Feature Format/General Transfer Format)_ | Text-based formats for representing genomic features, including genes, exons, and other structural elements. GFF is often used in older annotations, while GTF is commonly used in more recent annotations.   |
+| _FAST5_               | A format used by Oxford Nanopore Technologies (ONT) for storing raw sequencing data produced by their nanopore sequencing platforms. |
+
+
+
+---
+
+
+## Let's get to the sequence data
+
+Often, the first step in a bioinformatic workflow is getting the data you want to work with onto a computer where you can work with it. If you have outsourced sequencing of your data, the sequencing center will usually provide you with a link that you can use to download your data. Today we will be working with publicly available sequencing data.
 
 We are studying a population of *Escherichia coli* (designated Ara-3), which were propagated for more than 50,000 generations in a glucose-limited minimal medium. We will be working with three samples from this experiment, one from 5,000 generations, one from 15,000 generations, and one from 50,000 generations. The population changed substantially during the course of the experiment, and we will be exploring how with our variant calling workflow.
 
-The data are paired-end, so we will download two files for each sample. We will use the [European Nucleotide Archive](https://www.ebi.ac.uk/ena) to get our data. The ENA "provides a comprehensive record of the world's nucleotide sequencing information, covering raw sequencing data, sequence assembly information and functional annotation." The ENA also provides sequencing data in the fastq format, an important format for sequencing reads that we will be learning about today.
+But before we download the data, let's spend a minute explaining **shotgun sequencing**. 
 
-To download the data, run the commands below.
+**Shotgun sequencing** is a method used to determine the DNA sequence of an organism's genome. In this approach, the entire genome is broken into small, random fragments, which are then sequenced individually. The term "shotgun" comes from the randomness of the fragmentation, similar to how shotgun pellets scatter. After sequencing, these small fragments are computationally pieced together by finding overlapping regions between the fragments. This method is highly efficient for large genomes because it allows parallel sequencing of different regions of the genome, leading to faster results compared to other sequencing methods.
 
-Here we are using the `-p` option for `mkdir`. This option allows `mkdir` to create the new directory, even if one of the parent directories does not already exist. It also supresses errors if the directory already exists, without overwriting that directory.
+**Paired-end data** is a specific type of data produced in sequencing where both ends of a DNA fragment are sequenced. In paired-end sequencing, DNA fragments are sequenced from both directions, producing two reads: one from each end. The distance between these two reads is often known, which provides valuable information for assembling genomes, especially when dealing with repetitive regions or complex genomes. Paired-end sequencing improves accuracy in genome assembly and makes it easier to align sequences to reference genomes, especially when working with longer DNA fragments.
+
+The data are **paired-end**, so we will download two files for each sample. We will use the [European Nucleotide Archive](https://www.ebi.ac.uk/ena) to get our data. The ENA "provides a comprehensive record of the world's nucleotide sequencing information, covering raw sequencing data, sequence assembly information and functional annotation." The ENA also provides sequencing data in the fastq format, an important format for sequencing reads that we will be learning about today.
+
+To download the data, run the commands below. Here we are using the `-p` option for `mkdir`. This option allows `mkdir` to create the new directory, even if one of the parent directories does not already exist. It also supresses errors if the directory already exists, without overwriting that directory.
 
 
 ```bash
