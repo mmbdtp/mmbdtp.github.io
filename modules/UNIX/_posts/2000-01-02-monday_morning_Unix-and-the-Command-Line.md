@@ -353,7 +353,7 @@ This lists all `.txt` files, but won’t correctly handle files with special cha
 
 ## Coffee break!
 
-![](https://m.media-amazon.com/images/I/517VAiwmYHL._AC_SL1200_.jpg)
+![](https://en.wikipedia.org/wiki/Sudo#/media/File:Sudo_logo.png)
 
 Let's now stop for 15 minutes  for a comfort and coffee break.
 While slurping, ask ChatGPT to give you a joke based on `mkdir`.
