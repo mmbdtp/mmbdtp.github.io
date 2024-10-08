@@ -475,13 +475,19 @@ macOS includes security features like [Gatekeeper](https://en.wikipedia.org/wiki
 This afternoon we will learn how to manipulate and analyse text files on the Unix command line.
 
 
-**Downloading our toy files**
+---
+
+
+**Downloading some toy files**
 
 Let's download an archive with some toy files to use in the next sections. This time we use a command called `wget`, which stands for 'web get'
 
 ```
 wget "https://github.com/telatin/learn_bash/archive/refs/tags/2022.tar.gz"
 ```
+
+---
+
 
 **tar: extracting the archive**
 
@@ -604,7 +610,7 @@ If we want, we can print only the lines (with `-l`), words (with `-w`) or charac
 How many lines are there in `learn_bash/files/README.md`?
 
 
-You have now met the commands _wc_, _head_ and _tail_: they are all non-interactive commands. To interactively browse a file, we can use the [`less`](https://manpages.org/less) command.
+You have now met the commands `wc`, `head` and `tail`: they are all non-interactive commands. To interactively browse a file, we can use the [`less`](https://manpages.org/less) command.
 
 ```
 
@@ -635,7 +641,7 @@ A useful option for `less` is `-S`, which will not wrap long lines, meaning that
 
 **cut**
 
-The [`cut`](https://manpages.org/cut) command is used to extract columns from a file. The general syntax is ‚'_cut -d DELIMITER -f FIELDS FILE(s)_‚'. By default the delimiter is a tab, so you don't need to specify
+The [`cut`](https://manpages.org/cut) command is used to extract columns from a file. The general syntax is `cut -d DELIMITER -f FIELDS FILE(s)`. By default the delimiter is a tab, so you don't need to specify
 
 ```
 
@@ -703,7 +709,7 @@ wget -O origin.txt \
 
 ```
 
-Note that when you type a backslash at the end of a line and then press enter, the shell will print a different prompt (usually a `>`), which means that the command is not finished yet. The greater-than is not to be confused with the redirection operator.
+Note that when you type a backslash at the end of a line and then press enter, the shell will print a different prompt (usually a `>`), which means that the command is not finished yet. This greater-than is not to be confused with the redirection operator.
 
 ---
 
@@ -719,5 +725,5 @@ Your brain has been rewired and you need a rest.
 
 ---
 
-### Additional resources 
+# Additional resources 
 Follow the links in the column to the left to additional resources  and to the glossary that you might want to explore to reinforce your learning. 
