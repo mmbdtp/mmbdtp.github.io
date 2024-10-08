@@ -526,7 +526,7 @@ $ clear
 
 ### Time for lunch
 
-![](https://en.wikipedia.org/wiki/File:Sudo_logo.png)
+![](https://upload.wikimedia.org/wikipedia/commons/1/1d/Sudo_logo.png)
 
 
 How about a few Unix in-jokes to end this session
