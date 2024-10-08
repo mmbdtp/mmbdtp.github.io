@@ -529,6 +529,11 @@ $ clear
 ![](https://upload.wikimedia.org/wikipedia/commons/1/1d/Sudo_logo.png)
 
 
+
+---
+
+
+
 How about a few Unix in-jokes to end this session
 
 Which command do Unix files hate to play hide-and-seek with?
