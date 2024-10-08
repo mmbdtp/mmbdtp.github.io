@@ -153,10 +153,7 @@ very poor (`#` = a quality score of 2).
 
 ---
 
-### Exercise
-
-What is the last read in the `SRR2584863_1.fastq ` file? How confident are you in this read?
-
+**Quick question**: What is the last read in the `SRR2584863_1.fastq ` file? How confident are you in this read?
 
 
 ---
@@ -338,14 +335,10 @@ $ cd ~/dc_workshop/data/untrimmed_fastq/
 ---
 
 
-### Exercise
-
-How big are the files?
-(Hint: Look at the options for the `ls` command to see how to show
+**Quick question**:  How big are the files? (Hint: Look at the options for the `ls` command to see how to show
 file sizes.)
 
-
-There are six FASTQ files ranging from 124M (124MB) to 545M.
+(PS There are six FASTQ files ranging from 124M (124MB) to 545M.)
 
 
 FastQC can accept multiple file names as input, and on both zipped and unzipped files, so we can use the \*.fastq\* wildcard to run FastQC on all of the FASTQ files in this directory.
@@ -430,11 +423,10 @@ Then work through all the others, again focusing on "Per base sequence quality" 
 
 ---
 
-### Exercise
-
-Discuss your results with a neighbour. 
-Which sample(s) looks the best in terms of per base sequence quality? 
-Which sample(s) look the worst?
+**Quick questions** 
+- Discuss your results with a neighbour. 
+- Which sample(s) looks the best in terms of per base sequence quality? 
+- Which sample(s) look the worst?
 
 ---
 
@@ -619,16 +611,14 @@ $ cat */summary.txt > ~/dc_workshop/fastqc_summaries.txt
 
 
 
-### Exercise
+**Quick questions** Which samples failed at least one of FastQC's quality tests? What test(s) did those samples fail? Can you use `grep` to find out?
 
-Which samples failed at least one of FastQC's quality tests? What test(s) did those samples fail? Can you use `grep` to find out?
-
-### Solution
-
-We can get the list of all failed tests using `grep` with the term FAIL.
+(PS you can get the list of all failed tests using `grep` with the term FAIL).
 
 ---
 
-### Time for lunch
+# Time for lunch
 
+
+![](https://cdn11.bigcommerce.com/s-4q0pjazhsg/images/stencil/1280x1280/products/38545/97810/1__42010.1706343928.jpg?c=3)
 ---
