@@ -171,7 +171,7 @@ TrimmomaticPE: Completed successfully
 
 
 
-## Exercise
+**Quick questions**:
 
 Use the output from your `Trimmomatic` command to answer the
 following questions.
@@ -257,10 +257,9 @@ SRR2584863_2un.trim.fastq.gz  SRR2589044_1.fastq.gz
 ---
 
 
-## Exercise
-
-We trimmed our fastq files with Nextera adapters, but there are other adapters that are commonly used.
-What other adapter files came with Trimmomatic? Take a look in `/home/jovyan/.conda/pkgs/trimmomatic-0.39-hdfd78af_2/share/trimmomatic-0.39-2/adapters/`
+**Quick questions**:
+- We trimmed our fastq files with Nextera adapters, but there are other adapters that are commonly used.
+- What other adapter files came with Trimmomatic? Take a look in `/home/jovyan/.conda/pkgs/trimmomatic-0.39-hdfd78af_2/share/trimmomatic-0.39-2/adapters/`
 
 We have now completed the trimming and filtering steps of our quality control process! Before we move on, let's move our trimmed FASTQ files
 to a new subdirectory within our `data/` directory.
