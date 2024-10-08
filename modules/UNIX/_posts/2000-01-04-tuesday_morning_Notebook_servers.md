@@ -275,13 +275,13 @@ conda install -y -c bioconda seqkit
 The FASTA format is a simple text file format, and it’s as widely used as it is old (1985). Each sequence has a name, extra information (comments) and the sequence itself, and one or more sequences can be stored in the same file, one after the other. The sequence itself can span multiple lines.
 
 Here an example:
-
+```fasta
 >P01013 GENE X PROTEIN (OVALBUMIN-RELATED)
 QIKDLLVSSSTDLDTTLVLVNAIYFKGMWKTAFNAEDTREMPFHVTKQESKPVQMMCMNNSFNVATLPAE
 KMKILELPFASGDLSMLVLLPDEVSDLERIEKTINFEKLTEWTNPNTMEKRRVKVYLPQMKIEEKYNLTS
 VLMALGMTDLFIPSANLTGISSAESLKISQAVHGAFMELSEDGIEMAGSTGVIEDIKHSPESEQFRADHP
 FLFLIKHNPTNTIVYFGRYWSP
-
+```
 The header line must start with a “>” character.
 The sequence identifier, or sequence name, it’s P01013 (the first word before a white space)
 The sequence comment, in this example, is “GENE X PROTEIN (OVALBUMIN-RELATED)”
