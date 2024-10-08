@@ -210,6 +210,9 @@ macOS is forgiving if you type `Cd Bioinfo_fun` or `CD bioinfo_fun` instead of `
 
 But most Unix-like systems will fail to recognise the file name if any character is not in the right case.
 
+---
+
+
 ### Escape characters
 
 It's worth spending a few minutes picking up on that idea of escape characters.
@@ -234,6 +237,9 @@ Some characters that need to be escaped or handled carefully include:
 - **Tilde** (`~`)
 
 If these characters are used in file names without proper handling, the shell may interpret them as commands, arguments, or metacharacters (wildcards), leading to unexpected behavior.
+
+---
+
 
 ### Ways to Escape Characters in File Names:
 
@@ -278,6 +284,9 @@ If these characters are used in file names without proper handling, the shell ma
      ```bash
      cd "/home/user/special folder/"
      ```
+
+---
+
 
 ### Special Characters and Their Effects:
 
@@ -349,7 +358,9 @@ This lists all `.txt` files, but won’t correctly handle files with special cha
 - The most common characters that require escaping include spaces, `$`, `*`, `&`, `!`, and `()`.
 - Understanding how to escape characters ensures that file names are correctly interpreted by the shell.
 
+
 ---
+
 
 ## Coffee break!
 
@@ -455,11 +466,15 @@ $ cd ~
 
 ``` 
 
+---
+
+
 **Unix nerd joke**: 
 Q. What did Dorothy say at the end of her first Unix tutorial?
 A. There's no place like ~
 
 ---
+
 
 ### Listing files
 
@@ -495,12 +510,12 @@ $ clear
 
 ```
 
-
 ---
+
 
 ### Time for lunch
 
-![](https://en.wikipedia.org/wiki/Sudo#/media/File:Sudo_logo.png)
+![](https://en.wikipedia.org/wiki/File:Sudo_logo.png)
 
 How about a few Unix in-jokes to end this session
 
