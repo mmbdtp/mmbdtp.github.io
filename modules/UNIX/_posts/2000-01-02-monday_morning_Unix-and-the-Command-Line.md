@@ -367,7 +367,7 @@ If these characters are used in file names without proper handling, the shell ma
 
 ## Coffee break!
 
-![](https://en.wikipedia.org/wiki/Sudo#/media/File:Sudo_logo.png)
+![](https://m.media-amazon.com/images/I/517VAiwmYHL._AC_SL1200_.jpg)
 
 Let's now stop for 15 minutes  for a comfort and coffee break.
 While slurping, ask ChatGPT to give you a joke based on `mkdir`.
