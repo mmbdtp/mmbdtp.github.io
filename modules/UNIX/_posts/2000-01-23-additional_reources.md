@@ -10,7 +10,7 @@ Here are some links to additional resources that you might want to explore in yo
 * [Command Line Crash Course](https://www.youtube.com/watch?v=yz7nYlnXLfE)
 * [Beginner's guide to the Bash terminal](https://www.youtube.com/watch?v=oxuRxtrO2Ag)
   
-#### Lockdown Learning Bioinformatics-along**:
+#### Lockdown Learning Bioinformatics-along
 
 * [The linux file system](https://www.youtube.com/watch?v=P8OmVPd82NI&list=PLzfP3sCXUnxGpXB3NsG2WOk2txomLIwX6&index=2)
 * [Working with Files](https://www.youtube.com/watch?v=QHmDPMgeheA&list=PLzfP3sCXUnxGpXB3NsG2WOk2txomLIwX6&index=3)
