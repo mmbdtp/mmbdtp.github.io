@@ -356,6 +356,7 @@ This lists all `.txt` files, but won’t correctly handle files with special cha
 ![](https://m.media-amazon.com/images/I/517VAiwmYHL._AC_SL1200_.jpg)
 
 Let's now stop for 15 minutes  for a comfort and coffee break.
+While slurping, ask ChatGPT to give you a joke based on `mkdir`.
 
 ___
 
@@ -372,7 +373,7 @@ $ pwd
 The result will look something like this.
 
 ```bash
-$ /Users/username/Desktop/bioinfo_adventures/bioinfo_fun
+/Users/username/Desktop/bioinfo_adventures/bioinfo_fun
 
 ```
 The forward slashes list the directories down from the topmost directory, which is called the `root` directory.
@@ -384,44 +385,44 @@ Every location (file or directory) in the file system can be described either:
     - for example
   
 ```bash
-$   /users/admin/steve
+/users/admin/steve
 ```
   
-- as a `relative path`, that is the path from the current directory to the location, so if we are inside a directory called `jon` within the directory called `admin` it would be
+- as a `relative path`, that is the path from the current directory to the location, so if we are inside the directory called `admin`, the path to the same directory would be
 
 ```bash
-$ ../admin/steve
+$ steve
 ```
   
 
 Let's clarify these concepts:
 
-**Absolute paths** (almost) always start with /, and they are the same for everyone, no matter where they are in the file system. 
+**Absolute paths** (almost) always start with `/`, and they are the same for everyone, no matter where they are in the file system. 
 
  - Each absolute path is crafted separating with slashes the names of the directories in the path. The final trailing slash (for directories) is optional, but it's wrong if the path is for a file.
 
 - This is an absolute path for a directory
   
 ```bash
-$ /users/admin/steve
+/users/admin/steve
 ```
 
 
 - This is an absolute path for a file
  
 ```bash
-$ /users/admin/list.txt
+/users/admin/list.txt
 ```
 
  
-**Relative paths** never start with / and they are different depending on where they are in the file system.
+**Relative paths** never start with `/` and they are different depending on where they are in the file system.
 
  - Your current directory is represented by the dot `.`
  - The parent directory is represented by `..`
  - Example: this means that you want to access a file inside a directory that is two levels above your current directory
 
 ```bash
-$ ../../directory/file.txt
+../../directory/file.txt
 ```
 
 Remember that if you don't know where you are, you can always use `pwd` to print the current directory (its output is an absolute path).
@@ -438,24 +439,25 @@ Type that command now.
 
 Note that how `cd` can take an absolute or relative path as a parameter. 
 
- - If you type `cd` on its own it takes you to your home directory. 
+If you type `cd` on its own it takes you to your home directory. 
 
- - If you want to return to your previous directory, you can use `cd -`
+If you want to return to your previous directory, you can use `cd -`
 This a very useful feature that allows you to quickly switch between your current directory and the last directory you were working in. It is especially helpful when you need to jump back and forth between two directories without manually typing long paths every time. Here’s how it works:
-
    - When you change directories using `cd` <directory_path>, your previous working directory is stored in memory.
 Using the `cd -` command, you can return to this previous directory.
 If you use `cd -`  again, you will go back to the directory you originally came from.
 
   
-- As noted, the tilde character `~` is a shortcut for the home directory of the current user, so if "Steve" is the active user, the home directory is ` /users/admin/steve ` which can be written as `~ `, so you can also cd to your home directory with
+As noted, the tilde character `~` is a shortcut for the home directory of the current user, so if "Steve" is the active user, the home directory is ` /users/admin/steve ` which can be written as `~ `, so Steve can also `cd` to their home directory with
 
 ```bash
 $ cd ~
 
 ``` 
 
- - Unix nerd joke: There's no place like ~
+**Unix nerd joke**: 
+Q. What did Dorothy say at the end of her first Unix tutorial?
+A. There's no place like ~
 
 ---
 
@@ -479,7 +481,7 @@ $ . .. bioinfo fun bioinfo_fun grandeur.txt
 
 In this case, it reveals shortcuts to the directory above with two dots `..` and a single dot `.`, which is a shortcut referring to the current directory.
 
-If you specify a directory, the ls command will list the contents of that directory.
+If you specify a directory, the `ls` command will list the contents of that directory.
 
 ```bash
 $ ls ~/Desktop
@@ -496,8 +498,9 @@ $ clear
 
 ---
 
-
 ### Time for lunch
+
+![](https://en.wikipedia.org/wiki/Sudo#/media/File:Sudo_logo.png)
 
 How about a few Unix in-jokes to end this session
 
