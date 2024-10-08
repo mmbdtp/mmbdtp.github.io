@@ -356,13 +356,6 @@ If these characters are used in file names without proper handling, the shell ma
    touch file\\name.txt
    ```
 
-### Using `ls` and Wildcards Carefully:
-When listing files with wildcards, be careful with special characters in file names, as they can cause confusion. For example:
-```bash
-ls *.txt
-```
-This lists all `.txt` files, but won’t correctly handle files with special characters unless they are escaped or quoted.
-
 ### Summary:
 - Special characters in Unix file names may need to be **escaped** using backslashes (`\`), single quotes (`' '`), or double quotes (`" "`).
 - The most common characters that require escaping include spaces, `$`, `*`, `&`, `!`, and `()`.
