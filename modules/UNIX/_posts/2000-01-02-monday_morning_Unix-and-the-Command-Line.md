@@ -409,6 +409,8 @@ Every location (file or directory) in the file system can be described either:
 $ steve
 ```
   
+---
+
 
 Let's clarify these concepts:
 
