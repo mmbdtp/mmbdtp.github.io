@@ -8,7 +8,7 @@ Welcome back, newly formed bioinformaticians!
 
 Let's get stuck into some more Unix commands. 
 
-Make sure you are back in the directory `bioinfo_adventures`!
+Make sure you are back in the directory `bioinfo_adventures`.
 
 If we want to copy a file, we use the `cp` command. Let's copy the file `grandeur.txt` to create a new file called `Darwin.txt`
 
@@ -24,9 +24,14 @@ If we want to remove a file, we use the command `rm`
 rm Darwin.txt
 
 ```
+
 What do you see with `ls` now?
 
 - Remember the similar command `rmdir`, which works to remove directories—but only if they are empty.
+
+
+**Take care with`rm`!**: In Unix, the `rm` (remove) command is one of the most powerful—and dangerous—tools. When you use `rm`, it **permanently deletes files and directories** without sending them to a recycle bin or trash. Once a file is removed, it is usually impossible to recover without advanced tools. Be especially careful when using wildcards like `*`, which can remove multiple files at once. Adding the `-r` (recursive) option will delete entire directories, including their contents, making `rm -rf` particularly unforgiving. Always double-check your commands, or use `rm -i` to prompt before each removal.
+
 
 If we want to rename or move a file, we use the `mv` command. If we just issue the command and a file name, it renames the file. Try this and then see what you see with `ls`
 
@@ -114,7 +119,7 @@ Here's a breakdown of the command:
 
 We now have a text file of Darwin's *Voyage of the Beagle*.
 
-Remember the command 'cat'? `cat` will direct the entire contents of a file to the screen. Sometimes files are large, or even impossibly large, and we save our sanity if we just print the first (or last) lines of a file. The `head` and `tail` commands are used for this purpose. Compare outputs of these commands
+Remember the command `cat` will direct the entire contents of a file to the screen. Sometimes files are large, or even impossibly large, and we save our sanity if we just print the first (or last) lines of a file. The `head` and `tail` commands are used for this purpose. Compare outputs of these commands
 
 
 ```
@@ -146,14 +151,12 @@ The `grep` command is another powerful command.
 
 - [https://en.wikipedia.org/wiki/Grep](https://en.wikipedia.org/wiki/Grep)
 
-Let's use it in a very simple way to find all the lines in which Darwin mentions Patagonia
+Let's use it in a very simple way to find all the lines in which Darwin uses the term `handsome`
 
 ```
 grep handsome voyage_of_the_beagle.txt
 
 ```
-
-Lots listed! Might be worth using that `clear` command.
 
 Remember we can redirect the output of a command using `>`
 
@@ -161,7 +164,7 @@ Remember we can redirect the output of a command using `>`
 grep handsome voyage_of_the_beagle.txt > handsome.txt
 
 ```
-- How can you find out what is in the file handsome.txt
+- How can you find out what is in the file `handsome.txt`?
 
 
 ---
@@ -171,35 +174,35 @@ grep handsome voyage_of_the_beagle.txt > handsome.txt
 Here are a few useful variations of the `grep` command using different flags to demonstrate its flexibility. We’ll use "handsome" as the target word in *Voyage of the Beagle*.
 
 
-### Case-Insensitive Search
+**Case-Insensitive Search**
 The `-i` flag makes the search case-insensitive, so it will match "Handsome," "handsome," or any other capitalization.
 
 ```bash
 grep -i "handsome" voyage_of_the_beagle.txt
 ```
 
-### Print Line Numbers
+**Print Line Numbers**
 The `-n` flag adds line numbers to the output, which can be handy for reference.
 
 ```bash
 grep -n "handsome" voyage_of_the_beagle.txt
 ```
 
-### Invert Match (Lines that *Don't* Contain the Word)
+**Invert Match (Lines that *Don't* Contain the Word)**
 The `-v` flag inverts the match, showing all lines that *don't* contain the search term.
 
 ```bash
 grep -v "handsome" voyage_of_the_beagle.txt
 ```
 
-### Count Matches
+**Count Matches**
 The `-c` flag counts the number of lines that contain matches, instead of displaying them.
 
 ```bash
 grep -c "handsome" voyage_of_the_beagle.txt
 ```
 
-###  Show Context (Before and After Matches)
+**Show Context (Before and After Matches)**
 The `-B` and `-A` flags show the number of lines before and after each match, respectively. Here's how to show 3 lines before and after each match:
 
 ```bash
@@ -207,7 +210,7 @@ grep -B 3 -A 3 "handsome" voyage_of_the_beagle.txt
 ```
  - what was Darwin forced to admit about the ladies of Buenos Aires?
    
-### Show Only Matching Words
+**Show Only Matching Words**
 The `-o` flag will print only the matched part of the line. 
 
 ```bash
@@ -215,7 +218,7 @@ grep -o "handsome" voyage_of_the_beagle.txt
 ```
 
 
-### Show Whole Words Only
+**Show Whole Words**
 The `-w` flag ensures that `grep` only matches whole words. Without it, `grep` would also match substrings (e.g., "handsome" would match part of "handsomest").
 
 ```bash
@@ -224,11 +227,12 @@ grep -w "handsome" voyage_of_the_beagle.txt
 
 These variations of `grep` make it a powerful tool for finding exactly what you're looking for in any text!
 
+
 ---
 
 
 
-### File permissions in Unix
+## File permissions in Unix
 
 Unix-based systems, including macOS, manage file and directory access through permissions. These permissions determine who can read, write, or execute files and directories. permissions are divided into three categories for each file: user, group, and others. For more details, check the [https://en.wikipedia.org/wiki/File-system_permissions](Wikipedia page on Unix file permissions).
 
@@ -254,7 +258,7 @@ Here is how it looks for one particular file on my computer. The format will be 
 ls -l -rw-r--r--@ 1 mksmab staff 1207982 4 Oct 11:22 voyage_of_the_beagle.txt 
 ```
 
-The output from ls -l -rw-r--r--@ 1 mksmab staff 1207982 4 Oct 11:22 voyage_of_the_beagle.txt represents file information in a long format. 
+The output from 'ls -l -rw-r--r--@ 1 mksmab staff 1207982 4 Oct 11:22 voyage_of_the_beagle.txt' represents file information in a long format. 
 
 Here's how to interpret it:
 
@@ -271,7 +275,8 @@ This output provides comprehensive information about the file's permissions, own
 
 ---
 
-**Changing File permissions**
+
+### Changing File permissions 
 
 ***`chmod`: Changing permissions**
 To modify permissions, use the `chmod` command. permissions are assigned using a numerical code or symbolic notation.
@@ -297,7 +302,7 @@ Each permission is represented by a digit, with the sum of these digits represen
 
 ---
 
-**Give read and write permissions to the user and group**
+**Give read and write permissions to user and group**
 
 *Numerical Mode:*
 
@@ -335,7 +340,7 @@ In this example, the 700 in numerical mode or u=rwx in symbolic mode grants read
 
 ---
 
-**Give everyone full permissions to do anything to a file**
+**Give everyone permission to do anything to a file**
 
 *Numerical Mode:*
 
@@ -356,9 +361,9 @@ Remember that it's essential to use file permissions responsibly, especially whe
 
 ---
 
-**Creating a Shell Script**
+## Creating a Shell Script
 
-A shell script is a text file that contains a series of commands and instructions written in a scripting language, typically designed for command-line interaction. These scripts are executed by a shell interpreter, which is often the default command-line interface  of an operating system, such as Bash on most Unix-like systems or zsh on macOS.
+A *shell script* is a text file that contains a series of commands and instructions written in a scripting language, typically designed for command-line interaction. These scripts are executed by a shell interpreter, which is often the default command-line interface  of an operating system, such as Bash on most Unix-like systems or zsh on macOS.
 
 Shell scripts are used to automate tasks, execute a sequence of commands, or perform system administration tasks in a more efficient and repeatable manner. They can include conditional statements, loops, variables, and other programming constructs, allowing users to create complex sequences of actions. Shell scripts are widely used for tasks like file manipulation, data processing, system maintenance, and more. They are a fundamental tool for power users, system administrators, and developers working in command-line environments.
 
@@ -376,6 +381,7 @@ for file in *; do
 done
 EOF
 ```
+
 Use ls -l to look at the file and its permissions.
 
 ---
@@ -403,7 +409,7 @@ Execute the script in your current directory:
 
 This script replaces spaces with underscores in all filenames within the current directory.
 
-*Hang on!* **Why** do we need that `./` in front of the script name?
+*Hang on!* *Why* do we need that `./` in front of the script name?
 
 In Unix-like operating systems, including macOS, when you want to run a script or an executable file located in the current directory, you typically need to prefix the command with `./`. Here's why:
 
@@ -429,9 +435,9 @@ You can also change file permissions using the macOS Finder:
 
 ---
 
-**Understanding "Root" and `sudo`**
+**Understanding `Root` and `sudo`**
 
-"Root" is the superuser in Unix-based systems with unrestricted access. `sudo` (superuser do) allows authorized users to execute commands as the superuser or another user. sudo is often needed to install programs on Unix-like systems because many system-level tasks, including software installation and configuration, require administrative privileges. Be cautious when using sudo as it can modify system files. Learn more on the Wikipedia page about sudo.
+`Root` is the superuser in Unix-based systems with unrestricted access. `sudo` (superuser do) allows authorized users to execute commands as the superuser or another user. sudo is often needed to install programs on Unix-like systems because many system-level tasks, including software installation and configuration, require administrative privileges. Be cautious when using sudo as it can modify system files. Learn more on the Wikipedia page about sudo.
 
 For example, on the macOS you logged in as a user don't have permission to add a file to one of the directories used by the operating system. 
 
@@ -448,17 +454,19 @@ sudo touch /etc/test_file.txt
 ```
 
 Always exercise caution and avoid using `sudo` unless necessary.
-
+With sudo, you have the power to modify or delete critical system files, change user permissions, and alter the system in ways that can lead to serious, sometimes irreparable, damage. An accidental `sudo rm` or other poorly written command can cause system-wide issues.
 
 ---
 
 **macOS Security Considerations**
 
-macOS includes security features like Gatekeeper and SIP (System Integrity Protection) that restrict the execution of programs and scripts to ensure system integrity. You may encounter permission issues when running scripts or software downloaded from the internet. To overcome this, you can adjust security settings in the System Preferences to allow execution of specific applications and scripts. Always be vigilant about the security implications when modifying these settings to protect your system. It's because macOS is so fussy about such things that we will be moving ton to Notebook servers tomorrow and not trying to install any software on your MacBooks.
+macOS includes security features like [Gatekeeper](https://en.wikipedia.org/wiki/Gatekeeper_(macOS)) and [SIP (System Integrity Protection)](https://en.wikipedia.org/wiki/System_Integrity_Protection) that restrict the execution of programs and scripts to ensure system integrity. You may encounter permission issues when running scripts or software downloaded from the internet. To overcome this, you can adjust security settings in the System Preferences to allow execution of specific applications and scripts. Always be vigilant about the security implications when modifying these settings to protect your system. It's because macOS is so fussy about such things that we will be moving on to to Notebook servers tomorrow and not trying to install any bioinformatics software on your MacBooks. Also,some bioinformatics software may not yet be optimized for the Apple Silicon (ARM64) processors. To run these applications, Apple provides Rosetta 2, which translates x86_64 instructions for ARM processors. Yet more faff!
 
 ---
 
 ### Time for coffee!
+
+![](https://i.etsystatic.com/7847606/r/il/aa7b33/2211275942/il_1588xN.2211275942_2pz9.jpg)
 
 ---
 
