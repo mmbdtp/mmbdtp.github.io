@@ -411,7 +411,7 @@ $ steve
   
 ---
 
-
+## Absolute and Relative Paths
 Let's clarify these concepts:
 
 **Absolute paths** (almost) always start with `/`, and they are the same for everyone, no matter where they are in the file system. 
