@@ -6,6 +6,8 @@ title: MMB DTP Bioinformatics Course Week 1 — Unix and the Command Line
 
 **Week beginning October 14th, 2024**
 
+---
+
 **Tutors**:
 
 - **Mark Pallen** ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk))
@@ -18,7 +20,7 @@ Note that these sessions are part of your mandatory training.
 Please email the organizers well in advance if you will be late or unable to attend due to illness.  
 Please bring your MacBooks and ensure that you can log on to Eduroam.
 
-***
+---
 
 ### Monday, October 14th
 
@@ -28,9 +30,9 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
   - Mark leads, with help from Sam and Wing
 
 - **Afternoon: More Unix** 
-  - Sam leads, with help from Mark and Wing
+  - Mark leads, with help from Sam and Wing
 
-***
+---
 
 ### Tuesday, October 15th
 
@@ -38,25 +40,24 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 
 
 - **Morning: Jupyter Notebooks**
-  - Leo leads with help from Sam ± Mark
+  - Leo leads with help from Sam ± Mark and Wing
 
 - **Afternoon: Installing software and Conda environments**
-  - Leo leads with help from Sam ± Mark
+  - Leo leads with help from Sam ± Mark and Wing
 
-
-***
+---
 
 ### Thursday, October 17th
 
 **Venue:** Quadram Institute, Board Room from 9:00 am to 5:00 pm
 
 - **Morning: Sequence Quality Control**
-  - Sam leads, with help from Mark and Wing
+  - Sam leads, with help from Mark
 
 - **Afternoon: Trimming Sequence Files**
-  - Sam leads, with help from Wing and Leo
+  - Sam leads, with help from Leo
 
-***
+---
 
 ### Friday, October 18th
 
