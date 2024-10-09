@@ -282,7 +282,7 @@ where transitions should be more likely to occur than transversions:
 $ bcftools stats results/vcf/SRR2584866_variants.vcf | grep TSTV
 ```
 
-```
+```output
 # TSTV, transitions/transversions:
 # TSTV	[2]id	[3]ts	[4]tv	[5]ts/tv	[6]ts (1st ALT)	[7]tv (1st ALT)	[8]ts/tv (1st ALT)
 TSTV	0	628	58	10.83	628	58	10.83
@@ -292,7 +292,8 @@ TSTV	0	628	58	10.83	628	58	10.83
 $ bcftools stats results/vcf/SRR2584866_final_variants.vcf | grep TSTV
 ```
 
-```# TSTV, transitions/transversions:
+```output
+# TSTV, transitions/transversions:
 # TSTV	[2]id	[3]ts	[4]tv	[5]ts/tv	[6]ts (1st ALT)	[7]tv (1st ALT)	[8]ts/tv (1st ALT)
 TSTV	0	621	54	11.50	621	54	11.50
 ```
