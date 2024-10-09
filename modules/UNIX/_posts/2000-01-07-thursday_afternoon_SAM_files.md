@@ -237,7 +237,7 @@ done
 ```
 
 Go ahead and run the for loop. It should take a few minutes for Trimmomatic to run for each of our six input files. Once it is done
-running, take a look at your directory contents. You will notice that even though we ran Trimmomatic on file `SRR2589044` before running the for loop, there is only one set of files for it. Because we matched the ending `_1.fastq.gz`, we re-ran Trimmomatic on this file, overwriting our first results. That is ok, but it is good to be aware that it happened. Unix commands often overwrite exosting files without telling you.
+running, take a look at your directory contents. You will notice that even though we ran Trimmomatic on file `SRR2589044` before running the for loop, there is only one set of files for it. Because we matched the ending `_1.fastq.gz`, we re-ran Trimmomatic on this file, overwriting our first results. That is ok, but it is good to be aware that it happened. Unix commands often overwrite existing files without telling you.
 
 ```bash
 $ ls
