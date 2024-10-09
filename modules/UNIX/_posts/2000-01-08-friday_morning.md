@@ -364,36 +364,46 @@ CP000819.1      64042   .       G       A       225     .       DP=18;VDB=0.4513
 
 This is a lot of information, so let's take some time to make sure we understand our output.
 
-The first few columns represent the information we have about a predicted variation.
+To make this information display more clearly, here's a better-formatted version of your tables and explanation:
 
-| column  | info                                                                                                                                                                                                                                                                                                                                    | 
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CHROM   | contig location where the variation occurs                                                                                                                                                                                                                                                                                              | 
-| POS     | position within the contig where the variation occurs                                                                                                                                                                                                                                                                                   | 
-| ID      | a `.` until we add annotation information                                                                                                                                                                                                                                                                                                                                      | 
-| REF     | reference genotype (forward strand)                                                                                                                                                                                                                                                                                                     | 
-| ALT     | sample genotype (forward strand)                                                                                                                                                                                                                                                                                                        | 
-| QUAL    | Phred-scaled probability that the observed variant exists at this site (higher is better)                                                                                                                                                                                                                                               | 
-| FILTER  | a `.` if no quality filters have been applied, PASS if a filter is passed, or the name of the filters this variant failed                                                                                                                                                                                                                                                                                                                                      | 
+### Predicted Variation Information
 
-In an ideal world, the information in the `QUAL` column would be all we needed to filter out bad variant calls.
-However, in reality we need to filter on multiple other metrics.
+The first few columns represent the information we have about a predicted variation:
 
-The last two columns contain the genotypes and can be tricky to decode.
+| Column  | Information                                                                                                                                                                 | 
+|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| CHROM   | Contig location where the variation occurs                                                                                                                                  | 
+| POS     | Position within the contig where the variation occurs                                                                                                                       | 
+| ID      | A `.` until annotation information is added                                                                                                                                  | 
+| REF     | Reference genotype (forward strand)                                                                                                                                          | 
+| ALT     | Sample genotype (forward strand)                                                                                                                                             | 
+| QUAL    | Phred-scaled probability that the observed variant exists at this site (higher values indicate higher confidence)                                                            | 
+| FILTER  | Indicates if a variant has passed quality filters: a `.` if no filters have been applied, "PASS" if it passed, or the name of the failed filters                             | 
 
-| column  | info                                                                                                                                                                                                                                                                                                                                    | 
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| FORMAT  | lists in order the metrics presented in the final column                                                                                                                                                                                                                                                                                | 
-| results | lists the values associated with those metrics in order                                                                                                                                                                                                                                                                                 | 
+In an ideal scenario, the information in the `QUAL` column would suffice to filter out low-quality variant calls. However, in practice, multiple other metrics are considered for accurate filtering.
 
-For our file, the metrics presented are GT:PL:GQ.
+### Genotype Information
 
-| metric  | definition                                                                                                                                                                                                                                                                                                                              | 
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AD, DP  | the depth per allele by sample and coverage                                                                                                                                                                                                                                                                                             | 
-| GT      | the genotype for the sample at this loci. For a diploid organism, the GT field indicates the two alleles carried by the sample, encoded by a 0 for the REF allele, 1 for the first ALT allele, 2 for the second ALT allele, etc. A 0/0 means homozygous reference, 0/1 is heterozygous, and 1/1 is homozygous for the alternate allele. | 
-| PL      | the likelihoods of the given genotypes                                                                                                                                                                                                                                                                                                  | 
-| GQ      | the Phred-scaled confidence for the genotype                                                                                                                                                                                                                                                                                            | 
+The last two columns contain the genotypes, which can be tricky to decode:
+
+| Column  | Information                                                                                                                                             | 
+|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| FORMAT  | Lists, in order, the metrics presented in the final column                                                                                               | 
+| results | Contains the values associated with those metrics in the same order                                                                                      | 
+
+For our file, the metrics presented are `GT:PL:GQ`.
+
+### Metric Definitions
+
+| Metric  | Definition                                                                                                                                                                      | 
+|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| AD, DP  | Depth per allele by sample and coverage                                                                                                                                        | 
+| GT      | Genotype for the sample at this locus. For diploid organisms, the GT field indicates the two alleles carried by the sample: 0 for the REF allele, 1 for the first ALT allele, etc. A "0/0" indicates homozygous reference, "0/1" indicates heterozygous, and "1/1" indicates homozygous for the alternate allele. | 
+| PL      | Likelihoods of the given genotypes                                                                                                                                             | 
+| GQ      | Phred-scaled confidence for the genotype                                                                                                                                       | 
+
+This format makes the tables more readable and provides clear headings and definitions for each column or metric.
+
 
 The Broad Institute's [VCF guide](https://www.broadinstitute.org/gatk/guide/article?id=1268) is an excellent place
 to learn more about the VCF file format.
