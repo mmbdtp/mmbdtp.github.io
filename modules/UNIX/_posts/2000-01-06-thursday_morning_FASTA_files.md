@@ -560,9 +560,9 @@ A more efficient way is to use a `for` loop like we learned earlier in the week 
 
 ```bash
 $ for filename in *.zip
-> do
-> unzip $filename
-> done
+do
+    unzip $filename
+done
 ```
 
 In this example, the input is six filenames (one filename for each of our `.zip` files).
