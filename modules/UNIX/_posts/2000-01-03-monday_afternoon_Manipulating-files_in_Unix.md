@@ -18,6 +18,8 @@ cp grandeur.txt Darwin.txt
 ```
 What do you see with `ls` now?
 
+> :question: **TASK:** What happens if you try to use cp on a directory? Can you get it to work?
+
 If we want to remove a file, we use the command `rm`
 
 ```
@@ -27,11 +29,13 @@ rm Darwin.txt
 
 What do you see with `ls` now?
 
+> :question: **TASK:** What happens if you try to use rm on a directory?
+
 - Remember the similar command `rmdir`, which works to remove directories—but only if they are empty.
 
+> :question: **TASK:** Is there a way to use rm on a directory? How is that different from rmdir?
 
-**Take care with`rm`!**: In Unix, the `rm` (remove) command is one of the most powerful—and dangerous—tools. When you use `rm`, it **permanently deletes files and directories** without sending them to a recycle bin or trash. Once a file is removed, it is usually impossible to recover without advanced tools. Be especially careful when using wildcards like `*`, which can remove multiple files at once. Adding the `-r` (recursive) option will delete entire directories, including their contents, making `rm -rf` particularly unforgiving. Always double-check your commands, or use `rm -i` to prompt before each removal.
-
+**Take care with `rm`!**: In Unix, the `rm` (remove) command is one of the most powerful—and dangerous—tools. When you use `rm`, it **permanently deletes files and directories** without sending them to a recycle bin or trash. Once a file is removed, it is usually impossible to recover without advanced tools. Be especially careful when using wildcards like `*`, which can remove multiple files at once. Adding the `-r` (recursive) option will delete entire directories, including their contents, making `rm -rf` particularly unforgiving. Always double-check your commands, or use `rm -i` to prompt before each removal.
 
 If we want to rename or move a file, we use the `mv` command. If we just issue the command and a file name, it renames the file. Try this and then see what you see with `ls`
 
@@ -39,6 +43,8 @@ If we want to rename or move a file, we use the `mv` command. If we just issue t
 mv grandeur.txt origin.txt
 
 ```
+
+> :question: **TASK:** What happens if you try to use mv on a directory? Why is mv ok, but cp/rm not?
 
 But if we specify a file path for the destination file pointing outside the current directory, the file is moved rather than just renamed.
 
@@ -76,7 +82,7 @@ There are two quick shortcuts you can use to navigate around the Unix prompt.
 - Also, you can use the up `↑` and down `↓` arrows to take you up and down the set of previous commands, which can then be edited by using the left `←` and right `→` arrows to move along the line.
 
 
-What happens if you type a non-existent command? Type this:
+> :question: **TASK:** What happens if you type a non-existent command? Type this:
 
 ```
 evolve
@@ -91,7 +97,7 @@ evolve: command not found
 
 It's important that we read the messages that the terminal shows us. In this case it means that our system has no program (available to us) called `evolve`. If we want to use it, we have to install it first. This is a made up example, and we don't need to install anything.
 
-What happens if you issue a command when there is no file for it to act on?
+> :question: **TASK:** What happens if you issue a command when there is no file for it to act on?
 
 
 ```
