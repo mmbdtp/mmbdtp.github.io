@@ -220,6 +220,10 @@ variants.
 
 ![](https://datacarpentry.org/wrangling-genomics/fig/variant_calling_workflow.png){alt='workflow'}
 
+
+---
+
+
 #### Step 1: Calculate the read coverage of positions in the genome
 
 Do the first pass on variant calling by counting read coverage with
