@@ -159,13 +159,14 @@ Look at the file `grandeur.txt` on the Finder. Click on it. You will see it is e
 Let's add some text.
 
 ```bash
-$ echo "There is grandeur in this view of life" > grandeur.txt
+Nano grandeur.txt
+
+"There is grandeur in this view of life"
 
 ```
 
-`echo` makes the shell return the text as an output and the `>` redirects that output into the file named `grandeur.txt`. 
+Nano is bash based text editor (there are many available) which allows you to make edits to `grandeur.txt`. 
 
-- See [https://en.wikipedia.org/wiki/Redirection_(computing)](https://en.wikipedia.org/wiki/Redirection_(computing))
 
 Click on the `grandeur.txt` file in the Finder and you can see it now contains the text.
 
