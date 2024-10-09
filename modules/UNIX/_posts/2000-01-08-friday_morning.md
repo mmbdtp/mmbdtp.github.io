@@ -510,9 +510,7 @@ $ samtools tview ~/dc_workshop/results/bam/SRR2584866.aligned.sorted.bam ~/dc_wo
 ```
 
 Then type `g`. In the dialogue box, type `CP000819.1:4377265`.
-`G` is the variant. `A` is canonical. This variant possibly changes the phenotype of this sample to hypermutable. It occurs
-in the gene *mutL*, which controls DNA mismatch repair.   # Automating a Variant Calling Workflow
-
+`G` is the variant. `A` is canonical. This variant possibly changes the phenotype of this sample to hypermutable. It occurs in the gene *mutL*, which controls DNA mismatch repair.
 
 ---
 
@@ -527,6 +525,8 @@ But note that you will probably have to adapt some of the commands to ensure the
 
 
 # That's enough for this week!
+Please fill in the feedback form for this week before you go!
+
 As a reward for all your hard work, you should now take a look at this rap video that features Richard Lenski's research group along with Mark Pallen and his colleagues when he worked at Warwick. Have a great weekend!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/swoDROzsjXg?si=5n_GWma2mJFPA-fH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
