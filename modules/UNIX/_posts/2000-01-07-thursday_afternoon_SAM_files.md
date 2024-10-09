@@ -284,6 +284,9 @@ SRR2584863_2.trim.fastq.gz    SRR2584866_2.trim.fastq.gz    SRR2589044_2.trim.fa
 SRR2584863_2un.trim.fastq.gz  SRR2584866_2un.trim.fastq.gz  SRR2589044_2un.trim.fastq.gz
 ```
 
+This kind of good housekeeping in terms of storing files in clearly identified and structured directories is essential for sound bioinformatics research. You might think you know what everything is on the day you do the analysis but you can guarantee you won't be able to remember when you return from holiday or want to share an analysis with someone else. 
+
+
 ---
 
 ## And before we finish for the day
