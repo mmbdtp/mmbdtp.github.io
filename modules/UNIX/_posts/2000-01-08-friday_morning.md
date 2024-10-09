@@ -264,7 +264,9 @@ Filter the SNVs for the final output in VCF format, using `vcfutils.pl`
 
 ```bash
 $ vcfutils.pl varFilter results/vcf/SRR2584866_variants.vcf  > results/vcf/SRR2584866_final_variants.vcf
-```   ### Filtering
+```
+
+### Filtering
 
 The `vcfutils.pl varFilter` call filters out variants that do not meet minimum quality default criteria, which can be changed through
 its options. Using `bcftools` we can verify that the quality of the variant call set has improved after this filtering step by
