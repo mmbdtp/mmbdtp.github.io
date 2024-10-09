@@ -472,11 +472,31 @@ AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGCTTCTGAACTG
 
 ```
 
-The first line of output shows the genome coordinates in our reference genome. The second line shows the reference genome sequence. The third line shows the consensus sequence determined from the sequence reads. A `.` indicates a match to the reference sequence, so we can see that the consensus from our sample matches the reference in most locations. That is good! If that was not the case, we should probably reconsider our choice of reference.
+The first line of output shows the genome coordinates in our reference genome. 
+The second line shows the reference genome sequence. 
+The third line shows the consensus sequence determined from the sequence reads. 
+
+A `.` indicates a match to the reference sequence, so we can see that the consensus from our sample matches the reference in most locations. That is good! If that was not the case, we should probably reconsider our choice of reference.
 
 Below the horizontal line, we can see all of the reads in our sample aligned with the reference genome. Only
-positions where the called base differs from the reference are shown. You can use the arrow keys on your keyboard to scroll or type `?` for a help menu. To navigate to a specific position, type `g`. A dialogue box will appear. In this box, type the name of the "chromosome" followed by a colon and the position of the variant you would like to view (e.g. for this sample, type `CP000819.1:50` to view the 50th base. Type `Ctrl^C` or `q` to exit `tview`.
+positions where the called base differs from the reference are shown. 
 
+You can use the arrow keys on your keyboard to scroll or type `?` for a help menu. To navigate to a specific position, type `g`. A dialogue box will appear. In this box, type the name of the "chromosome" followed by a colon and the position of the variant you would like to view (e.g. for this sample, type `CP000819.1:50` to view the 50th base. Type `Ctrl^C` or `q` to exit `tview`.
+
+
+In the output from `samtools tview`, the dots (`.`) and commas (`,`) represent the alignment of sequencing reads to the reference genome, where each character indicates a particular state in the alignment.
+
+### Meaning of Characters:
+- **Dot (`.`)**: This indicates that the aligned base matches the reference sequence. It means that at this position, the base in the sequencing read is identical to the base in the reference genome.
+
+- **Comma (`,`)**: This indicates a match to the reference sequence but represents a base from the reverse strand. In sequencing data, reads can map to either the forward strand or the reverse strand of the DNA. Commas denote matching bases on the reverse strand, while dots represent matching bases on the forward strand.
+
+### Other Characters:
+- **Whitespace**: Indicates areas without coverage, meaning no sequencing reads align to that position.
+- **Base Letters (`A`, `T`, `G`, `C`)**: When present, these show differences (mismatches) between the sequencing reads and the reference genome. If a read contains a different base than the reference at a given position, the actual base letter will be displayed.
+- **Insertions/Deletions**: Gaps or different symbols may represent insertions or deletions in some aligners, but in the `samtools tview` output above, these aren't explicitly shown.
+
+This output helps visualize coverage and variations at different positions in the genome, showing which areas have high confidence matches and where mismatches or gaps occur.
 
 ---
 
