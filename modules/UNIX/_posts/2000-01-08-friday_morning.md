@@ -266,6 +266,10 @@ Filter the SNVs for the final output in VCF format, using `vcfutils.pl`
 $ vcfutils.pl varFilter results/vcf/SRR2584866_variants.vcf  > results/vcf/SRR2584866_final_variants.vcf
 ```
 
+---
+
+
+
 ### Filtering
 
 The `vcfutils.pl varFilter` call filters out variants that do not meet minimum quality default criteria, which can be changed through
