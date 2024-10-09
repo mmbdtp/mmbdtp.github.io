@@ -165,7 +165,7 @@ Nano grandeur.txt
 
 ```
 
-Nano is bash based text editor (there are many available) which allows you to make edits to `grandeur.txt`. 
+nano is bash based text editor (there are many available) which allows you to make edits to `grandeur.txt`. 
 
 
 Click on the `grandeur.txt` file in the Finder and you can see it now contains the text.
