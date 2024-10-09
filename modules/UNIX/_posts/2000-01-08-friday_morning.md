@@ -405,8 +405,7 @@ For our file, the metrics presented are `GT:PL:GQ`.
 This format makes the tables more readable and provides clear headings and definitions for each column or metric.
 
 
-The Broad Institute's [VCF guide](https://www.broadinstitute.org/gatk/guide/article?id=1268) is an excellent place
-to learn more about the VCF file format.
+The Broad Institute's [VCF guide](https://gatk.broadinstitute.org/hc/en-us/articles/360035531692-VCF-Variant-Call-Format) is an excellent place to learn more about the VCF file format.
 
 
 ---
