@@ -164,14 +164,6 @@ grep handsome voyage_of_the_beagle.txt
 
 ```
 
-Remember we can redirect the output of a command using `>`
-
-```
-grep handsome voyage_of_the_beagle.txt > handsome.txt
-
-```
-- How can you find out what is in the file `handsome.txt`?
-
 
 ---
 
@@ -268,7 +260,7 @@ The output from 'ls -l -rw-r--r--@ 1 mksmab staff 1207982 4 Oct 11:22 voyage_of_
 
 Here's how to interpret it:
 
-* `-rw-r--r--`: This part represents the file's permissions. In this example, "voyage_of_the_beagle.txt" has read and write permissions for the owner, but only read permissions for the group and others. The dashes (-) in the first and fourth positions indicate no special permissions like setuid or setgid, and no sticky bit is set.
+* `-rw-r--r--`: This part represents the file's permissions. In this example, "voyage_of_the_beagle.txt" has read and write permissions for the owner, but only read permissions for the group and others.
 * `1`: This number indicates the number of hard links to the file. In this case, there's only one link to the file.
 * `mksmab`: This is the owner of the file, which is "mksmab."
 * `staff`: This is the group associated with the file, which is "staff."
@@ -364,6 +356,66 @@ chmod a=rwx filename
 In this example, 777 in numerical mode grants read, write, and execute permissions to the user, group, and others. This setting allows anyone to do anything to the file.
 
 Remember that it's essential to use file permissions responsibly, especially when granting extensive permissions like 777, as it can pose security risks. Always consider the implications and only apply such permissive settings when necessary.
+
+---
+
+## Redirection
+
+Currently, the output of every command to placed in the command line (which is wiped clean after every session). Hoe can we output a command to a text file to save it? Bash contains a multitude of commands for redirecting inputs and outputs between different commands. It is a very powerful utility which allows you create pipelines and keep track of progress. We'll just cover the > operator here, but there is a lot more to discover online.
+
+```
+grep handsome voyage_of_the_beagle.txt > handsome.txt
+
+cat handsome.txt 
+
+``` 
+
+The > operator redirects the output of a command await from STDOUT (the command line) and writes to a file. If the file doesn't already exist then it tries to create it.
+
+> :question: **TASK:** What is the difference between > and >>?
+
+Other operators allow you to take the output of one command as use it as input to another. Other commands allow you to redirect error/warning messages to one file and successful outputs to another.
+
+---
+
+## Bash is a programming language 
+
+A full introduction to bash is beyond this course, but it is important to know that Bash is a full programming language with variables, logic and loops.
+
+### Create and call a variable
+
+```
+my_first_number=1
+
+echo $1 
+```
+
+> :question: **TASK:** Why did I use the command echo before calling the variable? What happens if you just call the variable on its own?
+
+> :question: **TASK:** What happens if you put spaces between the equals sign and the number?
+
+### Make a for loop
+
+```
+for var in 1 2 3 4 5
+do
+	touch $var.txt  
+done
+```
+
+### Wildcards
+
+Bash was created predominantly to run commands on files held by an OS. Therefore, for the most part it assumes any text passed to it is either a command or a file path. This allows bash to do some useful shortcuts!
+
+We've created five files. What is the easiest way to delete these files? With the * wildcard.
+
+```
+ls
+
+rm *.txt
+
+ls
+``` 
 
 ---
 
