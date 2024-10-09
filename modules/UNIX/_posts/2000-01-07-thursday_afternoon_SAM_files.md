@@ -257,9 +257,14 @@ SRR2584863_2un.trim.fastq.gz  SRR2589044_1.fastq.gz
 ---
 
 
-**Quick questions**:
+**Quick question**:
 - We trimmed our fastq files with Nextera adapters, but there are other adapters that are commonly used.
-- What other adapter files came with Trimmomatic? Take a look in `/home/jovyan/.conda/pkgs/trimmomatic-0.39-hdfd78af_2/share/trimmomatic-0.39-2/adapters/`
+- What other adapter files came with Trimmomatic?
+- **Clue**: Take a look in `/home/jovyan/.conda/pkgs/trimmomatic-0.39-hdfd78af_2/share/trimmomatic-0.39-2/adapters/`
+
+
+---
+
 
 We have now completed the trimming and filtering steps of our quality control process! Before we move on, let's move our trimmed FASTQ files
 to a new subdirectory within our `data/` directory.
