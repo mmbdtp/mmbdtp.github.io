@@ -11,7 +11,7 @@ If you are not familiar with these techniologies you might want to take a look a
   
 ---
 
-### Background on DNA Sequencing
+### Sequencing in general
 - [Wikipedia's DNA sequencing](https://en.wikipedia.org/wiki/DNA_sequencing)
 - [Sequencing technologies — the next generation by Michael L. Metzker](http://static.cs.brown.edu/courses/csci2950-c/Fall2011/Papers/SequencingTechnologies.pdf)
 - [Twenty years of bacterial genome sequencing by  Nick Loman and Mark Pallen](https://elearning.unite.it/pluginfile.php/247746/mod_resource/content/1/loman2015.pdf)
