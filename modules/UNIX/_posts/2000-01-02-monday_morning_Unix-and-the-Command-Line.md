@@ -159,7 +159,7 @@ Look at the file `grandeur.txt` on the Finder. Click on it. You will see it is e
 Let's add some text.
 
 ```bash
-Nano grandeur.txt
+nano grandeur.txt
 
 "There is grandeur in this view of life"
 
