@@ -38,8 +38,3 @@ If you are not familiar with these techniologies you might want to take a look a
 - [NCBI Handbook's chapter on DNA Sequencing Technologies](https://www.ncbi.nlm.nih.gov/books/NBK26883/)
 - [Coursera's "DNA Sequencing Technologies and Applications"](https://www.coursera.org/learn/dna-technologies)
 
-
-[Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).
-
-
-
