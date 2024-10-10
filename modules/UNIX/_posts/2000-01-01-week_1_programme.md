@@ -67,3 +67,4 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 - **Morning: Finding Sequence Variants**
   - Leo leads with help from Sam
 
+Please fill in the [feedback form](https://forms.office.com/Pages/ResponsePage.aspx?id=1O9S5qxdtkGiPXZGNMNs6nlK4JpdWo9LrIwG-Ilh-z9UMDEzSUNWNUxOTE1MTEZIQzg1T0oySkhRVS4u&origin=Invitation&channel=0) before leaving this session. 
