@@ -12,11 +12,9 @@ If you are not familiar with these techniologies you might want to take a look a
 
 ### Background on DNA Sequencing
 - [Wikipedia's DNA sequencing](https://en.wikipedia.org/wiki/DNA_sequencing)
-- [Sequencing technologies — the next generation
-Michael L. Metzker](http://static.cs.brown.edu/courses/csci2950-c/Fall2011/Papers/SequencingTechnologies.pdf)
-- [Twenty years of bacterial genome
-sequencing. Nicholas J. Loman and Mark J. Pallen](https://elearning.unite.it/pluginfile.php/247746/mod_resource/content/1/loman2015.pdf)
-[The Latest Developments in Sequencing Technologies: Matthew Higgs](https://frontlinegenomics.com/the-latest-developments-in-sequencing-technologies/)
+- [Sequencing technologies — the next generation by Michael L. Metzker](http://static.cs.brown.edu/courses/csci2950-c/Fall2011/Papers/SequencingTechnologies.pdf)
+- [Twenty years of bacterial genome sequencing by  Nick Loman and Mark Pallen](https://elearning.unite.it/pluginfile.php/247746/mod_resource/content/1/loman2015.pdf)
+- [The Latest Developments in Sequencing Technologies by Matthew Higgs](https://frontlinegenomics.com/the-latest-developments-in-sequencing-technologies/)
 
 ### Illumina Sequencing
 - [Illumina's official guide](https://www.illumina.com/science/technology/next-generation-sequencing.html)
