@@ -2,13 +2,12 @@
 title: Background to sequencing
 ---
 
+# Background to DNA Sequencing
+
 ![](https://pbs.twimg.com/media/FrVRedkXsAYfDxH?format=jpg&name=medium)
 
 The first half of this week will be dedicated to a hands-on unscripted run through how sequencing is actually done on the Illumina platform and using Oxford Nanopore. 
-
 If you are not familiar with these techniologies you might want to take a look at these links before during and after the session to orientate yourself and contextualise what you are being taught.
-
----
 
 ### Background on DNA Sequencing
 - [Wikipedia's DNA sequencing](https://en.wikipedia.org/wiki/DNA_sequencing)
@@ -26,3 +25,4 @@ If you are not familiar with these techniologies you might want to take a look a
 - [Wikipedia's page on Nanopore sequencing](https://en.wikipedia.org/wiki/Nanopore_sequencing)
 - [YouTube: How does nanopore DNA sequencing work?](https://www.youtube.com/watch?v=GUb1TZvMWsw)
   
+---
