@@ -26,7 +26,7 @@ If you want to raise questions or share insights, please add text or links to th
 
 * [https://tinyurl.com/MMBDTP-doc](https://tinyurl.com/MMBDTP-doc)
 
-Most of the week will be taken up with hands-on sessions, but before you get your hands dirty, let's start with a brief [PowerPoint presentation](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/githubio/2023_course/week_1/2023_Week1_Command_line_Unix.pptx) to set the scene.
+Most of the week will be taken up with hands-on sessions, but before you get your hands dirty, let's start with a brief [PowerPoint presentation]([https://mmbdtp.github.io/raw/gh-pages/githubio/2023_course/week_1](https://raw.githubusercontent.com/mmbdtp/mmbdtp.github.io/gh-pages/modules/UNIX/_posts/week_1_day_1_talk_Command_line_Unix.pptx) to set the scene.
 
 
 ---
