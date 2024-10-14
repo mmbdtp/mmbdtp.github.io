@@ -372,7 +372,7 @@ cat handsome.txt
 
 The > operator redirects the output of a command await from STDOUT (the command line) and writes to a file. If the file doesn't already exist then it tries to create it.
 
-> :question: **TASK:** What is the difference between > and >>?
+> :question: **TASK:** What is the difference between `>` and `>>`?
 
 Other operators allow you to take the output of one command as use it as input to another. Other commands allow you to redirect error/warning messages to one file and successful outputs to another.
 
@@ -387,7 +387,7 @@ A full introduction to bash is beyond this course, but it is important to know t
 ```
 my_first_number=1
 
-echo $1 
+echo $my_first_number 
 ```
 
 > :question: **TASK:** Why did I use the command echo before calling the variable? What happens if you just call the variable on its own?
