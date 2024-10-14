@@ -407,12 +407,12 @@ done
 
 Bash was created predominantly to run commands on files held by an OS. Therefore, for the most part it assumes any text passed to it is either a command or a file path. This allows bash to do some useful shortcuts!
 
-We've created five files. What is the easiest way to delete these files? With the * wildcard.
+We've created five files. What is the easiest way to delete these files? With the `?` wildcard, which means "any single character".
 
 ```
 ls
 
-rm *.txt
+rm ?.txt
 
 ls
 ``` 
