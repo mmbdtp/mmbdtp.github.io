@@ -642,7 +642,7 @@ We will now try to exemplify the power of shell expansion.
 *   `[A-Z]`, `[a-z]` or `[0-9]` matches any character in the range. 
 	*   For example, `find learn_bash -name "sample[0-9].*"` will match all files with the string `sample` followed by a digit, then a dot and ending with any string. Examples are again 'sample1_R1.fastq.gz', ‚'sample2_R1.fastq.gz' etc but not ‚'sample1_R11.fastq.gz', ‚'sample2_R1345.fastq.gz' etc'.
 *   `{this,that}` matches any of the strings separated by commas. 
-	*   For example, `find learn_bash -name "*_R{1,2}.fastq.gz"`' will match all files ending by ‚'\_R1.fastq.gz‚' and ‚'\_R2.fastq.gz‚'.
+	*   For example, `ls learn_bash/phage/reads/R{1,2}.fastq.gz"`' will match all files ending by ‚'\_R1.fastq.gz‚' and ‚'\_R2.fastq.gz‚'. However `find learn_bash -name "*_R{1,2}.fastq.gz"` will not work here (because the curly braces are interpreted by bash before find).   
 
 When we use this syntax, the command will receive the expanded list of matching files. Try with 'ls' to see what happens:
 
