@@ -232,7 +232,7 @@ These variations of `grep` make it a powerful tool for finding exactly what you'
 
 ## File permissions in Unix
 
-Unix-based systems, including macOS, manage file and directory access through permissions. These permissions determine who can read, write, or execute files and directories. permissions are divided into three categories for each file: user, group, and others. For more details, check the [https://en.wikipedia.org/wiki/File\-system\_permissions](Wikipedia page on Unix file permissions).
+Unix-based systems, including macOS, manage file and directory access through permissions. These permissions determine who can read, write, or execute files and directories. permissions are divided into three categories for each file: user, group, and others. For more details, check the [Wikipedia page on Unix file permissions](https://en.wikipedia.org/wiki/File\-system\_permissions)
 
 The Read (R), Write (W), and Execute (X) permissions are often referred to as the "rwx" permissions. These permissions determine what actions can be performed on a file or directory by different users or groups.
 
