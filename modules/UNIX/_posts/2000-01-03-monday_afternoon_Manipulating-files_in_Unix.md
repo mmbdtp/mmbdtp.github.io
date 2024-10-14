@@ -711,7 +711,7 @@ cut -d "," -f 1,3 learn_bash/files/cars.csv
 
 ```
 
- - How could we extract the same columns, but from the file `learn_bash/files/cars.tsv` (tab-separated)?
+ - How could we extract the same columns, but from the file `learn_bash/files/wine.tsv` (tab-separated)?
 
 **sed**
 
