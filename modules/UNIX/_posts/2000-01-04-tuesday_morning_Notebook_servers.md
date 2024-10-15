@@ -6,6 +6,8 @@ title: Tuesday Morning — Notebook servers and Conda Environments
 
 Credits for today's sessions: material from previous tutorials by Andrea Telatin, CLIMB BIG DATA documentation, fresh material from Mark Pallen, Powerpoint presentation from Phil Ashton, ChatGPT used to proofread, to expand on some points and create images.
 
+Please feel free to use the [Google Docs](https://docs.google.com/document/d/1aIbn-HR2bsPE3X6TyTypSR90-su1WnwVn4N1GGSrXhA/edit?tab=t.0) to ask questions
+
 ---
 
 ![](https://raw.githubusercontent.com/mmbdtp/mmbdtp.github.io/gh-pages/modules/UNIX/_posts/jupyter.jpg)
