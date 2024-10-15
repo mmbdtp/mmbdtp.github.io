@@ -61,7 +61,7 @@ Please bring your MacBooks and ensure that you can log on to Eduroam.
 
 ### Friday, October 18th
 
-**Venue:** Quadram Institute, Board Room from 9:00 am to 1:00 pm
+**Venue:** Quadram Institute, UG55C from 9:00 am to 1:00 pm
 
 
 - **Morning: Finding Sequence Variants**
