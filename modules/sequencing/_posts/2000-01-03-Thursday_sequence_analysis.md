@@ -41,10 +41,13 @@ Open a Terminal on your Notebook server. Let's get started by setting up a speci
 conda create -n seqanal 
 conda activate seqanal
 ```
-Sometimes Conda can run into issues with outdated metadata. It might make life easier if you clear the Conda cache.
+Sometimes Conda can run into issues with outdated metadata. It might make life easier if you clear the Conda cache and tell Conda want channels to look at as default
 
 ```
 conda clean --all
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda config --set channel_priority strict ⁠
 ```
 
 Let's create and use a directory for these example analyses:
