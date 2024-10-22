@@ -442,7 +442,12 @@ ktImportTaxonomy -t 5 -m 3 nano.report.txt   -o KronaReport.html
 What do we see now? Compare and contrast what you see when looking at the nano.report.txt file and the KronaReport.html file. 
 
 
+---
+
 ### Assembly of long reads
+
+---
+
 
 The requirements of optimal assembly of long reads is slightly different from that of short reads. 
 We will use the long read assembler `flye`.
