@@ -365,7 +365,9 @@ What has happened to the results compared to what we see with reads??
 ---
 
 
-##Long Reads
+## Long Reads
+
+---
 
 
 ### QC on long reads 
@@ -419,7 +421,7 @@ How much difference did PoreChop make to file sizes?
 
 ---
 
-###Taxonomic profiling of long reads
+### Taxonomic profiling of long reads
 
 ---
 
