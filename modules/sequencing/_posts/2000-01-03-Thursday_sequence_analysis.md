@@ -150,7 +150,7 @@ You will be doing this on all the files you created yourselves later today.
 
 ---
 
-If we want to learn quickly what organisms are represented by sequences in a run, we can use various approaches to taxonomic profiling. We will now have a brief Powerpoint presentation on this topic.
+If we want to learn quickly what organisms are represented by sequences in a run, we can use various approaches to taxonomic profiling. We will now have a brief [Powerpoint presentation](https://raw.githubusercontent.com/mmbdtp/mmbdtp.github.io/gh-pages/modules/sequencing/_posts/Sequence_profiling.pptx) on this topic.
 
 To get started, let's install `kraken2`
 
