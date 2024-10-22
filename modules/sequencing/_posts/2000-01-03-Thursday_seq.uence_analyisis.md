@@ -31,7 +31,7 @@ The steps in the workflow ahead of us include using:
 ---
  
 # The walkthrough
-
+modules/sequencing/_posts/2ff0bd4a-85a5-46a4-902c-73106a3b0717.webp
 ---
 ## Getting the example sequences
 
