@@ -13,6 +13,7 @@ title: Programme
 **Tutors:**
 - David Baker (david.baker@quadram.ac.uk)
 - Gemma Kay (Gemma.Kay@nanoporetech.com)
+- Mark Pallen (mark.pallen@quadram.ac.uk)
 - Richard Leggett (Richard.Leggett@earlham.ac.uk)
 
 
@@ -42,7 +43,7 @@ Note that these sessions are part of your mandatory training. Please email the o
 
 **Venue:** QIB Board Room 9.30am
 
--	Analyses of sequences created earlier in the week
+-	Analyses of sequences created earlier in the week with Mark Pallen
 
 ***
 
@@ -51,6 +52,3 @@ Note that these sessions are part of your mandatory training. Please email the o
 **Venue:** report to reception at the Earlham Institute at 10.00am
 
 -	sessions with Richard Leggett and colleagues at the Earlham Institute, covering adaptive sequencing, PacBio and single-cell sequencing
-
-
-NOTE: Nabil's material on QC needs moving, probably to week 1. Stored as files with "_old_" prefix.
