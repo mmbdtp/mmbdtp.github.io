@@ -38,8 +38,8 @@ The steps in the workflow ahead of us include using:
 
 Open a Terminal on your Notebook server. Let's get started by setting up a specific conda environment for this session.
 ```
-conda create -n seqanal 
-conda activate seqanal
+conda create -n seqanalysis 
+conda activate seqanalysis
 ```
 Sometimes Conda can run into issues with outdated metadata. It might make life easier if you clear the Conda cache and tell Conda want channels to look at as default
 
@@ -53,8 +53,8 @@ conda config --set channel_priority strict ⁠
 Let's create and use a directory for these example analyses:
 
 ```
-mkdir seqanal_example
-cd seqanal_example
+mkdir seqanalysis_example
+cd seqanalysis_example
 ```
 
 We need to install programs in this conda environment for short sequence QC
@@ -121,7 +121,7 @@ cd short_reads
 As before, let's copy across the adapters file
 
 ```
-cp /home/jovyan/shared-team/conda/mpallen.mmb-dtp/seqanal/share/trimmomatic/adapters/NexteraPE-PE.fa .
+cp /home/jovyan/shared-team/conda/mpallen.mmb-dtp/seqanalysis/share/trimmomatic/adapters/NexteraPE-PE.fa .
 ```
 
 We are using my version of the adapters file, which is associated with my version of the `trimmomatic` package. Feel free to explore `/home/jovyan/shared-team/conda/` followed by your name to see your own directories there.
@@ -316,10 +316,10 @@ What do you see? What do you conclude? What is good and bad about this approach?
 Let's assemble the short reads using `SPAdes`.
 
 ```
-mkdir /home/jovyan/seqanal_example/short_reads/spades
-cd /home/jovyan/seqanal_example/short_reads/spades
+mkdir /home/jovyan/seqanalysis_example/short_reads/spades
+cd /home/jovyan/seqanalysis_example/short_reads/spades
 conda install -c bioconda spades
-cp /home/jovyan/seqanal_example/short_reads/QC/DTP-2-3_S11_L001_R*_paired.fastq.gz . 
+cp /home/jovyan/seqanalysis_example/short_reads/QC/DTP-2-3_S11_L001_R*_paired.fastq.gz . 
 spades.py -1 DTP-2-3_S11_L001_R1_paired.fastq.gz -2 DTP-2-3_S11_L001_R2_paired.fastq.gz -o spades_out --threads 8 --memory 16
 ```
 
@@ -345,7 +345,7 @@ grep ">" spades_out/contigs.fasta
 There are programs like Quast that can give a more sophisticated view of assembly stats, but that wouldn't install for me earlier in the so with help from ChatGPT I created a Python script that did some basic analysis. Let's run that over our contigs.
 
 ```
-/home/jovyan/shared-team/seqanal_2024/qc_assembly.py contigs.fasta 
+/home/jovyan/shared-team/seqanalysis_2024/qc_assembly.py contigs.fasta 
 ```
 
 Let's break down the parameters and results from this assembly QC report to understand what each value means:
@@ -410,7 +410,7 @@ Let's now trim the reads using `porechop`
 porechop -i DTP_1_1_Nano.fastq.gz -o DTP_1_1_Nano_chopped.fastq.gz
 ```
 
- - Watch the progress of the program on your terminal. This takes a long time. You should open a fresh terminal to continue below while waiting. But remember to activate the seqanal conda environment.
+ - Watch the progress of the program on your terminal. This takes a long time. You should open a fresh terminal to continue below while waiting. But remember to activate the seqanalysis conda environment.
 
 Once it has finished, let's look at what we have
 
@@ -471,9 +471,9 @@ Let's make a directory to work in. Then copy the chopped nanopore reads across.
 
 
 ```
-mkdir /home/jovyan/seqanal_example/long_reads/flye
-cp /home/jovyan/seqanal_example/long_reads/DTP_1_1_Nano_chopped.fastq.gz /home/jovyan/seqanal_example/long_reads/flye
-cd /home/jovyan/seqanal_example/long_reads/flye
+mkdir /home/jovyan/seqanalysis_example/long_reads/flye
+cp /home/jovyan/seqanalysis_example/long_reads/DTP_1_1_Nano_chopped.fastq.gz /home/jovyan/seqanalysis_example/long_reads/flye
+cd /home/jovyan/seqanalysis_example/long_reads/flye
 ```
 
 Now let's run `flye`
@@ -504,7 +504,7 @@ grep ">" flye_out/assembly.fasta
 Let's run the Python script again.
 
 ```
-/home/jovyan/shared-team/seqanal_2024/qc_assembly.py flye_out/assembly.fasta 
+/home/jovyan/shared-team/seqanalysis_2024/qc_assembly.py flye_out/assembly.fasta 
 ```
 
 - what does that tell us?
@@ -512,7 +512,7 @@ Let's run the Python script again.
 Now let's run `kraken` and `krona` over the assembly. 
 
 ```
-kraken2 --threads 8 --db /home/jovyan/shared-public/db/kraken2/standard_8gb/latest --output nano_assembly_kraken_hits.txt --report nano_assembly_kraken_report.txt  --use-names /home/jovyan/seqanal_example/long_reads/flye/flye_output/assembly.fasta
+kraken2 --threads 8 --db /home/jovyan/shared-public/db/kraken2/standard_8gb/latest --output nano_assembly_kraken_hits.txt --report nano_assembly_kraken_report.txt  --use-names /home/jovyan/seqanalysis_example/long_reads/flye/flye_output/assembly.fasta
 ktImportTaxonomy -t 5 -m 3 nano_assembly_kraken_report.txt   -o nano_assembly_KronaReport.html
 ```
 And what do we see in the `krona` display now?
@@ -521,7 +521,7 @@ And what do we see in the `krona` display now?
 
 # And now it's over to you!
 
-The sequences you yourselves created should be available in `/home/jovyan/shared-team/seqanal_2024`
+The sequences you yourselves created should be available in `/home/jovyan/shared-team/seqanalysis_2024`
 
 Your mission is to analyse all of those sequences, performing QC, taxonomic profiling and assembly using the approaches outlined above. Take care to maintain a tidy file and directory structure as you go. 
 
