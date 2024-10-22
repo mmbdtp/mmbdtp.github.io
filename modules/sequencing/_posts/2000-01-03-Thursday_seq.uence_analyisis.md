@@ -146,7 +146,7 @@ You will be doing this on all the files you created yourselves later today.
 
 ---
 
-##Taxonomic profiling of short reads 
+## Taxonomic profiling of short reads 
 
 ---
 
@@ -347,16 +347,11 @@ There are programs like Quast that can give a more sophisticated view of assembl
 
 Let's break down the parameters and results from this assembly QC report to understand what each value means:
 
-- Total Contigs: 103
-- This indicates that your genome assembly is made up of 103 contigs, which are contiguous sequences of DNA assembled from the data. Ideally, in a perfect assembly, you would have a single contig representing the entire genome. More contigs typically indicate fragmentation in the assembly.
-- Total Length: 1,916,571 bp (base pairs)
-- This is the total length of all the contigs combined, measured in base pairs (bp), which are the basic units of DNA (A, T, C, G). It gives an idea of how much of the genome has been assembled. Comparing this with the expected genome size can tell you how complete your assembly might be.
-- Largest Contig: 350,850 bp
-- The largest contig is 350,850 bp long. This value is useful because larger contigs indicate fewer gaps or unresolved regions in the assembly. It also suggests that a significant portion of the genome is captured in a single sequence, which is good for assembly quality.
-- N50: 212,467 bp
-- The N50 is a key metric in genome assembly that represents the length of the shortest contig in the set of contigs that together make up at least 50% of the total assembly length. A higher N50 value indicates better assembly quality, meaning that a smaller number of long contigs make up a large portion of the genome. In this case, it means that 50% of the total genome is contained in contigs of at least 212,467 bp.
-- GC Content: 30.78%
-- This refers to the percentage of guanine (G) and cytosine (C) bases in your genome assembly. Different organisms have different GC contents, and this value can be compared to the known GC content for the species you're working with. If your GC content is close to the expected range, it suggests that your assembly is likely accurate. A major deviation could indicate issues like contamination or assembly errors.
+- **Total Contigs**: *103* This indicates that your genome assembly is made up of 103 contigs, which are contiguous sequences of DNA assembled from the data. Ideally, in a perfect assembly, you would have a single contig representing the entire genome. More contigs typically indicate fragmentation in the assembly.
+- **Total Length**: *1,916,571 bp (base pairs)* This is the total length of all the contigs combined, measured in base pairs (bp), which are the basic units of DNA (A, T, C, G). It gives an idea of how much of the genome has been assembled. Comparing this with the expected genome size can tell you how complete your assembly might be.
+- **Largest Contig**: *350,850 bp* The largest contig is 350,850 bp long. This value is useful because larger contigs indicate fewer gaps or unresolved regions in the assembly. It also suggests that a significant portion of the genome is captured in a single sequence, which is good for assembly quality.
+- **N50**: *212,467 bp* The N50 is a key metric in genome assembly that represents the length of the shortest contig in the set of contigs that together make up at least 50% of the total assembly length. A higher N50 value indicates better assembly quality, meaning that a smaller number of long contigs make up a large portion of the genome. In this case, it means that 50% of the total genome is contained in contigs of at least 212,467 bp.
+- **GC Content**: *30.78%* This refers to the percentage of guanine (G) and cytosine (C) bases in your genome assembly. Different organisms have different GC contents, and this value can be compared to the known GC content for the species you're working with. If your GC content is close to the expected range, it suggests that your assembly is likely accurate. A major deviation could indicate issues like contamination or assembly errors.
 
 
 Now let's try running kraken over the assembly
