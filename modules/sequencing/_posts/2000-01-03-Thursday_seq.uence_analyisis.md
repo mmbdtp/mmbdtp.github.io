@@ -1,7 +1,8 @@
-
 ---
 title: Analyses of short and long reads created earlier in the week
+
 ---
+
 
 # Week 2: Thursday 24th October 
 **Venue:** QIB Board Room 9.30am
