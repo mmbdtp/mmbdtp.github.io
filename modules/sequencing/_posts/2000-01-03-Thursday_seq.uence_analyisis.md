@@ -1,5 +1,5 @@
 ---
-title: Analyses of short and long reads created earlier in the week
+title: Analyses of YOUR VERY OWN short and long reads!
 
 ---
 
