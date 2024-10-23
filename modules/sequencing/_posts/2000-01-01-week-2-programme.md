@@ -16,6 +16,8 @@ title: Programme
 - Mark Pallen (mark.pallen@quadram.ac.uk)
 - Richard Leggett (Richard.Leggett@earlham.ac.uk)
 
+**Important**: Please fill in the [feedback form](https://forms.office.com/e/si0HtJNKD7) before you leave on friday!
+
 
 Note that these sessions are part of your mandatory training. Please email the organisers if you are going to be late or are unable to attend through illness. For Thursday/Friday, Please bring your MacBooks and ensure that you can log on to Eduroam.
 
