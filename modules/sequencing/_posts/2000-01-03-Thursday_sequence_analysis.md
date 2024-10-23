@@ -60,8 +60,8 @@ cd seqanalysis_example
 We need to install programs in this conda environment for short sequence QC
 
 ```
-conda install -c bioconda fastqc
-conda install -c bioconda trimmomatic
+conda install -y -c bioconda fastqc
+conda install -y -c bioconda trimmomatic
 ```
 
 
@@ -158,7 +158,7 @@ If we want to learn quickly what organisms are represented by sequences in a run
 To get started, let's install `kraken2`
 
 ```
-conda install kraken2
+conda install -y kraken2
 ```
 
 Let's engage in some housekeeping by making directories for the QC we just did and for the `kraken` analyses. We will use `kraken` on the trimmed reads
@@ -213,7 +213,7 @@ kraken2 --threads 8 --db /home/jovyan/shared-public/db/kraken2/standard_8gb/late
 ```
 
 
-The DTP-2-3_reads_report.txt file gives a supposedly human-readable output from Kraken2.
+The `DTP-2-3_reads_report.txt` file gives a supposedly human-readable output from Kraken2.
 
 ```
 cat DTP-2-3_reads_report.txt  
@@ -254,7 +254,7 @@ Now let's run `krona`
 ktImportTaxonomy -t 5 -m 3 DTP-2-3_reads_report.txt   -o DTP-2-3_reads_KronaReport.html
 ```
 
-Take a look in the graphical file viewer and you will see a file called DTP-2-3_reads_KronaReport.html
+Take a look in the graphical file viewer and you will see a file called `DTP-2-3_reads_KronaReport.html`
 
 Click on it and it will open a window. Click on the "Trust HTML" option at the top left. Then navigate up and down the `krona` plot. 
 
@@ -290,7 +290,7 @@ cp DTP-2-3_S11_L001_R1_paired.fastq.gz ../blast
 cd ../blast
 gunzip *gz
 head -400 DTP-2-3_S11_L001_R1_paired.fastq > seqhead.fastq
-conda install seqtk
+conda install -y seqtk
 seqtk seq -a seqhead.fastq > seqhead.fasta
 ```
 
@@ -318,7 +318,7 @@ Let's assemble the short reads using `SPAdes`.
 ```
 mkdir /home/jovyan/seqanalysis_example/short_reads/spades
 cd /home/jovyan/seqanalysis_example/short_reads/spades
-conda install -c bioconda spades
+conda install -y -c bioconda spades
 cp /home/jovyan/seqanalysis_example/short_reads/QC/DTP-2-3_S11_L001_R*_paired.fastq.gz . 
 spades.py -1 DTP-2-3_S11_L001_R1_paired.fastq.gz -2 DTP-2-3_S11_L001_R2_paired.fastq.gz -o spades_out --threads 8 --memory 16
 ```
@@ -345,7 +345,7 @@ grep ">" spades_out/contigs.fasta
 There are programs like Quast that can give a more sophisticated view of assembly stats, but that wouldn't install for me earlier in the so with help from ChatGPT I created a Python script that did some basic analysis. Let's run that over our contigs.
 
 ```
-/home/jovyan/shared-team/seqanalysis_2024/qc_assembly.py contigs.fasta 
+/home/jovyan/shared-team/seqanalysis_2024/qc_assembly.py spades_out/contigs.fasta 
 ```
 
 Let's break down the parameters and results from this assembly QC report to understand what each value means:
@@ -379,7 +379,7 @@ What has happened to the results compared to what we see with reads??
 Now we must turn our attention to the long reads. 
 
 ```
-cd ../..long_reads
+cd /home/jovyan/seqanalysis_example/long_reads
 ```
 
 We need to install `Nanoplot` and `PoreChop`
@@ -410,7 +410,7 @@ Let's now trim the reads using `porechop`
 porechop -i DTP_1_1_Nano.fastq.gz -o DTP_1_1_Nano_chopped.fastq.gz
 ```
 
- - Watch the progress of the program on your terminal. This takes a long time. You should open a fresh terminal to continue below while waiting. But remember to activate the seqanalysis conda environment.
+ - Watch the progress of the program on your terminal. This takes a long time. You should open a fresh terminal to continue below while waiting. But remember to activate the `seqanalysis` conda environment and cd to /home/jovyan/seqanalysis_example/long_reads
 
 Once it has finished, let's look at what we have
 
@@ -431,18 +431,18 @@ How much difference did PoreChop make to file sizes?
 Let's run kraken over these long reads.
 
 ```
-kraken2 --threads 8 --db /home/jovyan/shared-public/db/kraken2/standard_8gb/latest --output nano.hits.txt --report nano.report.txt  --use-names  DTP_1_1_Nano.fastq.gz 
+kraken2 --threads 8 --db /home/jovyan/shared-public/db/kraken2/standard_8gb/latest --output nano.hits.txt --report nano_reads_report.txt  --use-names  DTP_1_1_Nano.fastq.gz 
 ```
 
 And then `krona`
 
 
 ```
-ktImportTaxonomy -t 5 -m 3 nano.report.txt   -o KronaReport.html
+ktImportTaxonomy -t 5 -m 3 nano_reads_report.txt   -o nano_reads_KronaReport.html
 ```
 
 
-What do we see now? Compare and contrast what you see when looking at the nano.report.txt file and the KronaReport.html file. 
+What do we see now? Compare and contrast the view you get when looking at the nano_reads_report.txt file and the nano_reads_KronaReport.html file. 
 
 
 ---
@@ -464,7 +464,7 @@ We will use the long read assembler `flye`.
 
 
 ```
-conda install -y -c bioconda flye
+conda install -y flye
 
 ```
 Let's make a directory to work in. Then copy the chopped nanopore reads across.
