@@ -38,7 +38,7 @@ The steps in the workflow ahead of us include using:
 
 Open a Terminal on your Notebook server. 
 
-Sometimes Conda can run into issues with outdated metadata. It might make life easier if you clear the Conda cache and tell Conda want channels to look at as default
+Sometimes Conda can run into issues with outdated metadata. It might make life easier if you clear the Conda cache and tell Conda what channels to look at as default
 
 ```
 conda clean --all
@@ -47,9 +47,9 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict ⁠
 ```
 
-Let's get started by setting up a specific conda environment for this session.
+Let's get started by setting up a specific conda environment for this session and installing all the software we are going to need. If we include names of software packages after the environment name, everything gets done in one go and this usually works better than installing the packges one at a time.
 ```
-conda create -n seqanalysis 
+conda create -y -q -n seqanalysis fastqc trimmomatic kraken2 krona NanoPlot porechop seqtk flye
 conda activate seqanalysis
 ```
 
@@ -59,14 +59,6 @@ Let's create and use a directory for these example analyses:
 mkdir seqanalysis_example
 cd seqanalysis_example
 ```
-
-We need to install programs in this conda environment for short sequence QC
-
-```
-conda install -y  fastqc
-conda install -y  trimmomatic
-```
-
 
 One of the key features of the Jupyter Notebook servers run by [CLIMB-BIG-DATA](https://climb.ac.uk) is access to shared directories. There are two of these `shared-team` and `shared-public`. 
 You can take a look at them using `ls` or via the graphical file browser.
@@ -158,12 +150,6 @@ You will be doing this on all the files you created yourselves later today.
 
 If we want to learn quickly what organisms are represented by sequences in a run, we can use various approaches to taxonomic profiling. We will now have a brief [Powerpoint presentation](https://raw.githubusercontent.com/mmbdtp/mmbdtp.github.io/gh-pages/modules/sequencing/_posts/Sequence_profiling.pptx) on this topic.
 
-To get started, let's install `kraken2`
-
-```
-conda install -y kraken2
-```
-
 Let's engage in some housekeeping by making directories for the QC we just did and for the `kraken` analyses. We will use `kraken` on the trimmed reads
 
 ```
@@ -238,14 +224,7 @@ The output from Kraken 2  contains several columns:
 
 An alternative is to load a graphical display of the kraken results. 
 
-To do that we need to install `krona`
-
-```
-conda install krona
-```
-
-
-Krona reminds us to run `ktUpdateTaxonomy.sh` before it can be used.
+To do that we need to use `krona`, which needs us to run `ktUpdateTaxonomy.sh` before it can be used.
 
 ```
 ktUpdateTaxonomy.sh
@@ -293,7 +272,6 @@ cp DTP-2-3_S11_L001_R1_paired.fastq.gz ../blast
 cd ../blast
 gunzip *gz
 head -400 DTP-2-3_S11_L001_R1_paired.fastq > seqhead.fastq
-conda install -y seqtk
 seqtk seq -a seqhead.fastq > seqhead.fasta
 ```
 
@@ -321,7 +299,6 @@ Let's assemble the short reads using `SPAdes`.
 ```
 mkdir /home/jovyan/seqanalysis_example/short_reads/spades
 cd /home/jovyan/seqanalysis_example/short_reads/spades
-conda install -y  spades
 cp /home/jovyan/seqanalysis_example/short_reads/QC/DTP-2-3_S11_L001_R*_paired.fastq.gz . 
 spades.py -1 DTP-2-3_S11_L001_R1_paired.fastq.gz -2 DTP-2-3_S11_L001_R2_paired.fastq.gz -o spades_out --threads 8 --memory 16
 ```
@@ -385,23 +362,27 @@ Now we must turn our attention to the long reads.
 cd /home/jovyan/seqanalysis_example/long_reads
 ```
 
-We need to install `Nanoplot` and `PoreChop`
+We will use `Nanoplot` and `PoreChop`
 
-```
-conda install nanoplot
-conda install porechop
-```
+While somewhat old-fashioned, these remain useful tools for learning the basics of Nanopore data processing and quality control. They help researchers understand important steps like adapter trimming (Porechop) and quality metrics visualization (NanoPlot). However, both tools have largely been superseded by more modern developments integrated into Guppy and MinKNOW. 
 
-Let's make a directory for the nanoplot results and then run it
+ - **Guppy**, Oxford Nanopore's advanced basecaller, handles both basecalling and quality control more efficiently
+
+ - **MinKNOW** now includes real-time adapter filtering, reducing the need for external tools like Porechop. 
+
+Despite these advancements, learning these older tools provides foundational knowledge that is helpful for understanding how data processing has evolved and gives flexibility for handling legacy datasets or specialized workflows.
+
+Let's make a directory for the NanoPlot results and then run it
 
 
 ```
 mkdir nanoplot_out
-nanoplot --fastq DTP_1_1_Nano.fastq.gz  --plots  kde  dot --N50 -o nanoplot_out
+NanoPlot --fastq DTP_1_1_Nano.fastq.gz  --plots  kde  dot --N50 -o nanoplot_out
 ```
 
-Take a look through the output files, starting with NanoStats.txt and NanoPlot-report.html
+note that the command `NanoPlot` is mixed-case and case-sensitive.
 
+Take a look through the output files, starting with NanoStats.txt and NanoPlot-report.html
 
 - **NanoStats.txt** gives you a quick numerical overview of the sequencing dataset's quality and composition.
 - **NanoPlot-report.html** is a more detailed, interactive report that allows you to visualize the statistics and assess the overall quality of the sequencing run. Look for balanced read lengths, high-quality scores, and a consistent GC content as indicators of good data quality.
@@ -413,7 +394,7 @@ Let's now trim the reads using `porechop`
 porechop -i DTP_1_1_Nano.fastq.gz -o DTP_1_1_Nano_chopped.fastq.gz
 ```
 
- - Watch the progress of the program on your terminal. This takes a long time. You should open a fresh terminal to continue below while waiting. But remember to activate the `seqanalysis` conda environment and cd to /home/jovyan/seqanalysis_example/long_reads
+ - Watch the progress of the program on your terminal. This takes a long time. You should open a fresh terminal to continue below while waiting. But remember to activate the `seqanalysis` conda environment and `cd` to `/home/jovyan/seqanalysis_example/long_reads`
 
 Once it has finished, let's look at what we have
 
@@ -466,10 +447,6 @@ We will use the long read assembler `flye`.
 - *No Need for Hybrid Assembly*: Flye works directly with long reads, while SPAdes often needs short reads to polish or scaffold long-read assemblies effectively
 
 
-```
-conda install -y flye
-
-```
 Let's make a directory to work in. Then copy the chopped nanopore reads across.
 
 
