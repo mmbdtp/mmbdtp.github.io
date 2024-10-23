@@ -36,11 +36,8 @@ The steps in the workflow ahead of us include using:
 ---
 ## Getting the example sequences
 
-Open a Terminal on your Notebook server. Let's get started by setting up a specific conda environment for this session.
-```
-conda create -n seqanalysis 
-conda activate seqanalysis
-```
+Open a Terminal on your Notebook server. 
+
 Sometimes Conda can run into issues with outdated metadata. It might make life easier if you clear the Conda cache and tell Conda want channels to look at as default
 
 ```
@@ -48,6 +45,12 @@ conda clean --all
 conda config --add channels bioconda
 conda config --add channels conda-forge
 conda config --set channel_priority strict ⁠
+```
+
+Let's get started by setting up a specific conda environment for this session.
+```
+conda create -n seqanalysis 
+conda activate seqanalysis
 ```
 
 Let's create and use a directory for these example analyses:
