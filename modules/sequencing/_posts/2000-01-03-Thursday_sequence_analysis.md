@@ -60,8 +60,8 @@ cd seqanalysis_example
 We need to install programs in this conda environment for short sequence QC
 
 ```
-conda install -y -c bioconda fastqc
-conda install -y -c bioconda trimmomatic
+conda install -y  fastqc
+conda install -y  trimmomatic
 ```
 
 
@@ -318,7 +318,7 @@ Let's assemble the short reads using `SPAdes`.
 ```
 mkdir /home/jovyan/seqanalysis_example/short_reads/spades
 cd /home/jovyan/seqanalysis_example/short_reads/spades
-conda install -y -c bioconda spades
+conda install -y  spades
 cp /home/jovyan/seqanalysis_example/short_reads/QC/DTP-2-3_S11_L001_R*_paired.fastq.gz . 
 spades.py -1 DTP-2-3_S11_L001_R1_paired.fastq.gz -2 DTP-2-3_S11_L001_R2_paired.fastq.gz -o spades_out --threads 8 --memory 16
 ```
