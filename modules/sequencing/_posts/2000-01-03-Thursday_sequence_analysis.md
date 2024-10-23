@@ -10,6 +10,11 @@ title: Analyses of YOUR VERY OWN short and long reads!
 
 ---
 
+**Reminder**: Please fill in the [feedback form](https://forms.office.com/e/si0HtJNKD7) before you leave on friday!
+
+---
+# Be excited!
+
 Today you are going to analyse the sequence reads you created earlier this week. 
 
 BUT to start with, we will have a walkthrough of the various steps in the analysis, working on sequences created by students last year. Then you will work in two or three groups to analyse all the sequences that you created for yourselves. 
@@ -512,3 +517,9 @@ You are required to write a report as a PDF document covering each sequence, det
 You shuld work in your pre-existing team of two and produce three reports, one for each team. Upload your reports into /home/jovyan/shared-team/seqanalysis_2024/reports
 
 **Stretch target**: if you really race through all of this. Where short and long read sequences are available from the same sample, you could install `unicyler` and see if hybrid assembly gives better results than assemblies on short and long reads alone.
+
+---
+
+**Important**: Please fill in the [feedback form](https://forms.office.com/e/si0HtJNKD7) before you leave on friday!
+
+---
