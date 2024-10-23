@@ -501,16 +501,14 @@ And what do we see in the `krona` display now?
 
 # And now it's over to you!
 
-https://github.com/mmbdtp/mmbdtp.github.io/blob/gh-pages/modules/sequencing/_posts/42b0af67-1cf9-4cf1-b705-919c772ff879.webp
-
 ![](https://raw.githubusercontent.com/mmbdtp/mmbdtp.github.io/gh-pages/modules/sequencing/_posts/42b0af67-1cf9-4cf1-b705-919c772ff879.webp)
 
 The sequences you yourselves created should be available in `/home/jovyan/shared-team/seqanalysis_2024`
 
 Your mission is to analyse all of those sequences, performing QC, taxonomic profiling and assembly using the approaches outlined above. Take care to maintain a tidy file and directory structure as you go. 
 
-You are required to write a report in Word or as PDF on each sequence, detailing QC of reads, what's in the samples and how well the assembly worked. Include a short summary at the start.
+You are required to write a report as PDF document covering on each sequence, detailing QC of reads, what's in the samples and how well the assembly worked. Include images from mages files or screen dumps if helpful, Include a short tabulated summary at the start of the report.
 
-You can work singly, but are probably better off working in teams of two or three.
+You shuld work in your pre-existing team of two and produce three reports, one for each team. Upload your reports into /home/jovyan/shared-team/seqanalysis_2024/reports
 
 **Stretch target**: if you really race through all of this. Where short and long read sequences are available from the same sample, you could install unicyler and see if hybrid assembly gives better results than assemblies on short and long reads alone.
