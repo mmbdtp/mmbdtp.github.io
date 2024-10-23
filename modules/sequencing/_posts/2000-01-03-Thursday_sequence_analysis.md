@@ -501,6 +501,10 @@ And what do we see in the `krona` display now?
 
 # And now it's over to you!
 
+https://github.com/mmbdtp/mmbdtp.github.io/blob/gh-pages/modules/sequencing/_posts/42b0af67-1cf9-4cf1-b705-919c772ff879.webp
+
+![](https://raw.githubusercontent.com/mmbdtp/mmbdtp.github.io/gh-pages/modules/sequencing/_posts/42b0af67-1cf9-4cf1-b705-919c772ff879.webp)
+
 The sequences you yourselves created should be available in `/home/jovyan/shared-team/seqanalysis_2024`
 
 Your mission is to analyse all of those sequences, performing QC, taxonomic profiling and assembly using the approaches outlined above. Take care to maintain a tidy file and directory structure as you go. 
