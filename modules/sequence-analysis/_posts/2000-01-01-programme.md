@@ -7,31 +7,36 @@ title: Programme
 
 _Evelien Adriaenssens (Evelien.Adriaenssens@quadram.ac.uk) and her team_
 
+Please note that you will be following the material in this wiki on adriaenssens lab GitHhub
+
+ - [https://github.com/adriaenssens-lab/phage-genomics/wiki](https://github.com/adriaenssens-lab/phage-genomics/wiki)
+
+We will flexible on the pace and will take it as it comes, so there are no dates or times added to the wiki. 
+Please let us know if we are going too slowly or too fast as we go along.
 
 ***
 
-### Monday - Details to follow
+### Monday
 
 **Venue:** Monday October 28th: UG55B
 
 ***
 
-### Tuesday - Details to follow
+### Tuesday
 
 **Venue:** Tuesday October 29th: UG55C
 
 ***
 
-### Thursday - Details to follow
+### Thursday
 
 **Venue:** Thursday October 31st: QIB Board Room Meeting Room
 
 ***
 
-### Friday - Details to follow
+### Friday
 
 **Venue:** Friday November 1st: UG55C
 
 ***
 
-Note that files from this module in the 2023 course have been archived in the old_sequence_analysis directory
