@@ -14,6 +14,8 @@ Please note that you will be following the material in this wiki on adriaenssens
 We will flexible on the pace and will take it as it comes, so there are no dates or times added to the wiki. 
 Please let us know if we are going too slowly or too fast as we go along.
 
+**Please complete [this feedback form](https://forms.office.com/e/BUJkydwaZE) before leaving on Friday!**
+
 ***
 
 ### Monday
