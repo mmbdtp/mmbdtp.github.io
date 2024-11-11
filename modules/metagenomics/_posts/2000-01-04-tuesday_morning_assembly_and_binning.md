@@ -69,7 +69,7 @@ While that is running, let's watch this video that explains how de Bruijn graphs
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OY9Q_rUCGDw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Then let's comsider what the output of Metahit is telling us.
+Then let's consider what the output of Metahit is telling us.
 
 ```
 2024-11-11 11:20:22 - MEGAHIT v1.2.9
