@@ -13,7 +13,7 @@ By the end of this session, participants will be able to:
    - Comprehend the relevance of metagenomic profiling in analyzing and interpreting microbial community structures.
    - Relate the clinical and biological significance of data obtained from patient samples to potential diagnostic and treatment insights.
 
-2. **Navigate and Utilize the NCBI SRA Database**:
+2. **Navigate and Use the NCBI SRA Database**:
    - Access and explore BioProjects, BioSamples, and Sequence Read Runs (SRR) on the NCBI platform.
    - Understand how to interpret metadata associated with metagenomic sequencing datasets.
 
@@ -75,7 +75,7 @@ cd metagenomics_2024_yourname
 
 
 ##Powerpoint time
-Now, we will provide the conceptual background to metagenomics with a brief Powerpoint presentation.
+Now, we will provide the conceptual background to metagenomics with a brief [Powerpoint presentation](https://github.com/mmbdtp/mmbdtp.github.io/raw/refs/heads/gh-pages/modules/metagenomics/_posts/pallen-intro-metagenomics.pptx).
 
 
 ---
