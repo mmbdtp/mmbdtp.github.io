@@ -55,7 +55,7 @@ Assembly and binning
 **Venue:** Board Room
 
 
-Taxonomic and functional profiling.
+Taxonomic and functional profiling
 
 ***
 
@@ -63,4 +63,4 @@ Taxonomic and functional profiling.
 
 **Venue:** Board Room
 
-A glimpse of long-read metagenomics.
+A glimpse of long-read metagenomics
