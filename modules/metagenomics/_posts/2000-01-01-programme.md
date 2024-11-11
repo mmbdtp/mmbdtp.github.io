@@ -3,12 +3,12 @@ title: Metagenomics
 ---
 
 # Week 5: Metagenomics
-
----
-
 **Week beginning November 25 2024**
 
 ### Tutor(s)
+
+---
+
 
 - **Mark Pallen** ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk)) 
 
