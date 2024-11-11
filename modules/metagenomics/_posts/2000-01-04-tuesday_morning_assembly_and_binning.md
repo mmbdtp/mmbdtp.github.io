@@ -414,7 +414,10 @@ Here are the links to the SRA Krona plots.
 
 ## Time for lunch
 
+![](https://raw.githubusercontent.com/mmbdtp/mmbdtp.github.io/refs/heads/gh-pages/modules/metagenomics/_posts/DALL·E%202024-11-11%2013.09.50%20-%20A%20whimsical%20and%20detailed%20scene%20in%20a%20laboratory%20where%20PhD%20students%20are%20humorously%20eating%20lunch%20out%20of%20metagenomic%20bins.%20The%20students%20are%20seated%20at%20lab%20.webp)
 
+
+---
 
 
 
