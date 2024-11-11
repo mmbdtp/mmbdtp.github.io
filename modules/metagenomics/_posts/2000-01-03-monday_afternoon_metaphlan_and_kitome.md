@@ -221,8 +221,8 @@ bowtie2 -x hg37dec_v0.1 -1 patient29_R1.fastq.gz -2 patient29_R2.fastq.gz \
 
 We use `bowtie2` to map paired-end reads to the human reference genome index (`hg37dec_v0.1`). 
 
--- The `--un-conc` flag outputs reads that *do not* align to the host genome, essentially isolating non-human sequences. 
--- The output (`nonhuman.fastq.gz`) contains microbial or other non-host DNA, which can be further analyzed.
+- The `--un-conc` flag outputs reads that *do not* align to the host genome, essentially isolating non-human sequences. 
+- The output (`nonhuman.fastq.gz`) contains microbial or other non-host DNA, which can be further analyzed.
 
 ### Why Would We Do This?
 
@@ -236,7 +236,7 @@ Removing host DNA is crucial for accurate metagenomic profiling because:
 
 In our samples, we don’t expect a significant amount of host DNA because they were already screened for this before uploading to GenBank, so we are just runing this step on a single sample primarily for demonstration purposes. The command maps the reads and any reads that fail to align to the human genome are kept as non-human data and we get told how many reads mapped to the human genome. But if you want to try it out on any of the other samples, feel free to do so.
 
-
+NB: Host DNA can be removed using many other approaches such as BBMap, BWA, HISAT2, Minimap2, FastQ Screen, KneadData, DeconSeq, BMTagger, SAMtools, and Kraken2, depending on the data type and resources available.
 
 ---
 
