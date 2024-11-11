@@ -88,13 +88,120 @@ We will use human faecal metagenome samples from [a paper](https://www.microbiol
  
 Here's a table, integrating clinical information and sequence data on the patient samples.
 
-<div style="font-size: 12px;">
-| Header 1 | Header 2 | Header 3 |
-|----------|----------|----------|
-| Row 1    | Data     | Example  |
-| Row 2    | More     | Content  |
-| Row 3    | Data     | Here     |
-</div>
+<table style="font-size: 12px; width: 100%; border-collapse: collapse;">
+  <tr>
+    <th style="border: 1px solid #ddd; padding: 8px;">Patient</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">Age</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">Sex</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">Clinical Features</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">ICU Day</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">Sample</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">Run</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">AvgSpotLen</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">Bases</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">Bytes</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">SOFA score</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">Antibiotics</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #ddd; padding: 8px;">Patient 02</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">64</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">F</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Subarachnoid haemorrhage</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">1</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">13-6929524</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">SRR8926116</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">233</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">270,551,026</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">136,892,477</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">8</td>
+    <td style="border: 1px solid #ddd; padding: 8px;"></td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #ddd; padding: 8px;">Patient 02</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">64</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">F</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Subarachnoid haemorrhage</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">10</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">13-6929534</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">SRR8926119</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">229</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">286,911,856</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">144,866,803</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">3</td>
+    <td style="border: 1px solid #ddd; padding: 8px;"></td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #ddd; padding: 8px;">Patient 04</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">75</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">M</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Aortic aneurysm repair</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">10</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">13-6929537</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">SRR8926181</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">225</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">184,808,950</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">93,747,180</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">13</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Flucoxacillin; Rofampicin; Erythromycin</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #ddd; padding: 8px;">Patient 04</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">75</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">M</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Aortic aneurysm repair</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">14</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">13-6929548</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">SRR8926187</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">213</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">114,050,219</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">57,808,179</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">11</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Flucoxacillin; Rofampicin; Meropenem</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #ddd; padding: 8px;">Patient 29</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">80</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">M</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Subcapsular haematoma; liver cancer</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">15</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">13-6929598</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">SRR8926127</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">249</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">361,066,223</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">159,940,956</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">1</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Meropenem</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #ddd; padding: 8px;">Patient 35</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">49</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">M</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Lung transplant</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">3</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">13-6929625</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">SRR8926193</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">276</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">135,189,099</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">64,243,237</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">11</td>
+    <td style="border: 1px solid #ddd; padding: 8px;"></td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #ddd; padding: 8px;">Patient 36</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">30</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">M</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Multiple trauma</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">11</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">13-6929614</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">SRR8926233</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">254</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">153,261,668</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">70,498,579</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">3</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Co-Trimoxazole; Valganciclovir; Tazobactam</td>
+  </tr>
+</table>
 
 
 | Patient    | Age | Sex | Clinical Features                               | ICU Day| Sample     | Run        | AvgSpotLen | Bases        | Bytes       | SOFA score | Antibiotics                              |
