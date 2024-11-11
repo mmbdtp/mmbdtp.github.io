@@ -1,16 +1,17 @@
 ---
-title: Monday Afternoon - Metaphlan and the unreal microbiome
+title: Monday Afternoon - MetaPhlAn and the unreal microbiome
 ---
 
 
-# Monday Afternoon - Metaphlan and the unreal microbiome
+# Monday Afternoon 
+## MetaPhlAn and the unreal microbiome
 
 ---
 
 
 ## Objectives
 
-By the end of this session, participants will be able to:
+By the end of this session, you will be able to:
 
 1. **Understand the Role of MetaPhlAn in Metagenomics**:
    - Explain the key features of MetaPhlAn and its importance in profiling microbial communities.
@@ -46,7 +47,7 @@ By the end of this session, participants will be able to:
 
 ---
 
-## Metaphlan
+## MetaPhlAn
 ### MetaPhlAn Overview
 
 MetaPhlAn (Metagenomic Phylogenetic Analysis) is a computational tool designed for profiling the composition of microbial communities from metagenomic sequencing data. It uses a unique database of clade-specific marker genes to identify and quantify taxa within a sample, providing a high-resolution taxonomic profile. This makes it particularly valuable for studies exploring the diversity and abundance of microbial communities in various environments, including the human microbiome.
@@ -67,12 +68,12 @@ MetaPhlAn (Metagenomic Phylogenetic Analysis) is a computational tool designed f
 
 ---
 
-Now we want to run metaphlan over the same samples. But metaphlan output files are scarcely more user-friendly than Kraken output files. 
+Now we want to run MetaPhlAn over the same samples. But MetaPhlAn output files are scarcely more user-friendly than Kraken output files. 
 
-Here's what the first few lines of a metaphlan output file look like
+Here's what the first few lines of a MetaPhlAn output file look like
 
 ```
---input_type	#/shared/team/conda/mpallen.mmb-dtp/seqanalysis/bin/metaphlan
+--input_type	#/shared/team/conda/mpallen.mmb-dtp/seqanalysis/bin/MetaPhlAn
 relative_abundance	#clade_name
 100.0	Bacteria
 99.697	Bacteria	Proteobacteria
@@ -113,7 +114,7 @@ relative_abundance	#clade_name
 94.39562	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Yersiniaceae	Serratia	Serratia_fonticola
 ```
 
-It would be great if we could look at them as krona plots, but krona won't take metaphlan output files as input. But with a little text manipulation we can make it work, so that we can run metaphlan and create krona files. With help from ChatGPT, I have written a script that does this.
+It would be great if we could look at them as krona plots, but krona won't take MetaPhlAn output files as input. But with a little text manipulation we can make it work, so that we can run MetaPhlAn and create krona files. With help from ChatGPT, I have written a script that does this.
 
 Create a file called `metakron.sh` using `touch` then paste in shell script, grant it execute permissions and then run it:
 
@@ -121,29 +122,29 @@ Create a file called `metakron.sh` using `touch` then paste in shell script, gra
 #!/bin/bash
 
 # Create the MetaPhlAn output directory if it doesn't exist
-mkdir -p metaphlan
+mkdir -p MetaPhlAn
 
 # Run MetaPhlAn on paired-end *_R1.fastq.gz and *_R2.fastq.gz files in the current directory and generate Krona plots
 for sample in $(ls *_R1.fastq.gz | sed 's/_R1.fastq.gz//'); do
     if [ -f "${sample}_R1.fastq.gz" ] && [ -f "${sample}_R2.fastq.gz" ]; then
-        # Generate MetaPhlAn output filenames in the metaphlan directory
-        metaphlan_output="metaphlan/${sample}_metaphlan_out.txt"
-        bowtie2_output="metaphlan/${sample}_bowtie2_out.bowtie2"
+        # Generate MetaPhlAn output filenames in the MetaPhlAn directory
+        MetaPhlAn_output="MetaPhlAn/${sample}_MetaPhlAn_out.txt"
+        bowtie2_output="MetaPhlAn/${sample}_bowtie2_out.bowtie2"
 
         # Run MetaPhlAn with paired-end files
         echo "Running MetaPhlAn on ${sample} fastq.gz files..."
-        metaphlan "${sample}_R1.fastq.gz,${sample}_R2.fastq.gz" --input_type fastq -o "$metaphlan_output" --bowtie2out "$bowtie2_output"
+        MetaPhlAn "${sample}_R1.fastq.gz,${sample}_R2.fastq.gz" --input_type fastq -o "$MetaPhlAn_output" --bowtie2out "$bowtie2_output"
 
         # Check if MetaPhlAn output was generated
-        if [ ! -f "$metaphlan_output" ]; then
+        if [ ! -f "$MetaPhlAn_output" ]; then
             echo "Error: MetaPhlAn output not generated for ${sample}."
             continue
         fi
 
-        # Prepare the Krona input file in the metaphlan directory
-        krona_input="metaphlan/${sample}_krona_input.txt"
+        # Prepare the Krona input file in the MetaPhlAn directory
+        krona_input="MetaPhlAn/${sample}_krona_input.txt"
 
-        echo "Processing $metaphlan_output for Krona..."
+        echo "Processing $MetaPhlAn_output for Krona..."
         awk '{
             if (NR > 1 && NF >= 3) {
                 # Copy the third column to the first column in the output
@@ -163,7 +164,7 @@ for sample in $(ls *_R1.fastq.gz | sed 's/_R1.fastq.gz//'); do
                 # Print the transformed line
                 print output_col1 "\t" output_col2;
             }
-        }' "$metaphlan_output" > "$krona_input"
+        }' "$MetaPhlAn_output" > "$krona_input"
 
         # Check if ktImportText is available
         if ! command -v ktImportText &> /dev/null; then
@@ -171,8 +172,8 @@ for sample in $(ls *_R1.fastq.gz | sed 's/_R1.fastq.gz//'); do
             exit 1
         fi
 
-        # Generate the Krona plot in the metaphlan directory
-        krona_output="metaphlan/${sample}_krona.html"
+        # Generate the Krona plot in the MetaPhlAn directory
+        krona_output="MetaPhlAn/${sample}_krona.html"
         echo "Generating Krona plot for $krona_input..."
         ktImportText "$krona_input" -o "$krona_output"
 
@@ -191,7 +192,7 @@ done
 
 What is the script doing? Spend five minutes trying to work out for yourself, then ask ChatGPT for a detailed explanation. 
 
-Compare and contrast the krona plots for each sample produced by kraken and metaphlan. Write a brief text-based report on this.
+Compare and contrast the krona plots for each sample produced by kraken and MetaPhlAn. Write a brief text-based report on this.
 
 
 ---
