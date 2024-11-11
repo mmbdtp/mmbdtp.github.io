@@ -3,7 +3,7 @@ title: Metagenomics
 ---
 
 # Week 5: Metagenomics
-**Week beginning December 2nd 2024**
+**Week beginning November 25 2024**
 
 **Tutor(s)**: 
 - **Mark Pallen** ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk)) 
@@ -24,7 +24,7 @@ They found that ICU patients had significant alterations in their faecal microbi
 
 ***
 
-### Monday December 2nd
+### Monday November 25
 
 **Venue:** UG55C
 
@@ -32,7 +32,7 @@ Details to follow.
 
 ***
 
-### Tuesday December 3rd
+### Tuesday November 26
 
 **Venue:** UG55C
 
@@ -40,7 +40,7 @@ Details to follow.
 
 ***
 
-### Thursday December 5th
+### Thursday November 28
 
 **Venue:** Board Room
 
@@ -49,7 +49,7 @@ Details to follow.
 
 ***
 
-### Friday December 6th
+### Friday November 29
 
 **Venue:** Board Room
 
