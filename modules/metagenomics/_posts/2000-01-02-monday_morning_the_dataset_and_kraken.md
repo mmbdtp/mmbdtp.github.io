@@ -230,15 +230,54 @@ Explore the site's hierarchy of BioProjects, BioSamples, Sequence Read Experimen
 You can select a run and take a look at NCBI's phylogenetic analyses, including a Krona plot (click on *Show Krona View* to see it).
 Here's the table with patient, day in ICU, and SRR link:
 
-| Patient    | ICU Day    | Run Link                                                                                                        |
-|------------|------------|-----------------------------------------------------------------------------------------------------------------|
-| Patient 02 | 1          | [SRR8926116](https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926116&display=analysis) |
-| Patient 02 | 10         | [SRR8926119](https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926119&display=analysis) |
-| Patient 04 | 10         | [SRR8926181](https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926181&display=analysis) |
-| Patient 04 | 14         | [SRR8926187](https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926187&display=analysis) |
-| Patient 29 | 15         | [SRR8926127](https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926127&display=analysis) |
-| Patient 35 | 3          | [SRR8926193](https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926193&display=analysis) |
-| Patient 36 | 11         | [SRR8926233](https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926233&display=analysis) |
+<div style="font-size: 12px;">
+<table>
+  <thead>
+    <tr>
+      <th>Patient</th>
+      <th>ICU Day</th>
+      <th>Run Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Patient 02</td>
+      <td>1</td>
+      <td><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926116&display=analysis">SRR8926116</a></td>
+    </tr>
+    <tr>
+      <td>Patient 02</td>
+      <td>10</td>
+      <td><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926119&display=analysis">SRR8926119</a></td>
+    </tr>
+    <tr>
+      <td>Patient 04</td>
+      <td>10</td>
+      <td><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926181&display=analysis">SRR8926181</a></td>
+    </tr>
+    <tr>
+      <td>Patient 04</td>
+      <td>14</td>
+      <td><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926187&display=analysis">SRR8926187</a></td>
+    </tr>
+    <tr>
+      <td>Patient 29</td>
+      <td>15</td>
+      <td><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926127&display=analysis">SRR8926127</a></td>
+    </tr>
+    <tr>
+      <td>Patient 35</td>
+      <td>3</td>
+      <td><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926193&display=analysis">SRR8926193</a></td>
+    </tr>
+    <tr>
+      <td>Patient 36</td>
+      <td>11</td>
+      <td><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926233&display=analysis">SRR8926233</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 Equipped with accession numbers you could use command line tools like`fastq-dump` from the [SRA Toolkit](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software) to retrieve FASTQ files. 
 
