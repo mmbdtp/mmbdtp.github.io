@@ -328,9 +328,11 @@ Here's a rogue's gallery of common contanimants from the kitome:
 
 ![Image of Falk Hildebrand](https://quadram.ac.uk/wp-content/uploads/2019/01/Falk-Hildebrand1.jpg)
 
-And it's not just kitome that is the problem! QIB's very own Falk Hildebrand published this paper a few years ago:
+And it's not just kitome that is the problem! 
 
- - [Much ado about nothing? Off-target amplification can lead to false-positive bacterial brain microbiome detection in healthy and Parkinson’s disease individuals](https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-021-01012-1#:~:text=ado%20about%20nothing%3F-,Off%2Dtarget%20amplification%20can%20lead%20to%20false%2Dpositive%20bacterial%20brain,healthy%20and%20Parkinson's%20disease%20individuals)
+QIB's very own Falk Hildebrand published this paper a few years ago:
+
+ - [Much ado about nothing? Off-target amplification can lead to false-positive bacterial brain microbiome detection in healthy and Parkinson’s disease individuals](https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-021-01012-1)
 
 Here are the main points from the paper:
 
