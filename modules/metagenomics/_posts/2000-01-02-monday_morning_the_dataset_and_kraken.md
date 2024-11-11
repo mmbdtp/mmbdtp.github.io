@@ -203,7 +203,7 @@ Here's a table, integrating clinical information and sequence data on the patien
   </tr>
 </table>
 
-===
+---
 
 The **SOFA (Sequential Organ Failure Assessment) score** is used to assess the extent of a patient's organ function or rate of failure. It helps predict outcomes and indicates the severity of illness, especially in intensive care units (ICU). The higher the score, the greater the likelihood of organ dysfunction and mortality risk. Here’s a quick interpretation:
 
