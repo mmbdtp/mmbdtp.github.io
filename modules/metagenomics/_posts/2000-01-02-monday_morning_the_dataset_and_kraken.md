@@ -75,7 +75,7 @@ cd metagenomics_2024_yourname
 ---
 
 
-##Powerpoint time
+## Powerpoint time
 Now, we will provide the conceptual background to metagenomics with a brief [Powerpoint presentation](https://github.com/mmbdtp/mmbdtp.github.io/raw/refs/heads/gh-pages/modules/metagenomics/_posts/pallen-intro-metagenomics.pptx).
 
 
