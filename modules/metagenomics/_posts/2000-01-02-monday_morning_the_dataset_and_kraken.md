@@ -203,6 +203,8 @@ Here's a table, integrating clinical information and sequence data on the patien
   </tr>
 </table>
 
+
+
 The **SOFA (Sequential Organ Failure Assessment) score** is used to assess the extent of a patient's organ function or rate of failure. It helps predict outcomes and indicates the severity of illness, especially in intensive care units (ICU). The higher the score, the greater the likelihood of organ dysfunction and mortality risk. Here’s a quick interpretation:
 
 - **Low scores (1-5)**: Typically suggest a lower risk of organ failure and better patient condition.
@@ -225,11 +227,11 @@ If you are interested in a dataset from a paper, it will be usually deposited to
 
 Explore the site's hierarchy of BioProjects, BioSamples, Sequence Read Experiments (SRX) and Sequence Read Runs (SRR). Review the NCBI metadata associated with each of the samples and runs we are going to be working on, using the links in the table above. Get Google Maps to show you where the samples were collected. Do you trust what it is telling you?
 
-You can select a run and take a look at NCBI's phylogenetic analyses, including a Krona plot (click on *Show Krona View* to see it:
+You can select a run and take a look at NCBI's phylogenetic analyses, including a Krona plot (click on *Show Krona View* to see it).
 Here's the table with patient, day in ICU, and SRR link:
 
-| Patient    | ICU Day| Run Link                                                                                                   |
-|------------|------------|------------------------------------------------------------------------------------------------------------|
+| Patient    | ICU Day    | Run Link                                                                                                        |
+|------------|------------|-----------------------------------------------------------------------------------------------------------------|
 | Patient 02 | 1          | [SRR8926116](https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926116&display=analysis) |
 | Patient 02 | 10         | [SRR8926119](https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926119&display=analysis) |
 | Patient 04 | 10         | [SRR8926181](https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926181&display=analysis) |
