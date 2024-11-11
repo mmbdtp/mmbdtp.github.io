@@ -252,7 +252,7 @@ NB: Host DNA can be removed using many other approaches such as BBMap, BWA, HISA
 ---
 
 # The unreal microbiome
-
+![](https://raw.githubusercontent.com/mmbdtp/mmbdtp.github.io/refs/heads/gh-pages/modules/metagenomics/_posts/DALL·E%202024-11-11%2010.29.28%20-%20A%20playful%20and%20imaginative%20scene%20of%20a%20zombie%20character%20made%20of%20Kitome%20DNA%20strands%2C%20with%20a%20twisted%20double-helix%20shape%2C%20chasing%20a%20female%20PhD%20student%20in%20a.webp)
 Sometimes what we see in the output of metagenomic analyses does not reflect what is actually out there in the real world, particularly when we are dealing with samples that are likely to have a low biomass. This is a persistent problem. Just a few weeks ago, New Scientist claimed that the brain is teeming with life, when in fact there is no brain microbiome at all.
 
 Here's the landmark paper that anyone working on microbiomes should read:
