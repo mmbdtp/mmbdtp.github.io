@@ -351,5 +351,6 @@ See you tomorrow.
 
 **Stretch targets** if you have time and energy: 
 
+- read the Salter et al paper and Falk's paper carefully. Use Google Scholar to see who has cited them.
 - try running [Bracken](https://ccb.jhu.edu/software/bracken/) over your Kraken results.
 - try installing and running other profiling tools over the data, including [mOTUs](https://motu-tool.org) and [Centrifuge](https://ccb.jhu.edu/software/centrifuge/).
