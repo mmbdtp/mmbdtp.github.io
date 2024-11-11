@@ -224,6 +224,9 @@ We use `bowtie2` to map paired-end reads to the human reference genome index (`h
 - The `--un-conc` flag outputs reads that *do not* align to the host genome, essentially isolating non-human sequences. 
 - The output (`nonhuman.fastq.gz`) contains microbial or other non-host DNA, which can be further analyzed.
 
+---
+
+
 ### Why Would We Do This?
 
 Removing host DNA is crucial for accurate metagenomic profiling because:
@@ -232,7 +235,10 @@ Removing host DNA is crucial for accurate metagenomic profiling because:
 2. **Resource Efficiency**: Removing unnecessary host sequences before analysis helps save computational resources and improves the speed and accuracy of subsequent processing steps.
 3. **Ethical and Privacy Considerations**: For human samples, excluding host DNA can also mitigate privacy concerns related to handling personal genetic data.
 
-### Practical Note for Our Samples
+---
+
+
+### Practical Note on Our Samples
 
 In our samples, we don’t expect a significant amount of host DNA because they were already screened for this before uploading to GenBank, so we are just runing this step on a single sample primarily for demonstration purposes. The command maps the reads and any reads that fail to align to the human genome are kept as non-human data and we get told how many reads mapped to the human genome. But if you want to try it out on any of the other samples, feel free to do so.
 
@@ -240,6 +246,9 @@ NB: Host DNA can be removed using many other approaches such as BBMap, BWA, HISA
 
 ---
 
+## Coffee time
+
+---
 
 ## The unreal microbiome
 
