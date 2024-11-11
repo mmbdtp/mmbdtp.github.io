@@ -203,7 +203,7 @@ Here's a table, integrating clinical information and sequence data on the patien
   </tr>
 </table>
 
-
+===
 
 The **SOFA (Sequential Organ Failure Assessment) score** is used to assess the extent of a patient's organ function or rate of failure. It helps predict outcomes and indicates the severity of illness, especially in intensive care units (ICU). The higher the score, the greater the likelihood of organ dysfunction and mortality risk. Here’s a quick interpretation:
 
@@ -230,54 +230,55 @@ Explore the site's hierarchy of BioProjects, BioSamples, Sequence Read Experimen
 You can select a run and take a look at NCBI's phylogenetic analyses, including a Krona plot (click on *Show Krona View* to see it).
 Here's the table with patient, day in ICU, and SRR link:
 
-<div style="font-size: 12px;">
-<table>
-  <thead>
-    <tr>
-      <th>Patient</th>
-      <th>ICU Day</th>
-      <th>Run Link</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Patient 02</td>
-      <td>1</td>
-      <td><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926116&display=analysis">SRR8926116</a></td>
-    </tr>
-    <tr>
-      <td>Patient 02</td>
-      <td>10</td>
-      <td><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926119&display=analysis">SRR8926119</a></td>
-    </tr>
-    <tr>
-      <td>Patient 04</td>
-      <td>10</td>
-      <td><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926181&display=analysis">SRR8926181</a></td>
-    </tr>
-    <tr>
-      <td>Patient 04</td>
-      <td>14</td>
-      <td><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926187&display=analysis">SRR8926187</a></td>
-    </tr>
-    <tr>
-      <td>Patient 29</td>
-      <td>15</td>
-      <td><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926127&display=analysis">SRR8926127</a></td>
-    </tr>
-    <tr>
-      <td>Patient 35</td>
-      <td>3</td>
-      <td><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926193&display=analysis">SRR8926193</a></td>
-    </tr>
-    <tr>
-      <td>Patient 36</td>
-      <td>11</td>
-      <td><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926233&display=analysis">SRR8926233</a></td>
-    </tr>
-  </tbody>
-</table>
+<div style="font-size: 12px; font-family: Arial, sans-serif; margin: 20px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+  <table style="width: 100%; border-collapse: collapse;">
+    <thead style="background-color: #f4f4f4;">
+      <tr>
+        <th style="padding: 10px; text-align: left; border-bottom: 2px solid #ccc;">Patient</th>
+        <th style="padding: 10px; text-align: left; border-bottom: 2px solid #ccc;">ICU Day</th>
+        <th style="padding: 10px; text-align: left; border-bottom: 2px solid #ccc;">Run Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">Patient 02</td>
+        <td style="padding: 8px;">1</td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926116&display=analysis" style="color: #0066cc; text-decoration: none;">SRR8926116</a></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">Patient 02</td>
+        <td style="padding: 8px;">10</td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926119&display=analysis" style="color: #0066cc; text-decoration: none;">SRR8926119</a></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">Patient 04</td>
+        <td style="padding: 8px;">10</td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926181&display=analysis" style="color: #0066cc; text-decoration: none;">SRR8926181</a></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">Patient 04</td>
+        <td style="padding: 8px;">14</td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926187&display=analysis" style="color: #0066cc; text-decoration: none;">SRR8926187</a></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">Patient 29</td>
+        <td style="padding: 8px;">15</td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926127&display=analysis" style="color: #0066cc; text-decoration: none;">SRR8926127</a></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">Patient 35</td>
+        <td style="padding: 8px;">3</td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926193&display=analysis" style="color: #0066cc; text-decoration: none;">SRR8926193</a></td>
+      </tr>
+      <tr>
+        <td style="padding: 8px;">Patient 36</td>
+        <td style="padding: 8px;">11</td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926233&display=analysis" style="color: #0066cc; text-decoration: none;">SRR8926233</a></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+
 
 Equipped with accession numbers you could use command line tools like`fastq-dump` from the [SRA Toolkit](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software) to retrieve FASTQ files. 
 
@@ -297,6 +298,7 @@ cp -r  /home/jovyan/shared-team/2024_training/2024_metagenomics/sequences .
 
 ## Coffee break
 ![](https://github.com/mmbdtp/mmbdtp.github.io/raw/refs/heads/gh-pages/modules/metagenomics/_posts/DALL·E%202024-11-11%2009.50.14%20.webp)
+
 ---
 
 
