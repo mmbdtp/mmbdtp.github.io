@@ -48,9 +48,8 @@ By the end of this session, you will be able to:
 ---
 
 ## MetaPhlAn
-### MetaPhlAn Overview
 
-MetaPhlAn (Metagenomic Phylogenetic Analysis) is a computational tool designed for profiling the composition of microbial communities from metagenomic sequencing data. It uses a unique database of clade-specific marker genes to identify and quantify taxa within a sample, providing a high-resolution taxonomic profile. This makes it particularly valuable for studies exploring the diversity and abundance of microbial communities in various environments, including the human microbiome.
+•**MetaPhlAn** (Metagenomic Phylogenetic Analysis) is a computational tool designed for profiling the composition of microbial communities from metagenomic sequencing data. It uses a unique database of clade-specific marker genes to identify and quantify taxa within a sample, providing a high-resolution taxonomic profile. This makes it particularly valuable for studies exploring the diversity and abundance of microbial communities in various environments, including the human microbiome.
 
 #### Key Features
 - **High Specificity and Sensitivity**: MetaPhlAn focuses on using unique clade-specific markers to ensure accurate taxonomic classification, minimizing false positives common with broader marker sets.
@@ -68,7 +67,7 @@ MetaPhlAn (Metagenomic Phylogenetic Analysis) is a computational tool designed f
 
 ---
 
-Now we want to run MetaPhlAn over the same samples. But MetaPhlAn output files are scarcely more user-friendly than Kraken output files. 
+ Let's run MetaPhlAn over our samples. But MetaPhlAn output files are scarcely more user-friendly than Kraken output files. 
 
 Here's what the first few lines of a MetaPhlAn output file look like
 
