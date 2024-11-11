@@ -63,9 +63,10 @@ This command will assemble the paired-end reads from `patient02_day01` using 16 
 
 ---
 
-## De Bruijn grpahs made simple
+## De Bruijn graphs made simple
 
 While that is running, let's watch this video that explains how de Bruijn graphs are used for assembly. 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OY9Q_rUCGDw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Then let's comsider what the output of Metahit is telling us.
