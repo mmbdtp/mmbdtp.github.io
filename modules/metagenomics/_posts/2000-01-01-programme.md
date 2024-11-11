@@ -3,11 +3,18 @@ title: Metagenomics
 ---
 
 # Week 5: Metagenomics
+
+---
+
 **Week beginning November 25 2024**
 
-**Tutor(s)**: 
+### Tutor(s)
+
 - **Mark Pallen** ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk)) 
-  
+
+---
+
+
 ### Topics
 
 1. Metagenome profiling
@@ -15,6 +22,9 @@ title: Metagenomics
 3. Quality checks on MAGs
 4. Taxonomic classification of MAGs
 5. Functional analysis of metagenomes and MAGs
+
+---
+
 
 ### Dataset
 
