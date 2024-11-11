@@ -228,8 +228,6 @@ If you are interested in a dataset from a paper, it will be usually deposited to
 Explore the site's hierarchy of BioProjects, BioSamples, Sequence Read Experiments (SRX) and Sequence Read Runs (SRR). Review the NCBI metadata associated with each of the samples and runs we are going to be working on, using the links in the table above. Get Google Maps to show you where the samples were collected. Do you trust what it is telling you?
 
 You can select a run and take a look at NCBI's phylogenetic analyses, including a Krona plot (click on *Show Krona View* to see it).
-Here's the table with patient, day in ICU, and SRR link:
-
 <div style="font-size: 12px; font-family: Arial, sans-serif; margin: 20px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
   <table style="width: 100%; border-collapse: collapse;">
     <thead style="background-color: #f4f4f4;">
@@ -243,37 +241,37 @@ Here's the table with patient, day in ICU, and SRR link:
       <tr style="border-bottom: 1px solid #ddd;">
         <td style="padding: 8px;">Patient 02</td>
         <td style="padding: 8px;">1</td>
-        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926116&display=analysis" style="color: #0066cc; text-decoration: none;">SRR8926116</a></td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926116&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926116</a></td>
       </tr>
       <tr style="border-bottom: 1px solid #ddd;">
         <td style="padding: 8px;">Patient 02</td>
         <td style="padding: 8px;">10</td>
-        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926119&display=analysis" style="color: #0066cc; text-decoration: none;">SRR8926119</a></td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926119&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926119</a></td>
       </tr>
       <tr style="border-bottom: 1px solid #ddd;">
         <td style="padding: 8px;">Patient 04</td>
         <td style="padding: 8px;">10</td>
-        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926181&display=analysis" style="color: #0066cc; text-decoration: none;">SRR8926181</a></td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926181&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926181</a></td>
       </tr>
       <tr style="border-bottom: 1px solid #ddd;">
         <td style="padding: 8px;">Patient 04</td>
         <td style="padding: 8px;">14</td>
-        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926187&display=analysis" style="color: #0066cc; text-decoration: none;">SRR8926187</a></td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926187&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926187</a></td>
       </tr>
       <tr style="border-bottom: 1px solid #ddd;">
         <td style="padding: 8px;">Patient 29</td>
         <td style="padding: 8px;">15</td>
-        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926127&display=analysis" style="color: #0066cc; text-decoration: none;">SRR8926127</a></td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926127&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926127</a></td>
       </tr>
       <tr style="border-bottom: 1px solid #ddd;">
         <td style="padding: 8px;">Patient 35</td>
         <td style="padding: 8px;">3</td>
-        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926193&display=analysis" style="color: #0066cc; text-decoration: none;">SRR8926193</a></td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926193&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926193</a></td>
       </tr>
       <tr>
         <td style="padding: 8px;">Patient 36</td>
         <td style="padding: 8px;">11</td>
-        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926233&display=analysis" style="color: #0066cc; text-decoration: none;">SRR8926233</a></td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926233&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926233</a></td>
       </tr>
     </tbody>
   </table>
