@@ -354,7 +354,10 @@ Here are the main points from the paper:
 
 See this letter that New Scientist published from us:  [https://www.newscientist.com/letter/mg26435131-700-we-say-there-is-no-brain-microbiome/](https://www.newscientist.com/letter/mg26435131-700-we-say-there-is-no-brain-microbiome/)
 
-in response to this rubbish: [https://www.newscientist.com/letter/mg26435131-700-we-say-there-is-no-brain-microbiome/](https://www.newscientist.com/article/mg26335104-500-the-brain-has-its-own-microbiome-heres-what-it-means-for-your-health/](https://www.newscientist.com/letter/mg26435131-700-we-say-there-is-no-brain-microbiome/](https://www.newscientist.com/article/mg26335104-500-the-brain-has-its-own-microbiome-heres-what-it-means-for-your-health/)
+in response to this rubbish: [https://www.newscientist.com/letter/mg26435131-700-we-say-there-is-no-brain-microbiome/](https://www.newscientist.com/article/mg26335104-500-the-brain-has-its-own-microbiome-heres-what-it-means-for-your-health/)
+
+---
+
 
 ## That's all for today!
 
