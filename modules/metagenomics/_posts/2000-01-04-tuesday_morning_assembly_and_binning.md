@@ -159,6 +159,8 @@ Here's how to interpret the key outputs and what constitutes a good metagenomics
 
 6. **Misassemblies**: Count and type of detected misassemblies. A high number of misassemblies can imply structural errors in the assembly, which is especially important for metagenomic data as it reflects how accurately the assembly reflects the true genetic makeup.
 
+---
+
 ### What Would Count as a Good Metagenomics Assembly:
 For relatively simple metagenomic input files as we have here ranging from 30 to 80 MB, which likely represent moderate microbial diversity with lower coverage, here are some expected QUAST figures and interpretations:
 
@@ -186,6 +188,8 @@ For relatively simple metagenomic input files as we have here ranging from 30 to
    - **Expected**: Fewer than 50 misassemblies for simple metagenomes.
    - **Interpretation**: A low misassembly count indicates structural reliability. Higher counts suggest potential issues with assembly accuracy.
 
+---
+
 ### Additional Notes:
 - **Coverage Depth**: With smaller input files (30-80 MB), coverage depth may be limited, impacting the assembly quality and the contig N50. High-quality assemblies are more likely if coverage depth is around 20x or higher for dominant species.
 - **Completeness**: Expect assemblies to be partially complete but representative of the sample's microbial community.
@@ -206,9 +210,15 @@ Genomes in the sample can be recreated with a process called **binning**. This p
 
 There are various approaches to doing the binning using characteristics of the contigs, such as their GC content, the use of tetranucleotides (composition), or their coverage (abundance).
 
+
+---
+
 [Maxbin](https://sourceforge.net/projects/maxbin/files/) is a binning algorithm that distinguishes between contigs that belong to different bins according to their coverage levels and the tetranucleotide frequencies they have.
 
 Let us bin the samples we just assembled. But before we can run Maxbin, we have to calculate coverage depth using BowTie and related programs in the process of backmapping 
+
+---
+
 
 **Backmapping** involves aligning raw reads back to the assembled contigs to determine how well the reads map to different regions of the assembly. This process helps in calculating the coverage depth of each contig, which is directly proportional to the abundance of that contig in the sample.
 
@@ -219,7 +229,10 @@ Let us bin the samples we just assembled. But before we can run Maxbin, we have 
 - Average Coverage Calculation: The average coverage across each contig is computed to give a single value representing the abundance of that contig.
 - Inferring Abundance: Higher average coverage indicates higher abundance of the contig (and the corresponding organism) in the original metagenomic sample.
 
-Here's a workflow for this
+---
+
+
+Here's a workflow for all this
 
 ```
 mkdir -p maxbin_out_patient02_day01
@@ -248,9 +261,12 @@ This series of commands performs a workflow for mapping reads and generating abu
 
 7. **`run_MaxBin.pl -contig megahit_out_patient02_day01/final.contigs.fa -abund maxbin_out_patient02_day01/abundance_data.txt -out maxbin_out_patient02_day01/maxbin_bins -thread 48`**: Runs MaxBin using the contigs and abundance data to bin contigs into potential genomes, leveraging 48 threads for faster processing.
 
+---
+
+## Yallah!
 Run this workflow over your assembly. 
 
-Here's a separate version of the workflow for each of the FastQ files:
+Here's a separate version of the workflow for each of the samples. Copy and run the appropriate set of commands for your sample to complete the workflow.
 
 ### Workflow for `patient02_day01`
 ```bash
@@ -329,15 +345,17 @@ samtools depth maxbin_out_patient36/mapped_reads_sorted.bam | awk '{sum[$1] += $
 run_MaxBin.pl -contig megahit_out_patient36/final.contigs.fa -abund maxbin_out_patient36/abundance_data.txt -out maxbin_out_patient36/maxbin_bins -thread 48
 ```
 
-Copy and run the appropriate set of commands for your sample to complete the workflow.
+---
 
 
 ## Playing with BLAST
-Inside the maxbin_out_patient** directory you will discover how many bins you have. They are labelled maxbin_bins.001.fasta etc. How big are they? 
+Inside the maxbin_out_patient** directory you will discover how many bins you have. They are labelled maxbin_bins.001.fasta etc. 
+
+- How big are they? 
 
 Open each bin and copy and paste the first dozen or so sequences into a BLAST window [here](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome)
 
-Do you get coherent results? How do you interpret what you are seeing? How do they relate to what you saw with Kraken, Metaphlan and the SRA krona plots?
+- Do you get coherent results? How do you interpret what you are seeing? How do they relate to what you saw with Kraken, Metaphlan and the SRA krona plots?
 
 Here are the links to the SRA Krona plots.
 
@@ -391,6 +409,7 @@ Here are the links to the SRA Krona plots.
 </div>
 
 
+---
 
 
 ## Time for lunch
