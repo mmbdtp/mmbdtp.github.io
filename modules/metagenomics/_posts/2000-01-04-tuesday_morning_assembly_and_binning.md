@@ -10,6 +10,16 @@ title: Tuesday morning - Assembly and Binning
 
 
 ## Objectives 
+1. **Understand the Assembly Process**: Learn how to run the MEGAHIT assembler to create contigs from metagenomic samples and interpret the resulting output, including metrics like the number of contigs, total assembly length, and N50 value.
+2. **Gain Practical Skills in Assembly**: Execute MEGAHIT commands for assigned samples, using high-throughput sequencing data to generate assembly outputs and understand the significance of each parameter used in the process.
+3. **Familiarize with De Bruijn Graphs**: Understand the fundamental concept of de Bruijn graphs and their role in genome assembly, enhancing the comprehension of how short read data is stitched together into longer contigs.
+4. **Perform Quality Assessment with QUAST**: Analyze the quality of the assemblies using QUAST, identify important metrics like GC content and largest contig, and evaluate misassembly rates to assess the reliability of the results.
+5. **Introduction to Metagenomic Binning**: Learn how to perform metagenomic binning to separate assembled contigs into bins representing potential genomes, understanding the importance of metrics such as coverage depth and tetranucleotide frequency.
+6. **Calculate Coverage and Abundance**: Run backmapping workflows with Bowtie2 and Samtools to align reads back to contigs, calculate coverage depth, and generate abundance data, which is essential for successful binning.
+7. **Run MaxBin for Binning**: Implement MaxBin to create MAGs (Metagenome-Assembled Genomes) from assembled contigs and interpret the output to identify genomes of the most abundant species in the metagenomic sample.
+8. **Connect Results with Taxonomic Analysis**: Use BLAST to identify sequences within bins and compare findings to taxonomic results obtained from Kraken and MetaPhlAn, reinforcing an understanding of metagenomic data integration. 
+
+---
 
 ## Running assemblies
 
@@ -55,7 +65,8 @@ This command will assemble the paired-end reads from `patient02_day01` using 16 
 
 ## De Bruijn grpahs made simple
 
-While that is running, let's watch [this video](https://www.youtube.com/watch?v=OY9Q_rUCGDw) that explains how de Bruijn graphs are used for assembly. 
+While that is running, let's watch this video that explains how de Bruijn graphs are used for assembly. 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OY9Q_rUCGDw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Then let's comsider what the output of Metahit is telling us.
 
