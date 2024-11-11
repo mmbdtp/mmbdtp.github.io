@@ -392,4 +392,8 @@ Look at the individual **Krona plots** you have created and look at the **MultiQ
 ---
 
 ## Time for lunch
+![https://raw.githubusercontent.com/mmbdtp/mmbdtp.github.io/refs/heads/gh-pages/modules/metagenomics/_posts/DALL·E%202024-11-11%2010.06.04%20-%20A%20whimsical%20and%20detailed%20illustration%20of%20a%20group%20of%20PhD%20students%20eating%20noodles%20that%20are%20made%20up%20of%20DNA%20double%20helix%20structures.%20The%20setting%20is%20lighth.webp]()
+
+---
+
 
