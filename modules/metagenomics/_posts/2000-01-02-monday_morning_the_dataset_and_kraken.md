@@ -296,7 +296,7 @@ cp -r  /home/jovyan/shared-team/2024_training/2024_metagenomics/sequences .
 ---
 
 ## Coffee break
-
+![](https://github.com/mmbdtp/mmbdtp.github.io/raw/refs/heads/gh-pages/modules/metagenomics/_posts/DALL·E%202024-11-11%2009.50.14%20.webp)
 ---
 
 
