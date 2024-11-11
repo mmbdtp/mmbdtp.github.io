@@ -69,6 +69,8 @@ While that is running, let's watch this video that explains how de Bruijn graphs
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OY9Q_rUCGDw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+---
+
 Then let's consider what the output of Metahit is telling us.
 
 ```
@@ -130,7 +132,8 @@ This MEGAHIT output shows the progress and stages of assembling metagenomic data
 ## Quast
 Let's take a look at the quality of the assembly using Quast.
 
-```quast.py -o quast_out_patient02_day01 -t 4 -f megahit_out_patient02_day01/final.contigs.fa
+```
+quast.py -o quast_out_patient02_day01 -t 4 -f megahit_out_patient02_day01/final.contigs.fa
 quast.py -o quast_out_patient02_day10 -t 4 -f megahit_out_patient02_day10/final.contigs.fa
 quast.py -o quast_out_patient04_day10 -t 4 -f megahit_out_patient04_day10/final.contigs.fa
 quast.py -o quast_out_patient04_day14 -t 4 -f megahit_out_patient04_day14/final.contigs.fa
