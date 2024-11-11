@@ -4,10 +4,10 @@ title: Monday Morning - Introducing and Profiling the Dataset
 
 # Monday Morning - Introducing and Profiling the Dataset
 
-## Objectives
-### Session Objectives
+---
 
-By the end of this session, participants will be able to:
+## Objectives
+By the end of this session, you will be able to:
 
 1. **Understand the Importance of Profiling in Metagenomics**:
    - Comprehend the relevance of metagenomic profiling in analyzing and interpreting microbial community structures.
