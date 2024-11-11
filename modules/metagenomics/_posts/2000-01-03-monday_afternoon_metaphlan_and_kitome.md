@@ -49,17 +49,26 @@ By the end of this session, you will be able to:
 
 ## MetaPhlAn
 
-•**MetaPhlAn** (Metagenomic Phylogenetic Analysis) is a computational tool designed for profiling the composition of microbial communities from metagenomic sequencing data. It uses a unique database of clade-specific marker genes to identify and quantify taxa within a sample, providing a high-resolution taxonomic profile. This makes it particularly valuable for studies exploring the diversity and abundance of microbial communities in various environments, including the human microbiome.
+**MetaPhlAn** (Metagenomic Phylogenetic Analysis) is a computational tool designed for profiling the composition of microbial communities from metagenomic sequencing data. It uses a unique database of clade-specific marker genes to identify and quantify taxa within a sample, providing a high-resolution taxonomic profile. This makes it particularly valuable for studies exploring the diversity and abundance of microbial communities in various environments, including the human microbiome.
+
+---
+
 
 #### Key Features
 - **High Specificity and Sensitivity**: MetaPhlAn focuses on using unique clade-specific markers to ensure accurate taxonomic classification, minimizing false positives common with broader marker sets.
 - **Broad Taxonomic Coverage**: The tool can identify microorganisms across bacteria, archaea, viruses, and eukaryotes, making it versatile for metagenomic analysis.
 - **Output Format**: MetaPhlAn outputs a tab-delimited file showing relative abundances of identified taxa, which can be used for downstream analysis or visualization.
 
+---
+
+
 #### Installation and Documentation
 - **Official GitHub Repository**: [MetaPhlAn GitHub](https://github.com/biobakery/MetaPhlAn)
 - **Installation Guide**: Detailed instructions for installing MetaPhlAn can be found on its [installation page](https://github.com/biobakery/MetaPhlAn/wiki/MetaPhlAn-3.0#installation).
 - **Documentation**: Comprehensive user documentation is available at the [MetaPhlAn wiki](https://github.com/biobakery/MetaPhlAn/wiki).
+
+---
+
 
 #### Further Reading
 - [MetaPhlAn 3.0: Improved taxonomic profiling of microbial communities](https://academic.oup.com/bioinformatics/article/36/17/3269/5870236)
