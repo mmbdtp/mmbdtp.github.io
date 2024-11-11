@@ -42,15 +42,10 @@ megahit -t 16 --12 patient36_R1.fastq.gz,patient36_R2.fastq.gz -o megahit_out_pa
 ```
 ### Explanation:
 
- This MEGAHIT command can be broken down as follows:
-
 - **`megahit`**: The command to run the MEGAHIT assembler.
 - **`-t 16`**: Specifies the number of threads to use during the assembly, enabling parallel processing. Using 16 threads helps speed up the computation by utilizing more CPU cores.
 - **`--12 patient02_day01_R1.fastq.gz,patient02_day01_R2.fastq.gz`**: Indicates paired-end input reads are provided as interleaved files. The reads from the forward (`R1`) and reverse (`R2`) files are specified in a single argument, separated by a comma.
 - **`-o megahit_out_patient02_day01`**: Specifies the output directory where MEGAHIT will store the assembly results. In this case, the output folder is named `megahit_out_patient02_day01`.
-
-**Why?**
-
 - **Paired-end reads**: The `--12` option is used when both the forward and reverse reads are in separate files, and you want MEGAHIT to process them as paired data. This helps the assembler use paired-end information for better assembly quality.
 - **Output**: The directory `megahit_out_patient02_day01` will contain various files, including the assembled contigs (`final.contigs.fa`), logs, and intermediate files generated during the assembly.
 
@@ -118,9 +113,9 @@ This MEGAHIT output shows the progress and stages of assembling metagenomic data
 - The final output provides a summary of the assembly results: 32,989 contigs were generated, spanning a total of 21,701,806 base pairs, with an average contig length of 657 bp and an N50 of 723 bp, indicating the assembly's quality and contiguity. 
 - The process completed in about 761 seconds, demonstrating efficient use of 16 CPU threads.
 
+---
 
-
-##Quast
+## Quast
 Let's take a look at the quality of the assembly using Quast.
 
 ```quast.py -o quast_out_patient02_day01 -t 4 -f megahit_out_patient02_day01/final.contigs.fa
@@ -190,4 +185,152 @@ These figures provide a baseline for what you might expect from simple metagenom
 ![](https://raw.githubusercontent.com/mmbdtp/mmbdtp.github.io/refs/heads/gh-pages/modules/metagenomics/_posts/DALL·E%202024-11-11%2011.56.44%20-%20A%20whimsical%20scene%20of%20a%20DNA%20double-helix%20being%20assembled%20from%20coffee%20beans%20in%20a%20laboratory%20setting%2C%20with%20a%20few%20PhD%20students%20in%20lab%20coats%20looking%20on%20in%20.webp)
 
 ---
+
+## Metagenomic binning  
+Genomes in the sample can be recreated with a process called **binning**. This process allows separate analysis of genomes contained in the metagenome so long as there are enough reads to reconstruct each genome. In other words, it will only work for the most abundant species. Genomes reconstructed from metagenomic assemblies are called MAGs (Metagenome-Assembled Genomes). In this process, the assembled contigs from the metagenome are assigned to different bins (FASTA files containing contigs). Ideally, each bin corresponds to only one original genome (a MAG), but it is an error-prone process.
+
+There are various approaches to doing the binning using characteristics of the contigs, such as their GC content, the use of tetranucleotides (composition), or their coverage (abundance).
+
+[Maxbin](https://sourceforge.net/projects/maxbin/files/) is a binning algorithm that distinguishes between contigs that belong to different bins according to their coverage levels and the tetranucleotide frequencies they have.
+
+Let us bin the samples we just assembled. But before we can run Maxbin, we have to calculate coverage depth using BowTie and related programs in the process of backmapping 
+
+**Backmapping** involves aligning raw reads back to the assembled contigs to determine how well the reads map to different regions of the assembly. This process helps in calculating the coverage depth of each contig, which is directly proportional to the abundance of that contig in the sample.
+
+**How it Works**
+
+- Mapping Reads: The raw sequencing reads are aligned to the contigs using a tool like Bowtie2, producing alignment files (SAM/BAM).
+- Calculating Coverage: Tools like samtools depth are used to measure the coverage at each position of the contigs. This coverage data reflects how many reads align to each part of the contig.
+- Average Coverage Calculation: The average coverage across each contig is computed to give a single value representing the abundance of that contig.
+- Inferring Abundance: Higher average coverage indicates higher abundance of the contig (and the corresponding organism) in the original metagenomic sample.
+
+Here's a workflow for this
+
+```
+mkdir -p maxbin_out_patient02_day01
+bowtie2-build megahit_out_patient02_day01/final.contigs.fa maxbin_out_patient02_day01/contigs_index
+bowtie2 -x maxbin_out_patient02_day01/contigs_index -1 patient02_day01_R1.fastq.gz -2 patient02_day01_R2.fastq.gz -S maxbin_out_patient02_day01/mapped_reads.sam
+samtools view -S -b maxbin_out_patient02_day01/mapped_reads.sam > maxbin_out_patient02_day01/mapped_reads.bam
+samtools sort maxbin_out_patient02_day01/mapped_reads.bam -o maxbin_out_patient02_day01/mapped_reads_sorted.bam
+samtools depth maxbin_out_patient02_day01/mapped_reads_sorted.bam | awk '{sum[$1] += $3; count[$1]++} END {for (contig in sum) print contig, sum[contig]/count[contig]}' > maxbin_out_patient02_day01/abundance_data.txt
+run_MaxBin.pl -contig megahit_out_patient02_day01/final.contigs.fa -abund maxbin_out_patient02_day01/abundance_data.txt -out maxbin_out_patient02_day01/maxbin_bins -thread 48
+
+```
+
+This series of commands performs a workflow for mapping reads and generating abundance data to use with MaxBin for metagenomic binning. Here's a brief explanation:
+
+1. **`mkdir -p maxbin_out_patient02_day01`**: Creates an output directory (`maxbin_out_patient02_day01`) to store all subsequent results.
+
+2. **`bowtie2-build megahit_out_patient02_day01/final.contigs.fa maxbin_out_patient02_day01/contigs_index`**: Builds a Bowtie2 index from the contigs produced by MEGAHIT assembly (`final.contigs.fa`). This index is necessary for mapping reads to the contigs.
+
+3. **`bowtie2 -x maxbin_out_patient02_day01/contigs_index -1 patient02_day01_R1.fastq.gz -2 patient02_day01_R2.fastq.gz -S maxbin_out_patient02_day01/mapped_reads.sam`**: Maps the paired-end reads (`R1` and `R2`) to the indexed contigs, producing a SAM file (`mapped_reads.sam`) containing alignment information. This will take some time!
+
+4. **`samtools view -S -b maxbin_out_patient02_day01/mapped_reads.sam > maxbin_out_patient02_day01/mapped_reads.bam`**: Converts the SAM file to a BAM file format, which is a more compact and binary version of the alignment data.
+
+5. **`samtools sort maxbin_out_patient02_day01/mapped_reads.bam -o maxbin_out_patient02_day01/mapped_reads_sorted.bam`**: Sorts the BAM file by coordinates to prepare for downstream analysis.
+
+6. **`samtools depth maxbin_out_patient02_day01/mapped_reads_sorted.bam | awk '{sum[$1] += $3; count[$1]++} END {for (contig in sum) print contig, sum[contig]/count[contig]}' > maxbin_out_patient02_day01/abundance_data.txt`**: Calculates the coverage depth for each contig and uses `awk` to compute the average depth. This generates an abundance data file (`abundance_data.txt`), crucial for binning.
+
+7. **`run_MaxBin.pl -contig megahit_out_patient02_day01/final.contigs.fa -abund maxbin_out_patient02_day01/abundance_data.txt -out maxbin_out_patient02_day01/maxbin_bins -thread 48`**: Runs MaxBin using the contigs and abundance data to bin contigs into potential genomes, leveraging 48 threads for faster processing.
+
+Run this workflow over your assembly. 
+
+Here's a separate version of the workflow for each of the FastQ files:
+
+### Workflow for `patient02_day01`
+```bash
+mkdir -p maxbin_out_patient02_day01
+bowtie2-build megahit_out_patient02_day01/final.contigs.fa maxbin_out_patient02_day01/contigs_index
+bowtie2 -x maxbin_out_patient02_day01/contigs_index -1 patient02_day01_R1.fastq.gz -2 patient02_day01_R2.fastq.gz -S maxbin_out_patient02_day01/mapped_reads.sam
+samtools view -S -b maxbin_out_patient02_day01/mapped_reads.sam > maxbin_out_patient02_day01/mapped_reads.bam
+samtools sort maxbin_out_patient02_day01/mapped_reads.bam -o maxbin_out_patient02_day01/mapped_reads_sorted.bam
+samtools depth maxbin_out_patient02_day01/mapped_reads_sorted.bam | awk '{sum[$1] += $3; count[$1]++} END {for (contig in sum) print contig, sum[contig]/count[contig]}' > maxbin_out_patient02_day01/abundance_data.txt
+run_MaxBin.pl -contig megahit_out_patient02_day01/final.contigs.fa -abund maxbin_out_patient02_day01/abundance_data.txt -out maxbin_out_patient02_day01/maxbin_bins -thread 48
+```
+
+### Workflow for `patient02_day10`
+```bash
+mkdir -p maxbin_out_patient02_day10
+bowtie2-build megahit_out_patient02_day10/final.contigs.fa maxbin_out_patient02_day10/contigs_index
+bowtie2 -x maxbin_out_patient02_day10/contigs_index -1 patient02_day10_R1.fastq.gz -2 patient02_day10_R2.fastq.gz -S maxbin_out_patient02_day10/mapped_reads.sam
+samtools view -S -b maxbin_out_patient02_day10/mapped_reads.sam > maxbin_out_patient02_day10/mapped_reads.bam
+samtools sort maxbin_out_patient02_day10/mapped_reads.bam -o maxbin_out_patient02_day10/mapped_reads_sorted.bam
+samtools depth maxbin_out_patient02_day10/mapped_reads_sorted.bam | awk '{sum[$1] += $3; count[$1]++} END {for (contig in sum) print contig, sum[contig]/count[contig]}' > maxbin_out_patient02_day10/abundance_data.txt
+run_MaxBin.pl -contig megahit_out_patient02_day10/final.contigs.fa -abund maxbin_out_patient02_day10/abundance_data.txt -out maxbin_out_patient02_day10/maxbin_bins -thread 48
+```
+
+### Workflow for `patient04_day10`
+```bash
+mkdir -p maxbin_out_patient04_day10
+bowtie2-build megahit_out_patient04_day10/final.contigs.fa maxbin_out_patient04_day10/contigs_index
+bowtie2 -x maxbin_out_patient04_day10/contigs_index -1 patient04_day10_R1.fastq.gz -2 patient04_day10_R2.fastq.gz -S maxbin_out_patient04_day10/mapped_reads.sam
+samtools view -S -b maxbin_out_patient04_day10/mapped_reads.sam > maxbin_out_patient04_day10/mapped_reads.bam
+samtools sort maxbin_out_patient04_day10/mapped_reads.bam -o maxbin_out_patient04_day10/mapped_reads_sorted.bam
+samtools depth maxbin_out_patient04_day10/mapped_reads_sorted.bam | awk '{sum[$1] += $3; count[$1]++} END {for (contig in sum) print contig, sum[contig]/count[contig]}' > maxbin_out_patient04_day10/abundance_data.txt
+run_MaxBin.pl -contig megahit_out_patient04_day10/final.contigs.fa -abund maxbin_out_patient04_day10/abundance_data.txt -out maxbin_out_patient04_day10/maxbin_bins -thread 48
+```
+
+### Workflow for `patient04_day14`
+```bash
+mkdir -p maxbin_out_patient04_day14
+bowtie2-build megahit_out_patient04_day14/final.contigs.fa maxbin_out_patient04_day14/contigs_index
+bowtie2 -x maxbin_out_patient04_day14/contigs_index -1 patient04_day14_R1.fastq.gz -2 patient04_day14_R2.fastq.gz -S maxbin_out_patient04_day14/mapped_reads.sam
+samtools view -S -b maxbin_out_patient04_day14/mapped_reads.sam > maxbin_out_patient04_day14/mapped_reads.bam
+samtools sort maxbin_out_patient04_day14/mapped_reads.bam -o maxbin_out_patient04_day14/mapped_reads_sorted.bam
+samtools depth maxbin_out_patient04_day14/mapped_reads_sorted.bam | awk '{sum[$1] += $3; count[$1]++} END {for (contig in sum) print contig, sum[contig]/count[contig]}' > maxbin_out_patient04_day14/abundance_data.txt
+run_MaxBin.pl -contig megahit_out_patient04_day14/final.contigs.fa -abund maxbin_out_patient04_day14/abundance_data.txt -out maxbin_out_patient04_day14/maxbin_bins -thread 48
+```
+
+### Workflow for `patient29`
+```bash
+mkdir -p maxbin_out_patient29
+bowtie2-build megahit_out_patient29/final.contigs.fa maxbin_out_patient29/contigs_index
+bowtie2 -x maxbin_out_patient29/contigs_index -1 patient29_R1.fastq.gz -2 patient29_R2.fastq.gz -S maxbin_out_patient29/mapped_reads.sam
+samtools view -S -b maxbin_out_patient29/mapped_reads.sam > maxbin_out_patient29/mapped_reads.bam
+samtools sort maxbin_out_patient29/mapped_reads.bam -o maxbin_out_patient29/mapped_reads_sorted.bam
+samtools depth maxbin_out_patient29/mapped_reads_sorted.bam | awk '{sum[$1] += $3; count[$1]++} END {for (contig in sum) print contig, sum[contig]/count[contig]}' > maxbin_out_patient29/abundance_data.txt
+run_MaxBin.pl -contig megahit_out_patient29/final.contigs.fa -abund maxbin_out_patient29/abundance_data.txt -out maxbin_out_patient29/maxbin_bins -thread 48
+```
+
+### Workflow for `patient35`
+```bash
+mkdir -p maxbin_out_patient35
+bowtie2-build megahit_out_patient35/final.contigs.fa maxbin_out_patient35/contigs_index
+bowtie2 -x maxbin_out_patient35/contigs_index -1 patient35_R1.fastq.gz -2 patient35_R2.fastq.gz -S maxbin_out_patient35/mapped_reads.sam
+samtools view -S -b maxbin_out_patient35/mapped_reads.sam > maxbin_out_patient35/mapped_reads.bam
+samtools sort maxbin_out_patient35/mapped_reads.bam -o maxbin_out_patient35/mapped_reads_sorted.bam
+samtools depth maxbin_out_patient35/mapped_reads_sorted.bam | awk '{sum[$1] += $3; count[$1]++} END {for (contig in sum) print contig, sum[contig]/count[contig]}' > maxbin_out_patient35/abundance_data.txt
+run_MaxBin.pl -contig megahit_out_patient35/final.contigs.fa -abund maxbin_out_patient35/abundance_data.txt -out maxbin_out_patient35/maxbin_bins -thread 48
+```
+
+### Workflow for `patient36`
+```bash
+mkdir -p maxbin_out_patient36
+bowtie2-build megahit_out_patient36/final.contigs.fa maxbin_out_patient36/contigs_index
+bowtie2 -x maxbin_out_patient36/contigs_index -1 patient36_R1.fastq.gz -2 patient36_R2.fastq.gz -S maxbin_out_patient36/mapped_reads.sam
+samtools view -S -b maxbin_out_patient36/mapped_reads.sam > maxbin_out_patient36/mapped_reads.bam
+samtools sort maxbin_out_patient36/mapped_reads.bam -o maxbin_out_patient36/mapped_reads_sorted.bam
+samtools depth maxbin_out_patient36/mapped_reads_sorted.bam | awk '{sum[$1] += $3; count[$1]++} END {for (contig in sum) print contig, sum[contig]/count[contig]}' > maxbin_out_patient36/abundance_data.txt
+run_MaxBin.pl -contig megahit_out_patient36/final.contigs.fa -abund maxbin_out_patient36/abundance_data.txt -out maxbin_out_patient36/maxbin_bins -thread 48
+```
+
+Copy and run the appropriate set of commands for your sample to complete the workflow.
+
+
+## Playing with BLAST
+Inside the maxbin_out_patient** directory you will discover how many bins you have. They are labelled maxbin_bins.001.fasta etc. How big are they? 
+
+Open each bin and copy and paste the first dozen or so sequences into a BLAST window [here](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome)
+
+Do you get coherent results? How do you interpret what you are seeing? How do they relate to what you saw with Kraken, Metaphlan and the SRA krona plots?
+Here the links to the SRA Krona plots.
+
+
+
+
+## Time for lunch
+
+
+
+
 
