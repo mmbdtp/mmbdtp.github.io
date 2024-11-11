@@ -88,6 +88,13 @@ We will use human faecal metagenome samples from [a paper](https://www.microbiol
  
 Here's a table, integrating clinical information and sequence data on the patient samples.
 
+<div style="font-size: 12px;">
+| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| Row 1    | Data     | Example  |
+| Row 2    | More     | Content  |
+| Row 3    | Data     | Here     |
+</div>
 
 
 | Patient    | Age | Sex | Clinical Features                               | ICU Day| Sample     | Run        | AvgSpotLen | Bases        | Bytes       | SOFA score | Antibiotics                              |
