@@ -28,7 +28,7 @@ They found that ICU patients had significant alterations in their faecal microbi
 
 **Venue:** UG55C
 
-Details to follow.
+Viewing and profiling the dataset and avoiding the kitome
 
 ***
 
@@ -36,7 +36,7 @@ Details to follow.
 
 **Venue:** UG55C
 
-Details to follow.
+Assembly and binning
 
 ***
 
@@ -45,7 +45,7 @@ Details to follow.
 **Venue:** Board Room
 
 
-Details to follow.
+Taxonomic and functional profiling.
 
 ***
 
@@ -53,4 +53,4 @@ Details to follow.
 
 **Venue:** Board Room
 
-Details to follow.
+A glimpse of long-read metagenomics.
