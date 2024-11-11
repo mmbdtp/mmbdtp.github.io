@@ -88,7 +88,7 @@ We will use human faecal metagenome samples from [a paper](https://www.microbiol
  
 Here's a table, integrating clinical information and sequence data on the patient samples.
 
-<table style="font-size: 12px; width: 100%; border-collapse: collapse;">
+<table style="font-size: 11px; width: 100%; border-collapse: collapse;">
   <tr>
     <th style="border: 1px solid #ddd; padding: 8px;">Patient</th>
     <th style="border: 1px solid #ddd; padding: 8px;">Age</th>
@@ -203,19 +203,7 @@ Here's a table, integrating clinical information and sequence data on the patien
   </tr>
 </table>
 
-
-| Patient    | Age | Sex | Clinical Features                               | ICU Day| Sample     | Run        | AvgSpotLen | Bases        | Bytes       | SOFA score | Antibiotics                              |
-|------------|-----|-----|--------------------------------------------------|------------|------------|------------|------------|--------------|-------------|------------|-----------------------------------------------|
-| Patient 02 | 64  | F   | Subarachnoid haemorrhage                        | 1          | 13-6929524 | SRR8926116 | 233        | 270,551,026  | 136,892,477 | 8          |                                               |
-| Patient 02 | 64  | F   | Subarachnoid haemorrhage                        | 10         | 13-6929534 | SRR8926119 | 229        | 286,911,856  | 144,866,803 | 3          |                                               |
-| Patient 04 | 75  | M   | Aortic aneurysm repair                          | 10         | 13-6929537 | SRR8926181 | 225        | 184,808,950  | 93,747,180  | 13         | Flucoxacillin; Rofampicin; Erythromycin       |
-| Patient 04 | 75  | M   | Aortic aneurysm repair                          | 14         | 13-6929548 | SRR8926187 | 213        | 114,050,219  | 57,808,179  | 11         | Flucoxaxillin; Rofampicin; Meropenem          |
-| Patient 29 | 80  | M   | Subcapsular haematoma; liver cancer             | 15         | 13-6929598 | SRR8926127 | 249        | 361,066,223  | 159,940,956 | 1          | Meropenem                                     |
-| Patient 35 | 49  | M   | Lung transplant                                 | 3          | 13-6929625 | SRR8926193 | 276        | 135,189,099  | 64,243,237  | 11         |                                               |
-| Patient 36 | 30  | M   | Multiple trauma                                 | 11         | 13-6929614 | SRR8926233 | 254        | 153,261,668  | 70,498,579  | 3          | Co-Trimoxazole; Valganciclovir; Tazobactam    |
-
-
-The SOFA (Sequential Organ Failure Assessment) score is used to assess the extent of a patient's organ function or rate of failure. It helps predict outcomes and indicates the severity of illness, especially in intensive care units (ICU). The higher the score, the greater the likelihood of organ dysfunction and mortality risk. Here’s a quick interpretation:
+The **SOFA (Sequential Organ Failure Assessment) score** is used to assess the extent of a patient's organ function or rate of failure. It helps predict outcomes and indicates the severity of illness, especially in intensive care units (ICU). The higher the score, the greater the likelihood of organ dysfunction and mortality risk. Here’s a quick interpretation:
 
 - **Low scores (1-5)**: Typically suggest a lower risk of organ failure and better patient condition.
 - **Moderate scores (6-10)**: Indicate a moderate level of organ dysfunction with an increased risk of adverse outcomes.
