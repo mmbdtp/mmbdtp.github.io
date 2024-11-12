@@ -348,7 +348,7 @@ run_MaxBin.pl -contig megahit_out_patient36/final.contigs.fa -abund maxbin_out_p
 ---
 
 
-## Playing with BLAST
+## MaxBin outputs
 Inside the maxbin_out_patient** directory you will discover your bins. They are labelled  maxbin_out_patient**_bin.001.fasta etc. 
 
 - How many are there?
