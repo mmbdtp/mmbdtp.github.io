@@ -37,6 +37,9 @@ Use the "Download All" option on the second line and select "text" to get a hand
  - How do you interpret what you are seeing?
  - Do you get coherent results?
 
+---
+
+
 ## CheckM
 
 **CheckM** is a bioinformatics tool used for assessing the quality of metagenome-assembled genomes (MAGs) or genomic bins by evaluating their completeness and contamination. It employs a lineage-specific workflow that leverages a database of single-copy marker genes to estimate these metrics. 
@@ -67,6 +70,9 @@ The quality of a MAG can be evaluated using a formula that incorporates both com
 \]
 
 This metric allows researchers to quickly compare bins and decide which ones are worth focusing on for downstream analysis, as it takes into account both the presence of essential genes and the purity of the genomic bin. High-quality MAGs typically have a high completeness (e.g., ≥90%) and low contamination (e.g., ≤5%), leading to a strong quality score that indicates confidence in the assembly's reliability.
+
+---
+
 
 ### Running CheckM
 Run CheckM over all the bins in a MaxBin output directory:
@@ -220,14 +226,4 @@ The provided CheckM output log includes various stages of processing, warnings, 
    - **Description**: Depending on the `checkm qa` command or additional commands run, you might have custom-generated summary reports.
    - **Contents**: Includes a formatted summary of each bin’s completeness, contamination, and overall quality metrics.
    - **Use**: These reports are often shared with collaborators or included in analysis reports to summarize the quality of genome bins.
-
-### How to Use These Files:
-- **Primary Focus**: Start by reviewing `bin_stats_ext.tsv` for a quick assessment of completeness and contamination. This file provides an overview of each bin's key quality metrics.
-- **Investigate Lineages**: Use `lineage.ms` to understand which lineages were assigned to the bins and the expected marker genes.
-- **Troubleshoot with Logs**: If you encounter issues, `checkm.log` can help identify what went wrong during the run.
-- **Verify Marker Genes**: The contents of the `markers` directory help confirm which marker genes were used to calculate completeness and contamination and if there were any duplications indicating contamination.
-
-### Final Note:
-These output files, when interpreted collectively, provide a comprehensive view of the quality and characteristics of genome bins, aiding in the decision-making process for further analysis or reassembly.
-
 
