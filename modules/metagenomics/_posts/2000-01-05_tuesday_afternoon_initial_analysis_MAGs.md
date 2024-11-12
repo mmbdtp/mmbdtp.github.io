@@ -30,8 +30,6 @@ By the end of this session, you will be able to:
 
 ---
 
-These objectives aim to help students gain hands-on experience in analyzing the quality and content of MAGs using a combination of bioinformatics tools.
----
 
 ## Playing with BLAST
 
