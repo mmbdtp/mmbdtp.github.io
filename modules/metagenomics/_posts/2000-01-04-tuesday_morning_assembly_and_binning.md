@@ -276,7 +276,7 @@ bowtie2 -x maxbin_out_patient02_day01/contigs_index -1 patient02_day01_R1.fastq.
 samtools view -S -b maxbin_out_patient02_day01/mapped_reads.sam > maxbin_out_patient02_day01/mapped_reads.bam
 samtools sort maxbin_out_patient02_day01/mapped_reads.bam -o maxbin_out_patient02_day01/mapped_reads_sorted.bam
 samtools depth maxbin_out_patient02_day01/mapped_reads_sorted.bam | awk '{sum[$1] += $3; count[$1]++} END {for (contig in sum) print contig, sum[contig]/count[contig]}' > maxbin_out_patient02_day01/abundance_data.txt
-run_MaxBin.pl -contig megahit_out_patient02_day01/final.contigs.fa -abund maxbin_out_patient02_day01/abundance_data.txt -out maxbin_out_patient02_day01/maxbin_bins -thread 48
+run_MaxBin.pl -contig megahit_out_patient02_day01/final.contigs.fa -abund maxbin_out_patient02_day01/abundance_data.txt -out maxbin_out_patient02_day01/maxbin_out_patient02_day01.bin -thread 48
 ```
 
 ### Workflow for `patient02_day10`
@@ -287,7 +287,7 @@ bowtie2 -x maxbin_out_patient02_day10/contigs_index -1 patient02_day10_R1.fastq.
 samtools view -S -b maxbin_out_patient02_day10/mapped_reads.sam > maxbin_out_patient02_day10/mapped_reads.bam
 samtools sort maxbin_out_patient02_day10/mapped_reads.bam -o maxbin_out_patient02_day10/mapped_reads_sorted.bam
 samtools depth maxbin_out_patient02_day10/mapped_reads_sorted.bam | awk '{sum[$1] += $3; count[$1]++} END {for (contig in sum) print contig, sum[contig]/count[contig]}' > maxbin_out_patient02_day10/abundance_data.txt
-run_MaxBin.pl -contig megahit_out_patient02_day10/final.contigs.fa -abund maxbin_out_patient02_day10/abundance_data.txt -out maxbin_out_patient02_day10/maxbin_bins -thread 48
+run_MaxBin.pl -contig megahit_out_patient02_day10/final.contigs.fa -abund maxbin_out_patient02_day10/abundance_data.txt -out maxbin_out_patient02_day10/maxbin_out_patient02_day10.bin -thread 48
 ```
 
 ### Workflow for `patient04_day10`
@@ -298,7 +298,7 @@ bowtie2 -x maxbin_out_patient04_day10/contigs_index -1 patient04_day10_R1.fastq.
 samtools view -S -b maxbin_out_patient04_day10/mapped_reads.sam > maxbin_out_patient04_day10/mapped_reads.bam
 samtools sort maxbin_out_patient04_day10/mapped_reads.bam -o maxbin_out_patient04_day10/mapped_reads_sorted.bam
 samtools depth maxbin_out_patient04_day10/mapped_reads_sorted.bam | awk '{sum[$1] += $3; count[$1]++} END {for (contig in sum) print contig, sum[contig]/count[contig]}' > maxbin_out_patient04_day10/abundance_data.txt
-run_MaxBin.pl -contig megahit_out_patient04_day10/final.contigs.fa -abund maxbin_out_patient04_day10/abundance_data.txt -out maxbin_out_patient04_day10/maxbin_bins -thread 48
+run_MaxBin.pl -contig megahit_out_patient04_day10/final.contigs.fa -abund maxbin_out_patient04_day10/abundance_data.txt -out maxbin_out_patient04_day10/maxbin_out_patient04_day10.bin -thread 48
 ```
 
 ### Workflow for `patient04_day14`
@@ -309,7 +309,7 @@ bowtie2 -x maxbin_out_patient04_day14/contigs_index -1 patient04_day14_R1.fastq.
 samtools view -S -b maxbin_out_patient04_day14/mapped_reads.sam > maxbin_out_patient04_day14/mapped_reads.bam
 samtools sort maxbin_out_patient04_day14/mapped_reads.bam -o maxbin_out_patient04_day14/mapped_reads_sorted.bam
 samtools depth maxbin_out_patient04_day14/mapped_reads_sorted.bam | awk '{sum[$1] += $3; count[$1]++} END {for (contig in sum) print contig, sum[contig]/count[contig]}' > maxbin_out_patient04_day14/abundance_data.txt
-run_MaxBin.pl -contig megahit_out_patient04_day14/final.contigs.fa -abund maxbin_out_patient04_day14/abundance_data.txt -out maxbin_out_patient04_day14/maxbin_bins -thread 48
+run_MaxBin.pl -contig megahit_out_patient04_day14/final.contigs.fa -abund maxbin_out_patient04_day14/abundance_data.txt -out maxbin_out_patient04_day14/maxbin_out_patient04_day14.bin -thread 48
 ```
 
 ### Workflow for `patient29`
@@ -320,7 +320,7 @@ bowtie2 -x maxbin_out_patient29/contigs_index -1 patient29_R1.fastq.gz -2 patien
 samtools view -S -b maxbin_out_patient29/mapped_reads.sam > maxbin_out_patient29/mapped_reads.bam
 samtools sort maxbin_out_patient29/mapped_reads.bam -o maxbin_out_patient29/mapped_reads_sorted.bam
 samtools depth maxbin_out_patient29/mapped_reads_sorted.bam | awk '{sum[$1] += $3; count[$1]++} END {for (contig in sum) print contig, sum[contig]/count[contig]}' > maxbin_out_patient29/abundance_data.txt
-run_MaxBin.pl -contig megahit_out_patient29/final.contigs.fa -abund maxbin_out_patient29/abundance_data.txt -out maxbin_out_patient29/maxbin_bins -thread 48
+run_MaxBin.pl -contig megahit_out_patient29/final.contigs.fa -abund maxbin_out_patient29/abundance_data.txt -out maxbin_out_patient29/maxbin_out_patient29.bin -thread 48
 ```
 
 ### Workflow for `patient35`
@@ -331,7 +331,7 @@ bowtie2 -x maxbin_out_patient35/contigs_index -1 patient35_R1.fastq.gz -2 patien
 samtools view -S -b maxbin_out_patient35/mapped_reads.sam > maxbin_out_patient35/mapped_reads.bam
 samtools sort maxbin_out_patient35/mapped_reads.bam -o maxbin_out_patient35/mapped_reads_sorted.bam
 samtools depth maxbin_out_patient35/mapped_reads_sorted.bam | awk '{sum[$1] += $3; count[$1]++} END {for (contig in sum) print contig, sum[contig]/count[contig]}' > maxbin_out_patient35/abundance_data.txt
-run_MaxBin.pl -contig megahit_out_patient35/final.contigs.fa -abund maxbin_out_patient35/abundance_data.txt -out maxbin_out_patient35/maxbin_bins -thread 48
+run_MaxBin.pl -contig megahit_out_patient35/final.contigs.fa -abund maxbin_out_patient35/abundance_data.txt -out maxbin_out_patient35/maxbin_out_patient35.bin -thread 48
 ```
 
 ### Workflow for `patient36`
@@ -342,7 +342,7 @@ bowtie2 -x maxbin_out_patient36/contigs_index -1 patient36_R1.fastq.gz -2 patien
 samtools view -S -b maxbin_out_patient36/mapped_reads.sam > maxbin_out_patient36/mapped_reads.bam
 samtools sort maxbin_out_patient36/mapped_reads.bam -o maxbin_out_patient36/mapped_reads_sorted.bam
 samtools depth maxbin_out_patient36/mapped_reads_sorted.bam | awk '{sum[$1] += $3; count[$1]++} END {for (contig in sum) print contig, sum[contig]/count[contig]}' > maxbin_out_patient36/abundance_data.txt
-run_MaxBin.pl -contig megahit_out_patient36/final.contigs.fa -abund maxbin_out_patient36/abundance_data.txt -out maxbin_out_patient36/maxbin_bins -thread 48
+run_MaxBin.pl -contig megahit_out_patient36/final.contigs.fa -abund maxbin_out_patient36/abundance_data.txt -out maxbin_out_patient36/maxbin_out_patient36.bin -thread 48
 ```
 
 ---
@@ -355,58 +355,7 @@ Inside the maxbin_out_patient** directory you will discover how many bins you ha
 
 Open each bin and copy and paste the first dozen or so sequences into a BLAST window [here](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome)
 
-- Do you get coherent results? How do you interpret what you are seeing? How do they relate to what you saw with Kraken, Metaphlan and the SRA krona plots?
-
-Here are the links to the SRA Krona plots.
-
-<div style="font-size: 12px; font-family: Arial, sans-serif; margin: 20px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-  <table style="width: 100%; border-collapse: collapse;">
-    <thead style="background-color: #f4f4f4;">
-      <tr>
-        <th style="padding: 10px; text-align: left; border-bottom: 2px solid #ccc;">Patient</th>
-        <th style="padding: 10px; text-align: left; border-bottom: 2px solid #ccc;">ICU Day</th>
-        <th style="padding: 10px; text-align: left; border-bottom: 2px solid #ccc;">Run Link</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="border-bottom: 1px solid #ddd;">
-        <td style="padding: 8px;">Patient 02</td>
-        <td style="padding: 8px;">1</td>
-        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926116&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926116</a></td>
-      </tr>
-      <tr style="border-bottom: 1px solid #ddd;">
-        <td style="padding: 8px;">Patient 02</td>
-        <td style="padding: 8px;">10</td>
-        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926119&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926119</a></td>
-      </tr>
-      <tr style="border-bottom: 1px solid #ddd;">
-        <td style="padding: 8px;">Patient 04</td>
-        <td style="padding: 8px;">10</td>
-        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926181&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926181</a></td>
-      </tr>
-      <tr style="border-bottom: 1px solid #ddd;">
-        <td style="padding: 8px;">Patient 04</td>
-        <td style="padding: 8px;">14</td>
-        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926187&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926187</a></td>
-      </tr>
-      <tr style="border-bottom: 1px solid #ddd;">
-        <td style="padding: 8px;">Patient 29</td>
-        <td style="padding: 8px;">15</td>
-        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926127&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926127</a></td>
-      </tr>
-      <tr style="border-bottom: 1px solid #ddd;">
-        <td style="padding: 8px;">Patient 35</td>
-        <td style="padding: 8px;">3</td>
-        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926193&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926193</a></td>
-      </tr>
-      <tr>
-        <td style="padding: 8px;">Patient 36</td>
-        <td style="padding: 8px;">11</td>
-        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926233&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926233</a></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+- Do you get coherent results? How do you interpret what you are seeing? 
 
 
 ---
