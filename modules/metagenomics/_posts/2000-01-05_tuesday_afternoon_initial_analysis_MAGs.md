@@ -227,3 +227,9 @@ The provided CheckM output log includes various stages of processing, warnings, 
    - **Contents**: Includes a formatted summary of each bin’s completeness, contamination, and overall quality metrics.
    - **Use**: These reports are often shared with collaborators or included in analysis reports to summarize the quality of genome bins.
 
+### CheckM conclusions
+
+So what do conclude from your CheckM results? How do these results measure up against what you found with BLAST?
+
+## Kraken again
+
