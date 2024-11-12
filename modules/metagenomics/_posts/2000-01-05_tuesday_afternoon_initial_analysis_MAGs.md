@@ -34,6 +34,7 @@ By the end of this session, you will be able to:
 ## Playing with BLAST
 
 Open each bin and copy and paste the first dozen or so sequences into a [BLAST window](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome)
+
 Select "1" as the value in the "Max matches in query range" box to restrict results to one hit per input sequence.
 Use the "Download All" option on the second line and select "text" to get a handy summary of results.
 
