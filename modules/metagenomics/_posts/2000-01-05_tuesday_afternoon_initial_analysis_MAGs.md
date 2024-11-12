@@ -272,7 +272,6 @@ How does what we are seeing in MAGs measure up with what we know from profiling 
 
 Take a quick look again at the NCBI's Krona plot on your sample.
 
-You can select a run and take a look at NCBI's phylogenetic analyses, including a Krona plot (click on *Show Krona View* to see it).
 <div style="font-size: 12px; font-family: Arial, sans-serif; margin: 20px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
   <table style="width: 100%; border-collapse: collapse;">
     <thead style="background-color: #f4f4f4;">
