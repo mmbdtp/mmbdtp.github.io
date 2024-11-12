@@ -3,15 +3,34 @@ title: Tuesday afternoon - Initial analysis of MAGs
 ---
 
 
-# Tuesday morning 
+# Tuesday afternoon 
 ## Initial analysis of MAGs
 
 ---
 
 
 ## Objectives 
+By the end of this session, you will be able to:
 
+1. **Evaluate Metagenome-Assembled Genomes (MAGs)**:
+   - Run and interpret BLAST searches on sequences from MAGs to identify potential organisms and their coherence in results.
+   - Analyze marker gene sequences extracted from MAGs with BLASTP and interpret findings.
 
+2. **Assess Quality of MAGs Using CheckM**:
+   - Understand and interpret the outputs from CheckM, focusing on completeness, contamination, and the overall quality of the bins.
+   - Learn how completeness and contamination metrics are combined into a quality score for evaluating the reliability of MAGs.
+
+3. **Validate MAGs with Kraken**:
+   - Use Kraken to further classify and validate MAGs by comparing the taxonomic profiles obtained.
+   - Identify if the classified organisms align with expected sample content, noting the presence of pathogens or commensal organisms.
+
+4. **Synthesize and Report Findings**:
+   - Compare and cross-reference results from BLAST, CheckM, and Kraken to build a coherent picture of the bin's quality and taxonomic identity.
+   - Conclude with a discussion on the reliability of the MAGs and potential next steps for further analysis.
+
+---
+
+These objectives aim to help students gain hands-on experience in analyzing the quality and content of MAGs using a combination of bioinformatics tools.
 ---
 
 ## Playing with BLAST
@@ -247,6 +266,10 @@ What do you conclude now?
  - Are the organisms you are seeing in your bins the organisms you would expect to see in this context?
  - Are you seeing potential human pathogens? Commensals?
  - Do a brief PubMed search if you are unfamiliar with the organisms you are seeing.
+
+
+How does what we are seeing in MAGs measure up with what we know from profiling the metagenomes?
+
 
 ---
 
