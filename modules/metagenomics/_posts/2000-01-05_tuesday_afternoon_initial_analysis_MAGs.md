@@ -270,6 +270,58 @@ What do you conclude now?
 
 How does what we are seeing in MAGs measure up with what we know from profiling the metagenomes?
 
+Take a quick look again at the NCBI's Krona plot on your sample.
+
+You can select a run and take a look at NCBI's phylogenetic analyses, including a Krona plot (click on *Show Krona View* to see it).
+<div style="font-size: 12px; font-family: Arial, sans-serif; margin: 20px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+  <table style="width: 100%; border-collapse: collapse;">
+    <thead style="background-color: #f4f4f4;">
+      <tr>
+        <th style="padding: 10px; text-align: left; border-bottom: 2px solid #ccc;">Patient</th>
+        <th style="padding: 10px; text-align: left; border-bottom: 2px solid #ccc;">ICU Day</th>
+        <th style="padding: 10px; text-align: left; border-bottom: 2px solid #ccc;">Run Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">Patient 02</td>
+        <td style="padding: 8px;">1</td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926116&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926116</a></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">Patient 02</td>
+        <td style="padding: 8px;">10</td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926119&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926119</a></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">Patient 04</td>
+        <td style="padding: 8px;">10</td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926181&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926181</a></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">Patient 04</td>
+        <td style="padding: 8px;">14</td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926187&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926187</a></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">Patient 29</td>
+        <td style="padding: 8px;">15</td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926127&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926127</a></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #ddd;">
+        <td style="padding: 8px;">Patient 35</td>
+        <td style="padding: 8px;">3</td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926193&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926193</a></td>
+      </tr>
+      <tr>
+        <td style="padding: 8px;">Patient 36</td>
+        <td style="padding: 8px;">11</td>
+        <td style="padding: 8px;"><a href="https://trace.ncbi.nlm.nih.gov/Traces/index.html?view=run_browser&acc=SRR8926233&display=analysis" target="_blank" style="color: #0066cc; text-decoration: none;">SRR8926233</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 
 ---
 
