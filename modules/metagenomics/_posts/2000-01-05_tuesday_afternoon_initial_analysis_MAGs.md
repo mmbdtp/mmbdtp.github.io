@@ -227,9 +227,32 @@ The provided CheckM output log includes various stages of processing, warnings, 
    - **Contents**: Includes a formatted summary of each bin’s completeness, contamination, and overall quality metrics.
    - **Use**: These reports are often shared with collaborators or included in analysis reports to summarize the quality of genome bins.
 
+---
+
 ### CheckM conclusions
 
 So what do conclude from your CheckM results? How do these results measure up against what you found with BLAST?
 
+---
+
 ## Kraken again
+
+So, have we got credible MAGs? One additional line of attack is to run Kraken on all our bins, with a command something like this:
+
+```
+kraken2 --threads 32 --db /home/jovyan/shared-public/db/kraken2/pluspf_8gb/latest --output bins.001_kraken_hits.txt     --report bins.001_kraken_report.txt   --use-names  maxbin_bins.001.fasta
+```
+
+What do you conclude now?
+ - Are the organisms you are seeing in your bins the organisms you would expect to see in this context?
+ - Are you seeing potential human pathogens? Commensals?
+ - Do a brief PubMed search if you are unfamiliar with the organisms you are seeing.
+
+---
+
+## End of the session 
+That's all for today.
+Tomorrow, we will analyse some of the MAGs in terms of phylogeny and function.
+
+---
 
