@@ -106,6 +106,18 @@ abricate --db resfinder *.fasta > abricate_resfinder_out.tsv
 6. **PlasmidFinder**: Identifies plasmid replicon types. [PlasmidFinder](https://cge.food.dtu.dk/services/PlasmidFinder/) - Carattoli et al., 2014.
 7. **ECOH**: Detects *Escherichia coli* serotype genes. [ECOH at DTU](https://cge.food.dtu.dk/services/ECOH/)
 8. **Ecoli_VF**: Screens for *E. coli* virulence genes. [Ecoli_VF](https://www.mgc.ac.cn/cgi-bin/VFs/genus.cgi?Genus=Escherichia)
-9. **VFDB**: Comprehensive virulence factor detection. [VFDB](http://www.mgc.ac.cn/VFs/) - Chen et al., 2016.
+
+
+---
+
+### Task
+Spend the next 20-30 minutes using abricate to explore your MAGs. Do you find many resistance genes or virulence factors??
+
+---
+
+
+
+  
+10. **VFDB**: Comprehensive virulence factor detection. [VFDB](http://www.mgc.ac.cn/VFs/) - Chen et al., 2016.
 
 ---
