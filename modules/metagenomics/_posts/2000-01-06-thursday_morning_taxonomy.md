@@ -155,11 +155,3 @@ The main output files are `gtdbtk.bac120.summary.tsv` and `gtdbtk.ar53.summary.t
 - What do the markers and classifications reveal about your MAG?
 - How does the GTDB tree structure provide insight into evolutionary relationships?
 
-**Credit**:
-Acknowledgment to Phil Hugenholtz and the GTDB team for their groundbreaking work in microbial genomics and taxonomy. 
-
---- 
-
-### Summary
-
-Students will leave this session with practical experience running GTDB-Tk, interpreting results, and understanding the importance of consistent microbial taxonomy.
