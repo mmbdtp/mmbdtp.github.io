@@ -4,7 +4,9 @@ title: Thursday Afternoon - Function
 
 ---
 
-## Function
+## Thursday Afternoon - Function
+
+### Annotating and Analysing MAGs for Function
 
 ---
 
@@ -40,7 +42,7 @@ By the end of this session, you will be able to:
    - Compare findings from different tools to understand how they complement each other.
    - Ask and discuss questions related to detected functions, pathways, and potential ecological implications.
 
-This tutorial will equip students with the knowledge and practical skills to perform genome annotation and functional analysis of MAGs using popular bioinformatics tools.
+
 ---
 
 ## Abricate 
