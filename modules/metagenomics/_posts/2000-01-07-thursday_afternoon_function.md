@@ -116,9 +116,147 @@ abricate --db resfinder *.fasta > abricate_resfinder_out.tsv
 Spend the next 20-30 minutes using abricate to explore your MAGs. Do you find many resistance genes or virulence factors??
 
 ---
+### Prokka: Genome Annotation Step-by-Step
 
+---
 
+## Overview
+**Prokka** is a bioinformatics tool designed for the rapid annotation of prokaryotic genomes, producing outputs that adhere to standard file formats. It is commonly used to identify coding sequences (CDS), tRNAs, rRNAs, and other genomic features, annotating them based on known databases.
 
+---
+
+## Setting Up the Environment
+
+**Prokka** can be finicky when installed in different Conda environments. For best results, use the `seqanalysis` environment.
+
+### Step 1: Activate the Environment
+```bash
+conda deactivate
+conda activate seqanalysis
+conda install prokka
+```
+
+### Step 2: Test Prokka Installation
+Run these commands to confirm the installation:
+
+- **Check Prokka's help screen**:
+  ```bash
+  prokka
+  ```
+
+- **Check the version**:
+  ```bash
+  prokka --version
+  ```
+
+- **List installed databases**:
+  ```bash
+  prokka --listdb
+  ```
+
+---
+
+## Running Prokka on a Genome Bin
+
+To annotate a genome bin, use the following command:
+
+```bash
+prokka maxbin_bins.001.fasta
+```
+
+This command will generate an output directory named based on the current date (e.g., `PROKKA_11132024`).
+
+### Example Log Output
+The output log provides detailed information about the annotation process. You will see information about:
+
+- **Prokka version and environment details**.
+- **Number of contigs** and their total base pair count.
+- **tRNA and rRNA predictions**.
+- **Coding sequence (CDS) prediction** and annotation.
+- **Annotation progress**, including searching against known protein databases.
+
+### Key Sections Explained:
+- **Annotation Summary**: Shows the total number of predicted features, such as CDS, tRNAs, and rRNAs.
+- **Search Methods**: Prokka utilizes external tools like **Prodigal**, **Barrnap**, and **BLAST** for gene prediction and database searches.
+- **Output Files**:
+  - **.gff**: A standard feature file.
+  - **.gbk**: GenBank format.
+  - **.faa**: Protein sequences.
+  - **.ffn**: Nucleotide sequences of genes.
+  - **.fna**: Nucleotide sequences of contigs.
+  - **.txt**: Summary statistics.
+
+### Running Prokka on a Genome Bin
+
+To annotate a genome bin, use the following basic command:
+
+```bash
+prokka maxbin_bins.001.fasta
+```
+
+This command will generate an output directory named based on the current date (e.g., `PROKKA_11132024`), containing all the annotation results.
+
+---
+
+### Additional Options
+
+**Prokka** provides several options to customize the annotation process. Here are some useful flags:
+
+- **Specify a Prefix for Output Files**:
+  By default, Prokka uses a prefix based on the date. You can change this with the `--prefix` option to make outputs easier to track:
+
+  ```bash
+  prokka --prefix my_annotation maxbin_bins.001.fasta
+  ```
+
+  This will name the output files with `my_annotation` instead of `PROKKA_<date>`.
+
+- **Use a Reference Genome for Enhanced Annotation**:
+  If you have a related reference genome that can guide the annotation, you can use the `--proteins` flag:
+
+  ```bash
+  prokka --proteins reference_proteins.faa maxbin_bins.001.fasta
+  ```
+
+  This helps Prokka prioritize annotation based on known proteins, which can improve accuracy.
+
+- **Set the Locus Tag**:
+  Use the `--locustag` flag to define a custom locus tag prefix for your gene IDs:
+
+  ```bash
+  prokka --locustag ABC123 maxbin_bins.001.fasta
+  ```
+
+- **Genus-Specific Annotation**:
+  The `--genus` flag allows Prokka to apply more targeted rules for annotation if the genus is known:
+
+  ```bash
+  prokka --genus Escherichia maxbin_bins.001.fasta
+  ```
+
+- **Number of CPUs**:
+  To speed up the annotation, increase the number of CPU cores used:
+
+  ```bash
+  prokka --cpus 8 maxbin_bins.001.fasta
+  ```
+
+These options allow you to tailor the annotation process to your specific project needs, improving both the customization and accuracy of your results.
+
+### Example Output Review:
+After running Prokka, explore the generated directory (e.g., `PROKKA_11132024`) and examine the output files, particularly `PROKKA_11132024.gbk`.
+
+---
+
+## Discussion Points
+- **Why are some proteins annotated with function while others are labeled as hypothetical?**
   
+---
 
+## Notes
+- **Prokka** is powerful for annotating bacterial genomes quickly, making it ideal for initial analyses.
+- **Remember to cite**: If you use Prokka results in your work, cite Seemann T (2014) Prokka: rapid prokaryotic genome annotation. Bioinformatics. 30(14):2068-9.
+  
+Explore the files, understand the annotations, and consider how different databases and thresholds affect the final output.
+```
 ---
