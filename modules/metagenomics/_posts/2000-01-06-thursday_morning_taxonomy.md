@@ -29,7 +29,11 @@ By the end of this tutorial, students will:
 - **Key Concepts**: 
   - **Marker Genes**: GTDB-Tk uses a curated set of marker genes (e.g., `bac120` for bacteria, `ar53` for archaea) essential for taxonomic placement.
   - **Phylogenetic Placement**: The tool integrates input data with the GTDB reference to place genomes on the phylogenetic tree accurately.
-- **Credit**: Phil Hugenholtz and the GTDB team have significantly impacted microbial taxonomy, providing researchers worldwide with valuable resources and tools.
+
+
+**Credit**: Phil Hugenholtz and the GTDB team have significantly impacted microbial taxonomy, providing researchers worldwide with valuable resources and tools.
+
+ ![](https://scmb.uq.edu.au/sites/scmb.uq.edu.au/files/styles/uq_core_small_portrait/public/ckfinder/images/staff_profile/14.jpeg?itok=Emv-T1Z1)
 
 ---
 
