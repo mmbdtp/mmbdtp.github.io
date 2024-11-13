@@ -80,6 +80,7 @@ Successfully installed numpy-1.19.5
 **Running GTDB-Tk**
 
 We will build on [this example](https://ecogenomics.github.io/GTDBTk/examples/classify_wf.html) to run GTDB-Tk over our MAGs.
+Note that the workflow can be run as a single command `classify_wf`, but each step will be run individually in this example, as it can sometimes be useful to run the steps individually when processing or debugging large pipelines.
 
 ***Step 1: Gene calling (identify)***
 
@@ -134,4 +135,57 @@ maxbin_bins.001 40      6       0       74      PF00410.20,PF00466.21,TIGR00019,
 maxbin_bins.002 57      23      0       40      PF00380.20,PF00466.21,PF01025.20,TIGR00006,TIGR00019,TIGR00029,TIGR00043,TIGR00054,TIGR00061,TIGR00064,TIGR00086,TIGR00092,TIGR00095,TIGR00158,TIGR00166,TIGR00194,TIGR00344,TIGR00362,TIGR00392,TIGR00398,TIGR00420,TIGR00435,TIGR00442,TIGR00456,TIGR00459,TIGR00468,TIGR00496,TIGR00593,TIGR00615,TIGR00631,TIGR00635,TIGR00643,TIGR00663,TIGR00717,TIGR00755,TIGR00922,TIGR00964,TIGR00967,TIGR01029,TIGR01039,TIGR01066,TIGR01071,TIGR01164,TIGR01169,TIGR01510,TIGR01632,TIGR01953,TIGR02013,TIGR02027,TIGR02075,TIGR02191,TIGR02397,TIGR02432,TIGR03263,TIGR03594,TIGR03625,TIGR03725     PF00410.20,TIGR00082,TIGR00250,TIGR00382,TIGR00414,TIGR00431,TIGR00472,TIGR00580,TIGR00810,TIGR01009,TIGR01017,TIGR01021,TIGR01044,TIGR01079,TIGR01146,TIGR01171,TIGR01393,TIGR01394,TIGR02012,TIGR02729,TIGR03632,TIGR03654,TIGR03953             PF02576.18,PF03726.15,TIGR00020,TIGR00059,TIGR00065,TIGR00083,TIGR00084,TIGR00088,TIGR00090,TIGR00115,TIGR00116,TIGR00138,TIGR00168,TIGR00186,TIGR00337,TIGR00396,TIGR00416,TIGR00436,TIGR00445,TIGR00460,TIGR00487,TIGR00539,TIGR00634,TIGR00928,TIGR00959,TIGR00963,TIGR01011,TIGR01032,TIGR01059,TIGR01063,TIGR01082,TIGR01087,TIGR01128,TIGR01302,TIGR01391,TIGR01951,TIGR02273,TIGR02350,TIGR02386,TIGR03723
 maxbin_bins.003 47      14      0       59      PF00380.20,TIGR00019,TIGR00020,TIGR00029,TIGR00064,TIGR00082,TIGR00083,TIGR00088,TIGR00116,TIGR00158,TIGR00166,TIGR00186,TIGR00344,TIGR00362,TIGR00398,TIGR00416,TIGR00431,TIGR00435,TIGR00436,TIGR00445,TIGR00459,TIGR00460,TIGR00487,TIGR00496,TIGR00539,TIGR00631,TIGR00634,TIGR00643,TIGR00663,TIGR00922,TIGR00959,TIGR00964,TIGR01011,TIGR01039,TIGR01066,TIGR01082,TIGR01302,TIGR01510,TIGR01951,TIGR01953,TIGR02075,TIGR02273,TIGR02350,TIGR02397,TIGR03594,TIGR03723,TIGR03953        TIGR00006,TIGR00043,TIGR00054,TIGR00095,TIGR00115,TIGR00138,TIGR00337,TIGR00382,TIGR00420,TIGR00755,TIGR01128,TIGR01391,TIGR01394,TIGR03725                PF00410.20,PF00466.21,PF01025.20,PF02576.18,PF03726.15,TIGR00059,TIGR00061,TIGR00065,TIGR00084,TIGR00086,TIGR00090,TIGR00092,TIGR00168,TIGR00194,TIGR00250,TIGR00392,TIGR00396,TIGR00414,TIGR00442,TIGR00456,TIGR00468,TIGR00472,TIGR00580,TIGR00593,TIGR00615,TIGR00635,TIGR00717,TIGR00810,TIGR00928,TIGR00963,TIGR00967,TIGR01009,TIGR01017,TIGR01021,TIGR01029,TIGR01032,TIGR01044,TIGR01059,TIGR01063,TIGR01071,TIGR01079,TIGR01087,TIGR01146,TIGR01164,TIGR01169,TIGR01171,TIGR01393,TIGR01632,TIGR02012,TIGR02013,TIGR02027,TIGR02191,TIGR02386,TIGR02432,TIGR02729,TIGR03263,TIGR03625,TIGR03632,TIGR03654
 ```
+
+***Step 2: Aligning genomes (align)***
+
+The align step will align all identified markers, determine the most likely domain and output a concatenated multiple sequence alignment.
+
+```
+gtdbtk align --identify_dir /tmp/gtdbtk/identify --out_dir /tmp/gtdbtk/align --cpus 16
+```
+
+```
+[2024-11-13 09:27:37] INFO: GTDB-Tk v2.1.1
+[2024-11-13 09:27:37] INFO: gtdbtk align --identify_dir /tmp/gtdbtk/identify --out_dir /tmp/gtdbtk/align --cpus 16
+[2024-11-13 09:27:37] INFO: Using GTDB-Tk reference data version r220: /home/jovyan/shared-team/gtdbtk_data/release220
+[2024-11-13 09:27:37] INFO: Aligning markers in 3 genomes with 16 CPUs.
+[2024-11-13 09:27:37] INFO: Processing 3 genomes identified as bacterial.
+[2024-11-13 09:27:58] INFO: Read concatenated alignment for 107,235 GTDB genomes.
+[2024-11-13 09:27:58] TASK: Generating concatenated alignment for each marker.
+[2024-11-13 09:28:04] INFO: Completed 3 genomes in 0.05 seconds (60.42 genomes/second).
+[2024-11-13 09:28:06] TASK: Aligning 94 identified markers using hmmalign 3.1b2 (February 2015).
+[2024-11-13 09:28:20] INFO: Completed 94 markers in 8.90 seconds (10.56 markers/second).
+[2024-11-13 09:28:21] TASK: Masking columns of bacterial multiple sequence alignment using canonical mask.
+[2024-11-13 09:31:20] INFO: Completed 107,238 sequences in 2.98 minutes (35,958.68 sequences/minute).
+[2024-11-13 09:31:20] INFO: Masked bacterial alignment from 41,084 to 5,035 AAs.
+[2024-11-13 09:31:20] INFO: 0 bacterial user genomes have amino acids in <10.0% of columns in filtered MSA.
+[2024-11-13 09:31:20] INFO: Creating concatenated alignment for 107,238 bacterial GTDB and user genomes.
+[2024-11-13 09:31:56] INFO: Creating concatenated alignment for 3 bacterial user genomes.
+[2024-11-13 09:31:56] INFO: Done.
+```
+
+
+***Results***
+
+It is important to pay attention to the output, if a genome had a low number of markers identified it will be excluded from the analysis at this step. A warning will appear if that is the case.
+Depending on the domain, a prefixed file of either `ar53` or `bac120` will appear containing the MSA of the user genomes and the GTDB genomes, or just the user genomes (`gtdbtk.bac120.msa.fasta.gz` and `gtdbtk.bac120.user_msa.fasta.gz` respectively.)
+
+```
+ls /tmp/gtdbtk/align/align/
+gtdbtk.bac120.filtered.tsv  gtdbtk.bac120.msa.fasta.gz  gtdbtk.bac120.user_msa.fasta.gz  intermediate_results
+
+
+***Step 3: Classifying genomes (classify)***
+
+The classify step will place the genomes into a reference tree, then determine their most likely classification.
+
+gtdbtk classify --genome_dir ./. --align_dir /tmp/gtdbtk/align --out_dir /tmp/gtdbtk/classify -x fasta --cpus 16
+```
+
+```
+```
+
+***Results***
+
+The two main files output are the summary files (gtdbtk.ar53.summary.tsv, and gtdbtk.bac120.summary.tsv respectively). Classification of the genomes are present in the summary file.
 
