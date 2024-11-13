@@ -1,10 +1,10 @@
 ---
-title: Tuesday afternoon - Initial analysis of MAGs
+title: Thursday morning - Taxonomy
 ---
 
 
-# Tuesday morning 
-## Initial analysis of MAGs
+# Thursday morning 
+## Taxonomy
 
 ---
 
