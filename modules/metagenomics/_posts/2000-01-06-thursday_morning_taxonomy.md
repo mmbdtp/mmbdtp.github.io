@@ -49,12 +49,14 @@ By the end of this tutorial, students will:
 
 **Installation Command**:
 ```bash
-mamba create -n gtdbtk-2.1.1 -c conda-forge -c bioconda gtdbtk=2.1.1
+mamba create -n gtdbtk-2.4.0 -c conda-forge -c bioconda gtdbtk=2.4.0
+
 ```
 
 **Activate the Environment**:
 ```bash
-conda activate gtdbtk-2.1.1
+conda activate gtdbtk-2.4.0
+
 ```
 
 ---
@@ -90,7 +92,8 @@ Verify that `numpy` has been successfully downgraded.
 
 **Run the `identify` Command**:
 ```bash
-gtdbtk identify --genome_dir ./. --out_dir /tmp/gtdbtk/identify --extension fasta --cpus 16
+gtdbtk identify --genome_dir ./. --out_dir identify --extension fasta --cpus 16
+
 ```
 
 **Expected Output**:
@@ -115,7 +118,8 @@ ls /tmp/gtdbtk/identify/identify/intermediate_results/marker_genes/maxbin_bins.0
 
 **Run the `align` Command**:
 ```bash
-gtdbtk align --identify_dir /tmp/gtdbtk/identify --out_dir /tmp/gtdbtk/align --cpus 16
+gtdbtk align --identify_dir identify --out_dir align --cpus 16
+
 ```
 
 **Expected Output**:
@@ -135,7 +139,7 @@ Alignment results, including `gtdbtk.bac120.msa.fasta.gz`, will be saved in the 
 
 **Run the `classify` Command**:
 ```bash
-gtdbtk classify --genome_dir ./. --align_dir /tmp/gtdbtk/align --out_dir /tmp/gtdbtk/classify -x fasta --cpus 16
+gtdbtk classify --genome_dir ./. --align_dir align --out_dir classify -x fasta --cpus 16 --skip_ani_screen
 ```
 
 **Expected Output**:
