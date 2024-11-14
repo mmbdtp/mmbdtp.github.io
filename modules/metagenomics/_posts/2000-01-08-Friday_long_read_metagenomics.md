@@ -25,7 +25,11 @@ Powerpoint talk from Mark Pallen
 
 
 ## Socratic dialogue on the future of metagenomics
+
 Audio file will be played 
+
+
+![](https://github.com/mmbdtp/mmbdtp.github.io/blob/gh-pages/modules/metagenomics/_posts/DALL·E%202024-11-14%2013.03.45%20-%20A%20modern%20digital%20illustration%20depicting%20Socrates%20and%20Aspasia%20in%20a%20laboratory%20setting%20engaged%20in%20an%20animated%20debate.%20Socrates%2C%20an%20older%20man%20with%20a%20bear.webp)
 
 ---
 
