@@ -21,10 +21,9 @@ By the end of this session, you will be able to:
 2. **Run and Interpret Results from Bioinformatics Tools**:
    - Use **Abricate** for identifying antimicrobial resistance and virulence genes in metagenome-assembled genomes (MAGs).
    - Execute **Prokka** for annotating prokaryotic genomes, identifying coding sequences, tRNAs, and rRNAs.
-   - Run **DRAM** to annotate and distill metabolic functions in MAGs.
-
+  
 3. **Configure and Run Tools on Provided Datasets**:
-   - Set up and activate appropriate Conda environments for running **Abricate**, **Prokka**, and **DRAM**.
+   - Set up and activate appropriate Conda environments for running **Abricate** and **Prokka**
    - Practice using command-line options to customize analysis (e.g., selecting specific databases, setting output prefixes).
    - Annotate a genome bin (e.g., `maxbin_bins/001.fasta`) using all three tools and interpret the output files.
 
@@ -34,7 +33,7 @@ By the end of this session, you will be able to:
    - Reflect on findings, including the detection of resistance genes and metabolic capabilities.
 
 5. **Develop Skills in Bioinformatics Workflows**:
-   - Integrate **Abricate**, **Prokka**, and **DRAM** outputs into a comprehensive functional analysis.
+   - See how **Abricate** and **Prokka** fit into a comprehensive functional analysis.
    - Use additional flags and parameters to tailor outputs for specific research needs.
    - Navigate output directories and interpret key files, such as `.tsv`, `.gbk`, and summary reports.
 
@@ -286,98 +285,3 @@ Explore the files, understand the annotations, and consider how different databa
 ## Discussion Point
 - Why are only some proteins annotated with functions while others are merely labeled as hypothetical?
   
----
-
-# DRAM 
-
-## Introduction to DRAM
-**DRAM (Distilled and Refined Annotation of Metabolism)** is a bioinformatics tool designed to annotate microbial and viral genomes with a focus on metabolic functions. It integrates multiple databases to provide a comprehensive overview of functional genes and pathways present in metagenome-assembled genomes (MAGs). This tool is essential for understanding the metabolic capabilities of microbial communities and their potential ecological roles.
-
-### What DRAM Does
-- **Annotates metabolic genes**: DRAM provides detailed functional annotations, allowing researchers to identify genes involved in metabolic processes.
-- **Summarizes metabolic potential**: It generates summaries that highlight key metabolic pathways, enabling interpretation of microbial functions.
-- **Refines gene calls**: It integrates data from various databases to ensure accurate and comprehensive annotation.
-
-### How DRAM Works
-1. **Input**: A genome or MAG file (in FASTA format).
-2. **Annotation**: DRAM uses functional databases (such as Pfam, KEGG, and others) to search for matches and annotate genes.
-3. **Output**: DRAM produces detailed annotation files and summary reports, showing the distribution and function of genes within the input genome.
-
----
-
-## Step-by-Step Guide to Running DRAM
-
-### 1. Set Up Your Environment
-Before running DRAM, ensure you have activated the appropriate Conda environment where DRAM is installed:
-
-```bash
-conda activate dram
-```
-
-### 2. Annotate the MAG
-To run DRAM on a MAG (e.g., `maxbin_bins/001.fasta`), use the following command:
-
-```bash
-DRAM.py annotate -i maxbin_bins/001.fasta -o dram_output --threads 8
-```
-
-**Explanation**:
-- `-i maxbin_bins/001.fasta`: Specifies the input MAG file.
-- `-o dram_output`: Indicates the directory where annotation results will be stored.
-- `--threads 8`: Specifies the number of CPU threads for parallel processing, speeding up the annotation.
-
-### 3. Summarize the Annotation
-After the annotation step, create a summary of the results using the `distill` command:
-
-```bash
-DRAM.py distill -i dram_output/annotations.tsv -o dram_output_summary
-```
-
-**Explanation**:
-- `-i dram_output/annotations.tsv`: Path to the annotation output file from the previous step.
-- `-o dram_output_summary`: Directory for storing the summarized output.
-
-### 4. Check Output Files
-Navigate to the output directory to explore the generated files:
-
-```bash
-cd dram_output
-```
-
-**Key output files**:
-- `annotations.tsv`: Detailed annotation file containing the functional predictions for each gene.
-- `distill_output_summary/`: Contains summarized metabolic reports.
-
----
-
-## Optional Parameters
-- **Specify Database Location**: If your DRAM database is stored in a custom location, add the `--db-dir` flag to specify it:
-  ```bash
-  DRAM.py annotate -i maxbin_bins/001.fasta -o dram_output --threads 8 --db-dir /path/to/databases
-  ```
-- **Customize Output Format**: Use flags like `--output-format` to adjust the output file types if needed.
-
----
-
-## Example Commands
-### Annotate a MAG with DRAM:
-```bash
-DRAM.py annotate -i maxbin_bins/001.fasta -o dram_output --threads 8
-```
-
-### Generate a Summary of the Annotation:
-```bash
-DRAM.py distill -i dram_output/annotations.tsv -o dram_output_summary
-```
-
----
-
-## Exploring the Results
-After running DRAM, students should:
-1. Open the `annotations.tsv` file to review detailed gene annotations.
-2. Examine the `distill_output_summary` for insights into the metabolic capabilities and ecological functions inferred from the MAG.
-
-### Questions:
-- What key metabolic pathways are identified in your MAG?
-- Which functional genes are most abundant, and what might that imply about the organism’s ecological role?
-- Are there any unexpected genes or pathways that could indicate unique metabolic adaptations?
