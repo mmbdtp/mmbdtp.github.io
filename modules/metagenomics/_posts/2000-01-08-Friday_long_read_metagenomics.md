@@ -35,6 +35,9 @@ Audio file will be played
 
 
 ## Guest presnentation via Zoom
+
+![](https://www.birmingham.ac.uk/images/staff/profiles/biosciences/loman-nick-230x230.jpg?quality=80&width=411)
+
 Nick Loman
 - **Adventures with long read metagenomics and future prospects**
 
