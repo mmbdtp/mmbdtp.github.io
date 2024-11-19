@@ -20,7 +20,7 @@ Listen to this podcast
 
 ## Reading list
 
-Read and criticaly review the following papers:
+Read and critically review the following papers:
 
  - https://pubmed.ncbi.nlm.nih.gov/31089679/
  - https://translational-medicine.biomedcentral.com/articles/10.1186/s12967-024-04917-1
