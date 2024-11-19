@@ -1,8 +1,7 @@
 ---
-title: Monday Morning - Introducing and Profiling the Dataset
+title: Introducing and Profiling the Dataset
 ---
 
-# Monday Morning
 ## Introducing and Profiling the Dataset
 
 ---
