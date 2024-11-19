@@ -39,7 +39,7 @@ By the end of this tutorial, students will:
 
 **Credit**: Phil Hugenholtz and the GTDB team have significantly impacted microbial taxonomy, providing researchers worldwide with valuable resources and tools.
 
-For the conceptual background on GTDB, wtach [this video](https://www.youtube.com/watch?v=yR-IUXLEA4o).
+For the conceptual background on GTDB, watch [this video](https://www.youtube.com/watch?v=yR-IUXLEA4o).
 
  ![](https://scmb.uq.edu.au/sites/scmb.uq.edu.au/files/styles/uq_core_small_portrait/public/ckfinder/images/staff_profile/14.jpeg?itok=Emv-T1Z1)
 
