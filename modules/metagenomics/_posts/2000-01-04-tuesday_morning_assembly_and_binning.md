@@ -1,9 +1,8 @@
 ---
-title: Tuesday morning - Assembly and Binning
+title: Assembly and Binning
 ---
 
 
-# Tuesday morning 
 ## Assembly and Binning
 
 ---
