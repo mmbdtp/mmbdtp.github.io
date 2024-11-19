@@ -21,6 +21,8 @@ Listen to [this podcast](https://github.com/mmbdtp/mmbdtp.github.io/raw/refs/hea
 ## Socratic dialogue
 Take a look at what Socrates and Aspasia have to say in the gentle Socratic dialogue about whether short-read metagenomics belongs in the dustbin of history.
 
+![]()
+
 **Socrates**: My dear Aspasia, I see a fire in your eyes today, one that speaks of passionate conviction. What thought commands such energy?
 
 **Aspasia**: Oh, Socrates! It is the matter of metagenomics. The world, once enthralled by short-read sequencing, should now rise to see its limitations. It belongs in the dustbin of history. The time has come for long-read sequencing to reign supreme in the realm of metagenomic discovery, with its clarity and completeness beyond the reach of fragmented short-read assemblies.
@@ -50,9 +52,9 @@ Take a look at what Socrates and Aspasia have to say in the gentle Socratic dial
 **Aspasia**: Perhaps, Socrates, I see the balance you seek. But let us not forget that for the high peaks of discovery, long reads have set their claim. If we wish to unlock the true mysteries of metagenomic landscapes, they must lead the expedition.
 
 **Socrates**: And in their shadow, short reads will continue to illuminate the paths they cannot reach alone. Thus, with both in hand, we stride into the future, seeking to know the world as deeply and completely as our tools allow.
+
+
 ---
-
-
 
 
 ## Reading list
