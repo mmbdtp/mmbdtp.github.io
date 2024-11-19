@@ -29,7 +29,7 @@ Read and critically review the following papers:
 
 ---
 
-## Discussion
+## Discussion points
 
 - Discuss whether short-read metagenomics is becoming obsolete.
 - Debate whether long-read metagenomics is a revolution or if it remains more hype than reality.
