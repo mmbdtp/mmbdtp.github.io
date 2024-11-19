@@ -22,10 +22,10 @@ Listen to [this podcast](https://github.com/mmbdtp/mmbdtp.github.io/raw/refs/hea
 
 Read and critically review the following papers:
 
- - [https://pubmed.ncbi.nlm.nih.gov/31089679/]
- - [https://translational-medicine.biomedcentral.com/articles/10.1186/s12967-024-04917-1]
- - [https://link.springer.com/article/10.1186/s12859-020-3528-4]
- - [https://www.nature.com/articles/s41592-024-02262-1]
+ - [https://pubmed.ncbi.nlm.nih.gov/31089679/](https://pubmed.ncbi.nlm.nih.gov/31089679/)
+ - [https://translational-medicine.biomedcentral.com/articles/10.1186/s12967-024-04917-1](https://translational-medicine.biomedcentral.com/articles/10.1186/s12967-024-04917-1)
+ - [https://link.springer.com/article/10.1186/s12859-020-3528-4](https://link.springer.com/article/10.1186/s12859-020-3528-4)
+ - [https://www.nature.com/articles/s41592-024-02262-1](https://www.nature.com/articles/s41592-024-02262-1)
 
 ---
 
