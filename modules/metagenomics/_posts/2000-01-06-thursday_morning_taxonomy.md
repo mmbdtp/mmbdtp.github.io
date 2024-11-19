@@ -1,10 +1,10 @@
 ---
-title: Thursday Morning - Taxonomy
+title: Taxonomy
 ---
 
 
 
-# Thursday Morning - Taxonomy
+# Taxonomy
 
 ---
 
