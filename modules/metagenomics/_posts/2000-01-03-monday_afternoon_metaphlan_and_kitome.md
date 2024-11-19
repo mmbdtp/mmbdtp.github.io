@@ -1,9 +1,8 @@
 ---
-title: Monday Afternoon - MetaPhlAn and the unreal microbiome
+title: MetaPhlAn and the unreal microbiome
 ---
 
 
-# Monday Afternoon 
 ## MetaPhlAn and the unreal microbiome
 
 ---
