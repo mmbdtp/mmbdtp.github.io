@@ -262,7 +262,7 @@ This series of commands performs a workflow for mapping reads and generating abu
 
 ---
 
-## Yallah!
+## Running the workflow
 Run this workflow over your assembly. 
 
 Here's a separate version of the workflow for each of the samples. Copy and run the appropriate set of commands for your sample to complete the workflow.
