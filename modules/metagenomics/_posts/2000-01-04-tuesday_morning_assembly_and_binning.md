@@ -24,15 +24,15 @@ title: Assembly and Binning
 
 **MEGAHIT** is a powerful, efficient tool for assembling large and complex metagenomic datasets. It is designed for assembling short reads from high-throughput sequencing technologies, such as Illumina, and can handle metagenomic data with mixed organisms or environmental samples. MEGAHIT is particularly well-suited for assembling large-scale data due to its low memory usage and high speed, making it an excellent choice for metagenomic research involving diverse microbial communities.
 
-To save time and resources, for this session, you will each work on a single sample:
+To save time and resources, for this session, you will each work on a single sample. Decide between yourselves which student takes which sample:
 
- - patient02_day01: Ricardo
- - patient02_day10: Rachael
- - patient04_day10 : Samson
- - patient04_day14: Tabitha
- - patient29: William
- - patient35: Nabina
- - patient36: Chloe
+ - patient02_day01
+ - patient02_day10
+ - patient04_day10
+ - patient04_day14
+ - patient29
+ - patient35
+ - patient36
 
 You should run the assmbly on the sample that has been assigned to you, working within your own directory in shared-teams 
 
