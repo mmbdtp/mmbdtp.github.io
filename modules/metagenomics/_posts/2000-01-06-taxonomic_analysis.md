@@ -1,10 +1,10 @@
 ---
-title: Taxonomy
+title: Taxonomic analysis of MAGs
 ---
 
 
 
-# Taxonomy
+# Taxonomic analysis of MAGs
 
 ---
 
