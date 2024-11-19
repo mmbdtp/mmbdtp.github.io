@@ -39,6 +39,8 @@ By the end of this tutorial, students will:
 
 **Credit**: Phil Hugenholtz and the GTDB team have significantly impacted microbial taxonomy, providing researchers worldwide with valuable resources and tools.
 
+For the conceptual background on GTDB, wtach [this video](https://www.youtube.com/watch?v=yR-IUXLEA4o).
+
  ![](https://scmb.uq.edu.au/sites/scmb.uq.edu.au/files/styles/uq_core_small_portrait/public/ckfinder/images/staff_profile/14.jpeg?itok=Emv-T1Z1)
 
 ---
@@ -71,22 +73,13 @@ export GTDBTK_DATA_PATH=/home/jovyan/shared-team/gtdbtk_data/release220
 
 Ensure that the `GTDBTK_DATA_PATH` is correctly set to avoid data path errors.
 
----
-
-### Step 3: Fixing Numpy Compatibility Issues
-
-You might encounter an error related to `numpy` when running GTDB-Tk. To fix this, downgrade `numpy`:
-
-**Command**:
-```bash
-pip install numpy==1.19.5
-```
-
-Verify that `numpy` has been successfully downgraded.
 
 ---
 
 ## Running GTDB-Tk
+
+Note: GTDB-Tk is rather brittle, so do not be surprised if you encounter problems. In such case, use Google and ChatGPT to find solutions or workarounds.
+
 
 ### Step 1: Gene Calling (Identify)
 
