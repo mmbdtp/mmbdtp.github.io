@@ -1,9 +1,7 @@
 ---
-title: Tuesday afternoon - Initial analysis of MAGs
+title: Initial analysis of MAGs
 ---
 
-
-# Tuesday afternoon 
 ## Initial analysis of MAGs
 
 ---
