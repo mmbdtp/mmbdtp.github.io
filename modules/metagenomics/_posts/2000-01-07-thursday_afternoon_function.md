@@ -1,12 +1,10 @@
 ---
 
-title: Thursday Afternoon - Function
+title: Annotating and Analysing MAGs for Function
 
 ---
 
-## Thursday Afternoon - Function
-
-### Annotating and Analysing MAGs for Function
+## Annotating and Analysing MAGs for Function
 
 ---
 
