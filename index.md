@@ -9,9 +9,10 @@ published: true
 
 This is the website for the 6-week mandatory Bioinformatics Training for the MRC [Microbes, Microbiomes, and Bioinformatics Doctoral Training Partnership](https://www.uea.ac.uk/research/research-with-us/postgraduate-research/latest-phds-and-research-studentships/partnerships-in-doctoral-training/mmb) held from October to December 2024.
 
-**DTP and Course Director**: Mark Pallen ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk))
+**DTP and Course Director**: Ben Evans (University of East Anglia)
 
-Use the tabs above to select the course modules.
+Website implemented by Andrea Telatin and the Core Bioinformatics team at the Quadram Institute
+
 
 ---
 
