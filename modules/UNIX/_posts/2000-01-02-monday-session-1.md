@@ -2,6 +2,14 @@
 title: Monday - Session 1
 ---
 
+## NOTES
+
+- cd task to find a file location (what is location availble on all computer by default)
+- delete section tar
+- delete section homebrew
+- introduce flags
+- introduce man/help have a task to inspect ls -l output
+
 ## Check Access to CLIMB notebook 
 
 Share example files with students via email. Files will already be on CLIMB shared folder.
