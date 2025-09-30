@@ -2,12 +2,13 @@
 title: Monday - Session 2
 ---
 
-# Redirection and wildcards
+# Redirectors and wildcards
 
 >**Things covered here:**
 >
-> - Redirectors
 > - Wildcards
+> - Autocomplete with tab
+> - Redirectors
 > - History
 
 
@@ -17,79 +18,13 @@ To be sure we are still working in the same place, let’s run:
 cd ~/unix_intro
 ```
 
-## Redirectors
+## Special Characters
 
-When we are talking about “redirectors” here, we are referring to things that change where the output of something is going. The first we’re going to look at is called a “pipe” (`|`).
-
-> A pipe (`|`) is used to connect multiple commands. It takes the output from the previous command
-> and “pipes” it into the input of the following command.
-
-Let’s look at an example. Remember we used `wc -l` to count how many lines were in a file:
-
-```
-wc -l example.txt
-```
-
-And that ls lists the files and directories in our current working directory:
-
-ls
-If we “pipe” (`|`) the `ls` command into the `wc -l` command, instead of printing the output from `ls` to the screen as usual, it will go into `wc -l` which will print out how many items there are:
-
-```
-ls | wc -l
-```
-
-For another example, let’s look at what’s in the subdirectory, “`data/all_samples/`”:
-
-```
-ls data/all_samples/
-```
-
-That prints out a lot of stuff, let’s see how many things are in that directory:
-
-```
-ls data/all_samples/ | wc -l
-```
-
-We’ll get back to making sense of that when we get to *wildcards* in the next section.
-
-> Another important character is the greater than sign, `>`. This tells the command line to *redirect* 
-> the output to a file, rather than just printing it to the screen as we’ve seen so far.
-
-For an example of this we will write the output of `ls` to a new file called “`directory_contents.txt`”:
-
-```
-ls
-ls > directory_contents.txt
-```
-
-Notice that when we redirect the output with the `>`, nothing printed to the screen. And we’ve just created a file called “`directory_contents.txt`”:
-
-```
-ls
-head directory_contents.txt
-```
-
-**It’s important to remember that the `>` redirector will overwrite the file we are pointing to if it already exists.**
-
-```
-ls experiment/ > directory_contents.txt
-head directory_contents.txt
-```
-
-If we want to append an output to a file, rather than overwrite it, we can use two of them instead, `>>`:
-
-```
-ls >> directory_contents.txt
-head directory_contents.txt
-```
-
-## Wildcards
-
-> Wildcards as used at the command line are special characters that enable us to specify multiple 
-> items very easily. The `*` and `?` are probably the most commonly used, so let’s try them out!
+Bash uses special characters that have specific meanings. Some enable pattern matching (wildcards), while others help with navigation.
 
 ### The asterisk (*)
+
+Wildcards are special characters that enable us to specify multiple items very easily. The most common one you'll encounter is `*`, so let's try it out!
 
 As we’ve seen, `ls` lists the contents of the current working directory, and by default it assumes we want everything:
 
@@ -175,9 +110,122 @@ It's also counting the new directory we created 🙂
 > Note: When using wildcards, running `ls` first like done in the above example (`ls *.fq`) is good practice before 
 > actually running a command. It is a way of checking that we are specifying exactly what we think we are specifying.
 
+## Tab completion
+
+One of the nicest facilities of the modern shell is the built in "completion" support. These facilities allow you to complete commands and their arguments easily. Most shells allow command completion, typically bound to the TAB key, which allow you to complete the names of commands stored upon your PATH, file names, or directory names. This is typically used like so:
+
+```
+ls sa[TAB]
+ls sample_[TAB]
+Display all 900 possibilities? (y or n) [y]
+
+sample_1.fq
+sample_1.tsv
+sample_1.txt
+sample_10.fq
+sample_10.tsv
+sample_10.txt
+sample_11.fq
+sample_11.tsv
+sample_11.txt
+...
+
+```
+
+When you type `sa` and press TAB, the shell completes it to `sample_` because that matches all the files starting with `sa`. 
+
+If you press TAB again and there are multiple possibilities, the shell shows you all the options. If there's only one match, it completes the entire filename automatically. 
+
+Tab completion also works with commands and directories. For example, if you type `mkd[TAB]`, the shell will complete it to `mkdir` if that's the only command starting with "mkd" on your system. 
+
+```
+mkd[TAB]
+mkdir 
+```
+
+Let's say you want to go back to the top level directory `unix_intro` but you're not sure how many levels up that is from where you are. You could of course print working directory and see this, or you could use tab to see the directory structure like so:
+
+```
+pwd
+~/unix_intro/data/all_samples
+
+cd ../[TAB]
+all_samples/
+
+cd ../../[TAB]
+data/      example.txt     experiment/     six_commands/
+```
 
 
-### BONUS ROUND: History!
+## Redirectors
+
+When we are talking about “redirectors” here, we are referring to things that change where the output of something is going. The first we’re going to look at is called a “pipe” (`|`). Let's make sure we have returned to our home directory by executing `cd ~`.
+
+> A pipe (`|`) is used to connect multiple commands. It takes the output from the previous command
+> and “pipes” it into the input of the following command.
+
+Let’s look at an example. Remember we used `wc -l` to count how many lines were in a file:
+
+```
+wc -l example.txt
+```
+
+And that `ls` lists the files and directories in our current working directory:
+
+ls
+If we “pipe” (`|`) the `ls` command into the `wc -l` command, instead of printing the output from `ls` to the screen as usual, it will go into `wc -l` which will print out how many items there are:
+
+```
+ls | wc -l
+```
+
+For another example, let’s look at what’s in the subdirectory, “`data/all_samples/`”:
+
+```
+ls data/all_samples/
+```
+
+That prints out a lot of stuff, let’s see how many things are in that directory:
+
+```
+ls data/all_samples/ | wc -l
+```
+
+We’ll get back to making sense of that when we get to *wildcards* in the next section.
+
+> Another important character is the greater than sign, `>`. This tells the command line to *redirect* 
+> the output to a file, rather than just printing it to the screen as we’ve seen so far.
+
+For an example of this we will write the output of `ls` to a new file called “`directory_contents.txt`”:
+
+```
+ls
+ls > directory_contents.txt
+```
+
+Notice that when we redirect the output with the `>`, nothing printed to the screen. And we’ve just created a file called “`directory_contents.txt`”:
+
+```
+ls
+head directory_contents.txt
+```
+
+**It’s important to remember that the `>` redirector will overwrite the file we are pointing to if it already exists.**
+
+```
+ls experiment/ > directory_contents.txt
+head directory_contents.txt
+```
+
+If we want to append an output to a file, rather than overwrite it, we can use two of them instead, `>>`:
+
+```
+ls >> directory_contents.txt
+head directory_contents.txt
+```
+
+
+### History
 
 The shell also keeps track of our previous commands for us. There are a few different ways we can take advantage of this, one is by using the `history` command. But that alone will print all of it to the screen. It can be more practical to “pipe” (`|`) that into something else like `tail` to see the last few commands:
 
@@ -219,27 +267,7 @@ ls
 </details>
 </blockquote>
 
-### The question mark (?)
 
-> At the command line, the `?` wildcard represents any character that appears *only one time*.
-
-To see how this can be needed at times when the `*` won’t do, let’s change into the “fastq_file” subdirectory:
-
-```bash
-cd fastq_files/
-```
-
-And let’s say we wanted only the “.fq” files for samples 10-19. If we tried to grab those with the `*`, we’d get more than we wanted:
-
-```bash
-ls sample_1*.fq
-```
-
-Because the `*` allows for any character *any number* of times, it is also grabbing those in the 100s. But if we use the `?` wildcard, which only allows any character *one time*, we get only the samples we want:
-
-```bash
-ls sample_1?.fq
-```
 
 ## Summary
 
@@ -249,8 +277,8 @@ They may seem a little abstract at first, but redirectors and wildcards are two 
 
 | Character &nbsp;&nbsp;&nbsp;&nbsp; | Function                                                  |
 |:-----------------------------------| ----------------------------------------------------------|
+| `*` &nbsp;&nbsp;&nbsp;&nbsp;       | Represents any character appearing any number of times    |
+| `?` &nbsp;&nbsp;&nbsp;&nbsp;       | Represents any character appearing only once              |
 | `|` &nbsp;&nbsp;&nbsp;&nbsp;       | A "pipe" allows stringing together multiple commands      |
 | `>` &nbsp;&nbsp;&nbsp;&nbsp;       | Sends output to a file (overwrites target file)           |
 | `>>`&nbsp;&nbsp;&nbsp;&nbsp;       | Sends output to a file (appends to target file)           |
-| `*` &nbsp;&nbsp;&nbsp;&nbsp;       | Represents any character appearing any number of times    |
-| `?` &nbsp;&nbsp;&nbsp;&nbsp;       | Represents any character appearing only once              |
