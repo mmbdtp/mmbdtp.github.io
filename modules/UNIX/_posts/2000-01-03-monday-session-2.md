@@ -282,3 +282,7 @@ They may seem a little abstract at first, but redirectors and wildcards are two 
 | `|` &nbsp;&nbsp;&nbsp;&nbsp;       | A "pipe" allows stringing together multiple commands      |
 | `>` &nbsp;&nbsp;&nbsp;&nbsp;       | Sends output to a file (overwrites target file)           |
 | `>>`&nbsp;&nbsp;&nbsp;&nbsp;       | Sends output to a file (appends to target file)           |
+
+#### Acknowledgements 
+
+This training course was adapted from the [Happy Belly Bioinformatics Unix Course](https://astrobiomike.github.io/unix/).
