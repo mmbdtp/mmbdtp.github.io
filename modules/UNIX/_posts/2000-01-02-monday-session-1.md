@@ -1,6 +1,16 @@
 ---
 title: Monday - Session 1
 ---
+
+# Bash First Steps
+
+>**Things covered here:**
+>
+> - What is the terminal
+> - File system navigation
+> - Basic bash commands
+> - Using and understanding command flags
+
 ## Introductions
 
 Andrea, Judit and Sam are your instructors this week. We are all bioinformaticians in the QIB Core Bioinformatics Team.
@@ -21,7 +31,7 @@ Open the Terminal emulator (on a Mac it is called “Terminal”, on Linux it is
 
 :warning: We are using Mac and MacOS. MacOS is a “Unix-like” operating system (meaning it is similar but not identical to Unix). A difference between MacOS and most Unix operating systems is that by default MacOS terminals use zshell instead of bash as its shell.
 
-### My first command
+## My first command
 
 The string telatin@N121515:~$ (or similar) is called the prompt, and it’s an indication the terminal is waiting for your input. You can type a command and press Enter to execute it. If the program returns some text, it will be printed after the prompt, and when the program finishes the execution, you will receive a new prompt.
 
@@ -31,7 +41,7 @@ The string telatin@N121515:~$ (or similar) is called the prompt, and it’s an i
 pwd
 ```
 
-### Navigating the file system
+## Navigating the file system
 
 The file system is the way the computer organizes the files and directories (folders) on the disk. On your laptop you use a graphical interface to navigate the file system. These GUIs are curated to show common locations and hide sensitive (or dangerous locations).
 
@@ -194,7 +204,7 @@ rm has several flags that are useful but dangerous
 r m -fr /
 ```
 
-# mv
+### mv
 Move 'mv' is a cp command followed by a rm command
 ```
 mv new_file old_file
@@ -231,17 +241,8 @@ The goal of this section is to download an archive with some toy files to use in
 
 :exclamation: Go to your home directory before following this section, with cd ~.
 
-### wget
-The wget command is a tool to download files from the web. It’s a very powerful tool, but we will use it in a very simple way.
-
-```
-wget "https://github.com/telatin/learn_bash/archive/refs/tags/2020.tar.gz"
-```
-
-This will download the archive 2020.tar.gz and save it in the current directory.
-
 ### curl
-The curl command is a tool to download files from the web. While wget will save the file with its name in the current directory, the default behaviour of curl is to print the content of the file (which we don’t want), so we need to add the -o output-destination parameter. In addition we will also need to add the -L switch to follow redirects, or our file will not be downloaded.
+The curl command is a tool to download files from the web. The default behaviour of curl is to print the content of the file (which we don’t want), so we need to add the -o output-destination parameter. In addition we will also need to add the -L switch to follow redirects, or our file will not be downloaded.
 
 ```
 curl -L -o 2022.tar.gz "https://github.com/telatin/learn_bash/archive/refs/tags/2022.tar.gz"
