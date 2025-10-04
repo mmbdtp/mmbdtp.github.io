@@ -292,7 +292,101 @@ head target_genes.faa
 
 And now we’ve made a new fasta file holding the sequences of just the genes we wanted!
 
+## Looping until a condition is met
+
+An alternative to looping over a predetermined number of items is to continue to loop until a condition is met. This is used less often, but is very important if you are chaining commands together and want to ensure the one step only starts after another step has completed.
+
+```bash
+while [ $previous_step_is_running ]
+do
+  sleep 1
+done
+echo $output
+```
+
+## If/then conditional
+Loops are fantastic for scaling repetitive tasks across many files or lines. However, danger lies in not providing any check or balances for when things don't look right. Sometimes we want our code to behave differently if some critical information is missing. Enter if/else:
+
+If/else statements at a Unix-like command-line at a basic level can look something like this:
+
+```bash
+if [ # something-to-be-evaluated # ]
+then
+    # do something if true #
+else
+    # do something else if false #
+fi
+```
+
+The `fi` at the end is needed to close the if statement overall, similar to how we need to put `done` at the end of a for loop.
+
+We can check if there is anything inside a file with `[ -s filename ]`. (I usually forget and need to google that whenever I have a situation where I want to do it). Let’s look at this altogether interactively on the command-line first. 
+
+Here’s an example of how our if/then statement checking for file contents works (re-type, or copy and paste this code block into the command line):
+
+```bash
+if [ -s europa_target_gene_ids.txt ]
+then
+    echo "File is good-to-go!"
+else
+    echo "File is empty!"
+fi
+```
+
+When we run that, the terminal prints back “File is empty!”:
+
+
+If we run it on a file that holds something, like “K18979_target_gene_ids.txt” that we generated earlier, it prints back “File is good-to-go!”:
+
+```bash
+if [ -s K18979_target_gene_ids.txt ]
+then
+    echo "File is good-to-go!"
+else
+    echo "File is empty!"
+fi
+```
+
+
+<blockquote>
+<center><strong>QUICK QUESTION!</strong></center>
+
+Now to try and combine for loops and if conditions. How might we write some code to check if the files within a folder are empty or not?
+
+<details>
+<summary>Solution</summary>
+<br>
+<pre><code>for file in folder/*
+do
+  if [ -s $file ]
+  then
+    echo "File is good-to-go!"
+  else
+    echo "File is empty!"
+fi
+done</code></pre>
+
+</details>
+</blockquote>
+
+### Chaining if conditions
+
+Unix shells have been around for decades and clever but lazy developers have built tonnes of shorthands to make complex logic code simpler. You really can spend years just learning new aspect of shells like bash. Here is an example of comparing an argument to multiple possible values:
+
+```bash
+if ["$(my_var)" == 'option_a']
+  then
+    echo "I know what $my_var is."
+  elif ["$(my_var)" == 'option_b']
+    echo "I still know what $my_var is."
+  else
+    echo "I have no idea what $my_var is."
+fi
+```
+
+A really rabbit hole to get lost in with bash is its use of brackets. Normal, curl, squared, double or single all have different uses. The square brackets used above alway resolve to a true or false value and have many inbuilt short handles for comparing different variables and files. Here we are just doing a simple string comparison. We are also using the elif shorthand for else if!
+
 ## Summary
 
-Even though loops can get much more complicated as needed, practicing these foundational skills a bit is all that’s needed to start harnessing their awesome power 🙂
+Even though loops and logic can get much more complicated as needed, practicing these foundational skills a bit is all that’s needed to start harnessing their awesome power 🙂
 
