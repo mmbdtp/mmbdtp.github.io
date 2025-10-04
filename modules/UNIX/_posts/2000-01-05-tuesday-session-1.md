@@ -14,7 +14,7 @@ After our first day introducing default Bash commands, we will spend today explo
 
 ## Variables
 
-In Bash, unlike most other programming languages, all Bash variables are untyped character variables. Most other programming languages demand you explicitly state what type of variable it is (number, string, dictionary ect)  or try to infer the type dynamically as soon as you define it. Bash does not care. It is down entirely to the command that uses to function to determine if the variable is in anyway suitable, ie.e. check it is a number before try to divide it.
+In Bash, unlike most other programming languages, all Bash variables are untyped character variables. Most other programming languages demand you explicitly state what type of variable it is (number, string, dictionary ect)  or it tries to infer the type dynamically as soon as you define it. Bash does not care. It is down to the command that uses the variable to determine if the variable is in anyway suitable, i.e. check it is a number before it tries to divide it.
 
 Lets define a variable
 
@@ -76,16 +76,16 @@ Both local and exported variables are deleted if the parent shell session is clo
 
 ### System vs User defined
 
-The only meaningful distinction between shell variables are system-defined variables and user-defined variable. The above are examples of user-defined variable. They are typically ephemeral, i.e. they are deleted when you close your terminal. 
+The only meaningful distinction between shell variables are system-defined variables and user-defined variable. The above are examples of user-defined variables. They are typically ephemeral, i.e. they are deleted when you close your terminal. 
 
-System-defined variables, as the name suggests, are persistent variables that are critical so some sub-system of the OS or shell. You can still see them and you can change them, but be warned do so can have unexpected consequences. Restarting your shell will restore these variables to their system defaults.
+System-defined variables, as the name suggests, are persistent variables that are critical to some sub-system of the OS or shell. You can still see them and you can change them, but be warned doing so can have unexpected consequences. Restarting your shell will restore these variables to their system defaults.
 
 ```
 # example of a system-defined variable
 echo $HOME
 ```
 
-We will discuss how to make user-defined variables persistent later as well as how to make changes to the system-defined variables stay fixed too.
+We will discuss how to make user-defined variables persistent later as well as how to make changes to the system-defined variables stay too.
 
 ## For loops
 
@@ -389,4 +389,8 @@ A really rabbit hole to get lost in with bash is its use of brackets. Normal, cu
 ## Summary
 
 Even though loops and logic can get much more complicated as needed, practicing these foundational skills a bit is all that’s needed to start harnessing their awesome power 🙂
+
+#### Acknowledgements 
+
+This training course was adapted from the [Happy Belly Bioinformatics Unix Course](https://astrobiomike.github.io/unix/).
 
