@@ -6,21 +6,17 @@ title: Tuesday - Session 1
 
 > **Things covered here:**
 > - Variables
-> - For loops
+> - For/while loops
+> - Conditional logic with if/else
 
 
-Welcome to the wonderful world of loops!
-Loops are extremely powerful in all programming languages. They are what let us write out a command or operation once, and have it run on all of our samples or files or whatever we want to act on. Not only is this powerful, but it also helps with keeping our code more concise and readable, and it helps elmininate some more of our mortal enemy (human error). There are multiple types of loops, but here we are going to cover what is probably the most common type: the for loop. First, we need to quickly cover a tiny bit about variables.
-
-Let’s change back into our starting unix_intro directory::
-
-```bash
-cd ~/unix_intro
-```
+After our first day introducing default Bash commands, we will spend today exploring the more advanced concepts required to create our own customised scripts. In this session we will talk about bash variables, loops, and logic.
 
 ## Variables
 
-We can think of a variable as a placeholder for a value that will change with every iteration of our loop. To set a variable at the command line, we need to provide the variable name we want, an equals sign, and then the value we want the variable to hold (with no spaces in between any of that). Let’s try it:
+In Bash, unlike most other programming languages, all Bash variables are untyped character variables. Most other programming languages demand you explicitly state what type of variable it is (number, string, dictionary ect)  or try to infer the type dynamically as soon as you define it. Bash does not care. It is down entirely to the command that uses to function to determine if the variable is in anyway suitable, ie.e. check it is a number before try to divide it.
+
+Lets define a variable
 
 ```bash
 my_var=Europa
@@ -50,7 +46,46 @@ my_new_var="Europa is awesome."
 echo $my_new_var
 ```
 
-Great, that’s really all we need to know about variables for now. Let’s get to the good stuff 🙂
+```bash
+# Note that calling undefined variables does not give an error!
+echo $fake_var
+```
+
+### Local variables and extending scope
+
+Like all programming languages, shell variables have different scopes. That is to say, they are only defined when called in certain functions or environments and are undefined elsewhere. The variables defined above are locally defined. They can only be used by commands called in this session. 
+
+You can promote a variable to extend its scope to child processes of this parent shell session with the `export` command:
+
+```bash
+local_variable=here
+export exported_variable=there
+
+# both are available in this bash session
+echo $local_variable
+echo $exported_variable
+
+# Only the exported variable is available if a call a new shell session
+zsh -c 'echo $local_variable'
+zsh -c 'echo $exported_variable'
+```
+
+This distinction may seem subtle, but can have consequences when we are calling our own scripts later on.
+
+Both local and exported variables are deleted if the parent shell session is closed
+
+### System vs User defined
+
+The only meaningful distinction between shell variables are system-defined variables and user-defined variable. The above are examples of user-defined variable. They are typically ephemeral, i.e. they are deleted when you close your terminal. 
+
+System-defined variables, as the name suggests, are persistent variables that are critical so some sub-system of the OS or shell. You can still see them and you can change them, but be warned do so can have unexpected consequences. Restarting your shell will restore these variables to their system defaults.
+
+```
+# example of a system-defined variable
+echo $HOME
+```
+
+We will discuss how to make user-defined variables persistent later as well as how to make changes to the system-defined variables stay fixed too.
 
 ## For loops
 
@@ -130,9 +165,43 @@ done</code></pre>
 
 Usually we won’t want to type out the items we’re looping over, that was just to demonstrate what’s happening. Often we will want to loop through items in a file, like a list of samples or genomes.
 
+### Looping across files in a folder
+
+The possible arguments accepted by the **in** of a for loop are varied making for loops very versatile. A very useful option is to loop through all folders or through all files in a folder.
+
+First, lets create some files:
+
+```bash
+for file in file1 file2 file3
+do
+  touch $file
+done
+```
+
+Now, lets loop through these files and rename them:
+
+```bash
+for file in file*
+do
+  mv $file $file_new
+done
+```
+
+Notice how we did not need to explicitly list all the files. The wildcard * automatically tells the shell that the variable is a filename expansion and should look in the current directory to find which files fit the description (it is a powerful default bash utility called Globbing).
+
+```bash
+# check the output to confirm the files have changed
+ls
+```
+
+```bash
+# clean up after ourselves
+rm file*
+```
+
 ### Looping through lines of a file
 
-Instead of typing out the elements we want to loop over, we can execute a command in such a way that the output of that command becomes the list of things we are looping over.
+We can also execute a command in such a way that the output of that command becomes the list of things we are looping over.
 
 We’re going to use the `cat` command to help us do this (which comes from con**cat**enate). cat is kind of like head, except that instead of just printing the first lines in a file, it prints the whole thing:
 
@@ -153,83 +222,6 @@ Here, where we say `$(cat words.txt)`, the command line is performing that opera
 
 ```bash
 echo $(cat words.txt)
-```
-
-For a more practical example, let’s pull multiple specific sequences we want from a file!
-
-### BONUS ROUND: interleaving files with `paste`
-
-A pretty neat use of `paste` is to interleave two files. What `paste` is doing is sticking two files together, line-by-line, with some delimiter (separating character) in between them. This delimiter by default is a `tab` character, but we can set it to other things too, including a newline character. To demonstrate this, let’s make a fasta-formatted sequence file from our genes in the previous lesson.
-
-> **Note:** “Fasta” is a common format for holding sequence information. In it, each sequence entry takes up two lines: 
-> the first is the name of the sequence and needs to be preceded by a > character; and the second line is the sequence. 
-> It looks like this:
-
-> ```bash
-> >Seq_1
-> ATGCGACC
-> >Seq_2
-> TCCGACTT
-> ```
-
-To start, let’s copy over our table that holds the gene IDs, lengths, and sequences (remember the `.` says to copy it to our current location and keep the same name):
-
-```bash
-cp ~/unix_intro/six_commands/genes_and_seqs.tsv .
-```
-
-This file holds the gene IDs in the first column and the sequences in the third:
-
-```bash
-head -n 1 genes_and_seqs.tsv
-```
-
-Let’s get them into their own files. Note the use of `-n +2` in the `tail` command here. This takes everything in the file except the first line, which we don’t want here because it is the header of the table:
-
-```bash
-cut -f 1 genes_and_seqs.tsv | tail -n +2 > ids.tmp
-cut -f 3 genes_and_seqs.tsv | tail -n +2 > seqs.tmp
-
-head ids.tmp
-head seqs.tmp
-```
-We also need to add the `>` character in front of our IDs though because that is part of the fasta format. We can do that with `sed` and using a special character that represents the start of every line (`^`):
-
-```bash
-sed 's/^/>/' ids.tmp > fasta_ids.tmp
-
-head fasta_ids.tmp
-```
-
-This `sed` command is searching for the start of every line (`^`), and then adding in the `>` character.
-
-Now for the interleaving, to think about what’s happening here, remember that `paste` is normally just sticking things together with a tab in between them:
-
-```bash
-paste fasta_ids.tmp seqs.tmp | head -n 2
-```
-
-But we can tell paste to use a different delimiter by providing it to the `-d` argument. Here is if we wanted the delimiter to be a dash:
-
-```bash
-paste -d "-" fasta_ids.tmp seqs.tmp | head -n 2
-```
-
-And we can also tell it to combine them with a newline character in between (which is represented by `\n`):
-
-```bash
-paste -d "\n" fasta_ids.tmp seqs.tmp | head -n 4
-```
-
-And that’s our fasta-formatted file! So let’s write it to a new file and get rid of the temporary files we made along the way:
-
-```bash
-paste -d "\n" fasta_ids.tmp seqs.tmp > genes.faa
-
-head genes.faa
-
-ls *.tmp
-rm *.tmp
 ```
 
 ### Retrieving specific sequences with a loop
