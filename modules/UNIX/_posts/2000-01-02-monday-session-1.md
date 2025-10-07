@@ -37,7 +37,7 @@ The string telatin@N121515:~$ (or similar) is called the prompt, and it’s an i
 
 :bulb: Try yourself, type pwd and press Enter to see what it does.
 
-``` 
+```bash 
 pwd
 ```
 
@@ -50,7 +50,7 @@ In UNIX systems, all the possible directories we have access to, are nested in a
 ## Exploring the Unix file system with ls
 The ls command lists the contents of a directory or a set of files. Lets look as the folders within the root directory:
 
-```
+```bash
 ls /
 ```
 
@@ -60,33 +60,34 @@ ls /
 
 To change our current directory we can use the cd (change directory) command. First, lets return to the pwd call again:
 
-```
+```bash
 pwd
 ```
 
 As you can see, your home directory is a child of the /Users directory
 
-```
+```bash
 cd /Users
 ls
 ```
 
 To return back, we can use a special dot character '.' which allows you to reference files/folders in the current directory rather than write the full path from root.
 
-```
+```bash
 cd ./<username>
 ls
 ```
 Another useful character is the double dot '..' which allows you to reference files/folders in the parent directory. This can be chained together:
 
-```
+```bash
 ls 
 ls ..
 ls ../..
 ```
 
 A third useful character is the tilde '~' which allows you to reference your home directory wherever you are:
-```
+
+```bash
 cd /
 ls
 cd ~
@@ -117,17 +118,18 @@ Relative paths never start with /, and they are different depending on where the
 ## Expanding command functionality
 
 The ls command lists the contents of a directory or a set of files. It’s a powerful command, and it has many options. To activate the optional functionality of a bash command you pass flags alongside the command call e.g.
-```
+
+```bash
 ls -l
 ```
 -l is a switch to print the contents in a long format, with more information. E. g. ls -l
 
-```
+```bash
 ls -h
 ```
 -h is a switch to print the file sizes in a human readable format. E. g. ls -h
 
-```
+```bash
 ls -hl
 ```
 Multiple switches can be combined. E. g. ls -lh
@@ -139,7 +141,7 @@ UNIX comes with massive documentation. The man command (for “manual”) will o
 
 Let’s try opening the manual for ls:
 
-```
+```bash
 man ls
 ```
 Now you see a full page text, and you didn’t get your prompt back: this is because you are inside an interactive program. You can use the arrows to scroll and:
@@ -158,7 +160,7 @@ Now you see a full page text, and you didn’t get your prompt back: this is bec
 ### mkdir
 To create a new directory we can use the mkdir (make directory) command. It takes a path as a parameter.
 
-```
+```bash
 # Try repeating the command twice!
 mkdir new_dir
 
@@ -171,21 +173,21 @@ mkdir new_dir
 ### rmdir
 To remove a empty directory we can use the rmdir (remove directory) command. It takes a path as a parameter.
 
-```
+```bash
 rmdir new_dir
 ```
 
 ### touch
 To quickly create a file (e.g. to test we have write permissions) we can use the touch command
 
-```
+```bash
 touch new_file
 ```
 
 ### cp
 Copy 'cp' allows you to duplicate a file
 
-```
+```bash
 cp new_file new_file_2
 ```
 
@@ -194,19 +196,20 @@ cp can also duplicate folders if the -r flag
 ### rm
 To remove a file we can use the rm command
 
-```
+```bash
 rm new_file
 ```
 rm has several flags that are useful but dangerous
 
-```
+```bash
 # The dreaded command. DO NOT RUN! 
 r m -fr /
 ```
 
 ### mv
 Move 'mv' is a cp command followed by a rm command
-```
+
+```bash
 mv new_file old_file
 ```
 
@@ -214,12 +217,12 @@ mv new_file old_file
 If we type:
 
 
-```
+```bash
 gotcha
 ```
 we will (very likely) get an error message like:
 
-```
+```bash
 bash: gotcha: command not found
 ```
 
@@ -228,7 +231,7 @@ It’s important that we start reading the messages that the terminals shows us.
 ### echo
 The echo command prints its arguments back to the standard output. We will use this as a diagnostic tool.
 
-```
+```bash
 echo "Hello's world!"
 ```
 
@@ -244,8 +247,8 @@ The goal of this section is to download an archive with some toy files to use in
 ### curl
 The curl command is a tool to download files from the web. The default behaviour of curl is to print the content of the file (which we don’t want), so we need to add the -o output-destination parameter. In addition we will also need to add the -L switch to follow redirects, or our file will not be downloaded.
 
-```
-curl -L -o 2022.tar.gz "https://github.com/telatin/learn_bash/archive/refs/tags/2022.tar.gz"
+```bash
+curl -L -o unix_intro.tar.gz "https://mmbdtp.github.io/modules/UNIX/data/unix_intro.tar.gz"
 ```
 
 :bulb: it’s good practice, when pasting URLs from the web, to enclose them in quotes to avoid problems: if they contains characters like & or ? they will be interpreted by the shell and the command will fail.
@@ -253,8 +256,8 @@ curl -L -o 2022.tar.gz "https://github.com/telatin/learn_bash/archive/refs/tags/
 ### tar: extracting the archive
 We downloaded an archive in the .tar.gz format. This is a compressed archive, and it’s very popular in UNIX systems. To decompress it:
 
-```
-tar -xzf 2022.tar.gz
+```bash
+tar -xzf unix_intro.tar.gz
 ```
 
 Where we combined some switches:
@@ -264,19 +267,16 @@ Where we combined some switches:
 - and the -f parameter to specify the filename (immediately after).
 
 Try typing ls: can you see that a new directory was created? To see it’s content you can type:
-```
-ls -l learn_bash-2022 
+```bash
+ls -l unix_intro
 ```
 It’s output will be something like:
-```
-total 16
--rw-r--r--   1 telatin  bioinfo  6660 26 Oct 12:30 README.md
-drwxr-xr-x   6 telatin  bioinfo   192 26 Oct 12:30 _readme_maker
-drwxr-xr-x   5 telatin  bioinfo   160 26 Oct 12:30 archives
-drwxr-xr-x  18 telatin  bioinfo   576 26 Oct 12:30 files
-drwxr-xr-x   7 telatin  bioinfo   224 26 Oct 12:30 misc
-drwxr-xr-x  21 telatin  bioinfo   672 26 Oct 12:30 phage
-drwxr-xr-x  13 telatin  bioinfo   416 26 Oct 12:30 scripts
+
+```bash
+total 8
+drwxr-xr-x   4 telatin  bioinfo   128  2 Oct 12:30 data
+-rw-r--r--   1 telatin  bioinfo   1592 2 Oct 12:30 example.txt
+drwxr-xr-x   4 telatin  bioinfo   128  2 Oct 12:30 gene_annotations
 ```
 
 The first column lists the permissions of the file and its type: if the first char is d it’s a directory, if it’s - it’s a file, if it’s l it’s a link (“shortcut” as called in Windows).
@@ -285,11 +285,6 @@ Two columns specify the owner and the group of the file. We just created them ex
 
 We have a column specifying the size of the file, and the last column is the name of the file.
 
-:exclamation: To make our tutorials easier, we will now rename the directory to learn_bash:
-
-```
-mv ~/learn_bash-2022 ~/learn_bash
-```
 
 #### Acknowledgements 
 
