@@ -15,7 +15,7 @@ title: Monday - Session 2
 
 To be sure we are still working in the same place, let’s run:
 
-```
+```bash
 cd ~/unix_intro
 ```
 
@@ -29,7 +29,7 @@ Wildcards are special characters that enable us to specify multiple items very e
 
 As we’ve seen, `ls` lists the contents of the current working directory, and by default it assumes we want everything:
 
-```
+```bash
 ls
 ```
 
@@ -37,7 +37,7 @@ But we can be more specific about what we’re interested in by giving it a posi
 
 Here’s an example:
 
-```
+```bash
 ls *.txt
 ```
 
@@ -47,7 +47,7 @@ What this is saying is that no matter what comes before, if it ends with “.txt
 
 For a more practical example, let’s change directories into that messy subdirectory we saw earlier:
 
-```
+```bash
 cd data/all_samples/
 ls
 ls | wc -l
@@ -64,7 +64,7 @@ Using what we've seen above, how can we count how many files of each type there 
 <details>
 <summary>Solution</summary>
 <br>
-<pre><code>
+<pre><code class="language-bash">
 ls *.txt | wc -l
 ls *.tsv | wc -l
 ls *.fq | wc -l
@@ -78,7 +78,7 @@ So far we’ve just been using the `*` wildcard with the `ls` command. But wildc
 
 For example, we can use it with the `mv` command to move all 300 of the “.fq” files into their own directory at once:
 
-```
+```bash
 ls | wc -l
 
 mkdir fastq_files
@@ -115,7 +115,7 @@ It's also counting the new directory we created 🙂
 
 One of the nicest facilities of the modern shell is the built in "completion" support. These facilities allow you to complete commands and their arguments easily. Most shells allow command completion, typically bound to the TAB key, which allow you to complete the names of commands stored upon your PATH, file names, or directory names. This is typically used like so:
 
-```
+```bash
 ls sa[TAB]
 ls sample_[TAB]
 Display all 900 possibilities? (y or n) [y]
@@ -139,14 +139,14 @@ If you press TAB again and there are multiple possibilities, the shell shows you
 
 Tab completion also works with commands and directories. For example, if you type `mkd[TAB]`, the shell will complete it to `mkdir` if that's the only command starting with "mkd" on your system. 
 
-```
+```bash
 mkd[TAB]
 mkdir 
 ```
 
 Let's say you want to go back to the top level directory `unix_intro` but you're not sure how many levels up that is from where you are. You could of course print working directory and see this, or you could use tab to see the directory structure like so:
 
-```
+```bash
 pwd
 ~/unix_intro/data/all_samples
 
@@ -167,7 +167,7 @@ When we are talking about “redirectors” here, we are referring to things tha
 
 Let’s look at an example. Remember we used `wc -l` to count how many lines were in a file:
 
-```
+```bash
 wc -l example.txt
 ```
 
@@ -176,19 +176,19 @@ And that `ls` lists the files and directories in our current working directory:
 ls
 If we “pipe” (`|`) the `ls` command into the `wc -l` command, instead of printing the output from `ls` to the screen as usual, it will go into `wc -l` which will print out how many items there are:
 
-```
+```bash
 ls | wc -l
 ```
 
 For another example, let’s look at what’s in the subdirectory, “`data/all_samples/`”:
 
-```
+```bash
 ls data/all_samples/
 ```
 
 That prints out a lot of stuff, let’s see how many things are in that directory:
 
-```
+```bash
 ls data/all_samples/ | wc -l
 ```
 
@@ -199,28 +199,28 @@ We’ll get back to making sense of that when we get to *wildcards* in the next 
 
 For an example of this we will write the output of `ls` to a new file called “`directory_contents.txt`”:
 
-```
+```bash
 ls
 ls > directory_contents.txt
 ```
 
 Notice that when we redirect the output with the `>`, nothing printed to the screen. And we’ve just created a file called “`directory_contents.txt`”:
 
-```
+```bash
 ls
 head directory_contents.txt
 ```
 
 **It’s important to remember that the `>` redirector will overwrite the file we are pointing to if it already exists.**
 
-```
+```bash
 ls experiment/ > directory_contents.txt
 head directory_contents.txt
 ```
 
 If we want to append an output to a file, rather than overwrite it, we can use two of them instead, `>>`:
 
-```
+```bash
 ls >> directory_contents.txt
 head directory_contents.txt
 ```
@@ -252,7 +252,7 @@ We've already moved all the ".fq" files into their own directory. Create separat
 <details>
 <summary>Solution</summary>
 <br>
-<pre><code>
+<pre><code class="language-bash">
 mkdir text_files
 ls *.txt
 mv *.txt text_files
