@@ -18,7 +18,7 @@ cd ~/unix_intro
 We’ll mostly be working with a file here called “gene_annotations.tsv”, which is a tab-delimited table holding gene annotation information. Let’s change into our working directory for this page and explore it a little on the command line.
 
 ```bash
-cd mon-session-3/
+cd gene_annotations/
 ls
 ```
 
@@ -118,7 +118,7 @@ Name the new file <strong>"chrom_and_IDs.tsv"</strong>.
 <details>
 <summary>Solution</summary>
 <br>
-<pre><code>
+<pre><code class="language-bash">
 cut -f 1,4 gene_annotations.tsv | head
 cut -f 1,4 gene_annotations.tsv > chrom_and_IDs.tsv
 head chrom_and_IDs.tsv
@@ -140,7 +140,7 @@ grep AT1G08337 gene_annotations.tsv
 ```
 The output is one gene on chromosome 1, encoding for a miRNA:
 
-```
+```bash
 chr1	22372461	22372578	ID=AT1G08337;Name=MIR5022;locus_type=mirna
 ```
 
@@ -185,7 +185,7 @@ Using a combination of <code>grep</code> and <code>cut</code>, how could we prin
 <details>
 <summary>Solution</summary>
 <br>
-<pre><code>
+<pre><code class="language-bash">
 grep "chr2" gene_annotations.tsv | cut -f 4
 </code></pre>
 <p>Being able to stick together these individual pieces like this becomes a really valuable toolset to have at our disposal!
@@ -207,30 +207,30 @@ The syntax of `awk` can also take a little getting used to. In awk, we specify c
 
 Let's start with a simple example recreating `cut -f 1`: printing just the first column (chromosome):
 
-```
+```bash
 awk '{print $1}' gene_annotations.tsv | head
 ```
 
 Just like with `cut`, we can also print multiple columns:
 
-```
+```bash
 awk '{print $1, $4}' gene_annotations.tsv | head
 ```
 One of the most powerful uses of `awk` is filtering based on conditions. Let's say we only want genes from chromosome 3 (recreating `grep chr3 gene_annotations.tsv`):
 
-```
+```bash
 awk '$1 == "chr3"' gene_annotations.tsv | head
 ```
 
 We can also filter based on numeric comparisons. Let's find genes that start after position 1000000:
 
-```
+```bash
 awk '$2 > 1000000' gene_annotations.tsv | head
 ```
 
 `awk` can also perform calculations on the fly. Let's print the first 3 columns and create a new column that calculates the length of each gene (end position minus start position) and save it to a new file:
 
-```
+```bash
 awk 'NR > 1 {print $1, $2, $3,$4, $3-$2}' gene_annotations.tsv > gene_annotations_and_lengths.tsv
 ```
 
@@ -238,7 +238,7 @@ The `NR > 1` part skips the first line (the header), so we don't try to do maths
 
 We can combine filtering and calculations. Let's find genes longer than 5000 base pairs:
 
-```
+```bash
 awk '$5 > 5000' gene_annotations_and_lengths.tsv | head
 ```
 
@@ -253,7 +253,7 @@ How many protein coding genes in our list are larger than 2000bp?
 <details>
 <summary>Solution</summary>
 <br>
-<pre><code>
+<pre><code class="language-bash">
 grep protein_coding gene_annotations_and_lengths.tsv | awk '$5 > 2000'  | wc -l
 </code></pre>
 </details>
