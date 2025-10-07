@@ -14,7 +14,7 @@ After our first day introducing default Bash commands, we will spend today explo
 
 ## Variables
 
-In Bash, unlike most other programming languages, all Bash variables are untyped character variables. Most other programming languages demand you explicitly state what type of variable it is (number, string, dictionary ect)  or it tries to infer the type dynamically as soon as you define it. Bash does not care. It is down to the command that uses the variable to determine if the variable is in anyway suitable, i.e. check it is a number before it tries to divide it.
+In Bash, unlike most other programming languages, all Bash variables are untyped character variables. Most other programming languages demand you explicitly state what type of variable it is (number, string, dictionary etc.)  or it tries to infer the type dynamically as soon as you define it. Bash does not care. It is down to the command that uses the variable to determine if the variable is in anyway suitable, i.e. check it is a number before it tries to divide it.
 
 Lets define a variable
 
