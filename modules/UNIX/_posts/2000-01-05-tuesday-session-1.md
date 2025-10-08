@@ -80,7 +80,7 @@ The only meaningful distinction between shell variables are system-defined varia
 
 System-defined variables, as the name suggests, are persistent variables that are critical to some sub-system of the OS or shell. You can still see them and you can change them, but be warned doing so can have unexpected consequences. Restarting your shell will restore these variables to their system defaults.
 
-```
+```bash
 # example of a system-defined variable
 echo $HOME
 ```
@@ -151,7 +151,7 @@ Notice that we used <code>>></code> as the redirector inside the loop, and not <
 <details>
 <summary>Solution</summary>
 <br>
-<pre><code>for item in car truck ukulele
+<pre><code class="language-bash">for item in car truck ukulele
 do
   echo $item
   echo $item > test.txt
@@ -226,16 +226,21 @@ echo $(cat words.txt)
 
 ### Retrieving specific sequences with a loop
 
-Now imagine we want to pull out all of the sequences that were annotated with that function we looked at before, epoxyqueuosine reductase, which we figured out had the KO identifier “K18979”. We can get the gene IDs using `grep` like we did previously and then using `cut` to just keep the first column (note that we are providing the relative path to this file, starting from our current location):
+Now imagine we want to pull out all of the gene sequences that have gene IDs beginning with "AT3G511". We can get the gene IDs using `grep` like we did previously and then using `cut` to just keep the gene ID column:
 
 ```bash
-grep "K18979" ../six_commands/gene_annotations.tsv | cut -f 1
+cd ~/unix_intro/gene_annotations
+
+grep "AT3G511" gene_annotations.tsv | cut -f 4
+
+AT3G51140
+AT3G51190
 ```
 
 And let’s write them to a file:
 
 ```bash
-grep "K18979" ../six_commands/gene_annotations.tsv | cut -f 1 > target_gene_ids.txt
+grep "AT3G511" gene_annotations.tsv | cut -f 4 > target_gene_ids.txt
 
 ls
 head target_gene_ids.txt
@@ -244,25 +249,13 @@ head target_gene_ids.txt
 For pulling a few sequences out of a fasta file, `grep` can be very convenient. But remember the format of fasta is each entry takes two lines, and if we use grep with default settings to find a gene ID, we will only get the line with the gene ID:
 
 ```bash
-grep "99" genes.faa
+grep "AT3G51190" genes.fa
 ```
 
 Fortunately, `grep` has a handy parameter that let’s you pull out lines following your matched text also (in addition to just the line with the matched text), it’s the `-A` parameter. So we can tell `grep` to pull out the line that matches and the following line like so:
 
 ```bash
-grep -A 1 "99" genes.faa
-```
-
-Cool! There’s one more nuance we need to address though, and that is whether `grep` is looking for exact matches only or not. For example, trying to grab gene “9” does not do what we want:
-
-```bash
-grep -A 1 "9" genes.faa
-```
-
-It grabs everything that has a “9” in it. But we can tell `grep` to only take exact matches, meaning it needs to be the full word, if we provide the `-w` flag (for **w**ord). Here, the “word” (string we’re looking for) must be immediately surrounded by whitespace (spaces, tabs, and newline characters count as whitespace). We then also just need to add the leading `>` character in front of the sequence ID we want:
-
-```bash
-grep -w -A 1 ">9" genes.faa
+grep -A 1 "AT3G51190" genes.fa
 ```
 
 Great! Back to our target genes, we usually won’t want to do that for every individual sequence we want (even though we only have 2 in our example here). So let’s loop through our “target_gene_ids.txt” file! Here’s just with echo like we did above, to see how we can add the `>` in front of the variable:
@@ -283,11 +276,11 @@ Now let’s put the `grep` command we made above in the loop, and change what we
 ```bash
 for gene in $(cat target_gene_ids.txt)
 do
-  grep -w -A 1 ">$gene" genes.faa
-done > target_genes.faa
+  grep -w -A 1 ">$gene" genes.fa
+done > target_genes.fa
 
 ls
-head target_genes.faa
+head target_genes.fa
 ```
 
 And now we’ve made a new fasta file holding the sequences of just the genes we wanted!
