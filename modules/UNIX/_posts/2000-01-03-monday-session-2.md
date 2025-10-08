@@ -1,6 +1,5 @@
 ---
 title: Monday - Session 2
-
 ---
 
 # Redirectors and wildcards
