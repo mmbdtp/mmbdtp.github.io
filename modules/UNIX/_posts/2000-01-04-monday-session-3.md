@@ -136,36 +136,39 @@ wc -l chrom_and_IDs.tsv
 `grep` (**g**lobal **r**egular **e**x**p**ression) is a search tool. It looks through text files for strings (sequences of characters). In its default usage, `grep` will look for whatever string of characters you give it (1st positional argument), in whichever file you specify (2nd positional argument), and then print out the lines that contain what you searched for. Let’s try it:
 
 ```bash
-grep AT1G08337 gene_annotations.tsv
+grep "73177" gene_annotations.tsv
 ```
-The output is one gene on chromosome 1, encoding for a miRNA:
+The output is one gene on chromosome 1, encoding for a gene called BONSAI:
 
 ```bash
-chr1	22372461	22372578	ID=AT1G08337;Name=MIR5022;locus_type=mirna
+chr1	27516572	27517882	AT1G73177	ID=AT1G73177;Name=AT1G73177;full_name=BONSAI;computational_description=bonsai;locus=505006219;curator_summary=The
 ```
 
 If there are multiple lines that match, grep will print them all:
 
 ```bash
-grep 8337 gene_annotations.tsv
+grep "145" genes_200.tsv
 
-
-chr1	18333622	18337520	ID=AT1G49540;Name=AT1G49540;full_name=elongator
-chr1	22372461	22372578	ID=AT1G08337;Name=MIR5022;locus_type=mirna```
+chr1	166589	168088	AT1G01453	ID=AT1G01453;Name=AT1G01453;Dbxref=TAIR:4515102487;locus_type=protein_coding
+chr1	14543277	14544528	AT1G38790	ID=AT1G38790;Name=AT1G38790;Dbxref=TAIR:2824121;locus_type=protein_coding
+chr4	13413973	13417145	AT4G26590	ID=AT4G26590;Name=AT4G26590;full_name=oligopeptide
+chr4	16799635	16799966	AT4G09145	ID=AT4G09145;Name=AT4G09145;locus_type=long_noncoding_rna
+chr5	14598607	14599988	AT5G36960	ID=AT5G36960;Name=AT5G36960;Dbxref=TAIR:2167474;locus_type=protein_coding
 ```
+In this case some of the matches were in the gene IDs and some were in the locations.
 
 If what we are looking for is not in the file, we will just get our prompt back with nothing printed out:
 
 ```bash
-grep mygene gene_annotations.tsv
+grep "mygene" gene_annotations.tsv
 ```
 
 For the moment, let’s pretend we’re interested in a gene predicted to encode for DEMETER, (a DNA glycosylase protein, responsible for DNA hypomethylation) which has the gene ID AT5G04560. With `grep` we can check if it is in our annotations file:
 
 ```bash
-grep AT5G04560 gene_annotations.tsv
+grep "AT5G04560" gene_annotations.tsv
 
-chr5	1309098	1318520	ID=AT5G04560;Name=AT5G04560;full_name=DEMETER;computational_description=HhH-GPD
+chr5	1309098	1318520	AT5G04560	ID=AT5G04560;Name=AT5G04560;full_name=DEMETER;computational_description=HhH-GPD
 ```
 
 > **Note:** `grep` is case sensitive by default, but we can make it case insensitive with the `-i` flag. Try searching for DEMETER with and without this flag and see what you get:
@@ -196,7 +199,7 @@ grep "chr2" gene_annotations.tsv | cut -f 4
 We’re just scratching the surface of what `grep` can do, but one flag in addition to `-i` worth mentioning is the `-c` flag. This tells grep to just report how many lines matched, instead of printing them to the screen:
 
 ```bash
-grep -c chr2 gene_annotations.tsv
+grep -c "chr2" gene_annotations.tsv
 ```
 
 ### Optional: awk
