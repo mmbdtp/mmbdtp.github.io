@@ -329,10 +329,10 @@ fi
 When we run that, the terminal prints back “File is empty!”:
 
 
-If we run it on a file that holds something, like “K18979_target_gene_ids.txt” that we generated earlier, it prints back “File is good-to-go!”:
+If we run it on a file that holds something, like “target_gene_ids.txt” that we generated earlier, it prints back “File is good-to-go!”:
 
 ```bash
-if [ -s K18979_target_gene_ids.txt ]
+if [ -s target_gene_ids.txt ]
 then
     echo "File is good-to-go!"
 else
@@ -349,7 +349,7 @@ Now to try and combine for loops and if conditions. How might we write some code
 <details>
 <summary>Solution</summary>
 <br>
-<pre><code>for file in folder/*
+<pre><code class="language-bash">for file in folder/*
 do
   if [ -s $file ]
   then
@@ -377,7 +377,7 @@ if ["$(my_var)" == 'option_a']
 fi
 ```
 
-A really rabbit hole to get lost in with bash is its use of brackets. Normal, curl, squared, double or single all have different uses. The square brackets used above alway resolve to a true or false value and have many inbuilt short handles for comparing different variables and files. Here we are just doing a simple string comparison. We are also using the elif shorthand for else if!
+A really rabbit hole to get lost in with bash is its use of brackets. Normal, curl, squared, double or single all have different uses. The square brackets used above always resolve to a true or false value and have many inbuilt short handles for comparing different variables and files. Here we are just doing a simple string comparison. We are also using the elif shorthand for else if!
 
 ## Summary
 
