@@ -358,3 +358,7 @@ Whereas if we tried that before the `chmod` command we ran, we would have gotten
 As noted above, there are not a whole lot of guard-rails while writing scripts in a Unix-like shell. It’s generally not a big deal when creating ad-hoc scripts to do small things for our own analyses, but if getting into writing larger scripts, Bash strict mode might be something worth looking into. Bash strict mode is sort of an unofficial shorthand for adding things to the top of the script like `set -u` which will cause the script to exit if an undefined variable is used, and `set -e` which exits if any command doesn’t finish with its standard exit code. If you are interested in looking into this more, Aaron Maxwell has a page up on his site here that nicely walks through examples where his prefered configuration can help avoid potential problems.
 
 And that’s the general gist of scripting at the command-line! Again, what’s here is only a brief introduction, hopefully helpful to get any newcomers up-and-running! If creating a script that we want to have available anywhere (as in, not just callable from the same directory or explicitly pointing to it), we'll need to explore what our PATH is (which we will be covering next).
+
+#### Acknowledgements 
+
+This training course was adapted from the [Happy Belly Bioinformatics Unix Course](https://astrobiomike.github.io/unix/).
