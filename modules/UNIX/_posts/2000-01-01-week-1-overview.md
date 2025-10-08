@@ -10,15 +10,15 @@ title: MMBDTP Bioinformatics Course Week 1 — Unix and the Command Line
 
 **Tutors**:
 
+- **Andrea Telatin** ([Andrea.Telatin@quadram.ac.uk](Andrea.Telatin@quadram.ac.uk))
 - **Sam Haynes** ([Sam.Haynes@quadram.ac.uk](Sam.Haynes@quadram.ac.uk))
 - **Judit Talas** ([Judit.Talas@quadram.ac.uk](Judit.Talas@quadram.ac.uk))
-
 
 ---
 
 ### Monday, October 13th
 
-**Venue:** Quadram Institute, Room X from 09:30 am to 5:00 pm
+**Venue:** Quadram Institute, Room UG55C from 09:30 am to 5:00 pm
 
 - **Session 1** 09:30-12:00 (with 30 min break)
 
@@ -31,7 +31,7 @@ title: MMBDTP Bioinformatics Course Week 1 — Unix and the Command Line
 
 ### Tuesday, October 14th
 
-**Venue:** Quadram Institute, Room X from 10:00 am to 5:00 pm
+**Venue:** Quadram Institute, Room UG44A from 10:00 am to 5:00 pm
 
 - **Session 1** 10:00-12:00
 
@@ -43,7 +43,7 @@ title: MMBDTP Bioinformatics Course Week 1 — Unix and the Command Line
 
 ### Thursday, October 16th
 
-**Venue:** Quadram Institute, Room X from 10:00 am to 5:00 pm
+**Venue:** Quadram Institute, Room UG44B from 10:00 am to 5:00 pm
 
 - **Session 1** 10:00-12:00
 
@@ -55,7 +55,7 @@ title: MMBDTP Bioinformatics Course Week 1 — Unix and the Command Line
 
 ### Friday, October 17th
 
-**Venue:** Quadram Institute, Room X from 10:00 am to 12:00 pm
+**Venue:** Quadram Institute, Room UG44A from 10:00 am to 12:00 pm
 
 - **Session 1** 10:00-12:00
 
