@@ -281,4 +281,3 @@ As mentioned, this page is just a first introduction to some great commands that
 #### Acknowledgements 
 
 This training course was adapted from the [Happy Belly Bioinformatics Unix Course](https://astrobiomike.github.io/unix/).
- 

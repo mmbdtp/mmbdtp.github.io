@@ -386,4 +386,3 @@ Even though loops and logic can get much more complicated as needed, practicing 
 #### Acknowledgements 
 
 This training course was adapted from the [Happy Belly Bioinformatics Unix Course](https://astrobiomike.github.io/unix/).
-

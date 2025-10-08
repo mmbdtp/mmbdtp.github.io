@@ -287,4 +287,3 @@ They may seem a little abstract at first, but redirectors and wildcards are two 
 #### Acknowledgements 
 
 This training course was adapted from the [Happy Belly Bioinformatics Unix Course](https://astrobiomike.github.io/unix/).
-
