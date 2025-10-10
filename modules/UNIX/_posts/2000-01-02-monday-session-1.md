@@ -17,6 +17,8 @@ Andrea, Judit and Sam are your instructors this week. We are all bioinformaticia
 
 Please take this time to check access to [CLIMB notebooks](https://bryn.climb.ac.uk/user/login/).
 
+Please find the presentation [here]({{site.baseurl}}/modules/UNIX/data/telatin-unix.pdf)
+
 ## A first look at the terminal
 Open the Terminal emulator (on a Mac it is called “Terminal”, on Linux it is called “Terminal” or “GNOME Terminal”).
 

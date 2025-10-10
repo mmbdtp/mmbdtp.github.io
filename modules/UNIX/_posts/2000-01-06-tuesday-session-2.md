@@ -8,6 +8,7 @@ Instead of running commands one after another like we do when we are interactive
 
 > **Things covered here:**
 >
+> - nano: a terminal text editor
 > - What a script is
 > - Adding positional arguments
 > - Adding print statements
@@ -16,6 +17,35 @@ Instead of running commands one after another like we do when we are interactive
 
 
 This intro page covers just the fundamentals of scripting at the command line. Like with other things, this can get much more complicated as we need it to, but the basics covered here are enough to get us up and running! This page is not meant to be a detailed dive into shell scripting or all that it encompasses. If looking for a more technical and in-depth treatment like that, [linuxconfig.org](https://linuxconfig.org/) has one [here](https://linuxconfig.org/bash-scripting-tutorial) that would be a great place to start.
+
+## A terminal text editor: nano
+
+It is often very useful to be able to generate new plain-text files quickly at the command line, or make some changes to an existing one. One way to do this is using a text editor that operates at the command line. Here we’re going to look at one program that does this called `nano`.
+
+When we run the command `nano` it will open a text editor in our terminal window. If we give it a file name as a positional argument, it will open that file if it exists, or it will create it if it doesn’t. Here we’ll make a new file:
+
+```bash
+cd ~/unix_intro
+
+nano sample_names.txt
+```
+
+When we press `return`, our environment changes to the opened text file where we can type as usual. ype in a couple of sample names, one on each line – it doesn’t matter what the names are, for example:
+
+```bash
+Sample_A
+Sample_B
+```
+
+Afterwards, to save the file and exit, we need to use some of the keyboard shortcuts listed on the bottom. “WriteOut” will save our file, and the `^O` represents pressing `ctrl + o` together (it doesn’t need to be a capital “O”). This will ask us to either enter or confirm the file name, we can just press `return`. Now that it is saved, to exit we need to press `ctrl + x`.
+
+And now our new file is in our current working directory:
+
+```bash
+ls
+head sample_names.txt
+```
+
 
 ## Our first script
 
@@ -35,7 +65,7 @@ pwd
 ls | wc -l
 ```
 
-We were introduced to the command-line text editor `nano` earlier, so we’re going to use that here to make our first script, adding the 3 commands we just ran to it. It is convention to name a command-line script like this with the extension `.sh` for “shell”:
+Let's add the 3 commands we just ran to a file, with `nano`. It is convention to name a command-line script like this with the extension `.sh` for “shell”:
 
 ```bash
 nano first-script.sh

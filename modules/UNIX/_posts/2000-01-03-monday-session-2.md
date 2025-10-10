@@ -44,7 +44,18 @@ What this is saying is that no matter what comes before, if it ends with “.txt
 
 > At the command line, the `*` means any character, any number of times (including 0 times).
 
-For a more practical example, let’s change directories into that messy subdirectory we saw earlier:
+For a more practical example, let’s introduce a new command, `wc` for **w**ord **c**ount which is useful for counting how many lines, words, and characters there are in a file:
+
+```bash
+wc example.txt
+```
+We can also use the `-l` flag of `wc` to count *only* the number of lines in a file:
+
+```bash
+wc -l example.txt
+```
+
+Now let's change directories into that messy subdirectory we saw earlier:
 
 ```bash
 cd data/all_samples/
@@ -153,7 +164,7 @@ cd ../[TAB]
 all_samples/
 
 cd ../../[TAB]
-data/      example.txt     experiment/     six_commands/
+data/      example.txt     gene_annotations/
 ```
 
 
