@@ -8,10 +8,13 @@ title: Thursday - Session 3
 ## Getting Started with Conda/Mamba
 
 > **Things covered here:**
-> - What is Conda/Mamba?
-> - Why should I use a package and environment management system as part of my research workflow?
-> - Why use Conda (Mamba)?
-> How to install Mamba?
+> - What are packages, dependencies, and environments?
+> - What is Conda/Mamba and why use them?
+> - Understanding Conda channels
+> - How to install and configure Mamba (locally and on the HPC)
+> - Creating and managing environments
+> - Working with different tool versions
+> - Sharing environments with YAML files
 
 ### Packages and Environments
 
