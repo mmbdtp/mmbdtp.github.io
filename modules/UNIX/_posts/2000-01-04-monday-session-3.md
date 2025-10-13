@@ -147,7 +147,7 @@ chr1	27516572	27517882	AT1G73177	ID=AT1G73177;Name=AT1G73177;full_name=BONSAI;co
 If there are multiple lines that match, grep will print them all:
 
 ```bash
-grep "145" genes_200.tsv
+grep "145" gene_annotations.tsv
 
 chr1	166589	168088	AT1G01453	ID=AT1G01453;Name=AT1G01453;Dbxref=TAIR:4515102487;locus_type=protein_coding
 chr1	14543277	14544528	AT1G38790	ID=AT1G38790;Name=AT1G38790;Dbxref=TAIR:2824121;locus_type=protein_coding
@@ -217,7 +217,7 @@ awk '{print $1}' gene_annotations.tsv | head
 Just like with `cut`, we can also print multiple columns:
 
 ```bash
-awk '{print $1, $4}' gene_annotations.tsv | head
+awk '{print $1,$4}' gene_annotations.tsv | head
 ```
 One of the most powerful uses of `awk` is filtering based on conditions. Let's say we only want genes from chromosome 3 (recreating `grep chr3 gene_annotations.tsv`):
 
@@ -231,10 +231,10 @@ We can also filter based on numeric comparisons. Let's find genes that start aft
 awk '$2 > 1000000' gene_annotations.tsv | head
 ```
 
-`awk` can also perform calculations on the fly. Let's print the first 3 columns and create a new column that calculates the length of each gene (end position minus start position) and save it to a new file:
+`awk` can also perform calculations on the fly. Let's create a new column that calculates the length of each gene (end position minus start position) and save it to a new file:
 
 ```bash
-awk 'NR > 1 {print $1, $2, $3,$4, $3-$2}' gene_annotations.tsv > gene_annotations_and_lengths.tsv
+awk 'NR > 1 {print $1,$2,$3,$4,$5,$3-$2}' gene_annotations.tsv > gene_annotations_and_lengths.tsv
 ```
 
 The `NR > 1` part skips the first line (the header), so we don't try to do maths on text!
@@ -250,14 +250,14 @@ Again, `awk` can seem pretty tricky, especially at first, but forunately we donâ
 
 <blockquote>
 <center><strong>QUICK PRACTICE!</strong></center>
-How many protein coding genes in our list are larger than 2000bp?
+How many protein coding genes in our list are larger than 3000bp?
 <br>
 <strong>Hint: Try to use <code>grep</code> and <code>awk</code> piped together.</strong> <br>
 <details>
 <summary>Solution</summary>
 <br>
 <pre><code class="language-bash">
-grep protein_coding gene_annotations_and_lengths.tsv | awk '$5 > 2000'  | wc -l
+grep "protein_coding" gene_annotations_and_lengths.tsv | awk '$6 > 3000' | wc -l
 </code></pre>
 </details>
 </blockquote>
