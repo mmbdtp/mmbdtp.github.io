@@ -93,7 +93,7 @@ And that’s it! Notice it prints out to the terminal exactly the same way as if
 
 ## Scripting with positional arguments
 
-Variables and loops are common components of scripts. These were introduced in part 5 of the Unix Crash Course, so we are going to build off of the examples used there.
+Variables and loops are common components of scripts. We are going to build off of the examples from the previous session.
 
 First, let’s go back into our gene_annotations directory.
 
@@ -142,7 +142,7 @@ done > target_genes.fa
 That `$1` in the script will reference the first positional argument we give when we run the script. To see this in practice, first let’s remove the `target_genes.fa` output we are expecting:
 
 ```bash
-rm target_genes.faa
+rm target_genes.fa
 ```
 
 And here’s how we can run it giving our “target_gene_ids.txt” file as the positional argument:
@@ -151,7 +151,7 @@ And here’s how we can run it giving our “target_gene_ids.txt” file as the 
 bash parsing-genes.sh target_gene_ids.txt
 ```
 
-Nothing prints to the screen, but if we check, the “target_genes.faa” file holding our two genes of interest has been produced just like before:
+Nothing prints to the screen, but if we check, the “target_genes.fa” file holding our two genes of interest has been produced just like before:
 
 
 > **Note:**

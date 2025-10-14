@@ -367,13 +367,14 @@ done</code></pre>
 Unix shells have been around for decades and clever but lazy developers have built tonnes of shorthands to make complex logic code simpler. You really can spend years just learning new aspect of shells like bash. Here is an example of comparing an argument to multiple possible values:
 
 ```bash
-if ["$(my_var)" == 'option_a']
+if [[ "${my_var}" == "option_a" ]]
   then
-    echo "I know what $my_var is."
-  elif ["$(my_var)" == 'option_b']
-    echo "I still know what $my_var is."
+    echo "I know what my_var is."
+  elif [[ "${my_var}" == "option_b" ]]
+  then
+    echo "I still know what my_var is."
   else
-    echo "I have no idea what $my_var is."
+    echo "I have no idea what my_var is."
 fi
 ```
 
