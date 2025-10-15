@@ -2,7 +2,7 @@
 title: Programme
 ---
 
-## Week 6 Beginning 2 December 2024 ## 
+## Week 6 Beginning 1st December 2025 ## 
 
 ## Functional analysis: how can we understand what does what?
 
@@ -35,10 +35,10 @@ Datasets to use will be derived from both _E. coli_ and _P. aeruginosa_ after ex
 
 ### Venues
 
-* Monday December 2nd: UG55C
+* Monday December 1st: UG55B
 * Tuesday December 3rd: UG55C
-* Thursday December 5th: Board Room 
-* Friday December 6th: Board Room 
+* Thursday December 4th: UG44A
+* Friday December 5th: UG55C
 
 ***
 

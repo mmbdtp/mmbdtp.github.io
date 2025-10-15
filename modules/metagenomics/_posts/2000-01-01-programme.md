@@ -3,7 +3,7 @@ title: Metagenomics
 ---
 
 # Week 5: Metagenomics
-**Week beginning November 25 2024**
+**Week beginning November 24th 2025**
 
 ### Topics
 
@@ -26,10 +26,10 @@ Mark Pallen's group on critically ill patients on the Intensive Care Unit (ICU).
 
 ### Room bookings
 
-- Monday November 25: UG55C
-- Tuesday November 26: UG55C
-- Thursday November 28: Board Room
-- Friday November 29: Board Room (but probably best done from home)
+- Monday November 24th: UG55C
+- Tuesday November 25h: UG55C
+- Thursday November 27th: UG44B
+- Friday November 28th: UG55C
 
 ---
 
