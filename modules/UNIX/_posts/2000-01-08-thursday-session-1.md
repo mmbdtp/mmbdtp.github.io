@@ -101,4 +101,4 @@ Within the Terminal here, you can do almost all the things we did yesterday usin
 - Challenge: Find all the genes with a sequence length greater than 2000 nucleotides in gene_annotations.csv file. Output the full sequences of these genes to a file called long_genes.fa
 
 ### Acknowledgements
-This training course was adapted from the Carpentries Introduction to Conda for (Data) Scientists Course.
+This training course was adapted from material develop by Andrea Telatin and Lisa Marchioretto.
