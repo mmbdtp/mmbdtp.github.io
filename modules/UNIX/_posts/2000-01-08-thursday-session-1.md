@@ -2,12 +2,13 @@
 title: Thursday - Session 1
 ---
 
+# Cloud Computing with CLIMB
+
 >**Things covered here:**
 >
 > - Introduction to CLIMB
 > - Exercises to recap Bash
 
-# Cloud Computing with CLIMB
 
 Although your MacBooks run a version of Unix, most bioinformaticians prefer to use Linux and so most programs and pipelines work best on Linux. In bioinformatics, most researchers also prefer to use remote virtual servers over their own personal (bare metal) machines for several important reasons:
  - Bioinformatics analyses, such as genome assembly, sequence alignment, or large-scale data mining, can require substantial computational resources (e.g., CPU power, memory, and storage). 
