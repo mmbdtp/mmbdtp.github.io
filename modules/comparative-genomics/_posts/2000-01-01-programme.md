@@ -3,7 +3,7 @@ title: Comparative Genomics
 ---
 
 # Comparative Genomics 
-**Week beginning November 18th 2024**
+**Week beginning November 17th 2025**
 
 **Instructors and assistants:**
 
@@ -38,9 +38,9 @@ conda install scoary
 
 ***
 
-**Monday November 18th**
+**Monday November 17th**
 
-**Venue: UG55B**
+**Venue: UG55C**
 
 ***
 
@@ -66,7 +66,7 @@ conda install scoary
  
 ***
 
-**Tuesday November 19th**
+**Tuesday November 18th**
 
 
 **Venue: UG55B**
@@ -91,7 +91,7 @@ conda install scoary
 
 ***
 
-**Wednesday November 20th**
+**Wednesday November 19th**
 
 **Venue: UG44A**
  
@@ -117,10 +117,10 @@ conda install scoary
 
 ***
 
-**Friday November 22nd**
+**Friday November 21st**
  
 
-**Venue: UG55B**
+**Venue: UG55C**
 
 ***
 

@@ -20,25 +20,25 @@ Please let us know if we are going too slowly or too fast as we go along.
 
 ### Monday
 
-**Venue:** Monday October 28th: UG55B
+**Venue:** Monday October 27th: UG44A
 
 ***
 
 ### Tuesday
 
-**Venue:** Tuesday October 29th: UG55C
+**Venue:** Tuesday October 28th: UG44A
 
 ***
 
 ### Thursday
 
-**Venue:** Thursday October 31st: QIB Board Room Meeting Room
+**Venue:** Thursday October 30th: QIB UG44B
 
 ***
 
 ### Friday
 
-**Venue:** Friday November 1st: UG55C
+**Venue:** Friday October 31st: UG44A
 
 ***
 
