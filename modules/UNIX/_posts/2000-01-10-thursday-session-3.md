@@ -51,7 +51,7 @@ Let's display it using a python notebook. We'll need to download the genome info
 ### Creating the conda environment
 
 ```bash
-conda create -n gene_viewer biopython dna_features_viewer
+mamba create -n gene_viewer biopython dna_features_viewer ipykernel
 ```
 
 Now you should be able to use this conda environment as a basis of your Python Kernel.
