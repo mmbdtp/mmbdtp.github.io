@@ -335,7 +335,7 @@ Let's export one of the environments we already created to see what a YAML file 
 mamba activate test-env
 
 # Export to a YAML file
-mamba env export --no-builds > test-env.yml
+mamba env export --from-history > test-env.yml
 
 # View the exported file
 cat test-env.yml
