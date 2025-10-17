@@ -3,7 +3,7 @@ title: Programme
 ---
 
 # Week 3: From Sequence to Consequence
-**Week beginning October 28th 2024**
+**Week beginning October 28th 2025**
 
 _Evelien Adriaenssens (Evelien.Adriaenssens@quadram.ac.uk) and her team_
 

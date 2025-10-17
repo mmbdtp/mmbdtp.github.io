@@ -5,7 +5,7 @@ title: Programme
 
 ***
 
-**Week beginning October 20st, 2025**
+**Week beginning October 20th, 2025**
 
 ***
 
