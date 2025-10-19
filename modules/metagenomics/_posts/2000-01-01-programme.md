@@ -3,90 +3,37 @@ title: Metagenomics
 ---
 
 # Week 5: Metagenomics
-**Week beginning December 4th 2023**
-
-**Tutors**: **Mark Pallen** ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk)) and **Andrea Telatin** ([andrea.telatin@quadram.ac.uk](mailto:andrea.telatin))
-
-Note that to fit in with room availability, this week's course runs as follows
-- Tuesday, Wednesday, Friday all day
-- Thursday afternoon
-
-Note that although we initially intended to cover Python this week, in response to feedback, we have stuck to the simpler option of just covering metagenomics. We will run a masterclass in Python next year.
+**Week beginning November 24th 2025**
 
 ### Topics
 
-1. Whole metagenome profiling (taxonomy, function) using Kraken, Metaphlan and Humann
-2. Whole metagenome *de novo* assembly and binning
-3. The Anvi'o workbench for binning and MAG (Metagenome-Assembled Genome) refinement
-4. Quality checks on MAGs
-5. Taxonomic classification of MAGs
+1. Metagenome profiling
+2. Metagenome assembly and binning
+3. Quality checks on MAGs
+4. Taxonomic classification of MAGs
+5. Functional analysis of metagenomes and MAGs
 
-### Dataset
+---
 
-We will use some samples from [a paper](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000293) from
-Mark Pallen's group about comprehensive analysis of faecal metagenome samples from patients on the Intensive Care Unit (ICU). 
-They found that ICU patients had significant alterations in their faecal microbiome composition, including depletion of beneficial bacteria and an increase in potentially pathogenic species. 
+![](https://github.com/mmbdtp/mmbdtp.github.io/raw/refs/heads/gh-pages/modules/metagenomics/_posts/DALL·E%202024-11-11%2009.28.19%20-%20Seven%20PhD%20students%20in%20graduation%20gowns%20and%20caps%20curiously%20exploring%20an%20Intensive%20Care%20Unit%20(ICU)%20setting.%20The%20ICU%20is%20equipped%20with%20medical%20devices%20suc.webp)
 
-***
+### Dataset and learning strategy
 
-### Tuesday 5th Dec
+This set of tutorials uses some faecal metagenome samples from [a paper](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000293) from
+Mark Pallen's group on critically ill patients on the Intensive Care Unit (ICU). They found that ICU patients had significant alterations in their faecal microbiome composition, including depletion of beneficial bacteria and an increase in potentially pathogenic species. This material is designed to be worked through by students engaged in as student-directed learning with peer-to-peer support but without face-to-face input from a facilitator. Although rooms have been booked as detailed below, students should as a group decide at the begining of the week how they wish to work--whether in one large group or several smaller groups, whether in the designated rooms or as hybrid event where some students work from home. Although sessions are designed to roghly fit within half days, students can decide how they wish to schedule the work. The final session requires no hands on work and so could be done via Teams.
 
-**Venue:** Quadram Institute Room UG55A 9.00am to 5.00pm
+---
 
-*Morning*
+### Room bookings
 
-- **Talk from Mark Pallen**:
-  -  _Adventures in Metagenomics_: [Powerpoint Slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/modules/metagenomics/_posts/pallen-intro-metagenomics.pptx)
-- **Talk from Andrea Telatin**
-  - _Anvi'o_
+- Monday November 24th: UG55C
+- Tuesday November 25h: UG55C
+- Thursday November 27th: UG44B
+- Friday November 28th: UG55C
 
-- **Bioinformatics Task**  
-  - Setting up Anvi'o
-  - Exploring datasets with Anvi'o
+---
 
-- **Goals**  
-  - [ ] Anvi'o installation
-  - [ ] Dataset subsampling
-  - [ ] Inspection of Kraken profiles (MultiQC,...)
 
-***
+### Credits
 
-### Wednesday 6th Dec
-
-**Venue:** Quadram Institute Room UG55A 9.00am to 5.00pm
-
-- **Talk from Mark Pallen**:
-  - Adventures in Metagenomics Part 2_: [Powerpoint Slides](https://github.com/mmbdtp/mmbdtp.github.io/raw/gh-pages/modules/metagenomics/_posts/adventures-in-metagenomics2.pptx)
-
-- **Bioinformatics Tasks**  
-  - Profiling of Whole Metagenome Shotgun
-  - MultiQC report of Kraken profiles
-  - *De novo* assembly
-
-- **Goals**  
-  - [ ] Inspection of Kraken profiles
-  - [ ] Overview of other profilers
-  - [ ] Understanding how to generate MultiQC reports
-  - [ ] *De novo* assembly of metagenomes
-
-***
-
-### Thursday 7th Dec
-
-**Venue:** Quadram Institute Room UG55A 1.00pm to 5.00pm
-
- 
-- **Bioinformatics Task**
-  - Backmapping and the concept of coverage
-  - Automatic binning (SemiBin2) and manual binning (Anvi'o)
-
-***
-
-### Friday 8th Dec
-
-**Venue:** Quadram Institute Room UG55A 9.00am to 12.00pm; Room UB55C 12.00pm  to 5.00pm
-
-- **Bioinformatics Task**
-  - After binning: assessing the quality, taxonomy and functional content of MAGs
- 
-***
+This material has been prepared by Mark Pallen ([mark.pallen@quadram.ac.uk](mailto:mark.pallen@quadram.ac.uk)) 

@@ -1,42 +1,36 @@
 ---
 title: Background to sequencing
 ---
-
-The first half of this week will be dedicated to a hands-on unscripted run through how sequencing is actually done on the Illumina platform and using Oxford Nanopore. 
-
-If you are not familiar with these techniologies you might want to take a look at these links before during and after the session to orientate yourself and contextualise what you are being taught. Also feel free to consult the Glossary for this week.
-
+  
 ---
 
-### Background on DNA Sequencing
+# Background to DNA Sequencing
+
+![](https://pbs.twimg.com/media/FrVRedkXsAYfDxH?format=jpg&name=medium)
+
+The first half of this week will be dedicated to a hands-on unscripted run through how sequencing is actually done on the Illumina platform and using Oxford Nanopore. 
+If you are not familiar with these techniologies you might want to take a look at these links before during and after the session to orientate yourself and contextualise what you are being taught.
+  
+---
+
+### Sequencing in general
 - [Wikipedia's DNA sequencing](https://en.wikipedia.org/wiki/DNA_sequencing)
-- [YourGenome's explanation on DNA sequencing](https://www.yourgenome.org/facts/what-is-dna-sequencing)
+- [Sequencing technologies — the next generation by Michael L. Metzker](http://static.cs.brown.edu/courses/csci2950-c/Fall2011/Papers/SequencingTechnologies.pdf)
+- [Twenty years of bacterial genome sequencing by  Nick Loman and Mark Pallen](https://elearning.unite.it/pluginfile.php/247746/mod_resource/content/1/loman2015.pdf)
+- [The Latest Developments in Sequencing Technologies by Matthew Higgs](https://frontlinegenomics.com/the-latest-developments-in-sequencing-technologies/)
+  
+---
 
 ### Illumina Sequencing
 - [Illumina's official guide](https://www.illumina.com/science/technology/next-generation-sequencing.html)
 - [Wikipedia's page on Illumina (Solexa) sequencing](https://en.wikipedia.org/wiki/Illumina_dye_sequencing)
 - [YouTube: Illumina Sequencing by Synthesis](https://www.youtube.com/watch?v=fCd6B5HRaZ8)
-- [Nature's guide to the Illumina method](https://www.nature.com/scitable/definition/illumina-sequencing-296/)
-- [Brookhaven National Laboratory's take on Illumina Sequencing](https://www.bnl.gov/isd/documents/93024.pdf)
+  
+---
 
 ### Oxford Nanopore Sequencing
 - [Oxford Nanopore's official website](https://nanoporetech.com/)
 - [Wikipedia's page on Nanopore sequencing](https://en.wikipedia.org/wiki/Nanopore_sequencing)
 - [YouTube: How does nanopore DNA sequencing work?](https://www.youtube.com/watch?v=GUb1TZvMWsw)
-- [Review on Oxford Nanopore Sequencing: Current applications](https://pubmed.ncbi.nlm.nih.gov/30817829/)
-- [Nature's guide on Nanopore sequencing](https://www.nature.com/articles/nbt.4060)
-
-### Comparisons and Overviews
-- [Review on Illumina vs. Nanopore sequencing for genomics](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7318766/)
-- [YouTube: Overview of DNA Sequencing Technologies](https://www.youtube.com/watch?v=jFCD8Q6qSTM)
-- [Differences between Illumina and Nanopore Sequencing](https://blog.genohub.com/illumina-vs-ion-torrent-vs-pacbio/)
-- [O’Grady et al., 2020 paper comparing Illumina and Nanopore for clinical genomics](https://www.frontiersin.org/articles/10.3389/fgene.2020.00421/full)
-
-### Other Resources
-- [NCBI Handbook's chapter on DNA Sequencing Technologies](https://www.ncbi.nlm.nih.gov/books/NBK26883/)
-- [Coursera's "DNA Sequencing Technologies and Applications"](https://www.coursera.org/learn/dna-technologies)
-
-
-[Back to Programme]({{site.baseurl}}/modules/sequencing/week-2-programme/).
-
-
+  
+---

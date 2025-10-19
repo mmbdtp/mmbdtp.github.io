@@ -3,57 +3,60 @@ title: Programme
 ---
 # Week 2: Creating and handling sequences
 
-**Week beginning October 30th 2023**
+***
 
-Tutors: David Baker (david.baker@quadram.ac.uk) and Nabil-Fareed Alikhan (nabil-fareed.alikhan@quadram.ac.uk)
+**Week beginning October 20th, 2025**
+
+***
+
+
+**Tutors:**
+- David Baker
+- Alex Trotter
+- Andrea Telatin
+
+
+### Schedule
+
+:warning: Trainers will provide accurate starting times for each session
+
+Date         |  Venue | Time          |  Overall programme 
+-------------|--------|---------|-----------------------------------------
+Mon 20 Oct   | UG55C  | 9.30    | Sequencing and the long reads (Alex Trotter)
+Tue 21 Oct   | UG44A  | 9.30    | Bioinformatics QC (Andrea Telatin)
+Wed 22 Oct   | -      |         |
+Thu 23 Oct   | UG44B  |         | TBA
+Fri 24 Oct   | UG44A  |         | TBA
 
 Note that these sessions are part of your mandatory training. Please email the organisers if you are going to be late or are unable to attend through illness. For Thursday/Friday, Please bring your MacBooks and ensure that you can log on to Eduroam.
 
 ***
 
-### Monday
+### Monday October 20th
 
-**Venue:** Monday October 30th: report to Quadram Institute reception at 9.00am
+**Venue:** Report to UG55C 9.30am
 
-- **Hands on sequencing demonstration run by David Baker**
- 	-	exciting chance to see sequences are generated on the Illumina platform
+* Introduction to Sequencing
+* Long reads sequencing
+
+ℹ️ Instructors will guide you to the lab if needed
+
+### Tuesday October 21st
+
+**Venue:** Report to UG44A 9.30am
+
+* FASTQ format
+* SAM/BAM formats
+* QC of a sequencing run
+
+### Thursday October 23rd
+
+**Venue:** Report to UG44B 9.30am
+
+TBD
 
 ***
 
-### Tuesday 
-
-**Venue:** Tuesday October 31st: report to Quadram Institute reception at 9.00am
-
-- **Hands on sequencing demonstration run by David Baker**
- 	-	exciting chance to see sequences are generated on the Oxford Nanopore platform
-
-***
-
-### Thursday
-
-**Venue:** Thursday 2nd November: UG44B 9.00am to 12.00pm
-
-_Bioinformatics tutorials led by Nabil-Fareed Alikhan_
-
-> Much of Bioinformatics (via computing) is about building musle memory around operating a computer, and memorizing the syntax. These exercises will give you oppotunity to practice these skills, even though some these topics will have been presented in week 1. 
-
-
-[Quiz about you](/seq-data/about-you)
-
-* **[File compression]({{site.baseurl}}/modules/sequencing/file-compression/)**
-* **[Using tar and gzip]({{site.baseurl}}/modules/sequencing/using-gzip)**
-* **[Revisiting sequence file formats]({{site.baseurl}}/modules/sequencing/sequence-data/)**
-* **[Exploring file formats]({{site.baseurl}}/modules/sequencing/file-formats)**
-* **[FASTQ in detail]({{site.baseurl}}/modules/sequencing/fastq-in-detail)**
-* **[Quality control of short read data]({{site.baseurl}}/modules/sequencing/short-read-qc)**
-* **[Quality control of long read data]({{site.baseurl}}/modules/sequencing/long-read-qc)**
-
-### Friday
-
-**Venue:** Friday 3rd November:  _report to Quadram Institute reception at 9.00am._ Non-QIB students will need to be signed in at reception that day with a guest pass. We will use 01.45 Meeting room 9.00 am to 17.00 (There will be breaks!)
-
-_Bioinformatics tutorials led by Nabil-Fareed Alikhan_
-
-Continuation of Thursday's session
-
-
+### Friday October 24th
+T
+BD

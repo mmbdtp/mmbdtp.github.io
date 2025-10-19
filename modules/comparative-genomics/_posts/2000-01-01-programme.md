@@ -3,17 +3,14 @@ title: Comparative Genomics
 ---
 
 # Comparative Genomics 
-  
+**Week beginning November 17th 2025**
+
 **Instructors and assistants:**
 
 - Dr Gemma Langridge (lead): Gemma.Langridge@quadram.ac.uk
 - Dr Emma Waters
 - Alice Nisbet
 - Eleanor Hayles 
-
-***
-
-**Venue:** UB44A
 
 ***
 
@@ -41,8 +38,10 @@ conda install scoary
 
 ***
 
-### Monday 
- 
+**Monday November 17th**
+
+**Venue: UG55C**
+
 ***
 
 **Topic:** _Mapping and variant calling_ ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day1_MMB_Week4_mapping_variant_calling.pdf))
@@ -61,13 +60,16 @@ conda install scoary
 
 9:00-10:00 – Introduction and setup of task; installation of software  
 10:00-12:00 – Task    
-13:00- 15:00 - Task  
-15:00-16:00 – Talk from Dr Claire Jenkins, UKHSA  
+13:00- 15:00 – Task  
+15:00-16:00 – Talk from UKHSA  
 16:00-17:00 – Wrap up  
  
 ***
 
-### Tuesday 
+**Tuesday November 18th**
+
+
+**Venue: UG55B**
 
 ***
 
@@ -89,11 +91,13 @@ conda install scoary
 
 ***
 
-### Wednesday 
+**Wednesday November 19th**
+
+**Venue: UG44A**
  
 ***
 
-**Topic:**_Genome comparison_  ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day3_MMBDTP_Week4_genome_comparisons.pdf))
+**Topic:** _Genome comparison_  ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day3_MMBDTP_Week4_genome_comparisons.pdf))
 
 **Tasks:**
 
@@ -113,18 +117,17 @@ conda install scoary
 
 ***
 
-### Thursday  - Free
+**Friday November 21st**
+ 
+
+**Venue: UG55C**
 
 ***
- 
-### Friday 
- 
-***
 
-**Topic:**_Outbreak investigation_  ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day4_MMBDTP_outbreak_analysis.pdf))
+**Topic:** _Outbreak investigation_  ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day4_MMBDTP_outbreak_analysis.pdf))
 
 **Dataset:** 
-
+```
 | biosample_acc | strain       | genBankAssembly | SRArun_acc |
 |---------------|--------------|-----------------|------------|
 | SAMN00860590  | CFSAN000191  | GCA_000698635.1 | SRR498369  |
@@ -150,7 +153,7 @@ conda install scoary
 | SAMN01942296  | CFSAN000970  | GCA_000749415.1 | SRR498444  |
 | SAMN01942300  | CFSAN000958  | GCA_000748465.1 | SRR498431  |
 | SAMN01942313  | CFSAN000952  | GCA_000749165.1 | SRR498423  |
-
+```
 
 **Tasks:** 
 
