@@ -11,13 +11,22 @@ title: Programme
 
 
 **Tutors:**
-- David Baker (david.baker@quadram.ac.uk)
-- Gemma Kay (Gemma.Kay@nanoporetech.com)
-- Mark Pallen (mark.pallen@quadram.ac.uk)
-- Richard Leggett (Richard.Leggett@earlham.ac.uk)
+- David Baker
+- Alex Trotter
+- Andrea Telatin
 
-**Important**: Please fill in the [feedback form](https://forms.office.com/e/si0HtJNKD7) before you leave on friday!
 
+### Schedule
+
+:warning: Trainers will provide accurate starting times for each session
+
+Date         |  Venue          |  Overall programme 
+-------------|-----------------|-----------------------------------------
+Mon 20 Oct   | UG55C           | Sequencing and the long reads (Alex Trotter)
+Tue 21 Oct   | UG44A           | Bioinformatics QC (Andrea Telatin)
+Wed 22 Oct   | -               |
+Thu 23 Oct   | UG44B           | 
+Fri 24 Oct   | UG44A           |
 
 Note that these sessions are part of your mandatory training. Please email the organisers if you are going to be late or are unable to attend through illness. For Thursday/Friday, Please bring your MacBooks and ensure that you can log on to Eduroam.
 
