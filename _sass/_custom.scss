@@ -279,3 +279,15 @@ footer {
     transition: all 0.3s linear;
   }
 }
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
