@@ -20,13 +20,13 @@ title: Programme
 
 :warning: Trainers will provide accurate starting times for each session
 
-Date         |  Venue          |  Overall programme 
--------------|-----------------|-----------------------------------------
-Mon 20 Oct   | UG55C           | Sequencing and the long reads (Alex Trotter)
-Tue 21 Oct   | UG44A           | Bioinformatics QC (Andrea Telatin)
-Wed 22 Oct   | -               |
-Thu 23 Oct   | UG44B           | 
-Fri 24 Oct   | UG44A           |
+Date         |  Venue | Time          |  Overall programme 
+-------------|--------|---------|-----------------------------------------
+Mon 20 Oct   | UG55C  | 9.30    | Sequencing and the long reads (Alex Trotter)
+Tue 21 Oct   | UG44A  | 9.30    | Bioinformatics QC (Andrea Telatin)
+Wed 22 Oct   | -      |         |
+Thu 23 Oct   | UG44B  |         | TBA
+Fri 24 Oct   | UG44A  |         | TBA
 
 Note that these sessions are part of your mandatory training. Please email the organisers if you are going to be late or are unable to attend through illness. For Thursday/Friday, Please bring your MacBooks and ensure that you can log on to Eduroam.
 
