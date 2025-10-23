@@ -53,10 +53,8 @@ Note that these sessions are part of your mandatory training. Please email the o
 
 **Venue:** Report to UG44B 9.30am
 
-TBD
-
-***
+Nanopore QC and mapping with Andrea Telatin
 
 ### Friday October 24th
-T
-BD
+
+Illumina Sequencing with David Baker
