@@ -8,6 +8,9 @@ title: Metagenomics
 
 Andrea Telatin and Alise Ponsero, QIB Core Bioinformatics
 
+> This module has a [dedicated website](https://quadram-institute-bioscience.github.io/metagenomics-workshop)
+> that we will use to store training materials and hands-on tutorials
+
 ## Monday 24th, UG55C
 
 ### Morning
