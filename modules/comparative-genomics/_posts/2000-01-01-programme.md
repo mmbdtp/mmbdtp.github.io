@@ -3,16 +3,22 @@ title: Comparative Genomics
 ---
 
 # Comparative Genomics 
-**Week beginning November 17th 2025**
 
-**Instructors and assistants:**
+Week beginning November 17th 2025
+
+### Instructors and assistants:
 
 - Dr Gemma Langridge (lead): Gemma.Langridge@quadram.ac.uk
 - Dr Emma Waters
+- Dr Claire Hill
 - Alice Nisbet
 - Eleanor Hayles 
 
-***
+
+### 📑 Materials
+
+* [Slides, Day1](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day1_MMB_Week4_mapping_variant_calling_2025.pdf)
+* [Slides, Day2](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day2_MMB_Week4_pangenomes_MGEs_2025.pdf)
 
 **Required software**
 To be installed in new Conda environment compgen
@@ -44,7 +50,7 @@ conda install scoary
 
 ***
 
-**Topic:** _Mapping and variant calling_ ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day1_MMB_Week4_mapping_variant_calling.pdf))
+**Topic:** _Mapping and variant calling_
 
 **Dataset:** _A set of Salmonella enterica serovar Typhi samples that have been sequenced_
 
@@ -58,11 +64,10 @@ conda install scoary
 
 **Schedule:**  
 
-9:00-10:00 – Introduction and setup of task; installation of software  
-10:00-12:00 – Task    
-13:00- 15:00 – Task  
-15:00-16:00 – Talk from UKHSA  
-16:00-17:00 – Wrap up  
+9:15-10:15 – Introduction and setup of task; installation of software
+10:15-12:00 – Task 
+13:00- 15:00 – Task
+15:00-16:00 – Wrap up  
  
 ***
 
@@ -73,7 +78,7 @@ conda install scoary
 
 ***
 
-**Topic:** _Pan-genomes and mobile genetic elements_  ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day2_MMB_Week4_pangenomes_MGEs.pdf))
+**Topic:** _Pan-genomes and mobile genetic elements_
 
 **Tasks:**
 
@@ -84,20 +89,21 @@ conda install scoary
 
 **Schedule:**  
 
-9:00-10:00 – Introduction and setup of task  
-10:00-12:00 – Task  
-13:00-15:00 - Task  
-15:00-16:00 – Wrap up   
+9:00-10:00 – Introduction and setup of task
+10:00-12:00 – Task
+13:00-15:00 - Task
+15:00-15:30 – Talk from Dr Emma Waters
+15:30-16:30 - Wrap up   
 
 ***
 
-**Wednesday November 19th**
+**Thursday November 20th**
 
 **Venue: UG44A**
  
 ***
 
-**Topic:** _Genome comparison_  ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day3_MMBDTP_Week4_genome_comparisons.pdf))
+**Topic:** _Genome comparison_
 
 **Tasks:**
 
@@ -109,11 +115,11 @@ conda install scoary
 
 **Schedule:**  
 
-9:00-10:00 – Introduction and setup of task  
-10:00-12:00 – Task  
-13:00-15:00 - Task  
-15:00-15:30 – Talk from Dr Emma Waters   
-15:30-16:30 – Wrap up  
+9:00-09:30 – Introduction and setup of task
+09:30-11:00 – Task
+11:00-12:00 - Talk from Dr David Greig, UKHSA
+13:00-15:00 - Task 
+15:00-16:00 – Wrap up  
 
 ***
 
@@ -124,7 +130,7 @@ conda install scoary
 
 ***
 
-**Topic:** _Outbreak investigation_  ([slides](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day4_MMBDTP_outbreak_analysis.pdf))
+**Topic:** _Outbreak investigation_
 
 **Dataset:** 
 ```
