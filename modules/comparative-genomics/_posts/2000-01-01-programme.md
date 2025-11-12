@@ -19,6 +19,7 @@ Week beginning November 17th 2025
 
 * [Slides, Day1](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day1_MMB_Week4_mapping_variant_calling_2025.pdf)
 * [Slides, Day2](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day2_MMB_Week4_pangenomes_MGEs_2025.pdf)
+* [Slides, Day3](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day3_MMBDTP_Week4_genome_comparisons_2025.pdf)
 
 **Required software**
 To be installed in new Conda environment compgen
