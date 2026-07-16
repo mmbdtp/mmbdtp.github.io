@@ -19,6 +19,12 @@ title: "Week 3: From Sequence to Consequence"
 
 ## Programme
 
+> Note that this week has a dedicated website:
+> https://github.com/adriaenssens-lab/phage-genomics/wiki
+
 What is inside a genome that you just sequenced? 
 Following the Adriaenssens lab's phage genomics material (bacteriophage genome analysis), you will see how to assemble and 
 annotate a genome *de novo* (from scratch)
+
+We will flexible on the pace and will take it as it comes, so there are no dates or times added to the wiki. 
+Please let us know if we are going too slowly or too fast as we go along.
