@@ -1,6 +1,8 @@
 ---
-title: Programme
+title: Last year programme
 ---
+
+> ⚠️ **This page shows last year's (2025) programme and will be removed soon.** See the new Programme page for this week's up-to-date instructors, schedule and dates.
 
 # Week 3: From Sequence to Consequence
 **Week beginning October 28th 2025**

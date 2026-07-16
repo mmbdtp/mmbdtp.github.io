@@ -1,6 +1,8 @@
 ---
-title: Metagenomics
+title: Last year programme
 ---
+
+> ⚠️ **This page shows last year's (2025) programme and will be removed soon.** See the new Programme page for this week's up-to-date instructors, schedule and dates.
 
 # Week 5: Metagenomics
 **Week beginning November 24th 2025**
