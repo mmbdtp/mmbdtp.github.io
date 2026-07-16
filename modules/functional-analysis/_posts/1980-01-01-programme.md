@@ -20,7 +20,7 @@ title: "Week 6: Functional Analysis"
 
 ## Programme
 
-* **Monday** — Introduction to bacterial behaviour and image analysis
-* **Tuesday** — Transcriptomics: gene expression and RNAseq analysis
-* **Thursday** — Transposon mutagenesis (TraDIS)
-* **Friday** — TraDIS continued and week wrap-up
+* Introduction to bacterial behaviour and image analysis
+* Transcriptomics: gene expression and RNAseq analysis
+* Transposon mutagenesis (TraDIS)
+* TraDIS continued and week wrap-up

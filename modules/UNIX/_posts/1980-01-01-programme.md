@@ -5,8 +5,7 @@ title: "Week 1: UNIX and the Command Line"
 ![UNIX course banner]({% link img/week1.png %})
 
 ## Instructors
-
-* Andrea Telatin (Andrea.Telatin@quadram.ac.uk)
+ 
 * Sam Haynes (Sam.Haynes@quadram.ac.uk)
 * Judit Talas (Judit.Talas@quadram.ac.uk)
 
@@ -21,7 +20,8 @@ title: "Week 1: UNIX and the Command Line"
 
 ## Programme
 
-* **Monday** — Bash first steps; redirectors and wildcards; useful shell commands
-* **Tuesday** — Variables and for loops; introduction to scripting; the PATH, startup files and aliases
-* **Thursday** — Cloud computing with CLIMB; introduction to Conda/Mamba; introduction to JupyterHub
-* **Friday** — CLIMB challenges
+* Bash first steps: typing commands on your terminal
+* Filesystem and paths: where are files and how to access them
+* Redirectors and wildcards, extracting data from text files using shell commands
+* Introduction to Conda/Mamba; introduction to JupyterHub
+* Advanced topics: Variables and for loops; introduction to scripting; the PATH, startup files and aliases

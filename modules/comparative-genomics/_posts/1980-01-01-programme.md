@@ -7,8 +7,9 @@ title: "Week 4: Comparative Genomics"
 
 ## Instructors
 
-* Dr Gemma Langridge (lead) (Gemma.Langridge@quadram.ac.uk)
+* Dr Gemma Langridge  (Gemma.Langridge@quadram.ac.uk)
 * Dr Emma Waters
+* Dr Claire Hill
 
 
 ## Schedule
@@ -22,7 +23,7 @@ title: "Week 4: Comparative Genomics"
 
 ## Programme
 
-* **Monday** — Mapping and variant calling
-* **Tuesday** — Pan-genomes and mobile genetic elements
-* **Thursday** — Genome comparison and structural variation
-* **Friday** — Outbreak investigation
+* Mapping and variant calling
+* Pan-genomes and mobile genetic elements
+* Genome comparison and structural variation
+* Outbreak investigation

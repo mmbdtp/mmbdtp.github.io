@@ -19,4 +19,6 @@ title: "Week 3: From Sequence to Consequence"
 
 ## Programme
 
-Content follows the Adriaenssens lab's phage genomics material (bacteriophage genome analysis), taught at a flexible pace across the week rather than a fixed day-by-day breakdown.
+What is inside a genome that you just sequenced? 
+Following the Adriaenssens lab's phage genomics material (bacteriophage genome analysis), you will see how to assemble and 
+annotate a genome *de novo* (from scratch)
