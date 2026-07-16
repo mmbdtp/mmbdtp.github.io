@@ -2,12 +2,13 @@
 title: "Week 2: Creating and Handling Sequences"
 ---
 
+![Sequencing course banner]({% link img/week2.png %})
+
+
 ## Instructors
 
-* David Baker
-* Alex Trotter
-* Andrea Telatin (Andrea.Telatin@quadram.ac.uk)
-
+* David Baker (David.Baker@quadram.ac.uk)
+ 
 ## Schedule
 
 | Day      | Date       | Time    | Location        |
@@ -17,9 +18,9 @@ title: "Week 2: Creating and Handling Sequences"
 | Thursday | 22/10/2026 | 9am-5pm | UG44B            |
 | Friday   | 23/10/2026 | 9am-1pm | UG55A            |
 
+
 ## Programme
 
-* **Monday** — Introduction to sequencing and long-read sequencing
-* **Tuesday** — FASTQ/SAM/BAM formats; bioinformatics QC of a sequencing run
-* **Thursday** — Nanopore QC and mapping
-* **Friday** — Illumina sequencing
+Lab tour and library preparation for Illumina and Nanopore.
+
+Some final practicals at the computer will demonstrate how to analyse the output of sequencers (FASTQ files) with simple bioinformatics tools

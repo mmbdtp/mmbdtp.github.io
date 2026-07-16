@@ -2,13 +2,14 @@
 title: "Week 4: Comparative Genomics"
 ---
 
+
+![Comp course banner]({% link img/week4.png %})
+
 ## Instructors
 
 * Dr Gemma Langridge (lead) (Gemma.Langridge@quadram.ac.uk)
 * Dr Emma Waters
-* Dr Claire Hill
-* Alice Nisbet
-* Eleanor Hayles
+
 
 ## Schedule
 

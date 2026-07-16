@@ -2,6 +2,8 @@
 title: "Week 3: From Sequence to Consequence"
 ---
 
+![Sequence course banner]({% link img/week3.png %})
+
 ## Instructors
 
 * Evelien Adriaenssens (Evelien.Adriaenssens@quadram.ac.uk) and team

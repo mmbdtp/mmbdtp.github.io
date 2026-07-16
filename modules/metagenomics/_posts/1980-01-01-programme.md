@@ -1,11 +1,16 @@
 ---
 title: "Week 5: Metagenomics"
 ---
+![Comp course banner]({% link img/week5.png %})
 
 ## Instructors
 
-* Andrea Telatin (Andrea.Telatin@quadram.ac.uk)
+* Andrea Telatin 
 * Alise Ponsero
+
+> This module has a [dedicated website](https://quadram-institute-bioscience.github.io/metagenomics-workshop)
+> that we will use to store training materials and hands-on tutorials
+
 
 ## Schedule
 
@@ -18,7 +23,13 @@ title: "Week 5: Metagenomics"
 
 ## Programme
 
-* **Monday** — Microbiome genomics: profiling vs de novo; sequence coverage and assembly
-* **Tuesday** — Quality checks (adaptors, negative controls, host contamination) and contig binning
-* **Thursday** — Dataset exploration: strain tracking and k-mer sketches
-* **Friday** — Functional characterization and metabolic pathway extraction
+* QC of metagenomics datasets
+* Removal of host reads
+* Profiling and classifying raw reads
+* Profiling the functional content of metagenomics datasets
+
+* *De novo* assembly of metagenomes:
+  * Binning
+  * From bins to MAGs (metagenome assembled genomes)
+  * QC of MAGs (completeness and contamination)
+  * Backmapping: estimating abundances of MAGs

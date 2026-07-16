@@ -2,6 +2,8 @@
 title: "Week 1: UNIX and the Command Line"
 ---
 
+![UNIX course banner]({% link img/week1.png %})
+
 ## Instructors
 
 * Andrea Telatin (Andrea.Telatin@quadram.ac.uk)

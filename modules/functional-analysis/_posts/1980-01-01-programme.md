@@ -2,6 +2,8 @@
 title: "Week 6: Functional Analysis"
 ---
 
+![Comp course banner]({% link img/week6.png %})
+
 ## Instructors
 
 * Mark Webber
