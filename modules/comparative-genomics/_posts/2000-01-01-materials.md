@@ -1,21 +1,12 @@
 ---
-title: Last year programme
+title: Materials
 ---
 
-> ⚠️ **This page shows last year's (2025) programme and will be removed soon.** See the new Programme page for this week's up-to-date instructors, schedule and dates.
+> ⚠️ **This page is based on last year's (2025) programme**  
 
 # Comparative Genomics 
 
-Week beginning November 17th 2025
-
-### Instructors and assistants:
-
-- Dr Gemma Langridge (lead): Gemma.Langridge@quadram.ac.uk
-- Dr Emma Waters
-- Dr Claire Hill
-- Alice Nisbet
-- Eleanor Hayles 
-
+ 
 
 ### 📑 Materials
 
@@ -47,11 +38,7 @@ conda install scoary
 
 ***
 
-**Monday November 17th**
-
-**Venue: UG55C**
-
-***
+## Monday
 
 **Topic:** _Mapping and variant calling_
 
@@ -74,12 +61,8 @@ conda install scoary
  
 ***
 
-**Tuesday November 18th**
-
-
-**Venue: UG55B**
-
-***
+## Tuesday 
+ 
 
 **Topic:** _Pan-genomes and mobile genetic elements_
 
@@ -100,11 +83,9 @@ conda install scoary
 
 ***
 
-**Thursday November 20th**
+## Thursday 
 
-**Venue: UG44A**
  
-***
 
 **Topic:** _Genome comparison_
 
@@ -126,12 +107,9 @@ conda install scoary
 
 ***
 
-**Friday November 21st**
+## Friday  
+
  
-
-**Venue: UG55C**
-
-***
 
 **Topic:** _Outbreak investigation_
 

@@ -2,34 +2,17 @@
 title: Last year programme
 ---
 
-> ⚠️ **This page shows last year's (2025) programme and will be removed soon.** See the new Programme page for this week's up-to-date instructors, schedule and dates.
+> ⚠️ **This page shows last year's (2025) programme ** 
 
 # Week 2: Creating and handling sequences
 
-***
-
-**Week beginning October 20th, 2025**
-
-***
-
-
-**Tutors:**
-- David Baker
-- Alex Trotter
-- Andrea Telatin
-
+  
 
 ### Schedule
 
 :warning: Trainers will provide accurate starting times for each session
 
-Date         |  Venue | Time          |  Overall programme 
--------------|--------|---------|-----------------------------------------
-Mon 20 Oct   | UG55C  | 9.30    | Sequencing and the long reads (Alex Trotter)
-Tue 21 Oct   | UG44A  | 9.30    | Bioinformatics QC (Andrea Telatin)
-Wed 22 Oct   | -      |         |
-Thu 23 Oct   | UG44B  | 9.30    | Bioinformatics
-Fri 24 Oct   | UG44A  | 9.30    | Illumina sequencing (David Baker)
+ 
 
 Note that these sessions are part of your mandatory training. Please email the organisers if you are going to be late or are unable to attend through illness. For Thursday/Friday, Please bring your MacBooks and ensure that you can log on to Eduroam.
 

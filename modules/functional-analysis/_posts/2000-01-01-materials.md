@@ -1,19 +1,17 @@
 ---
-title: Last year programme
+title: Materials
 ---
 
-> ⚠️ **This page shows last year's (2025) programme and will be removed soon.** See the new Programme page for this week's up-to-date instructors, schedule and dates.
-
-## Week 6 Beginning 1st December 2025 ## 
-
+> ⚠️ **This page shows last year's (2025) programme ** S 
+ 
 ## Functional analysis: how can we understand what does what?
 
-***
+ 
 
 
 **Tutors**: Mark Webber, James Lazenby
 
-***
+ 
 
 As you have seen in the previous weeks, the ability to generate large amounts of bacterial genomic sequence data is now a routine activity. 
 Public health agencies and research laboratories have now generated hundreds of thousands of genomes for many pathogens: for an example see the [Enterobase database](https://enterobase.warwick.ac.uk/).
@@ -33,16 +31,8 @@ Datasets to use will be derived from both _E. coli_ and _P. aeruginosa_ after ex
 - TraDIS
 - Morphological observations
 
-***
-
-### Venues
-
-* Monday December 1st: UG55B
-* Tuesday December 3rd: UG55C
-* Thursday December 4th: UG44A
-* Friday December 5th: UG55C
-
-***
+*** 
+ 
 
 **Monday – Introduction and importance of bacterial behaviour**
 
