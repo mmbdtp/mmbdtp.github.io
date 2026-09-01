@@ -178,6 +178,7 @@ When we are talking about “redirectors” here, we are referring to things tha
 Let’s look at an example. Remember we used `wc -l` to count how many lines were in a file:
 
 ```bash
+cd ~/unix_intro
 wc -l example.txt
 ```
 
@@ -224,7 +225,7 @@ head directory_contents.txt
 **It’s important to remember that the `>` redirector will overwrite the file we are pointing to if it already exists.**
 
 ```bash
-ls experiment/ > directory_contents.txt
+ls gene_annotations/ > directory_contents.txt
 head directory_contents.txt
 ```
 

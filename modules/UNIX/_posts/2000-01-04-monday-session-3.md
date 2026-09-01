@@ -123,7 +123,7 @@ cut -f 1,4 gene_annotations.tsv | head
 cut -f 1,4 gene_annotations.tsv > chrom_and_IDs.tsv
 head chrom_and_IDs.tsv
 </code></pre>
-<p>And to make sure it holds all 199 lines and not just the first 10!</p>
+<p>And to make sure it holds all lines and not just the first 10!</p>
 <pre><code>
 wc -l chrom_and_IDs.tsv
 </code></pre>

@@ -102,7 +102,7 @@ There are 4 special words in the syntax of a For Loop in Unix languages: `for`, 
 
 | Magic word &nbsp;&nbsp;&nbsp;&nbsp;   | Purpose                                                         |
 |:-----------------------------------| -------------------------------------------------------------------|
-| `for` &nbsp;&nbsp;&nbsp;&nbsp;     | et the loop variable name                                          |
+| `for` &nbsp;&nbsp;&nbsp;&nbsp;     | set the loop variable name                                          |
 | `in` &nbsp;&nbsp;&nbsp;&nbsp;      | specify whatever it is we are looping over                         |
 | `do`&nbsp;&nbsp;&nbsp;&nbsp;       | specify what we want to do with each item                          |
 | `done` &nbsp;&nbsp;&nbsp;&nbsp;    | tell the computer we are done telling it what to do with each item |
