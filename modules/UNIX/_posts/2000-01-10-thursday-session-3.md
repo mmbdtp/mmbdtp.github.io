@@ -6,10 +6,10 @@ title: Thursday - Session 3
 
 > **Things covered here:**
 >
-> - What is BLAST and why run it locally?
+> - What is BLAST and why run it on the command line?
 > - Downloading data and building a BLAST database
 > - Running a protein BLAST search
-> - Understanding BLAST output formats
+> - Understanding tabular output
 > - Exploring tabular results with shell tools
 
 ## Getting started
@@ -67,14 +67,6 @@ curl -o mouse.1.protein.faa.gz -L https://osf.io/v6j9x/download
 curl -o zebrafish.1.protein.faa.gz -L https://osf.io/68mgf/download
 ```
 
-> **Reminder:** `curl` downloads a file from a URL. The `-o` flag specifies the output filename, and `-L` tells curl to follow redirects.
-
-Check that the files downloaded:
-
-```bash
-ls -lh
-```
-
 You should see two `.faa.gz` files. These are FASTA protein files (`.faa`) compressed with gzip (`.gz`). Uncompress them:
 
 ```bash
@@ -97,27 +89,15 @@ Rather than searching with the entire mouse proteome, let's start small. We'll e
 head -n 11 mouse.1.protein.faa > mm-first.faa
 ```
 
-Check what you've got:
-
-```bash
-cat mm-first.faa
-```
-
-You should see two FASTA records (two `>` header lines, each followed by sequence).
-
 ## Building a BLAST database
 
-Before we can search, we need to tell BLAST to index the zebrafish sequences as a database. This is done with `makeblastdb`:
+Before we can search, we need to tell BLAST to index the zebrafish sequences as a database:
 
 ```bash
 makeblastdb -in zebrafish.1.protein.faa -dbtype prot
 ```
 
-The `-dbtype prot` flag tells BLAST these are protein sequences (use `nucl` for nucleotide databases). This creates several index files alongside the original FASTA file. You can see them with:
-
-```bash
-ls zebrafish.1.protein.faa*
-```
+The `-dbtype prot` flag tells BLAST these are protein sequences (use `nucl` for nucleotide databases).
 
 ## Running BLAST
 
@@ -158,56 +138,30 @@ blastp \
     -outfmt 6
 ```
 
-This will take a bit longer than our first search.
+This will take a bit longer than our first search since we're now querying with 96 proteins instead of 2.
+
 Let's look at the first few lines of output:
 
 ```bash
 head mm-second.x.zebrafish.tsv
 ```
 
-### The 12 default columns
+The default `-outfmt 6` output has 12 tab-separated columns covering the query and subject IDs, alignment statistics, and significance scores. See [this page](https://www.metagenomics.wiki/tools/blast/blastn-output-format-6) for a full description of each column.
 
-The default `-outfmt 6` output always has these 12 columns, in this order:
+The most important column for deciding whether a hit is meaningful is the **E-value** (column 11). It answers the question: "If I searched this database with a random sequence, how many hits this good would I expect by chance?" An E-value of `1e-150` means essentially zero chance of a random match. An E-value of `10` means you'd expect 10 hits this good by chance. **Lower E-values = more significant hits.** A common rough threshold is `1e-5`.
 
-| Column | Name       | What it tells you |
-|--------|------------|-------------------|
-| 1      | `qseqid`   | **Query ID** - the identifier of your query sequence (the mouse protein) |
-| 2      | `sseqid`   | **Subject ID** - the identifier of the database hit (the zebrafish protein) |
-| 3      | `pident`   | **Percent identity** - percentage of residues in the aligned region that are identical |
-| 4      | `length`   | **Alignment length** - how many positions the alignment covers (including gaps) |
-| 5      | `mismatch` | **Mismatches** - positions where residues differ (not counting gaps) |
-| 6      | `gapopen`  | **Gap openings** - number of gaps introduced in the alignment |
-| 7      | `qstart`   | **Query start** - position in the query where the alignment begins |
-| 8      | `qend`     | **Query end** - position in the query where the alignment ends |
-| 9      | `sstart`   | **Subject start** - position in the subject where the alignment begins |
-| 10     | `send`     | **Subject end** - position in the subject where the alignment ends |
-| 11     | `evalue`   | **E-value** - the expect value (see below) |
-| 12     | `bitscore` | **Bit score** - a normalised alignment quality score (see below) |
+It's also useful to look at percent identity (column 3, fairly self-explanatory) and the bit score (column 12, a normalised quality score where higher is better).
 
-Please see [this link](https://www.metagenomics.wiki/tools/blast/blastn-output-format-6) for further reading on output formats. 
-### Key columns for interpreting your results
+### Adding a header
 
-While all 12 columns are useful, three matter most when deciding whether a hit is meaningful:
+One annoyance with `-outfmt 6` is that there's no header line. You can add one in two steps:
 
-#### Percent identity (column 3)
+```bash
+echo -e "qseqid\tsseqid\tpident\tlength\tmismatch\tgapopen\tqstart\tqend\tsstart\tsend\tevalue\tbitscore" > mm-second.with-header.tsv
+cat mm-second.x.zebrafish.tsv >> mm-second.with-header.tsv
+```
 
-This tells you how similar the sequences are in the aligned region. Be careful though: a short alignment at 95% identity might be less meaningful than a long alignment at 40% identity. Always consider percent identity together with alignment length (column 4).
-
-#### E-value (column 11)
-
-The E-value answers the question: **"If I searched a database of this size with a random sequence, how many hits this good would I expect by chance?"**
-
-- `1e-150` = essentially zero chance this is a random match, so this is a very strong hit.
-- `1e-5` (0.00001) = commonly used as a rough significance threshold.
-- `0.05` = you'd expect a hit this good about 1 in 20 random searches.
-- `10` = you'd expect 10 hits this good by chance.
-
-**Lower E-values = more significant hits.** But note that E-values depend on database size. The same alignment will produce a different E-value if you search a larger or smaller database, so you cannot directly compare E-values across different BLAST searches.
-
-#### Bit score (column 12)
-
-The bit score is a normalised alignment score that **does not** depend on database size. If you need to compare hits from different BLAST searches, use bit scores rather than E-values.
-
+The first line writes just the header to a new file (`>`). The second line appends the data to the same file (`>>`). Now `head mm-second.with-header.tsv` will show column names alongside the data.
 
 ## Exploring results with shell tools
 
@@ -253,7 +207,7 @@ Using the shell tools from earlier this week, try to answer the following:<br>
 <pre><code class="language-bash">awk '$11 < 1e-50' mm-second.x.zebrafish.tsv | head</code></pre>
 </details>
 
-<strong>2. Sort the results by percent identity (column 3), highest first. </strong>
+<strong>2. Sort the results by percent identity (column 3), highest first.</strong>
 <br><em>Hint: look at the <code>-k</code>, <code>-n</code>, and <code>-r</code> flags for <code>sort</code>.</em>
 
 <details>
@@ -262,7 +216,7 @@ Using the shell tools from earlier this week, try to answer the following:<br>
 <pre><code class="language-bash">sort -k3,3nr mm-second.x.zebrafish.tsv | head</code></pre>
 </details>
 
-<strong>3. Sort the results by bit score (column 12) instead. </strong>
+<strong>3. Sort the results by bit score (column 12) instead.</strong>
 
 <details>
 <summary>Solution</summary>
@@ -270,7 +224,7 @@ Using the shell tools from earlier this week, try to answer the following:<br>
 <pre><code class="language-bash">sort -k12,12nr mm-second.x.zebrafish.tsv | head</code></pre>
 </details>
 
-<strong>4. Write a one-liner that shows each query sequence and how many hits it has, sorted from most to fewest. </strong>
+<strong>4. Write a one-liner that shows each query sequence and how many hits it has, sorted from most to fewest.</strong>
 <br><em>Hint: you'll need <code>cut</code>, <code>sort</code>, <code>uniq -c</code>, and <code>sort</code> again.</em>
 
 <details>
@@ -279,37 +233,6 @@ Using the shell tools from earlier this week, try to answer the following:<br>
 <pre><code class="language-bash">cut -f1 mm-second.x.zebrafish.tsv | sort | uniq -c | sort -nr | head</code></pre>
 </details>
 </blockquote>
-
-## Adding a header line
-
-One annoyance with `-outfmt 6` is that there's no header. You can add one:
-
-```bash
-echo -e "qseqid\tsseqid\tpident\tlength\tmismatch\tgapopen\tqstart\tqend\tsstart\tsend\tevalue\tbitscore" > mm-second.with-header.tsv
-cat mm-second.x.zebrafish.tsv >> mm-second.with-header.tsv
-```
-
-The first line writes just the header to a new file (`>`). The second line appends the data to the same file (`>>`). Now `head mm-second.with-header.tsv` will show column names alongside the data.
-
-> **Tip:** `-outfmt 7` gives you the same tabular format as `-outfmt 6` but with comment lines (starting with `#`) that include column headers, the query ID, database name, and number of hits. Try running the search again with `-outfmt 7` and compare the output.
-
-## Customising the output columns
-
-You're not limited to the default 12 columns. You can specify exactly which fields you want:
-
-```bash
-blastp -query mm-first.faa -db zebrafish.1.protein.faa \
-    -outfmt "6 qseqid sseqid evalue pident qcovs stitle" \
-    -out mm-first.custom.tsv
-```
-
-This adds `qcovs` (percent of query covered) and `stitle` (full description of the hit), and drops the columns we didn't ask for. To see the full list of available fields, search the BLAST help text:
-
-```bash
-blastp -help | less
-```
-
-Then type `/alignment view options` and press Enter to jump to the format specifiers section. Press `q` to quit when you're done.
 
 ### Acknowledgements
 
