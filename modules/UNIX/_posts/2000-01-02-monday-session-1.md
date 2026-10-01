@@ -275,10 +275,10 @@ ls -l unix_intro
 It’s output will be something like:
 
 ```bash
-total 8
-drwxr-xr-x   4 telatin  bioinfo   128  2 Oct 12:30 data
--rw-r--r--   1 telatin  bioinfo   1592 2 Oct 12:30 example.txt
-drwxr-xr-x   4 telatin  bioinfo   128  2 Oct 12:30 gene_annotations
+drwxr-xr-x 3 jovyan users    1 Oct 15  2025 data
+-rw-r--r-- 1 jovyan users 1592 Oct  2  2025 example.txt
+drwxr-xr-x 2 jovyan users    2 Oct  1 09:42 friday_blast
+drwxr-xr-x 2 jovyan users    3 Oct 15  2025 gene_annotations
 ```
 
 The first column lists the permissions of the file and its type: if the first char is d it’s a directory, if it’s - it’s a file, if it’s l it’s a link (“shortcut” as called in Windows).
