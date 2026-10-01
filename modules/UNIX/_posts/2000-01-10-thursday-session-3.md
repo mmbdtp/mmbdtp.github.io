@@ -17,8 +17,8 @@ title: Thursday - Session 3
 Make a directory to work in and move into it:
 
 ```bash
-mkdir -p ~/unix_intro/blast
-cd ~/unix_intro/blast
+mkdir -p ~/unix_intro/thursday_blast
+cd ~/unix_intro/thursday_blast
 ```
 
 ### Installing BLAST
