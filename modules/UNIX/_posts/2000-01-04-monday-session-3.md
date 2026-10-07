@@ -202,6 +202,36 @@ We’re just scratching the surface of what `grep` can do, but one flag in addit
 grep -c "chr2" gene_annotations.tsv
 ```
 
+### gzip
+
+'gzip' is the ubiquitous file compression command across the linux echo system. It works by simplifing repeats and patterns in the a file. Its compression works well on flat text or numerical files but not other file types (i.e. pixel, audio or .docx files) It does not necessarily use the fastest or most effecting compression algorithm, but its common use in web transfers leads to many commands (including bioinformatics tools) accepting .gz files as there input - without needed to decompress first.
+
+```bash
+ls -lh gene_annotations.tsv
+gzip gene_annotations.tsv
+ls -lh gene_annotations.tsv.gz
+```
+
+'gzip' only works on one file at a time. Therefore, it is often paired with the archiving command `tar`. `tar` archives entire folders and multiple files into one file. Combinding files is especially useful when transfering them between servers (or across the web) as using the full bandwith for one connection is significantly more efficient that opening and closing multiple connections to transfer multiple files. Furthermore, running `gzip` on a `tar` archive often leads to slightly more compression than running `gzip` on each file independently as `gzip` can then find duplications and patterns common to all the files in a `tar` archive. 
+
+```bash
+tar -czf archive.tar.gz mydir/
+```
+
+`gzip` is known to be very slow to compress large files. You can parallelise the compression by using commands such as `pigz` which chunk the file into 128k blocks to compress in parallel. The output is a standard `gzip` file which can be used as normally. Unfortunately, you cannot decompress a file in parallel as one of the disadvantages of `gzip` file format is that it must be read from begining to end.
+
+```bash
+pigz -p 4 gene_annotations.tsv
+```
+
+You can also quickly inspect `gzip` files with the `zcat` version of the `cat` command.
+
+```bash
+zcat gene_annotations.tsv.gz
+```
+
+> **Information:** Given the ubiquitous natue of `gzip` files in Unix and bioinformatics it should be very rare for fastq files to be held in uncompressed formats on any computer. You can save up 50% of the file storage size (which is massive - up to 1 TB - for metagenomic studies).
+ 
 ### Optional: awk
 
 `awk` is even more expansive than any of the others we’ve seen, but like the others, just being familiar with its basic command-line usage can be powerful. `awk` is useful for doing things like filtering based on columns and doing calculations.
