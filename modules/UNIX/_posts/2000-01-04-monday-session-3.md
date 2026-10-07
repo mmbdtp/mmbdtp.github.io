@@ -204,7 +204,7 @@ grep -c "chr2" gene_annotations.tsv
 
 ### gzip
 
-'gzip' is the ubiquitous file compression command across the linux ecosystem. It works by simplifying repeats and patterns in the a file. Its compression works well on flat text or numerical files but not other file types (i.e. pixel, audio or .docx files) It does not necessarily use the fastest or most effective compression algorithm, but its common use in web transfers leads to many commands (including bioinformatics tools) accepting .gz files as input - without needing to decompress first.
+'gzip' is the ubiquitous file compression command across the linux ecosystem. It works by simplifying repeats and patterns in a file. Its compression works well on flat text or numerical files but not other file types (i.e. pixel, audio or .docx files) It does not necessarily use the fastest or most effective compression algorithm, but its common use in web transfers leads to many commands (including bioinformatics tools) accepting .gz files as input - without needing to decompress first.
 
 ```bash
 ls -lh gene_annotations.tsv
