@@ -6,7 +6,56 @@ title: Friday - Session 1
 
 These tasks are designed to bring together everything you've learned this week. Work through them at your own pace and ask for help if you get stuck.
 
-## Task 1: Mystery microbe
+## Task 1: Bash Recap
+
+<blockquote>
+<center><strong>TASKS</strong></center>
+
+<strong>1. Compress gene_annotations.tsv, then view its first 5 lines without decompressing it. </strong>
+
+<details>
+<summary>Solution</summary>
+<br>
+<pre><code class="language-bash">gzip gene_annotations.tsv
+zcat gene_annotations.tsv.gz | head -n 5</code></pre>
+</details>
+
+
+<strong>2. Save the gene IDs of all protein-coding genes on chromosome 1 to chr1_coding.txt. How many are there? </strong>
+
+<details>
+<summary>Solution</summary>
+<br>
+<pre><code class="language-bash">grep "protein_coding" gene_annotations.tsv | awk -F'\t' '$1=="chr1" {print $4}' > chr1_coding.txt</code></pre>
+There are 20 genes
+</details>
+
+<strong>3. Create a script that accepts a folder path and renames all the files to &lt;filename&gt;_old.&lt;ext&gt;. Make that script executable from any location.</strong>
+
+<details>
+<summary>Solution</summary>
+<br>
+<pre><code class="language-bash">folder="$1"
+for path in "$folder"/*; do
+    dir=$(dirname "$path")
+    file=$(basename "$path")
+ 
+    if [[ "$file" == *.* ]]; then
+        name="${file%.*}"    # everything before the last dot
+        ext="${file##*.}"    # everything after the last dot
+        new="${name}_old.${ext}"
+    else
+        new="${file}_old"    # file has no extension
+    fi
+    mv "$path" "$dir/$new"
+    echo "$file -> $new"
+done
+</code></pre>
+</details>
+
+</blockquote>
+
+## Task 2: Mystery microbe
 
 Make sure your BLAST environment is active before you start:
 
@@ -87,3 +136,13 @@ You should see three tiers:
 </ul>
 </details>
 </blockquote>
+
+## Task 3: The clean up
+
+Imagine 12 months have gone by. You've worked on 7 different analysis since then and you're disk space is full. How would you go about tidying this project up?
+
+1. Could you clearly identify which files are copies from public repositories or local archives? Do you need to keep them here?
+2. Which files are intermediate files that could be easily regenerated? Do you need to keep them here?
+3. Which files are critical outputs (scripts, plots, summary tables)? How might you minimise their current storage.
+
+How might we design a folder structure to clearly delineate this in future analyses? 

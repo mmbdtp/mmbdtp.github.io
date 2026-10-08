@@ -183,7 +183,7 @@ Now, lets loop through these files and rename them:
 ```bash
 for file in file*
 do
-  mv $file $file_new
+  mv $file ${file}_new
 done
 ```
 
@@ -322,7 +322,7 @@ if [ -s europa_target_gene_ids.txt ]
 then
     echo "File is good-to-go!"
 else
-    echo "File is empty!"
+    echo "File is empty or does not exist!"
 fi
 ```
 

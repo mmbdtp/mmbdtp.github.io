@@ -123,7 +123,7 @@ Download and install Miniforge from: [https://github.com/conda-forge/miniforge](
 For macOS:
 
 ```bash
-wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
@@ -156,8 +156,8 @@ conda config --set channel_alias "https://repo.prefix.dev"
 conda config --show channels
 
 channels:
-  - bioconda
   - conda-forge
+  - bioconda
 
 
 conda config --show channel_alias
@@ -340,7 +340,7 @@ mamba env export --from-history > test-env.yml
 # View the exported file
 cat test-env.yml
 ```
-Notice that the YAML file includes not just the tools you explicitly installed (samtools and bcftools), but also all their dependencies! Let's move to CLIMB notebooks and see how we would recreate this environment from this YAML file. 
+Let's move to CLIMB notebooks and see how we would recreate this environment from this YAML file. 
 
 Once logged into CLIMB, import the yaml file and simply run:
 

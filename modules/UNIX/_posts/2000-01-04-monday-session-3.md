@@ -52,10 +52,10 @@ tail -n 5 gene_annotations.tsv
 tail -n +2 gene_annotations.tsv
 ```
 
-As we can see the bed file contains 4 columns (or fields): 
+As we can see the bed file contains 5 columns (or fields): 
 - `chromosome` specifies the chromosome where the gene is located, 
 - `start` and `end` define the range of bases where the gene is located within that chromosome,
-- `gene_ID` holds some descriptive information about the genes, like gene IDs and functional annotations.
+- `gene_ID` and some descriptive information about the genes, like gene IDs and functional annotations.
 
 ## less
 
@@ -133,7 +133,7 @@ wc -l chrom_and_IDs.tsv
 
 ### grep
 
-`grep` (**g**lobal **r**egular **e**x**p**ression) is a search tool. It looks through text files for strings (sequences of characters). In its default usage, `grep` will look for whatever string of characters you give it (1st positional argument), in whichever file you specify (2nd positional argument), and then print out the lines that contain what you searched for. Let’s try it:
+`grep` (**g**lobal **r**egular **e**xpression **p**rint) is a search tool. It looks through text files for strings (sequences of characters). In its default usage, `grep` will look for whatever string of characters you give it (1st positional argument), in whichever file you specify (2nd positional argument), and then print out the lines that contain what you searched for. Let’s try it:
 
 ```bash
 grep "73177" gene_annotations.tsv
@@ -247,7 +247,7 @@ How much space do you save when you compress the gene_annotations folder?
 <summary>Solution</summary>
 <br>
 <pre><code class="language-bash">
-tar -lczf archive.tar.gz gene_annotations/
+tar -czf archive.tar.gz gene_annotations/
 gzip -l archive.tar.gz 
 
 compressed  uncompressed    ratio   uncompressed_name
@@ -290,15 +290,17 @@ awk '$2 > 1000000' gene_annotations.tsv | head
 `awk` can also perform calculations on the fly. Let's create a new column that calculates the length of each gene (end position minus start position) and save it to a new file:
 
 ```bash
-awk 'NR > 1 {print $1,$2,$3,$4,$5,$3-$2}' gene_annotations.tsv > gene_annotations_and_lengths.tsv
+awk -F'\t' -v OFS='\t' 'NR > 1 {print $1,$2,$3,$4,$5,$3-$2}' gene_annotations.tsv > gene_annotations_and_lengths.tsv 
 ```
 
 The `NR > 1` part skips the first line (the header), so we don't try to do maths on text!
 
+Why do you think we need to specify that awk should parse the .tsv as tab separated?
+
 We can combine filtering and calculations. Let's find genes longer than 5000 base pairs:
 
 ```bash
-awk '$5 > 5000' gene_annotations_and_lengths.tsv | head
+awk '$6 > 5000' gene_annotations_and_lengths.tsv | head
 ```
 
 Again, `awk` can seem pretty tricky, especially at first, but fortunately we don’t need to remember how to do these things, just that they can be done. And then we can look it up when we need it 🙂
