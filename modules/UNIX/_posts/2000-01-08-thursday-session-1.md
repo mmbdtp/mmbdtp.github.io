@@ -90,7 +90,7 @@ Within the Terminal here, you can do almost all the things we did yesterday usin
 
 ### Recap Tasks:
 
-- In the terminal, create a for loop that outputs the name of any file that is detected as empty in the folder shared-team/2025_training/week1/unix_intro/gene_annotations
+- In the terminal, create a for loop that outputs the name of any file that is detected as empty in the folder shared-team/2026_training/week1/unix_intro/gene_annotations
 
 - Can you make it into a script that you can pass a folder of your choice to check for empty files?
 
