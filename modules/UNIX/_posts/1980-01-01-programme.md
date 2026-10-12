@@ -13,10 +13,10 @@ title: "Week 1: UNIX and the Command Line"
 
 | Day      | Date       | Time    | Location |
 | -------- | ---------- | ------- | -------- |
-| Monday   | 12/10/2026 | 9am-5pm | UG55A    |
-| Tuesday  | 13/10/2026 | 9am-5pm | UG55C    |
-| Thursday | 15/10/2026 | 9am-5pm | UG44B    |
-| Friday   | 16/10/2026 | 9am-1pm | UG55A    |
+| Monday   | 12/10/2026 | 9am-4pm | UG55A    |
+| Tuesday  | 13/10/2026 | 10am-4pm | UG55C    |
+| Thursday | 15/10/2026 | 10am-4pm | UG44B    |
+| Friday   | 16/10/2026 | 10am-1pm | UG55A    |
 
 ## Programme
 

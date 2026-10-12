@@ -234,7 +234,7 @@ It’s important that we start reading the messages that the terminals shows us.
 The echo command prints its arguments back to the standard output. We will use this as a diagnostic tool.
 
 ```bash
-echo "Hello's world!"
+echo "Hello's world"
 ```
 
 We used double quotes around the messages. Try replacing the double quotes with single quotes in the last command, and see what happens.
