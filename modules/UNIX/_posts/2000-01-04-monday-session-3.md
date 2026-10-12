@@ -230,10 +230,10 @@ tar -czf archive.tar.gz data/
 pigz -p 2 gene_annotations.tsv
 ```
 
-You can also quickly inspect `gzip` files with the `zcat` version of the `cat` command. Similarly with `zgrep` and `zless`.
+You can also quickly inspect `gzip` files with the `gzcat` version of the `cat` command. Similarly with `gzgrep` and `gzless`. This is for macOS, on standard linux based OS you can drop the g to make `zcat`, `zgrep`, and `zless`. 
 
 ```bash
-zcat gene_annotations.tsv.gz
+gzcat gene_annotations.tsv.gz
 ```
 
 **Information:** Given the ubiquitous nature of `gzip` files in Unix and bioinformatics it should be very rare for fastq files to be held in uncompressed formats on any computer. You can save up 50% of the file storage size (which is massive - up to 1 TB - for metagenomics studies).
