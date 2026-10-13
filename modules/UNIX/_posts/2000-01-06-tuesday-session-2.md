@@ -100,7 +100,7 @@ And that’s it! Notice it prints out to the terminal exactly the same way as if
 <blockquote>
 <center><strong>TASK 2</strong></center>
     
-<strong>Create a script where you pull out the gene id hits for the string "AT3G51". Then, add a for loop that pulls those sequences from gene.fa and saves as files.</strong>
+<strong>Create a script where you pull out the gene id hits for the string "AT3G51". Then, add a for loop that pulls those sequences from genes.fa and saves it as fasta files.</strong>
 </blockquote>
 
 ## Scripting with positional arguments
