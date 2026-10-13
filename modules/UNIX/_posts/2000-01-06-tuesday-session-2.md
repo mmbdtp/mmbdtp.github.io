@@ -97,42 +97,15 @@ And that’s it! Notice it prints out to the terminal exactly the same way as if
 <strong>Recreate the for loop for creating new files numbered 1 to 4 within a script</strong>
 </blockquote>
 
+<blockquote>
+<center><strong>TASK</strong></center>
+    
+<strong>Create a script where you pull out the gene id hits for the string "AT3G51". Then, add a for loop that pulls those sequences from gene.fa and saves as files.</strong>
+</blockquote>
+
 ## Scripting with positional arguments
 
-Variables and loops are common components of scripts. We are going to build off of the examples from the previous session.
-
-First, let’s go back into our gene_annotations directory.
-
-```bash
-cd ../gene_annotations
-```
-
-The `gene_annotations.tsv` file holds some information about ~200 genes, and genes.fa holds their DNA sequences in fasta format:
-
-```bash
-head gene_annotations.tsv
-head -n 2 genes.fa
-```
-
-When working with these example files before, we were pretending to be interested in grabbing the genic sequences of genes beginning with "AT3G511" using `grep` and `cut`. Let’s do that again here if we cleaned up the file:
-
-```bash
-grep "AT3G511" gene_annotations.tsv | cut -f 4 > target_gene_ids.txt
-head target_gene_ids.txt
-```
-
-Then we wrote a for loop to pull and create a file that just held those sequences of interest:
-
-```bash
-for gene in $(cat target_gene_ids.txt)
-do
-    grep -A 1 ">$gene" genes.fa
-done > target_genes.fa
-
-head target_genes.fa
-```
-
-As we’ve seen, we can just copy and paste the above code block into a file, and then run it as a script, and it will work the same as when we entered it interactively. But we can also make the script more flexible and more re-usable if we make it work with positional arguments, rather than needing the file that holds the target genes to be “hard-coded” into the script. Meaning, right now we have “target_gene_ids.txt” in there explicitly, and if we want to change our target genes, we either need to open the script and change that file name at that location, or we need to change what gene IDs are in the “target_gene_ids.txt” file.
+We can also make the script more flexible and more re-usable if we make it work with positional arguments, rather than needing the file that holds the target genes to be “hard-coded” into the script. Meaning, right now we have “target_gene_ids.txt” in there explicitly, and if we want to change our target genes, we either need to open the script and change that file name at that location, or we need to change what gene IDs are in the “target_gene_ids.txt” file.
 
 Inside a script, we can access positional arguments given to the script when it’s called by referencing them as variables with their appropriate position. If not familiar with this, it can sound way more confusing in words than actually just seeing it. So let’s just start doing it 🙂
 
