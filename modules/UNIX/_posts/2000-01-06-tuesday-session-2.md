@@ -30,7 +30,7 @@ cd ~/unix_intro
 nano sample_names.txt
 ```
 
-When we press `return`, our environment changes to the opened text file where we can type as usual. ype in a couple of sample names, one on each line – it doesn’t matter what the names are, for example:
+When we press `return`, our environment changes to the opened text file where we can type as usual. Type in a couple of sample names, one on each line – it doesn’t matter what the names are, for example:
 
 ```bash
 Sample_A
@@ -57,7 +57,7 @@ mkdir unix-scripting
 cd unix-scripting
 ```
 
-Remember that if we run `date` at the command line, it will print back some temporal information according to the computer we are using. And remember that `pwd` will print the current working directory, and and piping ( `|` ) ls into `wc -l` will count how many directories and files are in the current working directory (which will currently be 0 for us at the moment):
+Remember that if we run `date` at the command line, it will print back some temporal information according to the computer we are using. And remember that `pwd` will print the current working directory, and piping ( `|` ) ls into `wc -l` will count how many directories and files are in the current working directory (which will currently be 0 for us at the moment):
 
 ```bash
 date
@@ -130,7 +130,7 @@ As we’ve seen, we can just copy and paste the above code block into a file, an
 
 Inside a script, we can access positional arguments given to the script when it’s called by referencing them as variables with their appropriate position. If not familiar with this, it can sound way more confusing in words than actually just seeing it. So let’s just start doing it 🙂
 
-Let’s put this next codeblock into a new script called “parsing-genes.sh”, where instead of specifying the “target_gene_ids.txt” filename explicitly like before, we are putting a `$1` in it’s place:
+Let’s put this next codeblock into a new script called “parsing-genes.sh”, where instead of specifying the “target_gene_ids.txt” filename explicitly like before, we are putting a `$1` in its place:
 
 ```bash
 for gene in $(cat $1)
@@ -226,7 +226,7 @@ We can see it created 2 new files, “AT3G511_target_gene_ids.txt” and “AT3G
 So now we can use our script to search for other genes too, e.g., running:
 
 ```bash
-bash parsing-genes.sh AT5G571
+bash parsing-genes.sh AT3G571
 ls AT3G511_*
 head AT3G511_genes.fa
 ```
@@ -244,7 +244,7 @@ bash parsing-genes.sh europa
 ls -l europa*
 ```
 
-First, let’s add a check that the target gene IDs we are looking for was actually found. There are many ways we could go about this. Here, we’ll just check that the file we create from the first searching line actually has something in it, because if it’s empty, nothing was found. We can add in an if/then statements to control part of our script. If the target_gene_ids file holds targets, we will run the for loop that pulls out the wanted sequences into a new file. If it doesn’t, we will just remove the empty file. Here’s what this looks like:
+First, let’s add a check that the target gene IDs we are looking for were actually found. There are many ways we could go about this. Here, we’ll just check that the file we create from the first searching line actually has something in it, because if it’s empty, nothing was found. We can add in an if/then statement to control part of our script. If the target_gene_ids file holds targets, we will run the for loop that pulls out the wanted sequences into a new file. If it doesn’t, we will just remove the empty file. Here’s what this looks like:
 
 ```bash
 nano parsing-genes.sh
@@ -293,8 +293,9 @@ if [ -s ${1}_target_gene_ids.txt ]
 then
     # if there is stuff in the file
     # count how many lines (genes found)
-      # this is a little ugly so that it works with standard mac and linux `wc`
-    num_found=$(wc -l ${1}_target_gene_ids.txt | sed 's/^ *//' | cut -f 1 -d " ")
+    # tr -d removes extra spaces from wc output
+    num_found=$(wc -l < "${1}_target_gene_ids.txt" | tr -d ' ')
+
     printf "\n  ${num_found} genes identified!\n\n"
 
     # looping through our target gene IDs,
@@ -325,7 +326,7 @@ bash parsing-genes.sh AT5G571
 
 A [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)) is something that we can put as the first line of the script, starting with `#!`, that tells the computer what to use to try to run that file as a script. The way we were running things above, specifying `bash` as the command before giving it the script as a positional argument, we didn’t need a shebang because we were explicitly telling the computer what to use. If we want to be able to run the script without doing that (or we want to call it from somewhere else in our PATH), we should add a shebang (we’ll also need to change permissions on the file, but we’ll discuss that next).
 
-There are different ways to specify what to use, but a good, portable shebang for bash is #! `/usr/bin/env bash`, so let’s add that to the top of our script like so:
+There are different ways to specify what to use, but a good, portable shebang for bash is `#!/usr/bin/env bash`, so let’s add that to the top of our script like so:
 
 ```bash
 #!/usr/bin/env bash
@@ -338,10 +339,10 @@ if [ -s ${1}_target_gene_ids.txt ]
 then
     # if there is stuff in the file
     # count how many lines (genes found)
-      # this is a little ugly so that it works with standard mac and linux `wc`
-    num_found=$(wc -l ${1}_target_gene_ids.txt | sed 's/^ *//' | cut -f 1 -d " ")
-    printf "\n  ${num_found} genes identified!\n\n"
+    # tr -d removes extra spaces from wc output
+    num_found=$(wc -l < "${1}_target_gene_ids.txt" | tr -d ' ')
 
+    printf "\n  ${num_found} genes identified!\n\n"
     # looping through our target gene IDs,
     # grabbing their sequences and writing them out to a new file
     for gene in $(cat ${1}_target_gene_ids.txt)
@@ -385,7 +386,7 @@ Whereas if we tried that before the `chmod` command we ran, we would have gotten
 
 ### Bash “strict mode”
 
-As noted above, there are not a whole lot of guard-rails while writing scripts in a Unix-like shell. It’s generally not a big deal when creating ad-hoc scripts to do small things for our own analyses, but if getting into writing larger scripts, Bash strict mode might be something worth looking into. Bash strict mode is sort of an unofficial shorthand for adding things to the top of the script like `set -u` which will cause the script to exit if an undefined variable is used, and `set -e` which exits if any command doesn’t finish with its standard exit code. If you are interested in looking into this more, Aaron Maxwell has a page up on his site here that nicely walks through examples where his prefered configuration can help avoid potential problems.
+As noted above, there are not a whole lot of guard-rails while writing scripts in a Unix-like shell. It’s generally not a big deal when creating ad-hoc scripts to do small things for our own analyses, but if getting into writing larger scripts, Bash strict mode might be something worth looking into. Bash strict mode is sort of an unofficial shorthand for adding things to the top of the script like `set -u` which will cause the script to exit if an undefined variable is used, and `set -e` which exits if any command doesn’t finish with its standard exit code. If you are interested in looking into this more, Aaron Maxwell has a page up on his site [here](http://redsymbol.net/articles/unofficial-bash-strict-mode/) that nicely walks through examples where his preferred configuration can help avoid potential problems.
 
 And that’s the general gist of scripting at the command-line! Again, what’s here is only a brief introduction, hopefully helpful to get any newcomers up-and-running! If creating a script that we want to have available anywhere (as in, not just callable from the same directory or explicitly pointing to it), we'll need to explore what our PATH is (which we will be covering next).
 
