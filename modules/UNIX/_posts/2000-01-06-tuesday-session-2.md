@@ -92,13 +92,13 @@ bash first-script.sh
 And that’s it! Notice it prints out to the terminal exactly the same way as if we ran those commands one at a time interactively like above 🙂
 
 <blockquote>
-<center><strong>TASK</strong></center>
+<center><strong>TASK 1</strong></center>
     
 <strong>Recreate the for loop for creating new files numbered 1 to 4 within a script</strong>
 </blockquote>
 
 <blockquote>
-<center><strong>TASK</strong></center>
+<center><strong>TASK 2</strong></center>
     
 <strong>Create a script where you pull out the gene id hits for the string "AT3G51". Then, add a for loop that pulls those sequences from gene.fa and saves as files.</strong>
 </blockquote>
