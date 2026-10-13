@@ -91,6 +91,12 @@ bash first-script.sh
 
 And that’s it! Notice it prints out to the terminal exactly the same way as if we ran those commands one at a time interactively like above 🙂
 
+<blockquote>
+<center><strong>TASK</strong></center>
+    
+<strong>Recreate the for loop for creating new files numbered 1 to 4 within a script</strong>
+</blockquote>
+
 ## Scripting with positional arguments
 
 Variables and loops are common components of scripts. We are going to build off of the examples from the previous session.
