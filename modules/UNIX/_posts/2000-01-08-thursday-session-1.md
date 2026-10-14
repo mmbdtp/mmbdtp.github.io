@@ -25,12 +25,12 @@ Before we get stuck in to using a Notebook server, let's set the scene with a sh
 
 * You have been sent an email invitation that explains how to access the CLIMB-BIG_DATA account interface Bryn [https://bryn.climb.ac.uk/](https://bryn.climb.ac.uk/) and set up an account.
 * Read this information about authentication:
-  * [https://docs.climb.ac.uk/getting-started/authentication/](https://docs.climb.ac.uk/getting-started/authentication/)
-* Using the navigation menu on the left hand side, select 'Notebook servers' under the 'Compute' subheading
-* Click the 'Launch notebook server' green action button on the right hand side
-* Select a 'Standard server'
-* Click 'Launch Server' and monitor the progress bar
-* Once ready, click the url beneath the 'User notebook server'
+  * [https://docs.climb.ac.uk/3.Getting-started/3.2.authentication/](https://docs.climb.ac.uk/3.Getting-started/3.2.authentication/)
+* Using the navigation menu on the left hand side, select 'JupyterLab' 
+* Click the 'Launch server' action button in the JupyterLab Environment pane
+* Select a 'standard' Server Profile and 2 CPUs
+* Click 'Launch' and monitor the progress bar
+* Once ready, click the URL or the 'Open JupyterLab' button
 * On first login, you may be asked to authorize access to your Bryn account. Click 'Authorize'
 * The JupyterLab interactive computing interface should open in a new tab.
 
@@ -88,17 +88,134 @@ sudo touch file.txt
 
 Within the Terminal here, you can do almost all the things we did yesterday using Unix on your MacBooks.
 
-### Recap Tasks:
+### Recap Tasks
 
-- In the terminal, create a for loop that outputs the name of any file that is detected as empty in the folder shared-team/2026_training/week1/unix_intro/gene_annotations
+<blockquote>
+<center><strong>TASKS</strong></center>
 
-- Can you make it into a script that you can pass a folder of your choice to check for empty files?
+<strong>1. Write a for loop that prints each of these species names, one per line: <code>ecoli</code>, <code>salmonella</code>, <code>klebsiella</code>, <code>campy</code>.</strong>
 
-- Can you make it run like a standard bash command? (i.e. without calling bash first with `bash <script>.sh`)
+<details>
+<summary>Solution</summary>
+<br>
+<pre><code class="language-bash">for species in ecoli salmonella klebsiella campy
+do
+    echo $species
+done</code></pre>
+</details>
 
-- How do you get bash to do resolve basic arithmetic (5 + 10)? (May have to ask google)
+<strong>2. Write a for loop that prints the name of each file in <br> <code>~/shared-team/2026_training/week1/unix_intro/gene_annotations/</code>.</strong>
+<br><em>Hint: try using <code>*</code> to match all files in the folder.</em>
 
-- Challenge: Find all the genes with a sequence length greater than 2000 nucleotides in gene_annotations.csv file. Output the full sequences of these genes to a file called long_genes.fa
+<details>
+<summary>Solution</summary>
+<br>
+<pre><code class="language-bash">for file in ~/shared-team/2026_training/week1/unix_intro/gene_annotations/*
+do
+    echo $file
+done</code></pre>
+</details>
+
+<strong>3. Modify your loop so that for each file it also prints how many lines it has.</strong>
+<br><em>Hint: <code>wc -l</code> counts lines in a file.</em>
+
+<details>
+<summary>Solution</summary>
+<br>
+<pre><code class="language-bash">for file in ~/shared-team/2026_training/week1/unix_intro/gene_annotations/*
+do
+    echo $file
+    wc -l $file
+done</code></pre>
+</details>
+
+<strong>4. Add a preview of the first line of each file to your loop.</strong>
+
+<details>
+<summary>Solution</summary>
+<br>
+<pre><code class="language-bash">for file in ~/shared-team/2026_training/week1/unix_intro/gene_annotations/*
+do
+    echo $file
+    wc -l $file
+    head -n 1 $file
+done</code></pre>
+For TSV files, the first line is usually the column headers, so this gives you a quick idea of what each file contains.
+</details>
+
+<strong>5. Put your loop into a script called <code>summarise_dir.sh</code> and run it.</strong>
+
+<details>
+<summary>Solution</summary>
+<br>
+Open a new file with nano:
+<pre><code class="language-bash">nano summarise_dir.sh</code></pre>
+Type in your loop, save with <code>Ctrl+O</code>, and exit with <code>Ctrl+X</code>. Then run it:
+<pre><code class="language-bash">bash summarise_dir.sh</code></pre>
+</details>
+
+<strong>6. Make your script executable so you can run it with <code>./summarise_dir.sh</code> instead of <br> <code>bash summarise_dir.sh</code>.</strong>
+<br><em>Hint: you need two things: a shebang line at the top of the script, and the right file permissions.</em>
+
+<details>
+<summary>Solution</summary>
+<br>
+Add <code>#!/bin/bash</code> as the first line of the script, then:
+<pre><code class="language-bash">chmod +x summarise_dir.sh
+./summarise_dir.sh</code></pre>
+</details>
+
+<strong>7. Modify your script so it takes a folder as an argument instead of always checking the same folder.</strong>
+<br><em>Hint: the first argument passed to a script is available as <code>$1</code>.</em>
+
+<details>
+<summary>Solution</summary>
+<br>
+<pre><code class="language-bash">#!/bin/bash
+for file in $1/*
+do
+    echo $file
+    wc -l $file
+    head -n 1 $file
+done</code></pre>
+Run it with:
+<pre><code class="language-bash">./summarise_dir.sh ~/shared-team/2026_training/week1/unix_intro/gene_annotations</code></pre>
+Try it on a different folder to check it works.
+</details>
+
+<strong>8. Modify your script so it takes a second argument for an output file, and saves the results there instead of printing to the screen.</strong>
+<br><em>Hint: the second argument is <code>$2</code>. You already know how to redirect output to a file.</em>
+
+<details>
+<summary>Solution</summary>
+<br>
+<pre><code class="language-bash">#!/bin/bash
+for file in $1/*
+do
+    echo $file
+    wc -l $file
+    head -n 1 $file
+done > $2</code></pre>
+Run it with:
+<pre><code class="language-bash">./summarise_dir.sh ~/shared-team/2026_training/week1/unix_intro/gene_annotations summary.txt
+cat summary.txt</code></pre>
+</details>
+
+<strong>9. Add the folder containing your script to your PATH permanently so you can run it from anywhere.</strong>
+<br><em>Hint: add an <code>export PATH=</code> line to your <code>~/.bashrc</code>.</em>
+
+<details>
+<summary>Solution</summary>
+<br>
+<pre><code class="language-bash">nano ~/.bashrc</code></pre>
+Add this line at the end of the file:
+<pre><code class="language-bash">export PATH=$PATH:$HOME/unix_intro</code></pre>
+Save and exit, then restart your terminal, or apply it without restarting your terminal:
+<pre><code class="language-bash">source ~/.bashrc</code></pre>
+Now try changing to a completely different directory and running:
+<pre><code class="language-bash">summarise_dir.sh ~/shared-team/2026_training/week1/unix_intro/gene_annotations summary.txt</code></pre>
+</details>
+</blockquote>
 
 ### Acknowledgements
 This training course was adapted from material develop by Andrea Telatin and Lisa Marchioretto.
