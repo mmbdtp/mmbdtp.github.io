@@ -11,9 +11,6 @@ title: "Week 2: Creating and Handling Sequences"
  
 ## Schedule
 
-:warning: Trainers will give you more information about when to meet the week before this training. S
-Some parts of this training are lab based, others will be at the computer
-
 > Please, on Monday and Tuesday wait to be collected in front of the reception desk.
 > Dr Dave Baker will guide you to the lab space to see the sequencing room and discuss about DNA Sequencing technologies and library preparation methods.
 
@@ -27,6 +24,6 @@ Some parts of this training are lab based, others will be at the computer
 
 ## Programme
 
-Lab tour and library preparation for Illumina and Nanopore.
+Monday-Tuesday: Lab tour and library preparation for Illumina and Nanopore.
 
-Some final practicals at the computer will demonstrate how to analyse the output of sequencers (FASTQ files) with simple bioinformatics tools
+Thursday-Friday: Some final practicals at the computer will demonstrate how to analyse the output of sequencers (FASTQ files) with simple bioinformatics tools
