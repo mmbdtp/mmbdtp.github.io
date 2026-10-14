@@ -207,13 +207,15 @@ cat summary.txt</code></pre>
 <details>
 <summary>Solution</summary>
 <br>
+First, check which directory your script is in:
+<pre><code class="language-bash">pwd</code></pre>
+Then edit your .bashrc:
 <pre><code class="language-bash">nano ~/.bashrc</code></pre>
-Add this line at the end of the file:
-<pre><code class="language-bash">export PATH=$PATH:$HOME/unix_intro</code></pre>
-Save and exit, then restart your terminal, or apply it without restarting your terminal:
+Add this line at the end of the file, using the path to the folder where your script lives:
+<pre><code class="language-bash">export PATH=$PATH:/path/to/your/scripts</code></pre>
+Save and exit, then restart your terminal or apply it without restarting:
 <pre><code class="language-bash">source ~/.bashrc</code></pre>
-Now try changing to a completely different directory and running:
-<pre><code class="language-bash">summarise_dir.sh ~/shared-team/2026_training/week1/unix_intro/gene_annotations summary.txt</code></pre>
+Every new terminal you open will now have this path included automatically. Try changing to a completely different directory and running your script!
 </details>
 </blockquote>
 
