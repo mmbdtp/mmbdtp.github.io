@@ -12,15 +12,15 @@ title: "Week 3: From Sequence to Consequence"
 
 | Day      | Date       | Time    | Location |
 | -------- | ---------- | ------- | -------- |
-| Monday   | 26/10/2026 | 9am-5pm | UG55A    |
-| Tuesday  | 27/10/2026 | 9am-5pm | UG55C    |
-| Thursday | 29/10/2026 | 9am-5pm | UG44B    |
-| Friday   | 30/10/2026 | 9am-1pm | UG55A    |
+| Monday   | 26/10/2026 | 9.30 - 17.00 | UG55A    |
+| Tuesday  | 27/10/2026 | 9.30 - 17.00 | UG55C    |
+| Thursday | 29/10/2026 | 9.30 - 17.00 | UG44B    |
+| Friday   | 30/10/2026 | 9.30 -13.00  | UG55A    |
 
 ## Programme
 
 > Note that this week has a dedicated website:
-> https://github.com/adriaenssens-lab/phage-genomics/wiki
+> [adriaenssens-lab/phage-genomics/wiki](https://github.com/adriaenssens-lab/phage-genomics/wiki)
 
 What is inside a genome that you just sequenced? 
 Following the Adriaenssens lab's phage genomics material (bacteriophage genome analysis), you will see how to assemble and 
