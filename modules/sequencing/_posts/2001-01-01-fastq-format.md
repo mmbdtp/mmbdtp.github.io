@@ -23,7 +23,12 @@ Every read in a FASTQ file looks like this:
   <span style="color:#8250df; font-weight:bold;">IIIIIIIIIIII?88888&lt;&lt;&lt;&lt;&lt;&lt;</span>
 </div>
 
-The header starts with `@` and carries the read name and (optionally) metadata. The quality string is always exactly the same length as the sequence — one character per base.
+Each record (sequence) will be stored in exactly 4 lines:
+
+* The header starts with `@` and carries the read name and (optionally) metadata. The quality string is always exactly the same length as the sequence — one character per base.
+* The sequence line contains the nucleotide sequence of the read.
+* The separator line is always a `+` and may optionally repeat the header.
+* The quality string encodes the *Phred quality score* for each base in the sequence.
 
 ---
 
@@ -88,6 +93,68 @@ So Q score 30 → 30 + 33 = 63 → the character `?`. Score 40 → 73 → `I`. S
     </div>
   </div>
   <div style="margin-top: 0.8em; font-size: 0.85em; color: #6a737d;">Red = poor quality → Yellow = acceptable → Green = good quality</div>
+</div>
+
+
+<div style="font-family: monospace; background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 6px; padding: 1.2em; line-height: 1.8em; overflow-x: auto;">
+<div style="display: flex; flex-wrap: wrap; gap: 0.6em; align-items: center; margin-bottom: 0.8em;">
+<input id="phred-input" type="text" value="I?8#" placeholder="e.g. IIII?88#" autocomplete="off" spellcheck="false" style="font-family: monospace; font-size: 1em; padding: 0.3em 0.5em; border: 1px solid #d0d7de; border-radius: 6px; background: #ffffff; color: #8250df; font-weight: bold; width: 14em;">
+<select id="phred-offset" style="font-family: monospace; font-size: 1em; padding: 0.3em 0.5em; border: 1px solid #d0d7de; border-radius: 6px; background: #ffffff; color: #24292f;">
+<option value="33" selected>Phred+33 (Illumina 1.8+, Sanger)</option>
+<option value="64">Phred+64 (Illumina 1.3-1.7)</option>
+</select>
+<button id="phred-button" type="button" style="font-family: monospace; font-size: 1em; padding: 0.3em 1em; border: 1px solid #d0d7de; border-radius: 6px; background: #0550ae; color: #ffffff; font-weight: bold; cursor: pointer;">Decode</button>
+</div>
+<div id="phred-output" style="white-space: pre; color: #24292f;"></div>
+<script>
+(function () {
+  var input = document.getElementById("phred-input");
+  var select = document.getElementById("phred-offset");
+  var button = document.getElementById("phred-button");
+  var output = document.getElementById("phred-output");
+  function colour(q) {
+    if (q >= 30) { return "#1a7f37"; }
+    if (q >= 20) { return "#d97706"; }
+    return "#cf222e";
+  }
+  function addRow(ch, text, colr) {
+    var row = document.createElement("div");
+    var c = document.createElement("span");
+    c.textContent = ch;
+    c.style.color = colr;
+    c.style.fontWeight = "bold";
+    var t = document.createElement("span");
+    t.textContent = text;
+    row.appendChild(c);
+    row.appendChild(t);
+    output.appendChild(row);
+  }
+  function decode() {
+    output.textContent = "";
+    var s = input.value;
+    var offset = parseInt(select.value, 10);
+    if (s.length === 0) {
+      output.textContent = "Enter one or more quality characters.";
+      return;
+    }
+    for (var i = 0; i !== s.length; i++) {
+      var code = s.charCodeAt(i);
+      var q = code - offset;
+      if (q < 0) {
+        addRow(s.charAt(i), "  ASCII " + code + "  invalid for this offset", "#cf222e");
+      } else {
+        var p = Math.pow(10, -q / 10);
+        addRow(s.charAt(i), "  ASCII " + code + "  Q" + q + "  P(error) = " + p.toExponential(2), colour(q));
+      }
+    }
+  }
+  button.addEventListener("click", decode);
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") { decode(); }
+  });
+  decode();
+})();
+</script>
 </div>
 
 ---
