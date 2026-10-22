@@ -12,17 +12,12 @@ FASTQ is the standard file format for storing sequencing reads. Each read is sto
 
 Every read in a FASTQ file looks like this:
 
-<div style="font-family: monospace; background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 6px; padding: 1.2em; line-height: 2em; overflow-x: auto;">
-  <span style="color:#6a737d;">Line 1 — Header</span><br>
-  <span style="color:#0550ae; font-weight:bold;">@SRR34548621.1 some description here</span><br>
-  <span style="color:#6a737d;">Line 2 — Sequence</span><br>
-  <span style="color:#1a7f37; font-weight:bold;">ACGTACGTACGTACGTACGTACGT</span><br>
-  <span style="color:#6a737d;">Line 3 — Separator (always a +)</span><br>
-  <span style="color:#953800;">+</span><br>
-  <span style="color:#6a737d;">Line 4 — Quality string (one character per base)</span><br>
-  <span style="color:#8250df; font-weight:bold;">IIIIIIIIIIII?88888&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<div style="font-family: monospace; background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 6px; padding: 1.2em; line-height: 1.8em; overflow-x: auto; white-space: nowrap;">
+<span style="color:#0550ae; font-weight:bold;">@SRR34548621.1 some description here</span><br>
+<span style="color:#24292f; font-weight:bold;">ACGTTGCAAGCTTGACCGATAGGCTATCGGATCAA</span><br>
+<span style="color:#953800;">+</span><br>
+<span style="color:#1a7f37; font-weight:bold;">IIIIIIIIIIHIIIIIIHII</span><span style="color:#d97706; font-weight:bold;">?=;98:7654</span><span style="color:#cf222e; font-weight:bold;">#%$##</span>
 </div>
-
 Each record (sequence) will be stored in exactly 4 lines:
 
 * The header starts with `@` and carries the read name and (optionally) metadata. The quality string is always exactly the same length as the sequence — one character per base.
