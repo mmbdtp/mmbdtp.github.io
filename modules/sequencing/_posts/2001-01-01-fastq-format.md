@@ -53,11 +53,6 @@ So a base with a 1-in-100 chance of being wrong has Q = 20. A base with a 1-in-1
 
 ### How scores are encoded
 
-Phred scores are stored as single ASCII characters, not as numbers, to keep the file compact. The encoding is:
-
-> **ASCII character = Phred score + 33**
-
-So Q score 30 → 30 + 33 = 63 → the character `?`. Score 40 → 73 → `I`. Score 0 → 33 → `!`.
 
 <div style="font-family: monospace; background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 6px; padding: 1.2em; overflow-x: auto;">
   <div style="margin-bottom: 0.5em; color: #6a737d; font-size: 0.9em;">Each character maps to a Q score:</div>
@@ -94,6 +89,13 @@ So Q score 30 → 30 + 33 = 63 → the character `?`. Score 40 → 73 → `I`. S
   </div>
   <div style="margin-top: 0.8em; font-size: 0.85em; color: #6a737d;">Red = poor quality → Yellow = acceptable → Green = good quality</div>
 </div>
+
+Phred scores are stored as single ASCII characters, not as numbers, to keep the file compact. The encoding is:
+
+> **ASCII character = Phred score + 33**
+
+So Q score 30 → 30 + 33 = 63 → the character `?`. Score 40 → 73 → `I`. Score 0 → 33 → `!`.
+
 
 
 <div style="font-family: monospace; background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 6px; padding: 1.2em; line-height: 1.8em; overflow-x: auto;">
@@ -204,13 +206,14 @@ The two platforms have very different error profiles, and that shapes everything
 
 ### How accuracy has improved in Nanopore
 
-Nanopore accuracy has improved substantially over successive chemistries and basecallers:
+Nanopore accuracy has improved substantially over successive chemistries and basecallers,
+but still not usually as high as Illumina:
 
 | Era                        | Typical Q   | Notes                              |
 |----------------------------|:-----------:|------------------------------------|
 | R9.4.1 (Guppy, fast mode)  | Q10–Q14     | Useful for long-range structure    |
 | R9.4.1 (Guppy, sup mode)   | Q15–Q18     | Most historical datasets           |
-| R10.4.1 (Dorado, sup mode) | Q20–Q25     | Current standard; rivals Illumina for variant calling |
+| R10.4.1 (Dorado, sup mode) | Q20–Q25     | Current standard; good enough for variant calling |
 
 ---
 
