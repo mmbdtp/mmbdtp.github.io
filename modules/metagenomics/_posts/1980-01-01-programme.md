@@ -1,6 +1,7 @@
 ---
 title: "Week 5: Metagenomics"
 ---
+
 ![Comp course banner]({% link img/week5.png %})
 
 ## Instructors
