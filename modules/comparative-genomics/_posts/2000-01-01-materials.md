@@ -10,31 +10,9 @@ title: Materials
 
 ### 📑 Materials
 
-* [Slides, Day1](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day1_MMB_Week4_mapping_variant_calling_2025.pdf)
-* [Slides, Day2](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day2_MMB_Week4_pangenomes_MGEs_2025.pdf)
-* [Slides, Day3](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2023-pre/Day3_MMBDTP_Week4_genome_comparisons_2025.pdf)
-
-**Required software**
-To be installed in new Conda environment compgen
-
-```
-conda create --name compgen
-conda activate compgen
-conda config --add channels bioconda
-conda config --add channels conda-forge
-conda config --set channel_priority strict
-conda install prokka
-conda install socru
-conda install breseq
-conda install refseq_masher
-conda install mlst
-conda install snippy
-conda install sistr_cmd
-conda install shovill
-conda install roary
-conda install artemis
-conda install scoary
-```
+* [Slides, Day1](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2025/Day1_MMB_Week4_mapping_variant_calling_2026.pdf)
+* [Slides, Day2](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2025/Day2_MMB_Week4_pangenomes_MGEs_2026.pdf)
+* [Slides, Day3](https://github.com/mmbdtp/mmbdtp.github.io/releases/download/v2025/Day3_MMBDTP_Week4_genome_comparisons_2026.pdf)
 
 ***
 
@@ -54,9 +32,10 @@ conda install scoary
 
 **Schedule:**  
 
-9:15-10:15 – Introduction and setup of task; installation of software
-10:15-12:00 – Task 
-13:00- 15:00 – Task
+9:00am start  
+9:15-10:15 – Introduction and setup of task  
+10:15-12:00 – Task  
+13:00-15:00 – Task  
 15:00-16:00 – Wrap up  
  
 ***
@@ -75,11 +54,11 @@ conda install scoary
 
 **Schedule:**  
 
-9:00-10:00 – Introduction and setup of task
-10:00-12:00 – Task
-13:00-15:00 - Task
-15:00-15:30 – Talk from Dr Emma Waters
-15:30-16:30 - Wrap up   
+9:30-10:00 – Introduction and setup of task  
+10:00-12:00 – Task  
+13:00-15:00 - Task  
+15:00-16:00 – Talk from Anais Painset, UKHSA  
+16:00-16:30 - Wrap up   
 
 ***
 
@@ -99,10 +78,10 @@ conda install scoary
 
 **Schedule:**  
 
-9:00-09:30 – Introduction and setup of task
-09:30-11:00 – Task
-11:00-12:00 - Talk from Dr David Greig, UKHSA
-13:00-15:00 - Task 
+9:00-09:30 – Introduction and setup of task  
+09:30-11:30 – Task  
+11:30-12:00 - Talk from Emma Waters, QIB  
+13:00-15:00 - Task  
 15:00-16:00 – Wrap up  
 
 ***
