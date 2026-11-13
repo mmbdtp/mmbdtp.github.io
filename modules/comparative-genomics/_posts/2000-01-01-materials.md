@@ -2,8 +2,6 @@
 title: Materials
 ---
 
-> ⚠️ **This page is based on last year's (2025) programme**  
-
 # Comparative Genomics 
 
  
