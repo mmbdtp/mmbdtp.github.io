@@ -22,24 +22,26 @@ title: "Week 5: Metagenomics"
 | Thursday | 26/11/2026 | 9am-5pm | UG55C    |
 | Friday   | 27/11/2026 | 9am-1pm | UG44A    |
 
+---
+
 ## Programme
 
 The week is organised around four themes, one per teaching day.
 
-### Monday — Introduction, QC and host removal
+#### Monday: Introduction, QC and host removal
 
 * Introduction to metagenomics and the datasets we will use
 * Quality control of metagenomic sequencing reads
 * Removal of host-derived reads
 
-### Tuesday — Taxonomic and functional profiling
+#### Tuesday: Taxonomic and functional profiling
 
 * Taxonomic profiling and classification of raw reads
 * Visualising community composition
 * Profiling the functional content of metagenomes
 * Interpreting and analysing the outputs
 
-### Thursday — Assembly, binning and MAGs
+#### Thursday: Assembly, binning and MAGs
 
 * *De novo* assembly of metagenomes
 * Binning of assembled contigs
@@ -47,6 +49,6 @@ The week is organised around four themes, one per teaching day.
 * QC of MAGs: completeness and contamination
 * Backmapping: estimating MAG abundances
 
-### Friday — Further topics
+#### Friday: Further topics
 
 * Selected advanced and emerging topics in metagenomics (to be confirmed)
