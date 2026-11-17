@@ -24,13 +24,29 @@ title: "Week 5: Metagenomics"
 
 ## Programme
 
-* QC of metagenomics datasets
-* Removal of host reads
-* Profiling and classifying raw reads
-* Profiling the functional content of metagenomics datasets
+The week is organised around four themes, one per teaching day.
 
-* *De novo* assembly of metagenomes:
-  * Binning
-  * From bins to MAGs (metagenome assembled genomes)
-  * QC of MAGs (completeness and contamination)
-  * Backmapping: estimating abundances of MAGs
+### Monday — Introduction, QC and host removal
+
+* Introduction to metagenomics and the datasets we will use
+* Quality control of metagenomic sequencing reads
+* Removal of host-derived reads
+
+### Tuesday — Taxonomic and functional profiling
+
+* Taxonomic profiling and classification of raw reads
+* Visualising community composition
+* Profiling the functional content of metagenomes
+* Interpreting and analysing the outputs
+
+### Thursday — Assembly, binning and MAGs
+
+* *De novo* assembly of metagenomes
+* Binning of assembled contigs
+* From bins to MAGs (Metagenome-Assembled Genomes)
+* QC of MAGs: completeness and contamination
+* Backmapping: estimating MAG abundances
+
+### Friday — Further topics
+
+* Selected advanced and emerging topics in metagenomics (to be confirmed)
