@@ -17,10 +17,10 @@ title: "Week 5: Metagenomics"
 
 | Day      | Date       | Time    | Location |
 | -------- | ---------- | ------- | -------- |
-| Monday   | 23/11/2026 | 9am-5pm | UG55A    |
-| Tuesday  | 24/11/2026 | 9am-5pm | UG55B    |
-| Thursday | 26/11/2026 | 9am-5pm | UG55C    |
-| Friday   | 27/11/2026 | 9am-1pm | UG44A    |
+| Monday   | 23/11/2026 | 9:30 - 16:00 | UG55A    |
+| Tuesday  | 24/11/2026 | 9:30 - 17:00 | UG55B    |
+| Thursday | 26/11/2026 | 9:30 - 17:00 | UG55C    |
+| Friday   | 27/11/2026 | 9:30 - 13:00 | UG44A    |
 
 ---
 
